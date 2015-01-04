@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+table {
+	margin-bottom:50px;
+}
+th {
+	background:#5f9be3;
+	color:#fff;
+	font-weight:bold;
+	padding:5px;
+	width:300px;
+	float:right;
+}
+td  {
+	padding-left:10px;
+}
+</style>
+</head>
+<body>
+<table>
+  <tr> <th>Document Title: </th><td> {{cvrfdoc.DocumentTitle.id}} </td> </tr>
+  <tr> <th>Document Type: </th><td> {{cvrfdoc.DocumentType.id}} </td> </tr>
+  <tr> <th>Vendor ID: </th><td> {{cvrfdoc.DocumentPublisher.VendorID}} </td> </tr>
+  <tr> <th>Publisher Type: </th><td> {{cvrfdoc.DocumentPublisher.Type}} </td> </tr>
+  <tr> <th>Contact Details: </th><td> {{cvrfdoc.DocumentPublisher.ContactDetails.id}} </td> </tr>
+  <tr> <th>Issuing Authority: </th><td> {{cvrfdoc.DocumentPublisher.IssuingAuthority.id}} </td> </tr>
+  <tr> <th>Identification ID: </th><td> {{cvrfdoc.DocumentTracking.Identification.ID.id}} </td> </tr>
+  <tr> <th>Identification Alias: </th><td> {{cvrfdoc.DocumentTracking.Identification.Alias.id}} </td> </tr>
+  <tr> <th>Status: </th><td> {{cvrfdoc.DocumentTracking.Status}} </td> </tr>
+  <tr> <th>Version: </th><td> {{cvrfdoc.DocumentTracking.Version}} </td> </tr>
+  <tr> <th>Revision Number: </th><td> {{cvrfdoc.DocumentTracking.RevisionHistory.Revision.Number}} </td> </tr>
+  <tr> <th>Revision Date: </th><td> {{cvrfdoc.DocumentTracking.RevisionHistory.Revision.Date}} </td> </tr>
+  <tr> <th>Revision Description: </th><td> {{cvrfdoc.DocumentTracking.RevisionHistory.Revision.Description.id}} </td> </tr>
+  <!--tr> <th>Revision </th></tr>
+  <tr> <th>Number</th><th>Date</th><th>Description</th></tr>
+  <tr> <td> {{cvrfdoc.DocumentTracking.RevisionHistory.Revision.Number}} </td> 
+           <td>{{cvrfdoc.DocumentTracking.RevisionHistory.Revision.Date}} </td> 
+               <td> {{cvrfdoc.DocumentTracking.RevisionHistory.Revision.Description.id}} </td> </tr -->
+  <tr> <th>Initial Release Date: </th><td> {{cvrfdoc.DocumentTracking.InitialReleaseDate}} </td> </tr>
+  <tr> <th>Current Release Date: </th><td> {{cvrfdoc.DocumentTracking.CurrentReleaseDate}} </td> </tr>
+  <tr> <th>Note Ordinal: </th><td> {{cvrfdoc.DocumentNotes.Note.Ordinal}} </td> </tr>
+  <tr> <th>Note Audience: </th><td> {{cvrfdoc.DocumentNotes.Note.Audience}} </td> </tr>
+  <tr> <th>Note Title: </th><td> {{cvrfdoc.DocumentNotes.Note.Title}} </td> </tr>
+  <tr> <th>Note Type: </th><td> {{cvrfdoc.DocumentNotes.Note.Type}} </td> </tr>
+  <tr> <th>Note Description: </th><td> {{cvrfdoc.DocumentNotes.Note.id }} </td> </tr>
+  <tr> <th>Aggregate Severity: </th><td> {{cvrfdoc.AggregateSeverity.id }} </td> </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+<style>
+/*
+dt, dd { display: inline; margin: 0; }
+dd:after {
+	content: '\A';
+	white-space: pre;
+}
+*/
+dl { 
+	margin-bottom:50px;
+}
+dl dt {
+	background: #5f9be3;
+	color:#fff;
+	float:left;
+	clear:left;
+	font-weight:bold;
+	margin-right:10px;
+	padding:5px;
+	width:200px;
+}
+
+dl dd {
+	margin:2px 0;
+	padding:5px 0;
+	display:table-cell;
+}
+</style>
+</head>
+<body>
+<dl>
+<dt>Document Title: </dt><dd> {{cvrfdoc.DocumentTitle.id}} </dd>
+<dt>Document Type: </dt><dd> {{cvrfdoc.DocumentType.id}} </dd>
+</dl>
+<dl>
+<dt>Vendor ID: </dt><dd> {{cvrfdoc.DocumentPublisher.VendorID}} </dd>
+<dt>Publisher Type: </dt><dd> {{cvrfdoc.DocumentPublisher.Type}} </dd>
+<dt>Contact Details: </dt><dd> {{cvrfdoc.DocumentPublisher.ContactDetails.id}} </dd>
+<dt>Issuing Authority: </dt><dd> {{cvrfdoc.DocumentPublisher.IssuingAuthority.id}} </dd>
+</dl>
+</body>
+</html>
