@@ -39,7 +39,7 @@ td {
 <table width="90%">
 <thead>
 <tr>
-<th width="100%" colspan=3>Revision History</th>
+<tr><th width="100%" colspan=3>Revision History</th></tr>
 </tr>
 <tr>
 <th width="17%">Number</th>
@@ -62,7 +62,7 @@ td {
 <div>
 <table width="90%">
 <thead>
-<th width="100%" colspan=3>Product Tree</th>
+<tr><th width="100%" colspan=3>Product Tree</th></tr>
 <tr>
 <th width="17%">ProductID</th>
 <th width="17%">CPE</th>
@@ -77,6 +77,62 @@ td {
 <td>{{ item.valueOf_ }}</td>
 </tr>
 {% endfor %}
+</tbody>
+</table>
+</div>
+<!-- Vulnerabilities -->
+<div>
+<table width="90%">
+<thead>
+<tr><th width="100%" colspan=3>Vulnerabilities</th></tr>
+</thead>
+<tbody>
+{% for item in test.Vulnerability %}
+<tr>
+<tr> <th width="100%" colspan=3><th/> </tr>
+<tr> <th width="17%">CVE</th> <th colspan=2>Vulnerability Title</th><th/> </tr>
+<td width="17%">{{ item.CVE }}</td>
+<td colspan=2>{{ item.Title.valueOf_ }}</td>
+</tr>
+	{% for note in item.Notes.Note %}
+	<tr><td colspan=3>{{ note.valueOf_}}</td></tr>
+	{% endfor %}
+<tr> <th width="17%">Type</th> <th>Product ID</th><th/> </tr>
+	{% for prod in item.ProductStatuses.Status %}
+	<tr><td >{{ prod.Type }}</td>
+	    <td colspan=2>{{ prod.ProductID}}</td><td/></tr>
+	{% endfor %}
+<tr> <th width="17%">Type</th> <th colspan=2>Threat Description</th> </tr>
+	{% for threat in item.Threats.Threat %}
+	<tr>
+	<td>{{ threat.Type }}</td>
+	<td colspan=2> {{ threat.Description.valueOf_ }}</td>
+	</tr>
+	{% endfor %}
+<tr> <th width="17%">Type</th> <th colspan=2>Remediation</th> </tr>
+	{% for rem in item.Remediations.Remediation %}
+	<tr>
+	<td>{{ rem.Type }}</td>
+	<td  colspan=2>{{ rem.Description.valueOf_ }}</td>
+	</tr>
+	{% endfor %}
+<tr> <th width="17%">Type</th> <th colspan=2>Acknowledgements</th> </tr>
+	{% for ack in item.Acknowledgments.Acknowledgment %}
+	<tr>
+	<td width="17%">
+		{% for n in ack.Name %} {{ n.valueOf_  }} {% endfor %}
+	</td>
+	<td width="17%">
+		{% for n in ack.Organization %} {{ n.valueOf_  }} {% endfor %}
+	</td>
+	<td>{{ ack.Description.valueOf_ }}</td>
+	</tr>
+	{% endfor %}
+{% endfor %}
+</div>
+</tbody>
+</table>
+</div>
 </tbody>
 </table>
 </div>
