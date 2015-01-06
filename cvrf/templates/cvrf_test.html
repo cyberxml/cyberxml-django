@@ -1,0 +1,84 @@
+<html>
+<head>
+<style>
+table {
+        margin-bottom:50px;
+}
+th {
+        background:#5f9be3;
+        color:#fff;
+        font-weight:bold;
+        padding:5px; 
+        /* width:300px;
+        float:right;  */
+}
+
+td {
+        /*padding-left:10px;*/
+}
+</style>
+</head>
+<body>
+<div>
+<table width="90%">
+<tr><th width="17%">Document Title: </th><td>{{ test.DocumentTitle.valueOf_ }}</td></tr>
+<tr><th>Document Type: </th><td>{{ test.DocumentType.valueOf_ }}</td></tr>
+<tr><th>Aggregate Severity: </th><td>{{ test.AggregateSeverity.valueOf_ }}</td></tr>
+<tr><th>Publisher Type: </th><td>{{ test.DocumentPublisher.PublisherType.valueOf_ }}</td></tr>
+<tr><th>Publisher ID: </th><td>{{ test.DocumentPublisher.PublisherID.valueOf_ }}</td></tr>
+<tr><th>Contact Details:  </th><td>{{ test.DocumentPublisher.ContactDetails.valueOf_ }}</td></tr>
+<tr><th>Issuing Authority:  </th><td>{{ test.DocumentPublisher.IssuingAuthority.valueOf_ }}</td></tr>
+<tr><th>Tracking ID:  </th><td>{{ test.DocumentTracking.Identification.ID.valueOf_ }}</td></tr>
+<tr><th>Tracking Alias:  </th><td>{{ test.DocumentTracking.Identification.Alias.valueOf_ }}</td></tr>
+<tr><th>Tracking Status:  </th><td>{{ test.DocumentTracking.Status }}</td></tr>
+<tr><th>Tracking Version:  </th><td>{{ test.DocumentTracking.Version }}</td></tr>
+<tr><th>Intial Release Date:  </th><td>{{ test.DocumentTracking.InitialReleaseDate }}</td></tr>
+<tr><th>Current Release Date:  </th><td>{{ test.DocumentTracking.CurrentReleaseDate }}</td></tr>
+</table>
+<!-- Revision History -->
+<table width="90%">
+<thead>
+<tr>
+<th width="100%" colspan=3>Revision History</th>
+</tr>
+<tr>
+<th width="17%">Number</th>
+<th width="17%">Date</th>
+<th width="66%">Revision Description</th>
+</tr>
+</thead>
+<tbody>
+{% for item in test.DocumentTracking.RevisionHistory.Revision %}
+<tr>
+<td>{{ item.Number }}</td>
+<td>{{ item.Date }}</td>
+<td>{{ item.Description.valueOf_ }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+<!-- Full Product Name -->
+<div>
+<table width="90%">
+<thead>
+<th width="100%" colspan=3>Product Tree</th>
+<tr>
+<th width="17%">ProductID</th>
+<th width="17%">CPE</th>
+<th width="66%">Full Product Name</th>
+</tr>
+</thead>
+<tbody>
+{% for item in test.ProductTree.FullProductName %}
+<tr>
+<td>{{ item.ProductID }}</td>
+<td>{{ item.CPE }}</td>
+<td>{{ item.valueOf_ }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</body>
+</html>
