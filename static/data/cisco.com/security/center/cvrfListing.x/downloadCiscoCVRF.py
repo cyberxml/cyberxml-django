@@ -29,4 +29,5 @@ for u in urls:
 	uname = u.split('/')[-1]
 	# if file does not exist, download
 	if (not os.path.isfile(uname) and os.access(".", os.W_OK)):
+		print ("downloading "+uname)
 		urllib.urlretrieve (u, uname)

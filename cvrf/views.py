@@ -17,6 +17,8 @@ def rawxml(request,vendor,cvrfnum):
 		vdir = "redhat.com/security/data/cvrf/"
 	elif vendor == "cisco":
 		vdir = "cisco.com/security/center/cvrfListing.x/"
+	elif vendor == "oracle":
+		vdir = "oracle.com/documents/webcontent/cvrf/"
 	else:
 		raise Http404
 	try:
@@ -28,7 +30,7 @@ def rawxml(request,vendor,cvrfnum):
 		raise Http404
 
 # Create your views here.
-def prettyxmltest(request,vendor,cvrfnum):
+def prettyxml(request,vendor,cvrfnum):
 	cvrfnum = cvrfnum.lower()
 	vendor = vendor.lower()
 	if vendor == "ms":
@@ -37,6 +39,8 @@ def prettyxmltest(request,vendor,cvrfnum):
 		vdir = "redhat.com/security/data/cvrf/"
 	elif vendor == "cisco":
 		vdir = "cisco.com/security/center/cvrfListing.x/"
+	elif vendor == "oracle":
+		vdir = "oracle.com/documents/webcontent/cvrf/"
 	else:
 		raise Http404
 	try:
@@ -48,9 +52,10 @@ def prettyxmltest(request,vendor,cvrfnum):
 	except:
 		raise Http404
 
+'''
 #from django.views.generic import View
 from . import models
-def prettyxml(request,vendor,cvrfnum):
+def prettyxmltest(request,vendor,cvrfnum):
 	cvrfnum = cvrfnum.lower()
 	if vendor == "ms":
 		vdir = "microsoft.com/MSRC-CVRF/"
@@ -156,4 +161,4 @@ def prettyxml(request,vendor,cvrfnum):
 	# more
 	
 	return render(request, 'cvrf_table.html', {'cvrfdoc':cd})
-	
+'''	
