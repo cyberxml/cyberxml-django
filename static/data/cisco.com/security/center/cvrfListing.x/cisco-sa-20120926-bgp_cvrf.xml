@@ -1,0 +1,51 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco IOS Software Malformed Border Gateway Protocol Attribute Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20120926-bgp</ID></Identification><Status>Final</Status><Version>1.1</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2012-09-25T21:13:37</Date><Description>Initial public release</Description></Revision><Revision><Number>1.1</Number><Date>2012-10-04T15:33:54</Date><Description>Added mVPN MDT note in the "Vulnerable Products" section.</Description></Revision></RevisionHistory><InitialReleaseDate>2012-09-26T16:00:00</InitialReleaseDate><CurrentReleaseDate>2012-10-04T15:33:54</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco IOS Software contains a vulnerability in the Border Gateway Protocol (BGP) routing protocol feature.  
+
+
+
+The vulnerability can be triggered when the router receives a malformed attribute from a peer on an existing BGP session.
+
+
+
+Successful exploitation of this vulnerability can cause all BGP sessions to reset.  Repeated exploitation may result in an inability to route packets to BGP neighbors during reconvergence times.
+
+
+
+Cisco has released free software updates that address this vulnerability.  There are no workarounds for this vulnerability. 
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120926-bgp["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120926-bgp"]
+
+Note: The September 26, 2012, Cisco IOS Software Security Advisory bundled publication includes nine Cisco Security Advisories. Eight of the advisories address vulnerabilities in Cisco IOS Software, and one advisory addresses a vulnerability in Cisco Unified Communications Manager. Each Cisco IOS Software Security Advisory lists the Cisco IOS Software releases that correct the vulnerability or vulnerabilities detailed in the advisory as well as the Cisco IOS Software releases that correct all Cisco IOS Software vulnerabilities in the September 2012 bundled publication. 
+
+Individual publication links are in "Cisco Event Response: Semi-Annual Cisco IOS Software Security Advisory Bundled Publication" at the following link: 
+
+http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep12.html["http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep12.html"]
+</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120926-bgp["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120926-bgp"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference><URL>http://tools.cisco.com/security/center/content/CiscoSecurityBundle/cisco-sa-20120926-bundle</URL><Description>Summary of Semi-Annual Cisco IOS Software Security Advisory Bundled Publication, September 26, 2012</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-107859">Cisco IOS Software 15.2(1)S</FullProductName><FullProductName ProductID="CVRFPID-111551">Cisco IOS Software 15.2(1)S1</FullProductName><FullProductName ProductID="CVRFPID-109769">Cisco IOS XR Software 4.1.0</FullProductName><FullProductName ProductID="CVRFPID-116015">Cisco IOS XR Software 4.1.1</FullProductName><FullProductName ProductID="CVRFPID-116016">Cisco IOS XR Software 4.1.2</FullProductName><FullProductName ProductID="CVRFPID-116014">Cisco IOS XR Software 4.2 Base</FullProductName><FullProductName ProductID="CVRFPID-185106">Cisco IOS XR Software 4.2.1</FullProductName><FullProductName ProductID="CVRFPID-185107">Cisco IOS XR Software 4.2.2</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco IOS Software Malformed Border Gateway Protocol Attribute Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCtt35379</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">Cisco Border Gateway Protocol has a buffer overflow vulnerability that is triggered by a malformed attribute.  A successful exploit of this vulnerability may result in BGP sessions being reset.</Note></Notes><CVE>CVE-2012-4617</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-107859</ProductID><ProductID>CVRFPID-111551</ProductID><ProductID>CVRFPID-109769</ProductID><ProductID>CVRFPID-116014</ProductID><ProductID>CVRFPID-116015</ProductID><ProductID>CVRFPID-116016</ProductID><ProductID>CVRFPID-185106</ProductID><ProductID>CVRFPID-185107</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerability may cause all BGP peers to reset.  Repeated exploitation may result in an inability to route packets to BGP neighbors during reconvergence times.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.1</BaseScore><TemporalScore>5.9</TemporalScore><Vector>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no workarounds for this vulnerability.
+
+A reference document that may be useful is the "Protecting BGP" white paper here: http://www.cisco.com/web/about/security/intelligence/protecting_bgp.html["http://www.cisco.com/web/about/security/intelligence/protecting_bgp.html"]</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

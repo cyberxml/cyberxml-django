@@ -1,0 +1,207 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Multiple Vulnerabilities in Cisco Email Security Appliance</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130626-esa</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-06-26T14:07:06</Date><Description>Initial public release</Description></Revision></RevisionHistory><InitialReleaseDate>2013-06-26T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-06-27T13:41:52</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco IronPort AsyncOS Software for Cisco Email Security Appliance is affected by the following vulnerabilities:
+
+
+     Web Framework Authenticated Command Injection Vulnerability 
+    IronPort Spam Quarantine Denial of Service Vulnerability
+    Management GUI Denial of Service Vulnerability 
+
+    
+
+Successful
+exploitation of the Web Framework Authenticated Command Injection Vulnerability could allow an authenticated,
+remote attacker to execute arbitrary commands on the underlying
+operating system with elevated privileges. 
+
+Successful
+exploitation of either of the two denial of service vulnerabilities may
+cause several critical processes to become unresponsive and make the
+affected system unstable.
+
+
+
+
+
+Cisco has released free software updates that address these vulnerabilities. Workarounds that mitigate these vulnerabilities are available. This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-esa["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-esa"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-esa["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-esa"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference><URL>http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29452</URL><Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Content Security Management, Web Security, and Email Security Appliances</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-189793">Cisco Web Security Appliance (WSA) 7.1 Base</FullProductName><FullProductName ProductID="CVRFPID-189952">Cisco Web Security Appliance (WSA) 7.1.1</FullProductName><FullProductName ProductID="CVRFPID-189953">Cisco Web Security Appliance (WSA) 7.1.2</FullProductName><FullProductName ProductID="CVRFPID-189954">Cisco Web Security Appliance (WSA) 7.1.3</FullProductName><FullProductName ProductID="CVRFPID-189955">Cisco Web Security Appliance (WSA) 7.1.4</FullProductName><FullProductName ProductID="CVRFPID-189795">Cisco Web Security Appliance (WSA) 7.5 Base</FullProductName><FullProductName ProductID="CVRFPID-189956">Cisco Web Security Appliance (WSA) 7.5.1</FullProductName><FullProductName ProductID="CVRFPID-189797">Cisco Web Security Appliance (WSA) 7.7 Base</FullProductName><FullProductName ProductID="CVRFPID-189799">Cisco Email Security Appliance (ESA) 7.1 Base</FullProductName><FullProductName ProductID="CVRFPID-189960">Cisco Email Security Appliance (ESA) 7.1.1</FullProductName><FullProductName ProductID="CVRFPID-189961">Cisco Email Security Appliance (ESA) 7.1.2</FullProductName><FullProductName ProductID="CVRFPID-189962">Cisco Email Security Appliance (ESA) 7.1.3</FullProductName><FullProductName ProductID="CVRFPID-189963">Cisco Email Security Appliance (ESA) 7.1.4</FullProductName><FullProductName ProductID="CVRFPID-189964">Cisco Email Security Appliance (ESA) 7.1.5</FullProductName><FullProductName ProductID="CVRFPID-189801">Cisco Email Security Appliance (ESA) 7.3 Base</FullProductName><FullProductName ProductID="CVRFPID-190773">Cisco Email Security Appliance (ESA) 7.3.1</FullProductName><FullProductName ProductID="CVRFPID-190774">Cisco Email Security Appliance (ESA) 7.3.2</FullProductName><FullProductName ProductID="CVRFPID-189803">Cisco Email Security Appliance (ESA) 7.5 Base</FullProductName><FullProductName ProductID="CVRFPID-189965">Cisco Email Security Appliance (ESA) 7.5.1</FullProductName><FullProductName ProductID="CVRFPID-189966">Cisco Email Security Appliance (ESA) 7.5.2</FullProductName><FullProductName ProductID="CVRFPID-189805">Cisco Email Security Appliance (ESA) 7.6 Base</FullProductName><FullProductName ProductID="CVRFPID-189967">Cisco Email Security Appliance (ESA) 7.6.1</FullProductName><FullProductName ProductID="CVRFPID-189968">Cisco Email Security Appliance (ESA) 7.6.2</FullProductName><FullProductName ProductID="CVRFPID-189811">Cisco Content Security Management Appliance (SMA) 7.2 Base</FullProductName><FullProductName ProductID="CVRFPID-189958">Cisco Content Security Management Appliance (SMA) 7.2.1</FullProductName><FullProductName ProductID="CVRFPID-189959">Cisco Content Security Management Appliance (SMA) 7.2.2</FullProductName><FullProductName ProductID="CVRFPID-189813">Cisco Content Security Management Appliance (SMA) 7.7 Base</FullProductName><FullProductName ProductID="CVRFPID-189957">Cisco Content Security Management Appliance (SMA) 7.7.1</FullProductName><FullProductName ProductID="CVRFPID-189815">Cisco Content Security Management Appliance (SMA) 7.9 Base</FullProductName><FullProductName ProductID="CVRFPID-190772">Cisco Content Security Management Appliance (SMA) 7.9.1</FullProductName><FullProductName ProductID="CVRFPID-189817">Cisco Content Security Management Appliance (SMA) 8.0 Base</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Web Framework Authenticated Command Injection Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCzv85726</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the web framework code could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system with elevated privileges.   
+
+
+
+The vulnerability is due to a failure to properly sanitize user supplied input that is subsequently utilized to perform an action that leverages the underlying command-line interface of the device. An authenticated but unprivileged attacker could exploit this vulnerability by sending a crafted URL to the affected system, or by convincing a valid user to click on a malicious URL. A successful exploit could allow an attacker with sufficient knowledge to take complete control of the affected device.</Note></Notes><CVE>CVE-2013-3384</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-189793</ProductID><ProductID>CVRFPID-189795</ProductID><ProductID>CVRFPID-189797</ProductID><ProductID>CVRFPID-189952</ProductID><ProductID>CVRFPID-189953</ProductID><ProductID>CVRFPID-189954</ProductID><ProductID>CVRFPID-189955</ProductID><ProductID>CVRFPID-189956</ProductID><ProductID>CVRFPID-189799</ProductID><ProductID>CVRFPID-189801</ProductID><ProductID>CVRFPID-189803</ProductID><ProductID>CVRFPID-189805</ProductID><ProductID>CVRFPID-189960</ProductID><ProductID>CVRFPID-189961</ProductID><ProductID>CVRFPID-189962</ProductID><ProductID>CVRFPID-189963</ProductID><ProductID>CVRFPID-189964</ProductID><ProductID>CVRFPID-189965</ProductID><ProductID>CVRFPID-189966</ProductID><ProductID>CVRFPID-189967</ProductID><ProductID>CVRFPID-189968</ProductID><ProductID>CVRFPID-190773</ProductID><ProductID>CVRFPID-190774</ProductID><ProductID>CVRFPID-189811</ProductID><ProductID>CVRFPID-189813</ProductID><ProductID>CVRFPID-189815</ProductID><ProductID>CVRFPID-189957</ProductID><ProductID>CVRFPID-189958</ProductID><ProductID>CVRFPID-189959</ProductID><ProductID>CVRFPID-190772</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful
+exploitation of the Web Framework Authenticated Command Injection Vulnerability could allow an authenticated,
+remote attacker to execute arbitrary commands on the underlying
+operating system with elevated privileges. 
+
+Successful
+exploitation of either of the two DoS vulnerabilities could cause several critical processes to become unresponsive and make the
+affected system unstable.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>9.0</BaseScore><TemporalScore>7.4</TemporalScore><Vector>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>The Web Framework Authenticated Command Injection Vulnerability and Management GUI Denial of Service Vulnerability could be mitigated by disabling management access to the affected system GUI. 
+
+Administrators can use the interfaceconifg command to disable appliance management via the GUI. Alternatively, this can be done via the
+GUI by editing the management interface properties under Network-&gt;IP
+interfaces-&gt; Edit and then selecting Disable Appliance Management.
+
+
+
+Note: Administrators can manage the affected system via SSH and command-line interface while GUI access is
+disabled. However, not all commands and features may be available via command-line interface.
+
+
+
+Administrators can also limit the attack surface by restricting IP addresses that can access the management interface. This can be
+done using the adminaccessconfig command and selecting IPACCESS from the menu.
+
+
+
+Administrator should also implement Cross-Site Request Forgery
+protection if available on their platform and software release. This
+will help limit the attack surface of the Web Framework Authenticated Command Injection Vulnerability, although it will not completely eliminate it.
+
+
+
+The IronPort Spam Quarantine Denial of Service Vulnerability can be mitigated by disabling the end-user access to the ISQ service. Administrators can disable this access using the interfaceconfig command. Alternatively, this can be done via the
+GUI by editing the settings for Spam Quarantine under Monitor-&gt;Quarantines-&gt; Edit and then unchecking the option "Enable End-User Quarantine Access".
+
+
+
+Note: Users will be unable to manage their safe list and block list while end-user access is disabled.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29452["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29452"]
+</Description></Remediation></Remediations></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Management GUI Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCzv78669</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">A vulnerability in the Graphical User Interface (GUI) function in the web framework  code could allow an unauthenticated,
+remote attacker to cause multiple processes to become unresponsive, resulting in a denial of service condition.
+
+
+
+The vulnerability is due to
+improper handling, processing and termination of HTTP and HTTPS connections. An attacker could exploit this vulnerability by
+sending multiple HTTP or HTTPS requests to any management enabled interfaces of
+the affected system. A full TCP three-way handshake is required to
+exploit this vulnerability. An exploit could allow the attacker prevent management access via the GUI and cause other critical process to become unresponsive, resulting in a denial of service condition. A hard reboot of the affected system is needed to restore full functionality.</Note></Notes><CVE>CVE-2013-3385</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-189811</ProductID><ProductID>CVRFPID-189813</ProductID><ProductID>CVRFPID-189815</ProductID><ProductID>CVRFPID-189817</ProductID><ProductID>CVRFPID-189957</ProductID><ProductID>CVRFPID-189958</ProductID><ProductID>CVRFPID-189959</ProductID><ProductID>CVRFPID-190772</ProductID><ProductID>CVRFPID-189799</ProductID><ProductID>CVRFPID-189801</ProductID><ProductID>CVRFPID-189803</ProductID><ProductID>CVRFPID-189805</ProductID><ProductID>CVRFPID-189960</ProductID><ProductID>CVRFPID-189961</ProductID><ProductID>CVRFPID-189962</ProductID><ProductID>CVRFPID-189963</ProductID><ProductID>CVRFPID-189964</ProductID><ProductID>CVRFPID-189965</ProductID><ProductID>CVRFPID-189966</ProductID><ProductID>CVRFPID-189967</ProductID><ProductID>CVRFPID-189968</ProductID><ProductID>CVRFPID-190773</ProductID><ProductID>CVRFPID-190774</ProductID><ProductID>CVRFPID-189793</ProductID><ProductID>CVRFPID-189952</ProductID><ProductID>CVRFPID-189953</ProductID><ProductID>CVRFPID-189954</ProductID><ProductID>CVRFPID-189955</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful
+exploitation of the Web Framework Authenticated Command Injection Vulnerability could allow an authenticated,
+remote attacker to execute arbitrary commands on the underlying
+operating system with elevated privileges. 
+
+Successful
+exploitation of either of the two DoS vulnerabilities could cause several critical processes to become unresponsive and make the
+affected system unstable.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>The Web Framework Authenticated Command Injection Vulnerability and Management GUI Denial of Service Vulnerability could be mitigated by disabling management access to the affected system GUI. 
+
+Administrators can use the interfaceconifg command to disable appliance management via the GUI. Alternatively, this can be done via the
+GUI by editing the management interface properties under Network-&gt;IP
+interfaces-&gt; Edit and then selecting Disable Appliance Management.
+
+
+
+Note: Administrators can manage the affected system via SSH and command-line interface while GUI access is
+disabled. However, not all commands and features may be available via command-line interface.
+
+
+
+Administrators can also limit the attack surface by restricting IP addresses that can access the management interface. This can be
+done using the adminaccessconfig command and selecting IPACCESS from the menu.
+
+
+
+Administrator should also implement Cross-Site Request Forgery
+protection if available on their platform and software release. This
+will help limit the attack surface of the Web Framework Authenticated Command Injection Vulnerability, although it will not completely eliminate it.
+
+
+
+The IronPort Spam Quarantine Denial of Service Vulnerability can be mitigated by disabling the end-user access to the ISQ service. Administrators can disable this access using the interfaceconfig command. Alternatively, this can be done via the
+GUI by editing the settings for Spam Quarantine under Monitor-&gt;Quarantines-&gt; Edit and then unchecking the option "Enable End-User Quarantine Access".
+
+
+
+Note: Users will be unable to manage their safe list and block list while end-user access is disabled.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29452["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29452"]
+</Description></Remediation></Remediations></Vulnerability><Vulnerability Ordinal="3" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>IronPort Spam Quarantine Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCzv81712</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="3">A vulnerability in the IronPort Spam Quarantine (ISQ) function in the web framework code could allow an unauthenticated,
+remote attacker to cause multiple critical processes to become unresponsive, resulting in a denial of service condition.
+
+
+
+The vulnerability is due to
+improper handling and processing of TCP connection requests
+sent at high rate. An attacker could exploit this vulnerability by
+a sending sequence of TCP requests to the ISQ service port that is open on the ISQ-enabled interfaces of
+the affected system. A full TCP three-way handshake is required to
+exploit this vulnerability. An successful exploit could allow the attacker to crash
+or make unresponsive the ISQ service and cause other critical processes to become unresponsive, resulting in a denial of service condition. A hard reboot of the affected system is needed to restore full functionality.</Note></Notes><CVE>CVE-2013-3386</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-189811</ProductID><ProductID>CVRFPID-189813</ProductID><ProductID>CVRFPID-189815</ProductID><ProductID>CVRFPID-189817</ProductID><ProductID>CVRFPID-189957</ProductID><ProductID>CVRFPID-189958</ProductID><ProductID>CVRFPID-189959</ProductID><ProductID>CVRFPID-190772</ProductID><ProductID>CVRFPID-189799</ProductID><ProductID>CVRFPID-189801</ProductID><ProductID>CVRFPID-189803</ProductID><ProductID>CVRFPID-189805</ProductID><ProductID>CVRFPID-189960</ProductID><ProductID>CVRFPID-189961</ProductID><ProductID>CVRFPID-189962</ProductID><ProductID>CVRFPID-189963</ProductID><ProductID>CVRFPID-189964</ProductID><ProductID>CVRFPID-189965</ProductID><ProductID>CVRFPID-189966</ProductID><ProductID>CVRFPID-189967</ProductID><ProductID>CVRFPID-189968</ProductID><ProductID>CVRFPID-190773</ProductID><ProductID>CVRFPID-190774</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful
+exploitation of the Web Framework Authenticated Command Injection Vulnerability could allow an authenticated,
+remote attacker to execute arbitrary commands on the underlying
+operating system with elevated privileges. 
+
+Successful
+exploitation of either of the two DoS vulnerabilities could cause several critical processes to become unresponsive and make the
+affected system unstable.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>The Web Framework Authenticated Command Injection Vulnerability and Management GUI Denial of Service Vulnerability could be mitigated by disabling management access to the affected system GUI. 
+
+Administrators can use the interfaceconifg command to disable appliance management via the GUI. Alternatively, this can be done via the
+GUI by editing the management interface properties under Network-&gt;IP
+interfaces-&gt; Edit and then selecting Disable Appliance Management.
+
+
+
+Note: Administrators can manage the affected system via SSH and command-line interface while GUI access is
+disabled. However, not all commands and features may be available via command-line interface.
+
+
+
+Administrators can also limit the attack surface by restricting IP addresses that can access the management interface. This can be
+done using the adminaccessconfig command and selecting IPACCESS from the menu.
+
+
+
+Administrator should also implement Cross-Site Request Forgery
+protection if available on their platform and software release. This
+will help limit the attack surface of the Web Framework Authenticated Command Injection Vulnerability, although it will not completely eliminate it.
+
+
+
+The IronPort Spam Quarantine Denial of Service Vulnerability can be mitigated by disabling the end-user access to the ISQ service. Administrators can disable this access using the interfaceconfig command. Alternatively, this can be done via the
+GUI by editing the settings for Spam Quarantine under Monitor-&gt;Quarantines-&gt; Edit and then unchecking the option "Enable End-User Quarantine Access".
+
+
+
+Note: Users will be unable to manage their safe list and block list while end-user access is disabled.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29452["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29452"]
+</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

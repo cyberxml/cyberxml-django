@@ -1,0 +1,101 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Multiple Vulnerabilities in Cisco TelePresence TC and TE Software </DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130619-tpc</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-06-19T14:53:30</Date><Description>Initial public release</Description></Revision></RevisionHistory><InitialReleaseDate>2013-06-19T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-06-20T11:46:05</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco TelePresence TC and TE Software contain two vulnerabilities in the implementation of the Session Initiation Protocol (SIP) that could allow an unauthenticated remote attacker to cause a denial of service (DoS) condition.
+
+Additionally, Cisco TelePresence TC Software contain an adjacent root access vulnerability that could allow an attacker on the same physical or logical Layer-2 network as the affected system to gain an unauthenticated root shell.
+
+
+
+Cisco has released free software updates that address these vulnerabilities. Workarounds that mitigate the Cisco TelePresence TC and TE Software SIP Denial of Service vulnerabilities are available.
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130619-tpc["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130619-tpc"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130619-tpc["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130619-tpc"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-192566">Cisco TelePresence TC Software 3.1 Base</FullProductName><FullProductName ProductID="CVRFPID-192577">Cisco TelePresence TC Software 3.1.5</FullProductName><FullProductName ProductID="CVRFPID-192568">Cisco TelePresence TC Software 4.2 Base</FullProductName><FullProductName ProductID="CVRFPID-192578">Cisco TelePresence TC Software 4.2.4</FullProductName><FullProductName ProductID="CVRFPID-192570">Cisco TelePresence TC Software 5.0 Base</FullProductName><FullProductName ProductID="CVRFPID-192579">Cisco TelePresence TC Software 5.0.2</FullProductName><FullProductName ProductID="CVRFPID-192580">Cisco TelePresence TC Software 5.0.2-CUCM</FullProductName><FullProductName ProductID="CVRFPID-192572">Cisco TelePresence TC Software 5.1 Base</FullProductName><FullProductName ProductID="CVRFPID-192581">Cisco TelePresence TC Software 5.1.3</FullProductName><FullProductName ProductID="CVRFPID-192582">Cisco TelePresence TC Software 5.1.3-CUCM</FullProductName><FullProductName ProductID="CVRFPID-192583">Cisco TelePresence TC Software 5.1.4</FullProductName><FullProductName ProductID="CVRFPID-192584">Cisco TelePresence TC Software 5.1.4-CUCM</FullProductName><FullProductName ProductID="CVRFPID-192585">Cisco TelePresence TC Software 5.1.5</FullProductName><FullProductName ProductID="CVRFPID-192586">Cisco TelePresence TC Software 5.1.5-CUCM</FullProductName><FullProductName ProductID="CVRFPID-192587">Cisco TelePresence TC Software 5.1.6</FullProductName><FullProductName ProductID="CVRFPID-192588">Cisco TelePresence TC Software 5.1.6-CUCM</FullProductName><FullProductName ProductID="CVRFPID-192589">Cisco TelePresence TC Software 5.1.7</FullProductName><FullProductName ProductID="CVRFPID-192590">Cisco TelePresence TC Software 5.1.7-CUCM</FullProductName><FullProductName ProductID="CVRFPID-192574">Cisco TelePresence TC Software 6.0 Base</FullProductName><FullProductName ProductID="CVRFPID-192591">Cisco TelePresence TC Software 6.0.0</FullProductName><FullProductName ProductID="CVRFPID-192592">Cisco TelePresence TC Software 6.0.0-CUCM</FullProductName><FullProductName ProductID="CVRFPID-192593">Cisco TelePresence TC Software 6.0.1</FullProductName><FullProductName ProductID="CVRFPID-192594">Cisco TelePresence TC Software 6.0.1-CUCM</FullProductName><FullProductName ProductID="CVRFPID-192595">Cisco TelePresence TC Software 6.0.2</FullProductName><FullProductName ProductID="CVRFPID-192603">Cisco TelePresence TE Software 4.0 Base</FullProductName><FullProductName ProductID="CVRFPID-192608">Cisco TelePresence TE Software 4.0.0</FullProductName><FullProductName ProductID="CVRFPID-192605">Cisco TelePresence TE Software 4.1 Base</FullProductName><FullProductName ProductID="CVRFPID-192609">Cisco TelePresence TE Software 4.1.1</FullProductName><FullProductName ProductID="CVRFPID-192610">Cisco TelePresence TE Software 4.1.1-CUCM</FullProductName><FullProductName ProductID="CVRFPID-192611">Cisco TelePresence TE Software 4.1.2</FullProductName><FullProductName ProductID="CVRFPID-192612">Cisco TelePresence TE Software 4.1.2-CUCM</FullProductName><FullProductName ProductID="CVRFPID-192607">Cisco TelePresence TE Software 6.0 Base</FullProductName><FullProductName ProductID="CVRFPID-192613">Cisco TelePresence TE Software 6.0.0</FullProductName><FullProductName ProductID="CVRFPID-192614">Cisco TelePresence TE Software 6.0.1</FullProductName><FullProductName ProductID="CVRFPID-192615">Cisco TelePresence TE Software 6.0.2</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco TelePresence TC and TE Software SIP Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCue01743</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the implementation of the Session Initiation Protocol (SIP) engine of Cisco TelePresence products running Cisco TelePresence TC and TE Software could allow an unauthenticated, remote attacker to trigger the reload of the affected system.
+
+
+
+The vulnerability is due to insufficient validation of crafted SIP packets. An attacker could exploit this vulnerability by sending a SIP packet to the affected system.</Note></Notes><CVE>CVE-2013-3377</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-192566</ProductID><ProductID>CVRFPID-192568</ProductID><ProductID>CVRFPID-192570</ProductID><ProductID>CVRFPID-192572</ProductID><ProductID>CVRFPID-192577</ProductID><ProductID>CVRFPID-192578</ProductID><ProductID>CVRFPID-192579</ProductID><ProductID>CVRFPID-192580</ProductID><ProductID>CVRFPID-192581</ProductID><ProductID>CVRFPID-192582</ProductID><ProductID>CVRFPID-192583</ProductID><ProductID>CVRFPID-192584</ProductID><ProductID>CVRFPID-192585</ProductID><ProductID>CVRFPID-192586</ProductID><ProductID>CVRFPID-192587</ProductID><ProductID>CVRFPID-192603</ProductID><ProductID>CVRFPID-192605</ProductID><ProductID>CVRFPID-192607</ProductID><ProductID>CVRFPID-192608</ProductID><ProductID>CVRFPID-192609</ProductID><ProductID>CVRFPID-192610</ProductID><ProductID>CVRFPID-192611</ProductID><ProductID>CVRFPID-192612</ProductID><ProductID>CVRFPID-192613</ProductID><ProductID>CVRFPID-192614</ProductID><ProductID>CVRFPID-192615</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the Cisco TelePresence TC and TE Software SIP DoS vulnerabilities may cause the affected system to become unresponsive or reload.
+
+Successful exploitation of the Cisco TelePresence TC Software Adjacent root Access Vulnerability  could allow
+an attacker on the same physical or logical Layer-2 network as
+the affected system to gain an unauthenticated root shell. </Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Cisco TelePresence TC and TE Software SIP Denial of Service Vulnerabilities
+
+
+
+If SIP it is not in use, a possible workaround for these vulnerabilities can be achieved by disabling the SIP service: set the NetworkServices SIP Mode to Off by issuing the following xCommand:
+xConfiguration NetworkServices SIP Mode: Off
+Alternatively, administrators can use the web interface to disable the SIP service: navigate to Configuration &gt; Advanced Configuration &gt; Network Services and set the SIP mode to Off.
+
+
+
+Cisco TelePresence TC Software Adjacent root Access Vulnerability
+
+
+
+There is no workaround that mitigates this vulnerability.</Description></Remediation></Remediations></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco TelePresence TC and TE Software SIP Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCuf89557</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">A vulnerability in the implementation of the Session Initiation Protocol (SIP) engine of Cisco TelePresence products running Cisco TelePresence TC and TE Software could allow an unauthenticated, remote attacker to cause the affected device to become unresponsive.
+
+
+
+The vulnerability is due to insufficient validation of crafted SIP packets. An attacker could exploit this vulnerability by sending a SIP packet to the affected system. An exploit could allow the attacker to cause the affected device to become unresponsive for a certain amount of time. Repeated exploitation may cause a denial of service (DoS) condition.</Note></Notes><CVE>CVE-2013-3378</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-192566</ProductID><ProductID>CVRFPID-192568</ProductID><ProductID>CVRFPID-192570</ProductID><ProductID>CVRFPID-192572</ProductID><ProductID>CVRFPID-192574</ProductID><ProductID>CVRFPID-192577</ProductID><ProductID>CVRFPID-192578</ProductID><ProductID>CVRFPID-192579</ProductID><ProductID>CVRFPID-192580</ProductID><ProductID>CVRFPID-192581</ProductID><ProductID>CVRFPID-192582</ProductID><ProductID>CVRFPID-192583</ProductID><ProductID>CVRFPID-192584</ProductID><ProductID>CVRFPID-192585</ProductID><ProductID>CVRFPID-192586</ProductID><ProductID>CVRFPID-192587</ProductID><ProductID>CVRFPID-192588</ProductID><ProductID>CVRFPID-192589</ProductID><ProductID>CVRFPID-192590</ProductID><ProductID>CVRFPID-192591</ProductID><ProductID>CVRFPID-192592</ProductID><ProductID>CVRFPID-192593</ProductID><ProductID>CVRFPID-192594</ProductID><ProductID>CVRFPID-192595</ProductID><ProductID>CVRFPID-192603</ProductID><ProductID>CVRFPID-192605</ProductID><ProductID>CVRFPID-192607</ProductID><ProductID>CVRFPID-192608</ProductID><ProductID>CVRFPID-192609</ProductID><ProductID>CVRFPID-192610</ProductID><ProductID>CVRFPID-192611</ProductID><ProductID>CVRFPID-192612</ProductID><ProductID>CVRFPID-192613</ProductID><ProductID>CVRFPID-192614</ProductID><ProductID>CVRFPID-192615</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the Cisco TelePresence TC and TE Software SIP DoS vulnerabilities may cause the affected system to become unresponsive or reload.
+
+Successful exploitation of the Cisco TelePresence TC Software Adjacent root Access Vulnerability  could allow
+an attacker on the same physical or logical Layer-2 network as
+the affected system to gain an unauthenticated root shell. </Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Cisco TelePresence TC and TE Software SIP Denial of Service Vulnerabilities
+
+
+
+If SIP it is not in use, a possible workaround for these vulnerabilities can be achieved by disabling the SIP service: set the NetworkServices SIP Mode to Off by issuing the following xCommand:
+xConfiguration NetworkServices SIP Mode: Off
+Alternatively, administrators can use the web interface to disable the SIP service: navigate to Configuration &gt; Advanced Configuration &gt; Network Services and set the SIP mode to Off.
+
+
+
+Cisco TelePresence TC Software Adjacent root Access Vulnerability
+
+
+
+There is no workaround that mitigates this vulnerability.</Description></Remediation></Remediations></Vulnerability><Vulnerability Ordinal="3" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco TelePresence TC Software Adjacent root Access Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCts37781</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="3">A vulnerability in the implementation of firewall rules could allow an authenticated, adjacent attacker to gain root shell access to affected system.
+
+
+
+The vulnerability is due to improper implementation of allowed hosts in the firewall rules. An attacker could exploit this vulnerability by connecting to the management IP address of the affected system. The attacker would need to be logically or physically adjacent to exploit this vulnerability. An exploit could allow the attacker to gain root access to the shell.</Note></Notes><CVE>CVE-2013-3379</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-192566</ProductID><ProductID>CVRFPID-192577</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the Cisco TelePresence TC and TE Software SIP DoS vulnerabilities may cause the affected system to become unresponsive or reload.
+
+Successful exploitation of the Cisco TelePresence TC Software Adjacent root Access Vulnerability  could allow
+an attacker on the same physical or logical Layer-2 network as
+the affected system to gain an unauthenticated root shell. </Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>8.3</BaseScore><TemporalScore>6.9</TemporalScore><Vector>AV:A/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Cisco TelePresence TC and TE Software SIP Denial of Service Vulnerabilities
+
+
+
+If SIP it is not in use, a possible workaround for these vulnerabilities can be achieved by disabling the SIP service: set the NetworkServices SIP Mode to Off by issuing the following xCommand:
+xConfiguration NetworkServices SIP Mode: Off
+Alternatively, administrators can use the web interface to disable the SIP service: navigate to Configuration &gt; Advanced Configuration &gt; Network Services and set the SIP mode to Off.
+
+
+
+Cisco TelePresence TC Software Adjacent root Access Vulnerability
+
+
+
+There is no workaround that mitigates this vulnerability.</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

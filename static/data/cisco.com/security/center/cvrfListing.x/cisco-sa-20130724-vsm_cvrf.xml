@@ -1,0 +1,98 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Multiple Vulnerabilities in the Cisco Video Surveillance Manager</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130724-vsm</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-07-24T15:17:03</Date><Description>Initial public release</Description></Revision></RevisionHistory><InitialReleaseDate>2013-07-24T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-07-24T15:17:03</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">The Cisco Video Surveillance Manager (VSM) allows operations managers and system integrators to build customized video surveillance networks to meet their needs. Cisco VSM provides centralized configuration, management, display, and control of video from Cisco and third-party surveillance endpoints. Multiple security vulnerabilities exist in versions of Cisco VSM prior to 7.0.0, which may allow an attacker to gain full administrative privileges on the system.
+
+
+
+More information on Cisco VSM can be found at http://www.cisco.com/en/US/products/ps10818/index.html["http://www.cisco.com/en/US/products/ps10818/index.html"]. 
+
+
+
+Cisco has released software updates that address these vulnerabilities. Workarounds that mitigate these vulnerabilities are available.
+
+
+
+This advisory is available at the following link: http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130724-vsm["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130724-vsm"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130724-vsm["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130724-vsm"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130724-vsm</URL><Description>Multiple Vulnerabilities in the Cisco Video Surveillance Manager</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-95887">Cisco Video Surveillance Operations Manager Software 3.0.0</FullProductName><FullProductName ProductID="CVRFPID-95889">Cisco Video Surveillance Operations Manager Software 3.1.0</FullProductName><FullProductName ProductID="CVRFPID-95894">Cisco Video Surveillance Operations Manager Software 3.1.1</FullProductName><FullProductName ProductID="CVRFPID-95893">Cisco Video Surveillance Operations Manager Software 4.0.0</FullProductName><FullProductName ProductID="CVRFPID-95896">Cisco Video Surveillance Operations Manager Software 4.1.0</FullProductName><FullProductName ProductID="CVRFPID-95899">Cisco Video Surveillance Operations Manager Software 4.1.1</FullProductName><FullProductName ProductID="CVRFPID-95898">Cisco Video Surveillance Operations Manager Software 4.2.0</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Video Surveillance Manager Directory Traversal Information Disclosure Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCsv37163</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in Cisco Video Surveillance Manager (VSM) could allow an unauthenticated, remote attacker to conduct directory traversal attacks and gain access to sensitive information.
+
+
+
+The vulnerability is due to improper validation of user-supplied input processed by the affected software. An unauthenticated, remote attacker could exploit this vulnerability by convincing a targeted user to follow a crafted URL. If successful, the attacker could launch directory traversal attacks on the targeted device and access sensitive information from arbitrary files on the system. The attacker could use the information to conduct further attacks.</Note></Notes><CVE>CVE-2013-3429</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-95887</ProductID><ProductID>CVRFPID-95889</ProductID><ProductID>CVRFPID-95893</ProductID><ProductID>CVRFPID-95894</ProductID><ProductID>CVRFPID-95896</ProductID><ProductID>CVRFPID-95898</ProductID><ProductID>CVRFPID-95899</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerabilities may allow an unauthenticated, remote attacker to gain administrative control of Cisco VSM. This access could allow an attacker to  create, modify and remove camera feeds, archives, logs and users on the VSM.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:N/A:N/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>The vulnerabilities described in this document can be mitigated or remediated by following the suggestions in the guide Securing Cisco Video Surveillance Manager Release 6.x: Best Practices and Recommendations["http://www.cisco.com/en/US/partner/docs/security/physical_security/video_surveillance/network/design/bestprac.html"] and removing the Broadware sample code. 
+
+
+
+The Broadware package name differs by the version of Cisco VSM and can be removed by issuing the command:
+
+
+rpm -e [package.rpm]
+The following example shows Cisco VSM software version 6.3.2(20) with the removal command:
+
+
+# rpm -qa | grep -i Cisco_VSBWT
+Cisco_VSBWT-6.3.2-20
+
+
+# rpm -e Cisco_VSBWT-6.3.2-20
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130724-vsm</URL><Description>Multiple Vulnerabilities in the Cisco Video Surveillance Manager</Description></Reference></References></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Video Surveillance Manager Insufficient Authentication Information Disclosure Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCsv37288</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">A vulnerability in Cisco Video Surveillance Manager (VSM) could allow an unauthenticated, remote attacker to gain access to sensitive information.
+
+
+
+The vulnerability is due to insufficient authentication protections imposed by the affected software. An unauthenticated, remote attacker could exploit this vulnerability to gain access to sensitive information, such as configuration files, monitoring pages archives, and system logs. If successful, the attacker could use the information to conduct further attacks.</Note></Notes><CVE>CVE-2013-3430</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-95887</ProductID><ProductID>CVRFPID-95889</ProductID><ProductID>CVRFPID-95893</ProductID><ProductID>CVRFPID-95894</ProductID><ProductID>CVRFPID-95896</ProductID><ProductID>CVRFPID-95898</ProductID><ProductID>CVRFPID-95899</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerabilities may allow an unauthenticated, remote attacker to gain administrative control of Cisco VSM. This access could allow an attacker to  create, modify and remove camera feeds, archives, logs and users on the VSM.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>9.0</BaseScore><TemporalScore>7.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:P/A:P/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>The vulnerabilities described in this document can be mitigated or remediated by following the suggestions in the guide Securing Cisco Video Surveillance Manager Release 6.x: Best Practices and Recommendations["http://www.cisco.com/en/US/partner/docs/security/physical_security/video_surveillance/network/design/bestprac.html"] and removing the Broadware sample code. 
+
+
+
+The Broadware package name differs by the version of Cisco VSM and can be removed by issuing the command:
+
+
+rpm -e [package.rpm]
+The following example shows Cisco VSM software version 6.3.2(20) with the removal command:
+
+
+# rpm -qa | grep -i Cisco_VSBWT
+Cisco_VSBWT-6.3.2-20
+
+
+# rpm -e Cisco_VSBWT-6.3.2-20
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130724-vsm</URL><Description>Multiple Vulnerabilities in the Cisco Video Surveillance Manager</Description></Reference></References></Vulnerability><Vulnerability Ordinal="3" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Video Surveillance Manager Insufficient Authentication Information Disclosure Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCsv40169</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="3">A vulnerability in Cisco Video Surveillance Manager (VSM) could allow an unauthenticated, remote attacker to gain access to sensitive information.
+
+
+
+The vulnerability is due to insufficient authentication protections imposed by the affected software. An unauthenticated, remote attacker could exploit this vulnerability to gain access to sensitive information, such as configuration files, monitoring pages archives, and system logs. If successful, the attacker could use the information to conduct further attacks.</Note></Notes><CVE>CVE-2013-3431</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-95887</ProductID><ProductID>CVRFPID-95889</ProductID><ProductID>CVRFPID-95893</ProductID><ProductID>CVRFPID-95894</ProductID><ProductID>CVRFPID-95896</ProductID><ProductID>CVRFPID-95898</ProductID><ProductID>CVRFPID-95899</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerabilities may allow an unauthenticated, remote attacker to gain administrative control of Cisco VSM. This access could allow an attacker to  create, modify and remove camera feeds, archives, logs and users on the VSM.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:N/A:N/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>The vulnerabilities described in this document can be mitigated or remediated by following the suggestions in the guide Securing Cisco Video Surveillance Manager Release 6.x: Best Practices and Recommendations["http://www.cisco.com/en/US/partner/docs/security/physical_security/video_surveillance/network/design/bestprac.html"] and removing the Broadware sample code. 
+
+
+
+The Broadware package name differs by the version of Cisco VSM and can be removed by issuing the command:
+
+
+rpm -e [package.rpm]
+The following example shows Cisco VSM software version 6.3.2(20) with the removal command:
+
+
+# rpm -qa | grep -i Cisco_VSBWT
+Cisco_VSBWT-6.3.2-20
+
+
+# rpm -e Cisco_VSBWT-6.3.2-20
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130724-vsm</URL><Description>Multiple Vulnerabilities in the Cisco Video Surveillance Manager</Description></Reference></References></Vulnerability></cvrfdoc>

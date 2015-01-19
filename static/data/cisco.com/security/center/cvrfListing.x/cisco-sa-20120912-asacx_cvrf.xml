@@ -1,0 +1,85 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco ASA-CX and Cisco PRSM Log Retention Denial of Service Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20120912-asacx</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2012-09-12T15:01:54</Date><Description>Initial public release</Description></Revision></RevisionHistory><InitialReleaseDate>2012-09-12T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-01-25T01:04:41</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco ASA-CX Context-Aware Security appliance and Cisco Prime Security Manager (PRSM) contain a denial of service (DoS) vulnerability in versions prior to 9.0.2-103.
+
+
+
+Successful exploitation of this vulnerability on the Cisco ASA-CX could cause the device to stop processing user traffic and prevent management access to the Cisco ASA-CX.
+
+Successful exploitation of this vulnerability on the Cisco PRSM could cause the software to become unresponsive and unavailable.
+
+
+
+There are no workarounds for this vulnerability, but some mitigations are available.
+
+
+
+Cisco has released free software updates that address this vulnerability. This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120912-asacx["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120912-asacx"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120912-asacx["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120912-asacx"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference><URL>http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=26840</URL><Description>Identifying and Mitigating Exploitation of the Cisco ASA-CX and Cisco PRSM Log Retention Denial of Service Vulnerability</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-184688">Cisco ASA CX Context-Aware Security Software 9.0.1-40</FullProductName><FullProductName ProductID="CVRFPID-184689">Cisco ASA CX Context-Aware Security Software 9.0.2-68</FullProductName><FullProductName ProductID="CVRFPID-184693">Cisco Prime Security Manager (PRSM) 9.0.1-40</FullProductName><FullProductName ProductID="CVRFPID-184694">Cisco Prime Security Manager (PRSM) 9.0.2-68</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco ASA-CX and Cisco PRSM Log Retention Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCub70603</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">Cisco ASA-CX Context-Aware Security software and Cisco Prime Security Manager contain a vulnerability that could allow an unauthenticated, remote attacker to cause a denial of service. 
+
+
+
+The vulnerability is due to incorrect handling of log retention. An attacker could exploit this vulnerability by sending a large number of packets to the Cisco ASA-CX or Cisco PRSM appliance's management interface. An exploit could cause ASA-CX appliance to lock up and stop processing user traffic. An exploit could cause Cisco PRSM appliance to become unresponsive and unavailable for managing Cisco ASA-CX appliance.
+
+
+</Note></Notes><CVE>CVE-2012-4629</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-184688</ProductID><ProductID>CVRFPID-184689</ProductID><ProductID>CVRFPID-184693</ProductID><ProductID>CVRFPID-184694</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerability on the Cisco ASA-CX Context-Aware Security appliance may cause the device to become unresponsive and stop processing user traffic.
+
+
+
+Successful exploitation of this vulnerability could cause the Cisco PRSM to become unresponsive and unavailable for managing Cisco ASA-CX software.
+
+
+
+
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no workarounds for this vulnerability.
+
+
+
+If the vulnerability has been exploited on the Cisco ASA-CX and the traffic is interrupted, as a mitigation, Modular Policy Framework (MPF) configuration on the Cisco ASA that is used to direct the user traffic towards the Cisco ASA-CX can be removed. This will cause all user traffic to bypass Cisco ASA-CX module inspection and allow it to pass through the Cisco ASA.
+
+
+
+The following example shows how to disable the redirecting of web traffic to the Cisco ASA-CX from the Cisco ASA firewall:
+
+
+
+
+
+hostname(config)# class-map http_traffic
+hostname(config-cmap)# match port tcp eq 80
+hostname(config)# policy-map http_traffic_policy
+hostname(config-pmap)# class http_traffic
+hostname(config-pmap-c)# no cxsc
+
+
+
+There are no similar mitigations available for Cisco Prime Security Manager.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the companion document for this Advisory: http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=26840["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=26840"]
+</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

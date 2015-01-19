@@ -1,0 +1,77 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Undocumented Test Interface in Cisco Small Business Devices</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20140110-sbd</ID></Identification><Status>Final</Status><Version>1.5</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2014-01-10T15:35:14</Date><Description>Initial public release.</Description></Revision><Revision><Number>1.1</Number><Date>2014-01-10T22:18:05</Date><Description>Updated Affected Products section to add Belkin Incident Response Team contact information.</Description></Revision><Revision><Number>1.2</Number><Date>2014-01-24T21:39:52</Date><Description>Fixed broken hyperlink in "Summary" section.</Description></Revision><Revision><Number>1.3</Number><Date>2014-01-28T21:15:34</Date><Description>Added fixed software version information.  Added Cisco Small Business Support Center contact information.</Description></Revision><Revision><Number>1.4</Number><Date>2014-03-14T21:18:05</Date><Description>Added download link for RVS4000 firmware version 2.0.3.4 to "Software Versions and Fixes."</Description></Revision><Revision><Number>1.5</Number><Date>2014-04-23T18:22:28</Date><Description>Added NOTE regarding new vulnerability information to the Summary section.</Description></Revision></RevisionHistory><InitialReleaseDate>2014-01-10T16:00:00</InitialReleaseDate><CurrentReleaseDate>2014-04-23T18:22:28</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">A vulnerability in the Cisco WAP4410N Wireless-N Access Point, Cisco WRVS4400N Wireless-N Gigabit Security Router, and the Cisco RVS4000 4-port Gigabit Security Router could allow an unauthenticated, remote attacker to gain root-level access to an affected device.
+
+
+
+Note: Additional research performed by Mr. Eloi Vanderbeken during April 2014 seems to indicate that some products may be affected by another vulnerability, introduced while fixing the original "TCP port 32764 Undocumented Test Interface" vulnerability. Cisco has confirmed the undocumented test interface has been completely removed by the firmware images listed in this advisory and cannot be re-enabled in the Cisco WAP4410N Wireless-N Access Point, Cisco WRVS4400N Wireless-N Gigabit Security Router, and the Cisco RVS4000 4-port Gigabit Security Router.
+
+
+
+Cisco has released free software updates that address these vulnerabilities. Workarounds that mitigate these vulnerabilities are not available.
+This advisory is available at the following link: 
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140110-sbd["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140110-sbd"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140110-sbd["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140110-sbd"]
+
+
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following email addresses:
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140110-sbd</URL><Description>Undocumented Test Interface in Cisco Small Business Devices</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-98912">Cisco RVS4000 Gigabit Security Router - VPN Firmware 1.3.0.5</FullProductName><FullProductName ProductID="CVRFPID-109686">Cisco RVS4000 Gigabit Security Router - VPN Firmware 1.3.1.0</FullProductName><FullProductName ProductID="CVRFPID-109687">Cisco RVS4000 Gigabit Security Router - VPN Firmware 1.3.2.0</FullProductName><FullProductName ProductID="CVRFPID-110299">Cisco RVS4000 Gigabit Security Router - VPN Firmware 1.3.3.5</FullProductName><FullProductName ProductID="CVRFPID-109689">Cisco RVS4000 Gigabit Security Router - VPN Firmware 2.0 Base</FullProductName><FullProductName ProductID="CVRFPID-109690">Cisco RVS4000 Gigabit Security Router - VPN Firmware 2.0.0.3</FullProductName><FullProductName ProductID="CVRFPID-197072">Cisco RVS4000 Gigabit Security Router - VPN Firmware 2.0.2.7</FullProductName><FullProductName ProductID="CVRFPID-197073">Cisco RVS4000 Gigabit Security Router - VPN Firmware 2.0.3.2</FullProductName><FullProductName ProductID="CVRFPID-109693">Cisco WRVS4400N Gigabit Security Router 1.1 Base</FullProductName><FullProductName ProductID="CVRFPID-109694">Cisco WRVS4400N Gigabit Security Router 1.1.13</FullProductName><FullProductName ProductID="CVRFPID-109696">Cisco WRVS4400N Gigabit Security Router 2.0 Base</FullProductName><FullProductName ProductID="CVRFPID-109697">Cisco WRVS4400N Gigabit Security Router 2.0.0.7</FullProductName><FullProductName ProductID="CVRFPID-109698">Cisco WRVS4400N Gigabit Security Router 2.0.0.8</FullProductName><FullProductName ProductID="CVRFPID-109699">Cisco WRVS4400N Gigabit Security Router 2.0.1.3</FullProductName><FullProductName ProductID="CVRFPID-197074">Cisco WRVS4400N Gigabit Security Router 2.0.2.1</FullProductName><FullProductName ProductID="CVRFPID-197077">Cisco WAP4410N Wireless-N Access Point Firware 2.0 Base</FullProductName><FullProductName ProductID="CVRFPID-197078">Cisco WAP4410N Wireless-N Access Point Firware 2.0.3.3</FullProductName><FullProductName ProductID="CVRFPID-197079">Cisco WAP4410N Wireless-N Access Point Firware 2.0.4.2</FullProductName><FullProductName ProductID="CVRFPID-197080">Cisco WAP4410N Wireless-N Access Point Firware 2.0.5.3</FullProductName><FullProductName ProductID="CVRFPID-197081">Cisco WAP4410N Wireless-N Access Point Firware 2.0.6.1</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Undocumented Test Interface in Cisco Small Business WAP4410N</Title><ID SystemName="Cisco Bug ID">CSCum37566</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the Cisco
+WAP4410N Wireless-N Access Point could allow an
+unauthenticated, remote attacker to gain root-level access to the affected device.
+
+
+
+The vulnerability is due to a service
+listening on TCP port 32764 of the affected device. An attacker could
+exploit this vulnerability by accessing the affected device from the Wireless LAN (WLAN) or the physical LAN interface and issuing arbitrary commands within the underlying
+operating system. An exploit could allow the attacker to gain access to
+user credentials for the administrator account of the device.  The
+exploit can also allow the attacker to issue arbitrary commands within
+the shell as the root level user.</Note></Notes><CVE>CVE-2014-0659</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-197077</ProductID><ProductID>CVRFPID-197078</ProductID><ProductID>CVRFPID-197079</ProductID><ProductID>CVRFPID-197080</ProductID><ProductID>CVRFPID-197081</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerabilities described in this document could allow an unauthenticated, remote attacker to execute arbitrary commands on the device with elevated privileges. This could cause the device to become unresponsive or cause the device configuration to restore to the factory default.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>10.0</BaseScore><TemporalScore>10.0</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:H/RL:U/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no known workarounds that mitigate these vulnerabilities.</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140110-sbd</URL><Description>Undocumented Test Interface in Cisco Small Business Devices</Description></Reference></References></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Undocumented Test Interface in Cisco Small Business RVS4000</Title><ID SystemName="Cisco Bug ID">CSCum43685</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">A vulnerability in the underlying operating system of the Cisco
+RVS4000 4-port Gigabit Security Router could allow an
+unauthenticated, remote attacker to gain root-level access to the shell
+of the affected device.
+
+
+
+The vulnerability is due to a service
+listening on TCP port 32764 on the LAN interface of the affected device. An attacker could
+exploit this vulnerability by accessing the affected device from the LAN
+side interface and issuing arbitrary commands within the underlying
+operating system. An exploit could allow the attacker to gain access to
+user credentials for the administrator account of the device.  The
+exploit can also allow the attacker to issue arbitrary commands within
+the shell as the root level user.</Note></Notes><CVE>CVE-2014-0659</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-98912</ProductID><ProductID>CVRFPID-109686</ProductID><ProductID>CVRFPID-109687</ProductID><ProductID>CVRFPID-109689</ProductID><ProductID>CVRFPID-109690</ProductID><ProductID>CVRFPID-110299</ProductID><ProductID>CVRFPID-197072</ProductID><ProductID>CVRFPID-197073</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerabilities described in this document could allow an unauthenticated, remote attacker to execute arbitrary commands on the device with elevated privileges. This could cause the device to become unresponsive or cause the device configuration to restore to the factory default.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>10.0</BaseScore><TemporalScore>10.0</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:H/RL:U/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no known workarounds that mitigate these vulnerabilities.</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140110-sbd</URL><Description>Undocumented Test Interface in Cisco Small Business Devices</Description></Reference></References></Vulnerability><Vulnerability Ordinal="3" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Undocumented Test Interface in Cisco Small Business WRVS4400N</Title><ID SystemName="Cisco Bug ID">CSCum43693</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="3">A vulnerability in the underlying operating system of the Cisco
+Wireless-N VPN Router (WRVS4400N) could allow an
+unauthenticated, remote attacker to gain root level access to the shell
+of the affected device.
+
+
+
+The vulnerability is due to a service
+listening on TCP port 32764 on the LAN interface of the affected device. An attacker could
+exploit this vulnerability by accessing the affected device from the LAN
+side interface and issuing arbitrary commands within the underlying
+operating system. An exploit could allow the attacker to gain access to
+user credentials for the administrator account of the device.  The
+exploit can also allow the attacker to issue arbitrary commands within
+the shell as the root level user.</Note></Notes><CVE>CVE-2014-0659</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-109693</ProductID><ProductID>CVRFPID-109694</ProductID><ProductID>CVRFPID-109696</ProductID><ProductID>CVRFPID-109697</ProductID><ProductID>CVRFPID-109698</ProductID><ProductID>CVRFPID-109699</ProductID><ProductID>CVRFPID-197074</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerabilities described in this document could allow an unauthenticated, remote attacker to execute arbitrary commands on the device with elevated privileges. This could cause the device to become unresponsive or cause the device configuration to restore to the factory default.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>10.0</BaseScore><TemporalScore>10.0</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:H/RL:U/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no known workarounds that mitigate these vulnerabilities.</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140110-sbd</URL><Description>Undocumented Test Interface in Cisco Small Business Devices</Description></Reference></References></Vulnerability></cvrfdoc>

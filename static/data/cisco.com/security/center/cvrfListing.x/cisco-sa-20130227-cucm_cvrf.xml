@@ -1,0 +1,53 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco Unified Communications Manager Multiple Denial of Service Vulnerabilities</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130227-cucm</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-02-27T15:53:00</Date><Description>Initial public release.</Description></Revision></RevisionHistory><InitialReleaseDate>2013-02-27T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-02-27T15:53:00</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco Unified Communications Manager contains two vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition. Exploitation of these vulnerabilities could cause an interruption of voice services.
+
+
+
+Cisco has released free software updates that address these vulnerabilities. This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130227-cucm["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130227-cucm"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130227-cucm["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130227-cucm"]
+
+
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses:
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.</DocumentDistribution><DocumentReferences><Reference><URL>http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28034</URL><Description>Identification and Mitigation of Vulnerabilities in Cisco Voice and Unified Communications Products</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-101512">Cisco Unified Communications Manager 8.6 Base</FullProductName><FullProductName ProductID="CVRFPID-189974">Cisco Unified Communications Manager 9.0 Base</FullProductName><FullProductName ProductID="CVRFPID-189976">Cisco Unified Communications Manager 9.0(1) Base</FullProductName><FullProductName ProductID="CVRFPID-189978">Cisco Unified Communications Manager 9.1 Base</FullProductName><FullProductName ProductID="CVRFPID-189980">Cisco Unified Communications Manager 9.1(1) Base</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Unified Communication Manager Location Bandwidth Manager (LBM) Poisoning Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCub28920</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">Cisco Unified Communications Manager 9.0 contains a vulnerability
+that could allow an unauthenticated, remote attacker to poison the
+Location Bandwidth Manager (LBM) transaction records.
+
+
+
+The
+vulnerability is due to a lack of authentication of the remote LBM Hub
+node in the Intracluster communication between LBMs. An attacker could exploit this vulnerability by poisoning the LBM transaction records to consume all available bandwidth pools.  An
+exploit could allow the attacker to consume all bandwidth and deny
+calls.</Note></Notes><CVE>CVE-2013-1134</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-189974</ProductID><ProductID>CVRFPID-189976</ProductID><ProductID>CVRFPID-189978</ProductID><ProductID>CVRFPID-189980</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerabilities that are described in this advisory could allow a remote attacker to trigger a memory leak or a denial of service condition resulting in the interruption of voice services.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.1</BaseScore><TemporalScore>5.9</TemporalScore><Vector>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Filtering traffic on TCP port 9004 from untrusted sources can provide a workaround for the LBM vulnerability.
+
+
+
+Additional mitigations that can be deployed on Cisco devices in the network are available in the companion document "Identifying and Mitigating Exploitation of the Cisco Unified Communications Manager and Cisco IOS Software Session Initiation Protocol Denial of Service Vulnerability" at the following location: http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28034["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28034"]</Description></Remediation></Remediations></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Unified Communications Manager Memory Leak During UDP Flood against Closed Ports</Title><ID SystemName="Cisco Bug ID">CSCtx43337</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">Cisco Unified Communications Manager contains a vulnerability which could allow an unauthenticated, remote attacker to cause a denial of service condition on the affected device. An attacker could exploit this issue by sending multiple, malformed UDP packets to closed ports on the device, which could result in a disruption of services.</Note></Notes><CVE>CVE-2013-1133</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-101512</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerabilities that are described in this advisory could allow a remote attacker to trigger a memory leak or a denial of service condition resulting in the interruption of voice services.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Filtering traffic on TCP port 9004 from untrusted sources can provide a workaround for the LBM vulnerability.
+
+
+
+Additional mitigations that can be deployed on Cisco devices in the network are available in the companion document "Identifying and Mitigating Exploitation of the Cisco Unified Communications Manager and Cisco IOS Software Session Initiation Protocol Denial of Service Vulnerability" at the following location: http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28034["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28034"]</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

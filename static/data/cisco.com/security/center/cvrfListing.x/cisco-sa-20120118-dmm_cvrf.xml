@@ -1,0 +1,110 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco Digital Media Manager Privilege Escalation Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20120118-dmm</ID></Identification><Status>Final</Status><Version>1.1</Version><RevisionHistory><Revision><Number>1.1</Number><Date>2012-01-19T16:53:33</Date><Description>No Description Available</Description></Revision></RevisionHistory><InitialReleaseDate>2012-01-18T16:00:00</InitialReleaseDate><CurrentReleaseDate>2012-01-19T16:53:33</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco Digital Media Manager contains a vulnerability that may allow a remote, authenticated attacker to elevate privileges and obtain full access to the affected system.
+
+
+
+Cisco Show and Share is not directly affected by this vulnerability. However, because Cisco Show and Share relies on Cisco Digital Media Manager for authentication services, attackers who compromise the Cisco Digital Media Manager may gain full access to Cisco Show and Share.
+
+
+
+Cisco has released free software updates that address this vulnerability.
+
+
+
+There are no workarounds that mitigate this vulnerability.
+
+
+
+This advisory is posted at http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120118-dmm["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120118-dmm"].</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco's worldwide website at: 
+
+  
+    http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120118-dmm["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120118-dmm"]
+  
+
+  
+    In addition to worldwide web posting, a text version of
+    this notice is clear-signed with the Cisco PSIRT PGP key and is posted to the
+    following e-mail and Usenet news recipients.
+  
+
+  
+    
+      cust-security-announce@cisco.com
+
+    
+    
+      first-teams@first.org
+
+    
+    
+      bugtraq@securityfocus.com
+
+
+    
+    
+      vulnwatch@vulnwatch.org
+
+    
+    
+      cisco@spot.colorado.edu
+
+    
+    
+      cisco-nsp@puck.nether.net
+
+    
+    
+      full-disclosure@lists.grok.org.uk
+
+    
+    
+      comp.dcom.sys.cisco@newsgate.cisco.com
+
+
+    
+  
+
+  
+    Future updates of this advisory, if any, will be placed on Cisco's
+    worldwide website, but may or may not be actively announced on mailing lists or
+    newsgroups. Users concerned about this problem are encouraged to check the
+    above URL for any updates.
+  
+</DocumentDistribution><DocumentReferences><Reference><URL>http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120118-dmm</URL><Description>Identifying and Mitigating Exploitation of the Cisco Digital Media Manager Privilege Escalation Vulnerability</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-97387">Cisco Digital Media Manager Software 5.1</FullProductName><FullProductName ProductID="CVRFPID-114096">Cisco Digital Media Manager Software 5.2 5.2.1</FullProductName><FullProductName ProductID="CVRFPID-114097">Cisco Digital Media Manager Software 5.2 5.2.1.1</FullProductName><FullProductName ProductID="CVRFPID-114098">Cisco Digital Media Manager Software 5.2 5.2.2</FullProductName><FullProductName ProductID="CVRFPID-114100">Cisco Digital Media Manager Software 5.2 5.2.3</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Digital Media Manager Privilege Escalation Vulnerability </Title><ID SystemName="Cisco Bug ID">CSCts63878</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">Cisco Digital Media Manager contains a vulnerability that may allow a
+remote, authenticated attacker to elevate privileges and obtain full access to the affected system.
+
+The vulnerability is due to improper validation of unreferenced URLs, which may allow an unprivileged attacker to access administrative resources and elevate privileges. An authenticated attacker, could exploit this
+vulnerability by sending the unreferenced URL to the affected
+system.
+
+Cisco Show and Share is not directly affected by this vulnerability.
+However, because Cisco Show and Share relies on Cisco Digital Media
+Manager for authentication services, attackers who compromise the Cisco
+Digital Media Manager may gain full access to Cisco Show and Share.
+
+This vulnerability could be exploited over the Cisco Digital Media Manager management port TCP 8443.
+
+ 
+</Note></Notes><CVE>CVE-2012-0329</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-97387</ProductID><ProductID>CVRFPID-114096</ProductID><ProductID>CVRFPID-114097</ProductID><ProductID>CVRFPID-114098</ProductID><ProductID>CVRFPID-114100</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerability may allow a remote, authenticated attacker to elevate privileges and obtain full access to the affected system.
+
+
+
+Additionally, because Cisco Show and Share relies on Cisco Digital Media Manager for authentication services, successful exploitation of the vulnerability on Cisco Digital Media Manager may allow the remote attacker to gain full access to Cisco Show and Share.
+
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>9.0</BaseScore><TemporalScore>7.4</TemporalScore><Vector>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no workarounds that mitigate this vulnerability.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Intelligence companion document for this advisory: http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120118-dmm["http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120118-dmm"]
+
+
+
+</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

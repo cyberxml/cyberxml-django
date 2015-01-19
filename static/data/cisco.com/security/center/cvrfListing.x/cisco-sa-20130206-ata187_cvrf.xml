@@ -1,0 +1,48 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco ATA 187 Analog Telephone Adaptor Remote Access Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130206-ata187</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-02-06T15:59:15</Date><Description>Initial public release</Description></Revision></RevisionHistory><InitialReleaseDate>2013-02-06T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-02-06T15:59:15</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco ATA 187 Analog Telephone Adaptor firmware versions 9.2.1.0 and 9.2.3.1 contain a vulnerability that could allow an unauthenticated, remote attacker to access the operating system of the affected device.
+
+
+
+Cisco has released free software updates that address this vulnerability. Workarounds that mitigate this vulnerability are available.
+
+
+
+This advisory is available at the following link: http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130206-ata187["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130206-ata187"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130206-ata187["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130206-ata187"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference><URL>http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=27921</URL><Description>Identifying and Mitigating Exploitation of the Cisco ATA 187 Analog Telephone Adaptor Remote Access Vulnerability</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-187458">Cisco ATA 187 Analog Telephone Adaptor 9.2 Base</FullProductName><FullProductName ProductID="CVRFPID-187459">Cisco ATA 187 Analog Telephone Adaptor 9.2.3</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco ATA 187 Analog Telephone Adaptor Remote Access Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCtz67038</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">Cisco ATA 187 Analog Telephone Adaptor firmware versions 9.2.1.0 and 9.2.3.1 contain a vulnerability that could allow an unauthenticated, remote attacker to access the operating system of the affected device.
+
+
+
+The vulnerability is due to improper validation of authentication on TCP port 7870 and improper authorization of commands within the operating system. An attacker could exploit this vulnerability by connecting to the affected system and sending arbitrary commands.</Note></Notes><CVE>CVE-2013-1111</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-187458</ProductID><ProductID>CVRFPID-187459</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerability may cause a denial of service condition or allow the execution of operating system commands on the device.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>9.0</BaseScore><TemporalScore>7.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:P/I:P/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>It is possible to terminate the listening Telnet process on the device by accessing the device remotely, listing the processes, and then terminating the Telnet process.  This prevents further remote access to the device until the device is reloaded.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the companion document "Identifying and Mitigating Exploitation of the Cisco ATA 187 Analog Telephone Adaptor Remote Access Vulnerability," which is available at the following
+
+link: http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=27921["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=27921"]
+
+
+</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

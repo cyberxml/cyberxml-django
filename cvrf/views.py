@@ -5,43 +5,60 @@ from . import cvrf
 from cStringIO import StringIO
 import re
 
-remsnum = re.compile("^[mM][sS]\d{2}-\d{3}$")
+#remsnum = re.compile("^[mM][sS]\d{2}-\d{3}$")
 
 # Create your views here.
-def rawxml(request,msnum):
-	msnum = msnum.lower()
-	if not remsnum.match(msnum)==None:
-		try:
-			rootObj = cvrf.parse("static/data/microsoft.com/MSRC-CVRF/"+msnum+".xml",0)
-			xmlstr=StringIO()
-			rootObj.export(xmlstr, 0)
-			return HttpResponse(xmlstr.getvalue(), content_type="application/xml")
-		except:
-			raise Http404
+def rawxml(request,vendor,cvrfnum):
+	cvrfnum = cvrfnum.lower()
+	vendor = vendor.lower()
+	if vendor == "ms":
+		vdir = "microsoft.com/MSRC-CVRF/"
+	elif vendor == "redhat":
+		vdir = "redhat.com/security/data/cvrf/"
+	elif vendor == "cisco":
+		vdir = "cisco.com/security/center/cvrfListing.x/"
 	else:
-		pass
-		#raise Http500
+		raise Http404
+	try:
+		rootObj = cvrf.parse("static/data/"+vdir+cvrfnum+".xml",0)
+		xmlstr=StringIO()
+		rootObj.export(xmlstr, 0)
+		return HttpResponse(xmlstr.getvalue(), content_type="application/xml")
+	except:
+		raise Http404
 
 # Create your views here.
-def prettyxmltest(request,msnum):
-	msnum = msnum.lower()
-	if not remsnum.match(msnum)==None:
-		try:
-			rootObj = cvrf.parse("static/data/microsoft.com/MSRC-CVRF/"+msnum+".xml",0)
-			xmlstr=StringIO()
-			rootObj.export(xmlstr, 0)
-			#return render(request, 'cvrf_pretty.html', {'test':msnum})
-			return render(request, 'cvrf_test.html', {'test':rootObj})
-		except:
-			raise Http404
+def prettyxmltest(request,vendor,cvrfnum):
+	cvrfnum = cvrfnum.lower()
+	vendor = vendor.lower()
+	if vendor == "ms":
+		vdir = "microsoft.com/MSRC-CVRF/"
+	elif vendor == "redhat":
+		vdir = "redhat.com/security/data/cvrf/"
+	elif vendor == "cisco":
+		vdir = "cisco.com/security/center/cvrfListing.x/"
 	else:
+		raise Http404
+	try:
+		rootObj = cvrf.parse("static/data/"+vdir+cvrfnum+".xml",0)
+		xmlstr=StringIO()
+		rootObj.export(xmlstr, 0)
+		#return render(request, 'cvrf_pretty.html', {'test':msnum})
+		return render(request, 'cvrf_test.html', {'test':rootObj})
+	except:
 		raise Http404
 
 #from django.views.generic import View
 from . import models
-def prettyxml(request,msnum):
-	msnum = msnum.lower()
-	rootObj = cvrf.parse("static/data/microsoft.com/MSRC-CVRF/"+msnum+".xml",0)
+def prettyxml(request,vendor,cvrfnum):
+	cvrfnum = cvrfnum.lower()
+	if vendor == "ms":
+		vdir = "microsoft.com/MSRC-CVRF/"
+	elif vendor == "redhat":
+		vdir = "redhat.com/security/data/cvrf/"
+	else:
+		raise Http404
+	rootObj = cvrf.parse("static/data/"+vdir+cvrfnum+".xml",0)
 	cd = models.cvrfdoc_model()
 	
 	# ---------------------------------------------------------------------	

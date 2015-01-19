@@ -1,0 +1,65 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco IOS Software Internet Key Exchange Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130327-ike</ID></Identification><Status>Final</Status><Version>1.1</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-03-27T15:47:57</Date><Description>Initial public release.</Description></Revision><Revision><Number>1.1</Number><Date>2013-04-11T15:30:45</Date><Description>Changed bundle first fix release data for 15.1SG.</Description></Revision></RevisionHistory><InitialReleaseDate>2013-03-27T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-04-11T15:30:45</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">The Cisco IOS Software Internet Key Exchange (IKE) feature contains a  denial of service (DoS) vulnerability.
+
+
+
+Cisco has released free software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.
+
+
+
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130327-ike["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130327-ike"]
+
+Note: The March 27, 2013, Cisco IOS Software Security Advisory bundled publication includes seven Cisco Security Advisories. All advisories address vulnerabilities in Cisco IOS Software. Each Cisco IOS Software Security Advisory lists the Cisco IOS Software releases that correct the vulnerability or vulnerabilities detailed in the advisory as well as the Cisco IOS Software releases that correct all Cisco IOS Software vulnerabilities in the March 2013 bundled publication. 
+
+Individual publication links are in "Cisco Event Response: Semiannual Cisco IOS Software Security Advisory Bundled Publication" at the following link: 
+
+http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar13.html["http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar13.html"]
+
+</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130327-ike["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130327-ike"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference><URL>http://tools.cisco.com/security/center/content/CiscoSecurityBundle/cisco-sa-20130327-bundle</URL><Description>Summary of Semiannual Cisco IOS Software Security Advisory Bundled Publication, March 27, 2013</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-105759">Cisco IOS Software 15.1(2)GC</FullProductName><FullProductName ProductID="CVRFPID-108649">Cisco IOS Software 15.1(2)GC1</FullProductName><FullProductName ProductID="CVRFPID-114130">Cisco IOS Software 15.1(2)GC2</FullProductName><FullProductName ProductID="CVRFPID-107433">Cisco IOS Software 15.1(1)T</FullProductName><FullProductName ProductID="CVRFPID-105178">Cisco IOS Software 15.1(1)T1</FullProductName><FullProductName ProductID="CVRFPID-106988">Cisco IOS Software 15.1(1)T2</FullProductName><FullProductName ProductID="CVRFPID-106205">Cisco IOS Software 15.1(1)T3</FullProductName><FullProductName ProductID="CVRFPID-103759">Cisco IOS Software 15.1(1)T4</FullProductName><FullProductName ProductID="CVRFPID-113965">Cisco IOS Software 15.1(1)T5</FullProductName><FullProductName ProductID="CVRFPID-100214">Cisco IOS Software 15.1(2)T</FullProductName><FullProductName ProductID="CVRFPID-106078">Cisco IOS Software 15.1(2)T0a</FullProductName><FullProductName ProductID="CVRFPID-107691">Cisco IOS Software 15.1(2)T1</FullProductName><FullProductName ProductID="CVRFPID-107626">Cisco IOS Software 15.1(2)T2</FullProductName><FullProductName ProductID="CVRFPID-107123">Cisco IOS Software 15.1(2)T2a</FullProductName><FullProductName ProductID="CVRFPID-106246">Cisco IOS Software 15.1(2)T3</FullProductName><FullProductName ProductID="CVRFPID-106454">Cisco IOS Software 15.1(2)T4</FullProductName><FullProductName ProductID="CVRFPID-108770">Cisco IOS Software 15.1(2)T5</FullProductName><FullProductName ProductID="CVRFPID-104546">Cisco IOS Software 15.1(1)XB</FullProductName><FullProductName ProductID="CVRFPID-105906">Cisco IOS Software 15.1(1)XB1</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco IOS Software Internet Key Exchange Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCth81055</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">Cisco IOS Software contains a vulnerability that could allow an unauthenticated, remote attacker to cause a DoS condition.
+
+
+
+The vulnerability is due to insufficient validation of IKE packets by the affected software. An attacker could exploit this vulnerability by sending specific IKE packets to a device configured with features that leverage IKEv1. An exploit could allow the attacker to cause a memory leak on the affected device which could lead to a DoS condition.</Note></Notes><CVE>CVE-2013-1144</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-100214</ProductID><ProductID>CVRFPID-103759</ProductID><ProductID>CVRFPID-104546</ProductID><ProductID>CVRFPID-105178</ProductID><ProductID>CVRFPID-105759</ProductID><ProductID>CVRFPID-105906</ProductID><ProductID>CVRFPID-106078</ProductID><ProductID>CVRFPID-106205</ProductID><ProductID>CVRFPID-106246</ProductID><ProductID>CVRFPID-106454</ProductID><ProductID>CVRFPID-106988</ProductID><ProductID>CVRFPID-107123</ProductID><ProductID>CVRFPID-107433</ProductID><ProductID>CVRFPID-107626</ProductID><ProductID>CVRFPID-107691</ProductID><ProductID>CVRFPID-108649</ProductID><ProductID>CVRFPID-108770</ProductID><ProductID>CVRFPID-113965</ProductID><ProductID>CVRFPID-114130</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerability may result in a memory leak that can lead to a DoS condition. Memory exhaustion can cause an affected Cisco IOS device to reload or become unresponsive; a power cycle might be required to recover from the condition.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>The following identification mechanism exist for this vulnerability.
+
+Embedded Event Manager (EEM)
+A Cisco IOS Embedded Event Manager (EEM) policy that is based on Tool Command Language (Tcl) can be used on vulnerable Cisco IOS devices to identify and detect a memory leak that is caused by this vulnerability. The policy allows administrators to monitor the memory for the affected process on a Cisco IOS device. When Cisco IOS EEM detects potential exploitation of this vulnerability, the policy can trigger a response by sending an alert to the network administrator, who could then decide to implement an upgrade or reload the device to recover the lost memory at a suitable time. The example policy is based on a Tcl script that sends a syslog when the memory keeps dropping and reaches EEM_IKE_BUFF_INCR_THRES and when the IKE buffers have dropped EEM_IKE_BUFF_INCR_THRES times. If IKE buffers are freed the counter starts counting from zero. After generating the memory leak syslog the script re-initializes.
+The Tcl script is available for download at the "Cisco Beyond: Embedded Event Manager (EEM) Scripting Community" at the following link: https://supportforums.cisco.com/docs/DOC-30300["https://supportforums.cisco.com/docs/DOC-30300"]. A sample device configuration is provided below.
+
+
+
+
+event manager environment EEM_MEM_LEAK_INTERVAL 20
+event manager environment EEM_MEM_LEAK_MAX_RUNTIME 5
+event manager environment EEM_IKE_BUFF_INCR_THRES 3
+event manager environment EEM_FREE_MEMORY_THRES 70
+event manager directory user policy "flash:/"
+event manager policy eem_ike_mem_leak.tcl
+
+</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

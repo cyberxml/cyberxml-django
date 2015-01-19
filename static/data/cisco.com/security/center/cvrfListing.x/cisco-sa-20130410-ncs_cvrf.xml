@@ -1,0 +1,66 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco Prime Network Control Systems Database Default Credentials Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130410-ncs</ID></Identification><Status>Final</Status><Version>1.1</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-04-10T14:56:16</Date><Description>Initial public release</Description></Revision><Revision><Number>1.1</Number><Date>2013-07-02T16:03:34</Date><Description>Added CSCub54624; updated fixed version to 1.1.2 and above</Description></Revision></RevisionHistory><InitialReleaseDate>2013-04-10T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-07-02T16:03:34</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco
+Prime Network Control System NCS appliances that are running software
+versions prior to 1.1.2 contain a database user account that is
+created with default credentials. An attacker could use this account to
+modify the configuration of the application or disrupt services.
+
+
+
+Cisco has released free software updates that address these vulnerabilities. There is no workaround for these vulnerabilities.
+
+
+
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130410-ncs["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130410-ncs"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130410-ncs["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130410-ncs"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130410-ncs</URL><Description>Cisco Prime Network Control Systems Database Default Credentials Vulnerability</Description></Reference><Reference><URL>http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28796</URL><Description>Identifying and Mitigating Exploitation of the Cisco Prime Network Control Systems Database Default Credentials Vulnerability</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-188729">Cisco Prime Network Control System 1.0 Base</FullProductName><FullProductName ProductID="CVRFPID-188731">Cisco Prime Network Control System 1.1 Base</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Prime Network Control System Default Credentials for Database User</Title><ID SystemName="Cisco Bug ID">CSCtz30468</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">Cisco Prime Network Control System NCS appliances that are running software versions prior to 1.1.1.24 contain a database user account that is created with default credentials. An attacker could use this account to modify the configuration of the application or disrupt services.
+
+
+
+A software upgrade is required to resolve this vulnerability.</Note></Notes><CVE>CVE-2013-1170</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-188729</ProductID><ProductID>CVRFPID-188731</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of these vulnerabilities could allow an unauthorized, remote user to use the default credentials to modify the configuration settings of a device or to disrupt services.  
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.5</BaseScore><TemporalScore>6.2</TemporalScore><Vector>AV:N/AC:L/Au:N/C:P/I:P/A:P/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There is no workaround for these vulnerabilities.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Intelligence companion document for this advisory:
+
+
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28796["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28796"]</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130410-ncs</URL><Description>Cisco Prime Network Control Systems Database Default Credentials Vulnerability</Description></Reference></References></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Prime Network Control System Default Credentials Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCub54624</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">Cisco Prime Network Control System NCS appliances that are running software versions prior to 1.1.2 contain a database user account that is created with default credentials. An attacker could use this account to modify the configuration of the application or disrupt services.
+
+
+
+A software upgrade is required to resolve this vulnerability.</Note></Notes><CVE>CVE-2013-1170</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-188729</ProductID><ProductID>CVRFPID-188731</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of these vulnerabilities could allow an unauthorized, remote user to use the default credentials to modify the configuration settings of a device or to disrupt services.  
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.5</BaseScore><TemporalScore>6.2</TemporalScore><Vector>AV:N/AC:L/Au:N/C:P/I:P/A:P/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There is no workaround for these vulnerabilities.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Intelligence companion document for this advisory:
+
+
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28796["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28796"]</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130410-ncs</URL><Description>Cisco Prime Network Control Systems Database Default Credentials Vulnerability</Description></Reference></References></Vulnerability></cvrfdoc>

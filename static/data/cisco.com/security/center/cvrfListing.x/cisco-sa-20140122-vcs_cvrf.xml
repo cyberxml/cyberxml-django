@@ -1,0 +1,54 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco TelePresence Video Communication Server SIP Denial of Service Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20140122-vcs</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2014-01-22T15:55:49</Date><Description>Initial public release</Description></Revision></RevisionHistory><InitialReleaseDate>2014-01-22T16:00:00</InitialReleaseDate><CurrentReleaseDate>2014-01-22T15:55:49</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco
+TelePresence Video Communication Server (VCS) contains a vulnerability that could allow an
+unauthenticated, remote attacker to trigger the failure of several critical processes which may cause active call to be dropped and prevent users from making new calls until the affected system is reloaded.
+
+
+
+Cisco has released free software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available. This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140122-vcs["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140122-vcs"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140122-vcs["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140122-vcs"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140122-vcs</URL><Description>Cisco TelePresence Video Communication Server SIP Denial of Service Vulnerability</Description></Reference><Reference><URL>http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=32409</URL><Description>Identifying and Mitigating Exploitation of the Cisco TelePresence Video Communication Server SIP Denial of Service Vulnerability</Description></Reference><Reference><URL>http://tools.cisco.com/security/center/viewAlert.x?alertId=32459</URL><Description>Cisco TelePresence Video Communication Server SDP Denial of Service Vulnerability</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-112252">Cisco TelePresence Video Communication Server (VCS) X5.2 Base</FullProductName><FullProductName ProductID="CVRFPID-112254">Cisco TelePresence Video Communication Server (VCS) X6.0 Base</FullProductName><FullProductName ProductID="CVRFPID-112256">Cisco TelePresence Video Communication Server (VCS) X6.1 Base</FullProductName><FullProductName ProductID="CVRFPID-115037">Cisco TelePresence Video Communication Server (VCS) X7.0 Base</FullProductName><FullProductName ProductID="CVRFPID-115038">Cisco TelePresence Video Communication Server (VCS) X7.0.1</FullProductName><FullProductName ProductID="CVRFPID-115039">Cisco TelePresence Video Communication Server (VCS) X7.0.2</FullProductName><FullProductName ProductID="CVRFPID-115040">Cisco TelePresence Video Communication Server (VCS) X7.0.3</FullProductName><FullProductName ProductID="CVRFPID-197127">Cisco TelePresence Video Communication Server (VCS) 7.1 Base</FullProductName><FullProductName ProductID="CVRFPID-197129">Cisco TelePresence Video Communication Server (VCS) 7.2 Base</FullProductName><FullProductName ProductID="CVRFPID-197132">Cisco TelePresence Video Communication Server (VCS) 7.2.1</FullProductName><FullProductName ProductID="CVRFPID-197133">Cisco TelePresence Video Communication Server (VCS) 7.2.2</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco TelePresence Video Communication Server SDP Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCue97632</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the Session Initiation Protocol (SIP) module of Cisco
+TelePresence Video Communication Server (VCS) could allow an
+unauthenticated, remote attacker to trigger the failure of several critical processes, which may cause the termination of active calls. New calls will also not be established until the affected system is restored.
+
+
+
+The vulnerability is due to
+improper handling of crafted Session Description Protocol (SDP) messages.
+An attacker could exploit this vulnerability by sending a crafted SDP message to the affected system. An exploit could allow the attacker to
+trigger the failure of several critical processes, which may
+cause the affected system to not function properly;
+active calls will be terminated and new calls will not be possible
+until the affected system is restored. A reload is needed to restore
+correct functionality.</Note></Notes><CVE>CVE-2014-0662</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-112252</ProductID><ProductID>CVRFPID-112254</ProductID><ProductID>CVRFPID-112256</ProductID><ProductID>CVRFPID-115037</ProductID><ProductID>CVRFPID-115038</ProductID><ProductID>CVRFPID-115039</ProductID><ProductID>CVRFPID-115040</ProductID><ProductID>CVRFPID-197127</ProductID><ProductID>CVRFPID-197129</ProductID><ProductID>CVRFPID-197132</ProductID><ProductID>CVRFPID-197133</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerability may cause the failure of several internal critical processes and the affected system will not be able to function properly; active calls will be terminated and new calls will not be possible until the affected system is restored. A reload is needed to restore correct functionality.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.1</BaseScore><TemporalScore>5.9</TemporalScore><Vector>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no workarounds that mitigate this vulnerability.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Intelligence companion document for this Advisory: http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=32409
+
+["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=32409"]</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140122-vcs</URL><Description>Cisco TelePresence Video Communication Server SIP Denial of Service Vulnerability</Description></Reference></References></Vulnerability></cvrfdoc>

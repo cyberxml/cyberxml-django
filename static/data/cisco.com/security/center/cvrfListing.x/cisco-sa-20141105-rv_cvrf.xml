@@ -1,0 +1,143 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Multiple Vulnerabilities in Cisco Small Business RV Series Routers</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20141105-rv</ID></Identification><Status>Final</Status><Version>1.1</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2014-11-05T15:53:17</Date><Description>Initial public release.</Description></Revision><Revision><Number>1.1</Number><Date>2014-11-20T14:41:29</Date><Description>Added fixed software details for the RV220W.</Description></Revision></RevisionHistory><InitialReleaseDate>2014-11-05T16:00:00</InitialReleaseDate><CurrentReleaseDate>2014-11-20T14:41:29</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">The Cisco RV120W Wireless-N VPN Firewall, Cisco RV180 VPN Router, Cisco RV180W Wireless-N Multifunction VPN Router, and Cisco RV220W Wireless Network Security Firewall are affected by the following vulnerabilities:
+
+
+    Cisco RV Series Routers Command Injection Vulnerability
+    Cisco RV Series Routers HTTP Referer Header Vulnerability
+    Cisco RV Series Routers Insecure File Upload Vulnerability
+
+These vulnerabilities are independent of each other; a release that is affected by one of the vulnerabilities may not be affected by the others.
+
+
+
+Cisco has released free software updates that address these vulnerabilities. Workarounds that mitigate these vulnerabilities are available. This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141105-rv["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141105-rv"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141105-rv["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141105-rv"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141105-rv</URL><Description>Multiple Vulnerabilities in Cisco Small Business RV Series Routers</Description></Reference><Reference><URL>http://tools.cisco.com/security/center/viewAlert.x?alertId=36240</URL><Description>Cisco Small Business RV Series Routers Command Injection Vulnerability</Description></Reference><Reference><URL>http://tools.cisco.com/security/center/viewAlert.x?alertId=36241</URL><Description>Cisco Small Business RV Series Routers HTTP Referer Header Vulnerability</Description></Reference><Reference><URL>http://tools.cisco.com/security/center/viewAlert.x?alertId=36242</URL><Description>Cisco Small Business RV Series Routers Insecure File Upload Vulnerability</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-183632">Cisco Small Business RV Series Router Firmware 1.0 0.2</FullProductName><FullProductName ProductID="CVRFPID-198685">Cisco Small Business RV Series Router Firmware 1.0.0.30</FullProductName><FullProductName ProductID="CVRFPID-198686">Cisco Small Business RV Series Router Firmware 1.0.1.9</FullProductName><FullProductName ProductID="CVRFPID-198687">Cisco Small Business RV Series Router Firmware 1.0.2.6</FullProductName><FullProductName ProductID="CVRFPID-198688">Cisco Small Business RV Series Router Firmware 1.0.3.10</FullProductName><FullProductName ProductID="CVRFPID-183634">Cisco Small Business RV Series Router Firmware 1.1.0.9</FullProductName><FullProductName ProductID="CVRFPID-183636">Cisco Small Business RV Series Router Firmware 1.2.0.2</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco RV Series Routers Insecure File Upload Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCuh86998</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the file upload routines of the Cisco RV120W Wireless-N VPN Firewall, Cisco RV180 VPN Router, Cisco RV180W Wireless-N Multifunction VPN Router, and Cisco RV220W Wireless Network Security Firewall could allow an unauthenticated, remote attacker to upload files to arbitrary locations on the devices.
+
+The vulnerability is due to insufficient input validation. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. An exploit could allow the attacker to upload files to an arbitrary location on the device.
+</Note></Notes><CVE>CVE-2014-2179</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-183632</ProductID><ProductID>CVRFPID-183634</ProductID><ProductID>CVRFPID-183636</ProductID><ProductID>CVRFPID-198685</ProductID><ProductID>CVRFPID-198686</ProductID><ProductID>CVRFPID-198687</ProductID><ProductID>CVRFPID-198688</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the Cisco RV Series Routers Command Injection Vulnerability could allow a remote, authenticated attacker to execute arbitrary commands on an affected device with root privileges.
+
+Successful exploitation of the Cisco RV Series Routers Referer Header Vulnerability could allow an attacker to perform actions in the administrative web pages with the privileges of the authenticated user. An attacker could exploit this vulnerability by persuading an authenticated user to click a malicious link.
+
+Successful exploitation of the Cisco RV Series Routers Insecure File Upload Vulnerability could allow a remote, unauthenticated attacker to upload or replace existing files on an affected device with root privileges.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>9.4</BaseScore><TemporalScore>7.8</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>The following mitigations help limit the exposure to these vulnerabilities.
+
+
+
+Disable Remote Management
+
+
+
+
+Caution: Do not disable remote management if you manage the device via the WAN connection. This will result in loss of management connectivity to the device. Disabling this feature prevents Cisco QuickVPN access.
+
+
+
+Remote Management is disabled by default. If it is enabled, administrators can disable it using the Web Access screen: Administration &gt; Management Interface &gt; Web Access. Check the box for Disabled in the Remote Management field.
+
+
+
+Disabling remote management helps ensure that only users on the LAN could attempt to exploit the vulnerabilities.
+
+
+
+
+Limit Remote Management Access to Specific IP Addresses
+
+
+
+If remote management is required, harden the device so that it can be accessed only by certain IP addresses, rather than the default setting of any. By accessing the configuration screen (Administration &gt; Management Interface &gt; Web Access), an administrator can change the Remote IP address field to ensure only devices with the specified IP addresses can access the device.
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141105-rv</URL><Description>Multiple Vulnerabilities in Cisco Small Business RV Series Routers</Description></Reference></References></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco RV Series Routers Command Injection Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCuh87126</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">A vulnerability in the network diagnostics administration pages of the Cisco RV120W Wireless-N VPN Firewall, Cisco RV180 VPN Router, Cisco RV180W Wireless-N Multifunction VPN Router, and Cisco RV220W Wireless Network Security Firewall could allow an authenticated, remote attacker to execute arbitrary commands on the devices.
+
+The vulnerability is due to improper validation of user-supplied input. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. An exploit could allow the attacker to execute arbitrary commands on the device with root privileges.
+</Note></Notes><CVE>CVE-2014-2177</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-183632</ProductID><ProductID>CVRFPID-183634</ProductID><ProductID>CVRFPID-183636</ProductID><ProductID>CVRFPID-198685</ProductID><ProductID>CVRFPID-198686</ProductID><ProductID>CVRFPID-198687</ProductID><ProductID>CVRFPID-198688</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the Cisco RV Series Routers Command Injection Vulnerability could allow a remote, authenticated attacker to execute arbitrary commands on an affected device with root privileges.
+
+Successful exploitation of the Cisco RV Series Routers Referer Header Vulnerability could allow an attacker to perform actions in the administrative web pages with the privileges of the authenticated user. An attacker could exploit this vulnerability by persuading an authenticated user to click a malicious link.
+
+Successful exploitation of the Cisco RV Series Routers Insecure File Upload Vulnerability could allow a remote, unauthenticated attacker to upload or replace existing files on an affected device with root privileges.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>9.0</BaseScore><TemporalScore>7.4</TemporalScore><Vector>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>The following mitigations help limit the exposure to these vulnerabilities.
+
+
+
+Disable Remote Management
+
+
+
+
+Caution: Do not disable remote management if you manage the device via the WAN connection. This will result in loss of management connectivity to the device. Disabling this feature prevents Cisco QuickVPN access.
+
+
+
+Remote Management is disabled by default. If it is enabled, administrators can disable it using the Web Access screen: Administration &gt; Management Interface &gt; Web Access. Check the box for Disabled in the Remote Management field.
+
+
+
+Disabling remote management helps ensure that only users on the LAN could attempt to exploit the vulnerabilities.
+
+
+
+
+Limit Remote Management Access to Specific IP Addresses
+
+
+
+If remote management is required, harden the device so that it can be accessed only by certain IP addresses, rather than the default setting of any. By accessing the configuration screen (Administration &gt; Management Interface &gt; Web Access), an administrator can change the Remote IP address field to ensure only devices with the specified IP addresses can access the device.
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141105-rv</URL><Description>Multiple Vulnerabilities in Cisco Small Business RV Series Routers</Description></Reference></References></Vulnerability><Vulnerability Ordinal="3" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco RV Series Routers HTTP Referer Header Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCuh87145</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="3">A vulnerability in the administrative web interface of the Cisco RV120W Wireless-N VPN Firewall, Cisco RV180 VPN Router, Cisco RV180W Wireless-N Multifunction VPN Router, and Cisco RV220W Wireless Network Security Firewall could allow an unauthenticated, remote attacker to perform a cross-site request forgery (CSRF) attack.
+
+The vulnerability is due to insufficient CSRF protections. An attacker could exploit this vulnerability by persuading a user who is authenticated to the device to click a malicious link. An exploit could allow the attacker to perform actions in the administrative web pages of the device with the privileges of the authenticated user.
+</Note></Notes><CVE>CVE-2014-2178</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-183632</ProductID><ProductID>CVRFPID-183634</ProductID><ProductID>CVRFPID-183636</ProductID><ProductID>CVRFPID-198685</ProductID><ProductID>CVRFPID-198686</ProductID><ProductID>CVRFPID-198687</ProductID><ProductID>CVRFPID-198688</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the Cisco RV Series Routers Command Injection Vulnerability could allow a remote, authenticated attacker to execute arbitrary commands on an affected device with root privileges.
+
+Successful exploitation of the Cisco RV Series Routers Referer Header Vulnerability could allow an attacker to perform actions in the administrative web pages with the privileges of the authenticated user. An attacker could exploit this vulnerability by persuading an authenticated user to click a malicious link.
+
+Successful exploitation of the Cisco RV Series Routers Insecure File Upload Vulnerability could allow a remote, unauthenticated attacker to upload or replace existing files on an affected device with root privileges.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>4.3</BaseScore><TemporalScore>3.6</TemporalScore><Vector>AV:N/AC:M/Au:N/C:N/I:P/A:N/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>The following mitigations help limit the exposure to these vulnerabilities.
+
+
+
+Disable Remote Management
+
+
+
+
+Caution: Do not disable remote management if you manage the device via the WAN connection. This will result in loss of management connectivity to the device. Disabling this feature prevents Cisco QuickVPN access.
+
+
+
+Remote Management is disabled by default. If it is enabled, administrators can disable it using the Web Access screen: Administration &gt; Management Interface &gt; Web Access. Check the box for Disabled in the Remote Management field.
+
+
+
+Disabling remote management helps ensure that only users on the LAN could attempt to exploit the vulnerabilities.
+
+
+
+
+Limit Remote Management Access to Specific IP Addresses
+
+
+
+If remote management is required, harden the device so that it can be accessed only by certain IP addresses, rather than the default setting of any. By accessing the configuration screen (Administration &gt; Management Interface &gt; Web Access), an administrator can change the Remote IP address field to ensure only devices with the specified IP addresses can access the device.
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141105-rv</URL><Description>Multiple Vulnerabilities in Cisco Small Business RV Series Routers</Description></Reference></References></Vulnerability></cvrfdoc>

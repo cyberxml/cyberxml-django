@@ -1,0 +1,808 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130508-cvp</ID></Identification><Status>Final</Status><Version>1.3</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-05-08T14:33:52</Date><Description>Initial public release.</Description></Revision><Revision><Number>1.1</Number><Date>2013-05-10T19:30:21</Date><Description>Updated Workarounds and Software Versions and Fixes sections.</Description></Revision><Revision><Number>1.2</Number><Date>2013-07-30T12:40:42</Date><Description>Added location of patches for 8.x releases.</Description></Revision><Revision><Number>1.3</Number><Date>2013-08-28T13:25:29</Date><Description>Updated Workarounds section.</Description></Revision></RevisionHistory><InitialReleaseDate>2013-05-08T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-08-28T13:25:29</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco Unified Customer Voice Portal Software (Unified CVP) contains multiple vulnerabilities. Various components of Cisco Unified CVP are affected; see the "Details" section for more information on the vulnerabilities. These vulnerabilities can be exploited independently; however, more than one vulnerability could be exploited on the same device.
+
+
+
+Cisco has released free software updates that address these vulnerabilities. Workarounds that mitigate some of these vulnerabilities are available.
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp</URL><Description>Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software</Description></Reference><Reference><URL>http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982</URL><Description>Identifying and Mitigating Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-79530">Cisco Unified Customer Voice Portal (CVP) 7.0 base</FullProductName><FullProductName ProductID="CVRFPID-79322">Cisco Unified Customer Voice Portal (CVP) 7.0(1)</FullProductName><FullProductName ProductID="CVRFPID-190938">Cisco Unified Customer Voice Portal (CVP) 8.5 Base</FullProductName><FullProductName ProductID="CVRFPID-190940">Cisco Unified Customer Voice Portal (CVP) 9.0 Base</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Unified Customer Voice Portal Malformed SIP INVITE packet vulnerability</Title><ID SystemName="Cisco Bug ID">CSCua65148</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability exists in CallServer component of Cisco Customer Voice
+Portal that could allow an unauthenticated, remote attacker to cause the
+system to not accept new calls.
+
+
+
+The vulnerability is due to
+improper processing of malformed SIP INVITE packets. An attacker could
+exploit this vulnerability by sending malformed SIP INVITE packets to a
+Cisco CVP server.</Note></Notes><CVE>CVE-2013-1220</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-79322</ProductID><ProductID>CVRFPID-79530</ProductID><ProductID>CVRFPID-190938</ProductID><ProductID>CVRFPID-190940</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of these vulnerabilities may have various impacts.
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software SIP INVITE Packet Vulnerability documented in Cisco Bug ID CSCua65148["https://tools.cisco.com/bugsearch/bug/CSCua65148"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to cause the
+system to not accept new calls.
+
+
+
+Successful exploitation
+of the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability documented in Cisco Bug ID CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to escalate privileges and gain administrator access.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Tomcat Configuration Vulnerability documented in Cisco Bug ID CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to execute unauthorized user-supplied web applications.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software File Access Vulnerability documented in Cisco Bug ID CSCub38372["https://tools.cisco.com/bugsearch/bug/CSCub38372"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to view arbitrary
+system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Path Traversal Vulnerability documented in Cisco Bug ID CSCub38369["https://tools.cisco.com/bugsearch/bug/CSCub38369"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to
+overwrite system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow
+an unauthenticated, remote attacker to view arbitrary system files.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>A workaround is available for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability, the communication
+between the Cisco Unified CVP devices must be secured using SSL.  For more
+information on how to secure the communications between Cisco Unified CVP
+devices, refer to the "Unified CVP security" section of the
+Configuration and Administration Guide for Cisco Unified CVP at the following location:
+
+
+
+http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf["http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf "]
+
+A workaround is available for the Cisco Unified Customer Voice Portal
+Software Tomcat Web Application Vulnerability documented in Cisco Bug ID
+CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability, the Manager and Host-Manager web applications must be removed manually from the Tomcat instances on CVP servers. Follow the instructions to remove the Manager and Host-Manager web applications:
+
+
+
+
+Stop the services of respective server:
+
+The ?manager? and ?host-manager? web applications need to be manually removed from Tomcat instances of your CVP servers.
+
+
+CVP VXML Server
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Call
+Server
+
+Go to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Operation
+Console Server
+
+Go to the
+C:\Cisco\CVP\OPSConsoleServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+
+CVP Reporting Server
+
+Go
+to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+A workaround is available for the CVP: Insecure Tomcat Configuration Instance documented in Cisco Bug ID
+CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the CVP: Insecure Tomcat Configuration Instance, follow these steps:
+
+
+
+Stop the service of VXML Server:
+
+
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\conf folder and edit server.xml file.
+
+
+
+Modify autoDeploy to false. Earlier it was true.
+
+
+
+
+None of the other vulnerabilities published in this document have workarounds.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982"]
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp</URL><Description>Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Unified Customer Voice Portal Insecure Tomcat Web Applications Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCub38384</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">A vulnerability exists in the Tomcat Web Management component of Cisco Customer Voice Portal that could allow an unauthenticated, remote attacker to escalate privileges and gain administrator access.
+
+
+
+The vulnerability is due to improper configuration of Tomcat components.</Note></Notes><CVE>CVE-2013-1221</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-79322</ProductID><ProductID>CVRFPID-79530</ProductID><ProductID>CVRFPID-190938</ProductID><ProductID>CVRFPID-190940</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of these vulnerabilities may have various impacts.
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software SIP INVITE Packet Vulnerability documented in Cisco Bug ID CSCua65148["https://tools.cisco.com/bugsearch/bug/CSCua65148"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to cause the
+system to not accept new calls.
+
+
+
+Successful exploitation
+of the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability documented in Cisco Bug ID CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to escalate privileges and gain administrator access.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Tomcat Configuration Vulnerability documented in Cisco Bug ID CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to execute unauthorized user-supplied web applications.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software File Access Vulnerability documented in Cisco Bug ID CSCub38372["https://tools.cisco.com/bugsearch/bug/CSCub38372"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to view arbitrary
+system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Path Traversal Vulnerability documented in Cisco Bug ID CSCub38369["https://tools.cisco.com/bugsearch/bug/CSCub38369"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to
+overwrite system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow
+an unauthenticated, remote attacker to view arbitrary system files.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>10.0</BaseScore><TemporalScore>8.3</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>A workaround is available for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability, the communication
+between the Cisco Unified CVP devices must be secured using SSL.  For more
+information on how to secure the communications between Cisco Unified CVP
+devices, refer to the "Unified CVP security" section of the
+Configuration and Administration Guide for Cisco Unified CVP at the following location:
+
+
+
+http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf["http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf "]
+
+A workaround is available for the Cisco Unified Customer Voice Portal
+Software Tomcat Web Application Vulnerability documented in Cisco Bug ID
+CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability, the Manager and Host-Manager web applications must be removed manually from the Tomcat instances on CVP servers. Follow the instructions to remove the Manager and Host-Manager web applications:
+
+
+
+
+Stop the services of respective server:
+
+The ?manager? and ?host-manager? web applications need to be manually removed from Tomcat instances of your CVP servers.
+
+
+CVP VXML Server
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Call
+Server
+
+Go to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Operation
+Console Server
+
+Go to the
+C:\Cisco\CVP\OPSConsoleServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+
+CVP Reporting Server
+
+Go
+to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+A workaround is available for the CVP: Insecure Tomcat Configuration Instance documented in Cisco Bug ID
+CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the CVP: Insecure Tomcat Configuration Instance, follow these steps:
+
+
+
+Stop the service of VXML Server:
+
+
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\conf folder and edit server.xml file.
+
+
+
+Modify autoDeploy to false. Earlier it was true.
+
+
+
+
+None of the other vulnerabilities published in this document have workarounds.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982"]
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp</URL><Description>Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="3" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Customer Voice Portal Insecure TomCat configurations vulnerability</Title><ID SystemName="Cisco Bug ID">CSCub38379</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="3">A vulnerability exists in Tomcat Web Management component of Cisco
+Customer Voice Portal that could allow an unauthenticated, remote
+attacker to execute unauthorized user-supplied web applications.
+
+
+
+The vulnerability is due to improper configuration of Tomcat components.</Note></Notes><CVE>CVE-2013-1222</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-79322</ProductID><ProductID>CVRFPID-79530</ProductID><ProductID>CVRFPID-190938</ProductID><ProductID>CVRFPID-190940</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of these vulnerabilities may have various impacts.
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software SIP INVITE Packet Vulnerability documented in Cisco Bug ID CSCua65148["https://tools.cisco.com/bugsearch/bug/CSCua65148"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to cause the
+system to not accept new calls.
+
+
+
+Successful exploitation
+of the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability documented in Cisco Bug ID CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to escalate privileges and gain administrator access.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Tomcat Configuration Vulnerability documented in Cisco Bug ID CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to execute unauthorized user-supplied web applications.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software File Access Vulnerability documented in Cisco Bug ID CSCub38372["https://tools.cisco.com/bugsearch/bug/CSCub38372"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to view arbitrary
+system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Path Traversal Vulnerability documented in Cisco Bug ID CSCub38369["https://tools.cisco.com/bugsearch/bug/CSCub38369"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to
+overwrite system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow
+an unauthenticated, remote attacker to view arbitrary system files.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:C/A:N/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>A workaround is available for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability, the communication
+between the Cisco Unified CVP devices must be secured using SSL.  For more
+information on how to secure the communications between Cisco Unified CVP
+devices, refer to the "Unified CVP security" section of the
+Configuration and Administration Guide for Cisco Unified CVP at the following location:
+
+
+
+http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf["http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf "]
+
+A workaround is available for the Cisco Unified Customer Voice Portal
+Software Tomcat Web Application Vulnerability documented in Cisco Bug ID
+CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability, the Manager and Host-Manager web applications must be removed manually from the Tomcat instances on CVP servers. Follow the instructions to remove the Manager and Host-Manager web applications:
+
+
+
+
+Stop the services of respective server:
+
+The ?manager? and ?host-manager? web applications need to be manually removed from Tomcat instances of your CVP servers.
+
+
+CVP VXML Server
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Call
+Server
+
+Go to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Operation
+Console Server
+
+Go to the
+C:\Cisco\CVP\OPSConsoleServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+
+CVP Reporting Server
+
+Go
+to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+A workaround is available for the CVP: Insecure Tomcat Configuration Instance documented in Cisco Bug ID
+CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the CVP: Insecure Tomcat Configuration Instance, follow these steps:
+
+
+
+Stop the service of VXML Server:
+
+
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\conf folder and edit server.xml file.
+
+
+
+Modify autoDeploy to false. Earlier it was true.
+
+
+
+
+None of the other vulnerabilities published in this document have workarounds.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982"]
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp</URL><Description>Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="4" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Unified Customer Voice Portal Arbitrary File Access Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCub38372</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="4">A vulnerability exists in the log viewer of Cisco Unified Customer Voice Portal (CVP) that could allow an unauthenticated, remote attacker to view arbitrary system files.
+
+
+
+The vulnerability is due to an incorrect parameter check. An attacker could exploit this vulnerability by sending a crafted request to the log viewer.</Note></Notes><CVE>CVE-2013-1223</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-79322</ProductID><ProductID>CVRFPID-79530</ProductID><ProductID>CVRFPID-190938</ProductID><ProductID>CVRFPID-190940</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of these vulnerabilities may have various impacts.
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software SIP INVITE Packet Vulnerability documented in Cisco Bug ID CSCua65148["https://tools.cisco.com/bugsearch/bug/CSCua65148"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to cause the
+system to not accept new calls.
+
+
+
+Successful exploitation
+of the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability documented in Cisco Bug ID CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to escalate privileges and gain administrator access.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Tomcat Configuration Vulnerability documented in Cisco Bug ID CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to execute unauthorized user-supplied web applications.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software File Access Vulnerability documented in Cisco Bug ID CSCub38372["https://tools.cisco.com/bugsearch/bug/CSCub38372"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to view arbitrary
+system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Path Traversal Vulnerability documented in Cisco Bug ID CSCub38369["https://tools.cisco.com/bugsearch/bug/CSCub38369"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to
+overwrite system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow
+an unauthenticated, remote attacker to view arbitrary system files.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:N/A:N/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>A workaround is available for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability, the communication
+between the Cisco Unified CVP devices must be secured using SSL.  For more
+information on how to secure the communications between Cisco Unified CVP
+devices, refer to the "Unified CVP security" section of the
+Configuration and Administration Guide for Cisco Unified CVP at the following location:
+
+
+
+http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf["http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf "]
+
+A workaround is available for the Cisco Unified Customer Voice Portal
+Software Tomcat Web Application Vulnerability documented in Cisco Bug ID
+CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability, the Manager and Host-Manager web applications must be removed manually from the Tomcat instances on CVP servers. Follow the instructions to remove the Manager and Host-Manager web applications:
+
+
+
+
+Stop the services of respective server:
+
+The ?manager? and ?host-manager? web applications need to be manually removed from Tomcat instances of your CVP servers.
+
+
+CVP VXML Server
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Call
+Server
+
+Go to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Operation
+Console Server
+
+Go to the
+C:\Cisco\CVP\OPSConsoleServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+
+CVP Reporting Server
+
+Go
+to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+A workaround is available for the CVP: Insecure Tomcat Configuration Instance documented in Cisco Bug ID
+CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the CVP: Insecure Tomcat Configuration Instance, follow these steps:
+
+
+
+Stop the service of VXML Server:
+
+
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\conf folder and edit server.xml file.
+
+
+
+Modify autoDeploy to false. Earlier it was true.
+
+
+
+
+None of the other vulnerabilities published in this document have workarounds.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982"]
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp</URL><Description>Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="5" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Unified Customer Voice Portal Path Traversal Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCub38369</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="5">A vulnerability exists in Resource Manager (ORM) of Cisco Unified Customer Voice Portal (CVP) that could allow an unauthenticated, remote attacker to overwrite system files.
+
+
+
+The vulnerability is due to an incorrect parameter check. An attacker could exploit this vulnerability by sending a crafted request to the Resource Manager.</Note></Notes><CVE>CVE-2013-1224</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-79322</ProductID><ProductID>CVRFPID-79530</ProductID><ProductID>CVRFPID-190938</ProductID><ProductID>CVRFPID-190940</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of these vulnerabilities may have various impacts.
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software SIP INVITE Packet Vulnerability documented in Cisco Bug ID CSCua65148["https://tools.cisco.com/bugsearch/bug/CSCua65148"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to cause the
+system to not accept new calls.
+
+
+
+Successful exploitation
+of the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability documented in Cisco Bug ID CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to escalate privileges and gain administrator access.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Tomcat Configuration Vulnerability documented in Cisco Bug ID CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to execute unauthorized user-supplied web applications.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software File Access Vulnerability documented in Cisco Bug ID CSCub38372["https://tools.cisco.com/bugsearch/bug/CSCub38372"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to view arbitrary
+system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Path Traversal Vulnerability documented in Cisco Bug ID CSCub38369["https://tools.cisco.com/bugsearch/bug/CSCub38369"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to
+overwrite system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow
+an unauthenticated, remote attacker to view arbitrary system files.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.1</BaseScore><TemporalScore>5.9</TemporalScore><Vector>AV:N/AC:M/Au:N/C:N/I:C/A:N/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>A workaround is available for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability, the communication
+between the Cisco Unified CVP devices must be secured using SSL.  For more
+information on how to secure the communications between Cisco Unified CVP
+devices, refer to the "Unified CVP security" section of the
+Configuration and Administration Guide for Cisco Unified CVP at the following location:
+
+
+
+http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf["http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf "]
+
+A workaround is available for the Cisco Unified Customer Voice Portal
+Software Tomcat Web Application Vulnerability documented in Cisco Bug ID
+CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability, the Manager and Host-Manager web applications must be removed manually from the Tomcat instances on CVP servers. Follow the instructions to remove the Manager and Host-Manager web applications:
+
+
+
+
+Stop the services of respective server:
+
+The ?manager? and ?host-manager? web applications need to be manually removed from Tomcat instances of your CVP servers.
+
+
+CVP VXML Server
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Call
+Server
+
+Go to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Operation
+Console Server
+
+Go to the
+C:\Cisco\CVP\OPSConsoleServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+
+CVP Reporting Server
+
+Go
+to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+A workaround is available for the CVP: Insecure Tomcat Configuration Instance documented in Cisco Bug ID
+CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the CVP: Insecure Tomcat Configuration Instance, follow these steps:
+
+
+
+Stop the service of VXML Server:
+
+
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\conf folder and edit server.xml file.
+
+
+
+Modify autoDeploy to false. Earlier it was true.
+
+
+
+
+None of the other vulnerabilities published in this document have workarounds.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982"]
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp</URL><Description>Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="6" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Unified Customer Voice Portal XML Entity Expansion Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCub38366</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="6">A vulnerability exists in Cisco Unified Customer Voice Portal (CVP) that could allow an unauthenticated, remote attacker to view unauthorized system files.
+
+
+
+The vulnerability is due to a missing check for XML Entity Expansion. An attacker could exploit this vulnerability by sending a crafted request to the Resource Manager.</Note></Notes><CVE>CVE-2013-1225</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-79322</ProductID><ProductID>CVRFPID-79530</ProductID><ProductID>CVRFPID-190938</ProductID><ProductID>CVRFPID-190940</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of these vulnerabilities may have various impacts.
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software SIP INVITE Packet Vulnerability documented in Cisco Bug ID CSCua65148["https://tools.cisco.com/bugsearch/bug/CSCua65148"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to cause the
+system to not accept new calls.
+
+
+
+Successful exploitation
+of the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability documented in Cisco Bug ID CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to escalate privileges and gain administrator access.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Tomcat Configuration Vulnerability documented in Cisco Bug ID CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote
+attacker to execute unauthorized user-supplied web applications.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software File Access Vulnerability documented in Cisco Bug ID CSCub38372["https://tools.cisco.com/bugsearch/bug/CSCub38372"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to view arbitrary
+system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software Path Traversal Vulnerability documented in Cisco Bug ID CSCub38369["https://tools.cisco.com/bugsearch/bug/CSCub38369"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow an unauthenticated, remote attacker to
+overwrite system files.
+
+
+
+Successful exploitation of the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only) could allow
+an unauthenticated, remote attacker to view arbitrary system files.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:N/A:N/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>A workaround is available for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability documented in Cisco Bug ID CSCub38366["https://tools.cisco.com/bugsearch/bug/CSCub38366"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability, the communication
+between the Cisco Unified CVP devices must be secured using SSL.  For more
+information on how to secure the communications between Cisco Unified CVP
+devices, refer to the "Unified CVP security" section of the
+Configuration and Administration Guide for Cisco Unified CVP at the following location:
+
+
+
+http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf["http://www.cisco.com/en/US/docs/voice_ip_comm/cust_contact/contact_center/customer_voice_portal/cvp9_0/configuration/guide/CCVP_BK_CA6D87A1_00_cvp-configuration-and-administration-guide.pdf "]
+
+A workaround is available for the Cisco Unified Customer Voice Portal
+Software Tomcat Web Application Vulnerability documented in Cisco Bug ID
+CSCub38384["https://tools.cisco.com/bugsearch/bug/CSCub38384"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+
+To implement the
+workaround for the Cisco Unified Customer Voice Portal Software Tomcat Web Application Vulnerability, the Manager and Host-Manager web applications must be removed manually from the Tomcat instances on CVP servers. Follow the instructions to remove the Manager and Host-Manager web applications:
+
+
+
+
+Stop the services of respective server:
+
+The ?manager? and ?host-manager? web applications need to be manually removed from Tomcat instances of your CVP servers.
+
+
+CVP VXML Server
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Call
+Server
+
+Go to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete the Manager and Host-Manager folders.
+
+
+
+CVP Operation
+Console Server
+
+Go to the
+C:\Cisco\CVP\OPSConsoleServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+
+CVP Reporting Server
+
+Go
+to the C:\Cisco\CVP\CallServer\Tomcat\server\webapps folder. Delete
+the Manager and Host-Manager folders.
+
+
+A workaround is available for the CVP: Insecure Tomcat Configuration Instance documented in Cisco Bug ID
+CSCub38379["https://tools.cisco.com/bugsearch/bug/CSCub38379"] (registered["http://tools.cisco.com/RPF/register/register.do"] customers only).
+
+
+
+To implement the
+workaround for the CVP: Insecure Tomcat Configuration Instance, follow these steps:
+
+
+
+Stop the service of VXML Server:
+
+
+
+Go to the C:\Cisco\CVP\VXMLServer\Tomcat\conf folder and edit server.xml file.
+
+
+
+Modify autoDeploy to false. Earlier it was true.
+
+
+
+
+None of the other vulnerabilities published in this document have workarounds.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=28982"]
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp</URL><Description>Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software</Description></Reference></References></Vulnerability></cvrfdoc>

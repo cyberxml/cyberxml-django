@@ -1,0 +1,42 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco Application Control Engine Administrator IP Address Overlap Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20120620-ace</ID></Identification><Status>Final</Status><Version>1.1</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2012-06-19T22:20:34</Date><Description>Initial public release</Description></Revision><Revision><Number>1.1</Number><Date>2012-06-20T19:12:33</Date><Description>Corrected CVE ID</Description></Revision></RevisionHistory><InitialReleaseDate>2012-06-20T16:00:00</InitialReleaseDate><CurrentReleaseDate>2012-06-20T19:27:06</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">A vulnerability exists in Cisco Application Control Engine (ACE) software.  Administrative users may be logged into an unintended context (virtual instance) on the ACE when running in multicontext mode.
+
+
+
+Cisco has released free software updates that address this vulnerability.  A workaround is available for this vulnerability.
+This advisory is available at the following link:
+
+
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ace["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ace"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+    A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ace["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ace"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-28233">Cisco Application Control Engine (ACE) Module 3.0</FullProductName><FullProductName ProductID="CVRFPID-28243">Cisco Application Control Engine (ACE) Module 3.1</FullProductName><FullProductName ProductID="CVRFPID-113440">Cisco Application Control Engine (ACE) Module A2(3.2)</FullProductName><FullProductName ProductID="CVRFPID-113442">Cisco Application Control Engine (ACE) Module A2(3.3)</FullProductName><FullProductName ProductID="CVRFPID-113444">Cisco Application Control Engine (ACE) Module A2(3.4)</FullProductName><FullProductName ProductID="CVRFPID-113446">Cisco Application Control Engine (ACE) Module A2(3.5)</FullProductName><FullProductName ProductID="CVRFPID-116785">Cisco Application Control Engine (ACE) Module A2(3.6)</FullProductName><FullProductName ProductID="CVRFPID-102643">Cisco ACE 4700 Series Application Control Engine Appliance Software A1</FullProductName><FullProductName ProductID="CVRFPID-99719">Cisco ACE 4700 Series Application Control Engine Appliance Software A3</FullProductName><FullProductName ProductID="CVRFPID-102645">Cisco ACE 4700 Series Application Control Engine Appliance Software A4</FullProductName><FullProductName ProductID="CVRFPID-102628">Cisco ACE Application Control Engine Module A1</FullProductName><FullProductName ProductID="CVRFPID-100151">Cisco ACE Application Control Engine Module A2</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco ACE Administrative IP address overlap vulnerability</Title><ID SystemName="Cisco Bug ID">CSCts30631</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">Cisco Application Control Engine (ACE) software contains an authentication vulnerability that could allow an authenticated, remote user to log in to an unauthorized context (virtual instance).  This vulnerability depends on two or more contexts having the same management IP address.
+
+
+
+The vulnerability can be triggered by an administrative user attempting to log in to the management interface.  A successful exploit could allow the attacker to be incorrectly logged in to the administrative context of the device.</Note></Notes><CVE>CVE-2012-3063</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-28233</ProductID><ProductID>CVRFPID-28243</ProductID><ProductID>CVRFPID-99719</ProductID><ProductID>CVRFPID-100151</ProductID><ProductID>CVRFPID-102628</ProductID><ProductID>CVRFPID-102643</ProductID><ProductID>CVRFPID-102645</ProductID><ProductID>CVRFPID-113440</ProductID><ProductID>CVRFPID-113442</ProductID><ProductID>CVRFPID-113444</ProductID><ProductID>CVRFPID-113446</ProductID><ProductID>CVRFPID-116785</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerability may cause users to be logged in to an unintended context as the administrator.  This situation could happen inadvertently.  Configurations can be viewed and/or changed by the administrator.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.1</BaseScore><TemporalScore>5.9</TemporalScore><Vector>AV:N/AC:H/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Configure a unique management IP address for each context on the Cisco ACE.  A configuration reference is available at
+
+http://www.cisco.com/en/US/partner/docs/app_ntwk_services/data_center_app_services/ace_appliances/vA3_2_2/configuration/quick/guide/setup.html#wp1010576["http://www.cisco.com/en/US/partner/docs/app_ntwk_services/data_center_app_services/ace_appliances/vA3_2_2/configuration/quick/guide/setup.html#wp1010576"]</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

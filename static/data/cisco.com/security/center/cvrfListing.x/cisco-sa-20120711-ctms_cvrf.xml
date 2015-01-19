@@ -1,0 +1,65 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Multiple Vulnerabilities in Cisco TelePresence Multipoint Switch</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20120711-ctms</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2012-07-10T15:08:36</Date><Description>Initial public release.</Description></Revision></RevisionHistory><InitialReleaseDate>2012-07-11T16:00:00</InitialReleaseDate><CurrentReleaseDate>2012-07-10T15:08:36</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco TelePresence Multipoint Switch contains the following vulnerabilities:
+
+
+
+    Cisco TelePresence Malformed IP Packets Denial of Service Vulnerability 
+    Cisco TelePresence Cisco Discovery Protocol Remote Code Execution Vulnerability 
+
+Exploitation of the Cisco TelePresence Malformed IP Packets Denial of Service Vulnerability may allow an unauthenticated, remote attacker to create a denial of service (DoS) condition,
+causing the product to become unresponsive to new connection requests and
+potentially leading to termination services and processes.
+
+
+
+Exploitation of the Cisco TelePresence Cisco Discovery Protocol Remote Code Execution Vulnerability may allow an unauthenticated, adjacent attacker to execute
+arbitrary code with elevated privileges.
+
+
+
+Cisco has released free software updates that address these vulnerabilities. There are no workarounds that mitigate these vulnerabilities. This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctms["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctms"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on the Cisco Security portal at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctms["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctms"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-117597">Cisco TelePresence Immersive Endpoints 1.5</FullProductName><FullProductName ProductID="CVRFPID-117595">Cisco TelePresence Immersive Endpoints 1.6</FullProductName><FullProductName ProductID="CVRFPID-117593">Cisco TelePresence Immersive Endpoints 1.7</FullProductName><FullProductName ProductID="CVRFPID-117591">Cisco TelePresence Immersive Endpoints 1.8</FullProductName><FullProductName ProductID="CVRFPID-117625">Cisco TelePresence Recording Server 1.5</FullProductName><FullProductName ProductID="CVRFPID-117619">Cisco TelePresence Recording Server 1.6</FullProductName><FullProductName ProductID="CVRFPID-117621">Cisco TelePresence Recording Server 1.7</FullProductName><FullProductName ProductID="CVRFPID-117623">Cisco TelePresence Recording Server 1.8</FullProductName><FullProductName ProductID="CVRFPID-117635">Cisco TelePresence Manager 1.5</FullProductName><FullProductName ProductID="CVRFPID-117637">Cisco TelePresence Manager 1.6</FullProductName><FullProductName ProductID="CVRFPID-117639">Cisco TelePresence Manager 1.7</FullProductName><FullProductName ProductID="CVRFPID-117641">Cisco TelePresence Manager 1.8</FullProductName><FullProductName ProductID="CVRFPID-117642">Cisco TelePresence Manager 1.8 Base</FullProductName><FullProductName ProductID="CVRFPID-117645">Cisco TelePresence Multipoint Switch 1.0</FullProductName><FullProductName ProductID="CVRFPID-117647">Cisco TelePresence Multipoint Switch 1.1</FullProductName><FullProductName ProductID="CVRFPID-117649">Cisco TelePresence Multipoint Switch 1.5</FullProductName><FullProductName ProductID="CVRFPID-117651">Cisco TelePresence Multipoint Switch 1.6</FullProductName><FullProductName ProductID="CVRFPID-117653">Cisco TelePresence Multipoint Switch 1.7</FullProductName><FullProductName ProductID="CVRFPID-117655">Cisco TelePresence Multipoint Switch 1.8</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco TelePresence Malformed IP Packets Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCti21851</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability exists in the network stack of the operating system that could allow an unauthenticated, remote attacker to create a denial of service condition, preventing the device from responding to new connection requests and potentially leading to the crash of some of the services and processes. The vulnerability is due to improper handling of malformed IP packets and TCP connection requests or terminations sent at a high rate. An attacker could exploit this vulnerability by sending a specially crafted sequence of malformed IP packets or TCP segments at a high rate.</Note></Notes><CVE>CVE-2012-3073</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-117635</ProductID><ProductID>CVRFPID-117637</ProductID><ProductID>CVRFPID-117639</ProductID><ProductID>CVRFPID-117642</ProductID><ProductID>CVRFPID-117645</ProductID><ProductID>CVRFPID-117647</ProductID><ProductID>CVRFPID-117649</ProductID><ProductID>CVRFPID-117651</ProductID><ProductID>CVRFPID-117653</ProductID><ProductID>CVRFPID-117655</ProductID><ProductID>CVRFPID-117619</ProductID><ProductID>CVRFPID-117621</ProductID><ProductID>CVRFPID-117623</ProductID><ProductID>CVRFPID-117625</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerabilities may cause a DoS condition where the product becomes unresponsive to new connection requests and
+potentially leading to termination services and processes or to execute arbitrary code with elevated privileges.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector><ProductID>CVRFPID-117635</ProductID><ProductID>CVRFPID-117637</ProductID><ProductID>CVRFPID-117639</ProductID><ProductID>CVRFPID-117642</ProductID><ProductID>CVRFPID-117645</ProductID><ProductID>CVRFPID-117647</ProductID><ProductID>CVRFPID-117649</ProductID><ProductID>CVRFPID-117651</ProductID><ProductID>CVRFPID-117653</ProductID><ProductID>CVRFPID-117655</ProductID></ScoreSet><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>7.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:U/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no workarounds that mitigate these vulnerabilities.</Description></Remediation></Remediations></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco TelePresence Cisco Discovery Protocol Remote Code Execution Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCtz40941</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">A remote code execution vulnerability in the implementation of the Cisco
+Discovery Protocol component could allow an unauthenticated, adjacent
+attacker to execute arbitrary code with elevated privileges. The
+vulnerability is due to a failure to properly handle malformed Cisco
+Discovery Protocol packets.  An attacker could exploit this
+vulnerability by passing malformed Cisco
+Discovery Protocol packets to an
+affected device.  Successful exploitation of this vulnerability could allow the
+attacker to execute arbitrary code with elevated privileges.
+
+
+
+Because Cisco Discovery Protocol works at the data link layer (Layer 2),
+an attacker must have a way to submit an Ethernet frame directly to an
+affected device. This action may be possible in situations where the affected
+system is part of a bridged network or connected to a non partitioned
+device, such as a network hub.
+</Note></Notes><CVE>CVE-2012-2486</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-117591</ProductID><ProductID>CVRFPID-117593</ProductID><ProductID>CVRFPID-117595</ProductID><ProductID>CVRFPID-117597</ProductID><ProductID>CVRFPID-117635</ProductID><ProductID>CVRFPID-117637</ProductID><ProductID>CVRFPID-117639</ProductID><ProductID>CVRFPID-117641</ProductID><ProductID>CVRFPID-117645</ProductID><ProductID>CVRFPID-117647</ProductID><ProductID>CVRFPID-117649</ProductID><ProductID>CVRFPID-117651</ProductID><ProductID>CVRFPID-117653</ProductID><ProductID>CVRFPID-117655</ProductID><ProductID>CVRFPID-117619</ProductID><ProductID>CVRFPID-117621</ProductID><ProductID>CVRFPID-117623</ProductID><ProductID>CVRFPID-117625</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerabilities may cause a DoS condition where the product becomes unresponsive to new connection requests and
+potentially leading to termination services and processes or to execute arbitrary code with elevated privileges.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>8.3</BaseScore><TemporalScore>6.9</TemporalScore><Vector>AV:A/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no workarounds that mitigate these vulnerabilities.</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Apache HTTPd Range Header Denial of Service Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20110830-apache</ID></Identification><Status>Final</Status><Version>1.9</Version><RevisionHistory><Revision><Number>1.7</Number><Date>2012-01-23T17:49:16</Date><Description>Updated the Software Versions and Fixes section.</Description></Revision><Revision><Number>1.8</Number><Date>2014-10-28T10:19:11</Date><Description>Added Nexus 1K as affected.  Updated first fixed release information.</Description></Revision><Revision><Number>1.9</Number><Date>2014-11-20T16:35:36</Date><Description>Fixed information for Video Communication Server: fixed release is X7.0.2 instead of X7.0.1.</Description></Revision></RevisionHistory><InitialReleaseDate>2011-08-30T16:00:00</InitialReleaseDate><CurrentReleaseDate>2014-11-20T16:35:36</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">The Apache HTTPd server contains a denial of service vulnerability when
+it handles multiple, overlapping ranges. Multiple Cisco products may be
+affected by this vulnerability. 
+
+ Mitigations that can be deployed on Cisco devices within
+the network are available in the Cisco Applied Intelligence companion document
+for this Advisory:
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=24024["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=24024"]
+
+
+This advisory is posted at http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110830-apache["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110830-apache"].
+</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco's worldwide website at: 
+
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110830-apache["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110830-apache"]
+
+
+
+In addition to worldwide web posting, a text version of
+this notice is clear-signed with the Cisco PSIRT PGP key and is posted to the
+following e-mail and Usenet news recipients.
+
+
+
+    
+    cust-security-announce@cisco.com
+    
+    first-teams@first.org
+    
+    bugtraq@securityfocus.com
+    
+    vulnwatch@vulnwatch.org
+    
+    cisco@spot.colorado.edu
+    
+    cisco-nsp@puck.nether.net
+    
+    full-disclosure@lists.grok.org.uk
+    
+    comp.dcom.sys.cisco@newsgate.cisco.com
+
+
+Future updates of this advisory, if any, will be placed on Cisco's
+worldwide website, but may or may not be actively announced on mailing lists or
+newsgroups. Users concerned about this problem are encouraged to check the
+above URL for any updates.
+
+</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110830-apache</URL><Description>Apache HTTPd Range Header Denial of Service Vulnerability</Description></Reference></DocumentReferences></cvrfdoc>

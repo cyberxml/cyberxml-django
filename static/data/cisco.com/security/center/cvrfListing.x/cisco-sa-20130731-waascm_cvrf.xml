@@ -1,0 +1,50 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco WAAS Central Manager Remote Code Execution Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130731-waascm</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-07-29T17:53:49</Date><Description>Initial public release</Description></Revision></RevisionHistory><InitialReleaseDate>2013-07-31T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-07-29T17:53:49</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco Wide Area Application Services (WAAS) when configured as Central Manager (CM), contains a vulnerability that could allow an unauthenticated, remote attacker to execute
+arbitrary code on the affected system.
+
+
+
+Cisco has released free software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-waascm["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-waascm"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-waascm["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-waascm"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-waascm</URL><Description>Cisco WAAS Central Manager Remote Code Execution Vulnerability</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-96260">Cisco Wide Area Application Services (WAAS) 4.2 Base</FullProductName><FullProductName ProductID="CVRFPID-96261">Cisco Wide Area Application Services (WAAS) 4.2(1)</FullProductName><FullProductName ProductID="CVRFPID-114279">Cisco Wide Area Application Services (WAAS) 4.3 Base</FullProductName><FullProductName ProductID="CVRFPID-114281">Cisco Wide Area Application Services (WAAS) 4.4 Base</FullProductName><FullProductName ProductID="CVRFPID-114282">Cisco Wide Area Application Services (WAAS) 4.4.3</FullProductName><FullProductName ProductID="CVRFPID-114283">Cisco Wide Area Application Services (WAAS) 4.4.3a</FullProductName><FullProductName ProductID="CVRFPID-114284">Cisco Wide Area Application Services (WAAS) 4.4.3b</FullProductName><FullProductName ProductID="CVRFPID-114285">Cisco Wide Area Application Services (WAAS) 4.4.3c</FullProductName><FullProductName ProductID="CVRFPID-184112">Cisco Wide Area Application Services (WAAS) 5.0 Base</FullProductName><FullProductName ProductID="CVRFPID-184113">Cisco Wide Area Application Services (WAAS) 5.0.1</FullProductName><FullProductName ProductID="CVRFPID-192294">Cisco Wide Area Application Services (WAAS) 5.0.3</FullProductName><FullProductName ProductID="CVRFPID-192295">Cisco Wide Area Application Services (WAAS) 5.0.3a</FullProductName><FullProductName ProductID="CVRFPID-192296">Cisco Wide Area Application Services (WAAS) 5.0.3c</FullProductName><FullProductName ProductID="CVRFPID-192297">Cisco Wide Area Application Services (WAAS) 5.0.3d</FullProductName><FullProductName ProductID="CVRFPID-192298">Cisco Wide Area Application Services (WAAS) 5.0.3e</FullProductName><FullProductName ProductID="CVRFPID-192291">Cisco Wide Area Application Services (WAAS) 5.1 Base</FullProductName><FullProductName ProductID="CVRFPID-192299">Cisco Wide Area Application Services (WAAS) 5.1.1</FullProductName><FullProductName ProductID="CVRFPID-192300">Cisco Wide Area Application Services (WAAS) 5.1.1a</FullProductName><FullProductName ProductID="CVRFPID-192301">Cisco Wide Area Application Services (WAAS) 5.1.1b</FullProductName><FullProductName ProductID="CVRFPID-192302">Cisco Wide Area Application Services (WAAS) 5.1.1c</FullProductName><FullProductName ProductID="CVRFPID-192293">Cisco Wide Area Application Services (WAAS) 5.2 Base</FullProductName><FullProductName ProductID="CVRFPID-192303">Cisco Wide Area Application Services (WAAS) 5.2.1</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco WAAS Central Manager Remote Code Execution Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCuh26626</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the web service framework code of Cisco WAAS, when configured as Central
+Manager (CM) could allow an unauthenticated, remote attacker to execute
+arbitrary code on the affected system.
+
+
+
+The vulnerability is due
+to insufficient input validation. An attacker could
+exploit this vulnerability by sending a crafted POST request to the
+affected system. An exploit could allow the attacker to execute arbitrary code on the
+affected system. Due to the privileged function of the WAAS CM
+in the Cisco WAAS network, exploitation of this vulnerability could allow the attacker
+to gain administrative access to all the devices that have been
+associated to the vulnerable WAAS CM.</Note></Notes><CVE>CVE-2013-3443</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-96260</ProductID><ProductID>CVRFPID-96261</ProductID><ProductID>CVRFPID-114279</ProductID><ProductID>CVRFPID-114281</ProductID><ProductID>CVRFPID-114282</ProductID><ProductID>CVRFPID-114283</ProductID><ProductID>CVRFPID-114284</ProductID><ProductID>CVRFPID-114285</ProductID><ProductID>CVRFPID-184112</ProductID><ProductID>CVRFPID-184113</ProductID><ProductID>CVRFPID-192291</ProductID><ProductID>CVRFPID-192293</ProductID><ProductID>CVRFPID-192294</ProductID><ProductID>CVRFPID-192295</ProductID><ProductID>CVRFPID-192296</ProductID><ProductID>CVRFPID-192297</ProductID><ProductID>CVRFPID-192298</ProductID><ProductID>CVRFPID-192299</ProductID><ProductID>CVRFPID-192300</ProductID><ProductID>CVRFPID-192301</ProductID><ProductID>CVRFPID-192302</ProductID><ProductID>CVRFPID-192303</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerability may cause an unauthenticated, remote attacker to execute arbitrary command and completely compromise the affected system.
+
+Due to the privileged function of the Cisco WAAS CM in the Cisco WAAS network, exploitation of this vulnerability could allow the attacker to gain administrative access to all the devices that are associated to the vulnerable and compromised CM. 
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>10.0</BaseScore><TemporalScore>8.7</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:H/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no workarounds that mitigate this vulnerability.</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-waascm</URL><Description>Cisco WAAS Central Manager Remote Code Execution Vulnerability</Description></Reference></References></Vulnerability></cvrfdoc>

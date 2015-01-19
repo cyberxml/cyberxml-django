@@ -1,0 +1,57 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco Network Admission Control Manager SQL Injection Vulnerability </DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130417-nac</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-04-17T13:31:12</Date><Description>Initial public release</Description></Revision></RevisionHistory><InitialReleaseDate>2013-04-17T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-04-17T13:31:12</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco Network Admission Control (NAC) Manager contains a vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code and take full control of the vulnerable system. A successful attack could allow an unauthenticated attacker to access, create or modify any information in the NAC Manager database. 
+
+
+
+Cisco has released free software updates that address this vulnerability. 
+
+
+
+There are no workarounds for this vulnerability.
+
+
+
+This advisory is available at the following link: http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130417-nac["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130417-nac"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130417-nac["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130417-nac"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-188997">Cisco NAC Appliance Software 4.5.1 Base</FullProductName><FullProductName ProductID="CVRFPID-189305">Cisco NAC Appliance Software 4.6.2 Base</FullProductName><FullProductName ProductID="CVRFPID-113602">Cisco NAC Appliance Software 4.7.0 Base</FullProductName><FullProductName ProductID="CVRFPID-189309">Cisco NAC Appliance Software 4.7.1 Base</FullProductName><FullProductName ProductID="CVRFPID-189311">Cisco NAC Appliance Software 4.7.3 Base</FullProductName><FullProductName ProductID="CVRFPID-189313">Cisco NAC Appliance Software 4.7.4 Base</FullProductName><FullProductName ProductID="CVRFPID-189317">Cisco NAC Appliance Software 4.7.5 Base</FullProductName><FullProductName ProductID="CVRFPID-112160">Cisco NAC Appliance Software 4.8.0 Base</FullProductName><FullProductName ProductID="CVRFPID-112162">Cisco NAC Appliance Software 4.8.1 Base</FullProductName><FullProductName ProductID="CVRFPID-112164">Cisco NAC Appliance Software 4.8.2 Base</FullProductName><FullProductName ProductID="CVRFPID-189315">Cisco NAC Appliance Software 4.8.3 Base</FullProductName><FullProductName ProductID="CVRFPID-189301">Cisco NAC Appliance Software 4.9.0 Base</FullProductName><FullProductName ProductID="CVRFPID-189307">Cisco NAC Appliance Software 4.9.1 Base</FullProductName><FullProductName ProductID="CVRFPID-189303">Cisco NAC Appliance Software 4.9.2 Base</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco NAC Manager SQL Injection Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCub23095</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">Cisco NAC Manager contains a vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code and take full control of the vulnerable system.
+
+
+
+This vulnerability is due to improper validation of user-supplied requests by the Cisco NAC Manager. An attacker could exploit this vulnerability by injecting Structured Query Language (SQL) commands. An exploit could allow the attacker to execute arbitrary queries and take full control of the affected system.
+
+
+</Note></Notes><CVE>CVE-2013-1177</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-112160</ProductID><ProductID>CVRFPID-112162</ProductID><ProductID>CVRFPID-112164</ProductID><ProductID>CVRFPID-113602</ProductID><ProductID>CVRFPID-188997</ProductID><ProductID>CVRFPID-189301</ProductID><ProductID>CVRFPID-189303</ProductID><ProductID>CVRFPID-189305</ProductID><ProductID>CVRFPID-189307</ProductID><ProductID>CVRFPID-189309</ProductID><ProductID>CVRFPID-189311</ProductID><ProductID>CVRFPID-189313</ProductID><ProductID>CVRFPID-189315</ProductID><ProductID>CVRFPID-189317</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerability could allow the attacker to execute arbitrary queries on the Cisco NAC Manager and take full control of the affected system. 
+
+A successful attack could allow an unauthenticated attacker to access, create or modify information such as usernames and password hashes in the NAC Manager database. A successful attack also has the potential to create, modify, or delete arbitrary and system files and to copy sensitive information from the vulnerable device.
+
+
+
+
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>10.0</BaseScore><TemporalScore>8.3</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no workarounds for the vulnerability described in this document.
+
+
+
+
+</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

@@ -1,0 +1,203 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Multiple Vulnerabilities in Cisco Wireless LAN Controllers</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20120229-wlc</ID></Identification><Status>Final</Status><Version>1.2</Version><RevisionHistory><Revision><Number>1.1</Number><Date>2012-03-01T15:12:07</Date><Description>Software table update.</Description></Revision><Revision><Number>1.2</Number><Date>2012-03-16T20:46:08</Date><Description>Software table update.</Description></Revision></RevisionHistory><InitialReleaseDate>2012-02-29T16:00:00</InitialReleaseDate><CurrentReleaseDate>2012-03-16T20:46:08</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">The Cisco Wireless LAN Controller (WLC) product family is affected by the following vulnerabilities:
+
+
+    Cisco Wireless LAN Controllers HTTP Denial of Service Vulnerability
+    Cisco Wireless LAN Controllers IPv6 Denial of Service Vulnerability
+    Cisco Wireless LAN Controllers WebAuth Denial of Service Vulnerability
+    Cisco Wireless LAN Controllers Unauthorized Access Vulnerability
+
+
+
+Cisco has released free software updates that address these vulnerabilities. Workarounds are available that mitigate some of these vulnerabilities.
+
+
+
+ This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-wlc["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-wlc"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-wlc["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-wlc"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference><URL>http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-wlc</URL><Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Wireless LAN Controllers</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-7744">Cisco 4400 Series Wireless LAN Controller</FullProductName><FullProductName ProductID="CVRFPID-7368">Cisco Wireless LAN Controller</FullProductName><FullProductName ProductID="CVRFPID-82269">Cisco Wireless LAN Controller 4.2</FullProductName><FullProductName ProductID="CVRFPID-82275">Cisco Wireless LAN Controller 5.0</FullProductName><FullProductName ProductID="CVRFPID-82278">Cisco Wireless LAN Controller 5.1</FullProductName><FullProductName ProductID="CVRFPID-88658">Cisco Wireless LAN Controller 5.2</FullProductName><FullProductName ProductID="CVRFPID-100593">Cisco Wireless LAN Controller 6.0</FullProductName><FullProductName ProductID="CVRFPID-109057">Cisco Wireless LAN Controller 7.0</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Wireless LAN Controllers HTTP Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCts81997</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">
+
+
+The Cisco Wireless LAN Controller (WLC) product family is affected by a denial of service (DoS) vulnerability that could allow an unauthenticated, remote attacker to cause the device to crash by submitting a malformed URL to the administrative management interface.
+
+
+
+
+</Note></Notes><CVE>CVE-2012-0368</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-7368</ProductID><ProductID>CVRFPID-7744</ProductID><ProductID>CVRFPID-100593</ProductID><ProductID>CVRFPID-109057</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the DoS vulnerabilities could allow an unauthenticated attacker to cause an affected device to reload. Repeated exploitation could result in a sustained DoS condition.
+
+
+
+Successful exploitation of the unauthorized access vulnerability could allow an unauthenticated attacker to view or modify the device configuration.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+
+
+
+Cisco Wireless LAN Controllers HTTP Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers IPv6 Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers WebAuth Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers Unauthorized Access Vulnerability
+
+CPU based ACLs can be configured to block access to the affected WLC on TCP port 1023. After ACLs are defined, they can be applied to the management interface,
+the access point manager (AP-manager) interface, or any of the dynamic
+interfaces for client data traffic or to the Network Processing Unit (NPU)
+interface for traffic to the controller CPU.
+
+
+
+Additional mitigations that can be deployed on Cisco devices in the network are available in the Cisco Applied Mitigation Bulletin companion document for this advisory, which is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-wlc["http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-wlc"]</Description></Remediation></Remediations></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Wireless LAN Controllers IPv6 Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCtt07949</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">The Cisco Wireless LAN Controller (WLC) product family is affected by a denial of service (DoS) vulnerability where an unauthenticated attacker could cause a device reload by sending a series of IPv6 packets.</Note></Notes><CVE>CVE-2012-0369</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-7368</ProductID><ProductID>CVRFPID-7744</ProductID><ProductID>CVRFPID-100593</ProductID><ProductID>CVRFPID-109057</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the DoS vulnerabilities could allow an unauthenticated attacker to cause an affected device to reload. Repeated exploitation could result in a sustained DoS condition.
+
+
+
+Successful exploitation of the unauthorized access vulnerability could allow an unauthenticated attacker to view or modify the device configuration.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+
+
+
+Cisco Wireless LAN Controllers HTTP Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers IPv6 Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers WebAuth Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers Unauthorized Access Vulnerability
+
+CPU based ACLs can be configured to block access to the affected WLC on TCP port 1023. After ACLs are defined, they can be applied to the management interface,
+the access point manager (AP-manager) interface, or any of the dynamic
+interfaces for client data traffic or to the Network Processing Unit (NPU)
+interface for traffic to the controller CPU.
+
+
+
+Additional mitigations that can be deployed on Cisco devices in the network are available in the Cisco Applied Mitigation Bulletin companion document for this advisory, which is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-wlc["http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-wlc"]</Description></Remediation></Remediations></Vulnerability><Vulnerability Ordinal="3" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Wireless LAN Controllers WebAuth Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCtt47435</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="3">The Cisco Wireless LAN Controller (WLC) product family is affected by a denial of service (DoS) vulnerability where an unauthenticated attacker could cause a device reload by sending a series of HTTP or HTTPS packets to an affected controller configured for WebAuth.</Note></Notes><CVE>CVE-2012-0370</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-7368</ProductID><ProductID>CVRFPID-7744</ProductID><ProductID>CVRFPID-82269</ProductID><ProductID>CVRFPID-82275</ProductID><ProductID>CVRFPID-82278</ProductID><ProductID>CVRFPID-88658</ProductID><ProductID>CVRFPID-100593</ProductID><ProductID>CVRFPID-109057</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the DoS vulnerabilities could allow an unauthenticated attacker to cause an affected device to reload. Repeated exploitation could result in a sustained DoS condition.
+
+
+
+Successful exploitation of the unauthorized access vulnerability could allow an unauthenticated attacker to view or modify the device configuration.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+
+
+
+Cisco Wireless LAN Controllers HTTP Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers IPv6 Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers WebAuth Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers Unauthorized Access Vulnerability
+
+CPU based ACLs can be configured to block access to the affected WLC on TCP port 1023. After ACLs are defined, they can be applied to the management interface,
+the access point manager (AP-manager) interface, or any of the dynamic
+interfaces for client data traffic or to the Network Processing Unit (NPU)
+interface for traffic to the controller CPU.
+
+
+
+Additional mitigations that can be deployed on Cisco devices in the network are available in the Cisco Applied Mitigation Bulletin companion document for this advisory, which is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-wlc["http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-wlc"]</Description></Remediation></Remediations></Vulnerability><Vulnerability Ordinal="4" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Wireless LAN Controllers Unauthorized Access Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCtu56709</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="4">The Cisco Wireless LAN Controller (WLC) product family is affected by an unauthorized access vulnerability where an unauthenticated attacker could view and modify the configuration of an affected Cisco WLC.
+</Note></Notes><CVE>CVE-2012-0371</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-7368</ProductID><ProductID>CVRFPID-82278</ProductID><ProductID>CVRFPID-88658</ProductID><ProductID>CVRFPID-100593</ProductID><ProductID>CVRFPID-109057</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the DoS vulnerabilities could allow an unauthenticated attacker to cause an affected device to reload. Repeated exploitation could result in a sustained DoS condition.
+
+
+
+Successful exploitation of the unauthorized access vulnerability could allow an unauthenticated attacker to view or modify the device configuration.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>9.3</BaseScore><TemporalScore>7.7</TemporalScore><Vector>AV:N/AC:M/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+
+
+
+Cisco Wireless LAN Controllers HTTP Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers IPv6 Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers WebAuth Denial of Service Vulnerability
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco Wireless LAN Controllers Unauthorized Access Vulnerability
+
+CPU based ACLs can be configured to block access to the affected WLC on TCP port 1023. After ACLs are defined, they can be applied to the management interface,
+the access point manager (AP-manager) interface, or any of the dynamic
+interfaces for client data traffic or to the Network Processing Unit (NPU)
+interface for traffic to the controller CPU.
+
+
+
+Additional mitigations that can be deployed on Cisco devices in the network are available in the Cisco Applied Mitigation Bulletin companion document for this advisory, which is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-wlc["http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-wlc"]</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

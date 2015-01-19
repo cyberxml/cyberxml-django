@@ -1,0 +1,710 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Multiple Vulnerabilities in Cisco Intrusion Prevention System Software</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130717-ips</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-07-17T14:03:42</Date><Description>Initial public release.</Description></Revision></RevisionHistory><InitialReleaseDate>2013-07-17T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-07-18T14:14:20</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco Intrusion Prevention System (IPS) Software is affected by the following vulnerabilities:
+
+    Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability
+    Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability 
+    Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability
+    Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability
+
+The Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability could allow an unauthenticated, remote attacker to cause the MainApp process to become unresponsive.
+
+
+
+The Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability could allow an unauthenticated, remote attacker to cause the Analysis Engine process to become unresponsive due to memory corruption or could cause the reload of the affected system. 
+
+
+
+The Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability could allow an unauthenticated, remote attacker to cause a reload of a Cisco Intrusion Prevention System Network Module Enhanced (IPS NME).
+
+
+
+The Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability could allow an unauthenticated, remote attacker to cause the kernel of the Cisco Catalyst 6500 Series Intrusion Detection System (IDSM-2) Module to become unresponsive.
+
+
+
+Successful exploitation of any of these vulnerabilities could result in a denial of service (DoS) condition.
+
+
+
+Cisco has released free software updates that address all the vulnerabilities in this advisory with the exception of the Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability. Customers running a vulnerable version of the Cisco IDSM-2 Module should refer to the "Workarounds" section of this advisory for available mitigations. 
+
+
+
+Workarounds that mitigate the Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability and Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability are available.
+
+
+
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-ips["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-ips"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-ips["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-ips"]
+
+
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses:
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-ips</URL><Description>Multiple Vulnerabilities in Cisco Intrusion Prevention System Software</Description></Reference><Reference><URL>http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29271</URL><Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Intrusion Prevention System Software</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-53266">Cisco Intrusion Prevention System (IPS) 5.0(1)</FullProductName><FullProductName ProductID="CVRFPID-53267">Cisco Intrusion Prevention System (IPS) 5.0(2)</FullProductName><FullProductName ProductID="CVRFPID-53268">Cisco Intrusion Prevention System (IPS) 5.0(3)</FullProductName><FullProductName ProductID="CVRFPID-60463">Cisco Intrusion Prevention System (IPS) 5.0(4)</FullProductName><FullProductName ProductID="CVRFPID-60464">Cisco Intrusion Prevention System (IPS) 5.0(5)</FullProductName><FullProductName ProductID="CVRFPID-60465">Cisco Intrusion Prevention System (IPS) 5.0(6)</FullProductName><FullProductName ProductID="CVRFPID-59013">Cisco Intrusion Prevention System (IPS) 5.1(1)</FullProductName><FullProductName ProductID="CVRFPID-59008">Cisco Intrusion Prevention System (IPS) 5.1(1a)</FullProductName><FullProductName ProductID="CVRFPID-59009">Cisco Intrusion Prevention System (IPS) 5.1(1b)</FullProductName><FullProductName ProductID="CVRFPID-59010">Cisco Intrusion Prevention System (IPS) 5.1(1c)</FullProductName><FullProductName ProductID="CVRFPID-59011">Cisco Intrusion Prevention System (IPS) 5.1(1d)</FullProductName><FullProductName ProductID="CVRFPID-59012">Cisco Intrusion Prevention System (IPS) 5.1(1e)</FullProductName><FullProductName ProductID="CVRFPID-59025">Cisco Intrusion Prevention System (IPS) 5.1(p1)</FullProductName><FullProductName ProductID="CVRFPID-60466">Cisco Intrusion Prevention System (IPS) 5.1(2)</FullProductName><FullProductName ProductID="CVRFPID-66050">Cisco Intrusion Prevention System (IPS) 5.1(5)</FullProductName><FullProductName ProductID="CVRFPID-66051">Cisco Intrusion Prevention System (IPS) 5.1(6)</FullProductName><FullProductName ProductID="CVRFPID-65005">Cisco Intrusion Prevention System (IPS) 6.0 Base</FullProductName><FullProductName ProductID="CVRFPID-66052">Cisco Intrusion Prevention System (IPS) 6.0(2)</FullProductName><FullProductName ProductID="CVRFPID-66053">Cisco Intrusion Prevention System (IPS) 6.0(3)</FullProductName><FullProductName ProductID="CVRFPID-113565">Cisco Intrusion Prevention System (IPS) 6.0(4)</FullProductName><FullProductName ProductID="CVRFPID-79296">Cisco Intrusion Prevention System (IPS) 6.1 Base</FullProductName><FullProductName ProductID="CVRFPID-189702">Cisco Intrusion Prevention System (IPS) 7.0 Base</FullProductName><FullProductName ProductID="CVRFPID-189704">Cisco Intrusion Prevention System (IPS) 7.1 Base</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCtx18596</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the IP stack could allow an unauthenticated, remote attacker to cause the MainApp process to become unresponsive. This creates a denial of service (DoS) condition because the Cisco IPS sensor is not able to execute several critical tasks including alert notification, event store management, and sensor authentication. The Cisco IPS web server will also be unavailable while the MainApp process is unresponsive. Additionally, due to this general system failure, other processes such as the Analysis Engine may not work properly. The vulnerability is due to improper handling of malformed IP packets from the management interface of the affected system. An attacker may exploit this vulnerability by sending malformed IP packets to the management interface.
+
+
+
+The vulnerability can be triggered only by IPv4 traffic directed to the management interface. Traffic passing through the sensing interfaces will not trigger this vulnerability. If the Cisco IPS is configured in promiscuous mode, mitigation actions that require MainApp processing such as shun or rate-limit may be unavailable. If the Cisco IPS is configured in inline mode, the sensor may not correctly perform inspection and mitigation actions because the Analysis Engine process may not be working properly.</Note></Notes><CVE>CVE-2013-1243</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-189704</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause the MainApp process to become unresponsive and prevent it from executing several tasks including alert notification, event store management, and sensor authentication. The Cisco IPS web server will also be unavailable while the MainApp process is unresponsive, and other processes such as the Analysis Engine process may not work properly.
+
+
+
+If the Cisco IPS is configured in promiscuous mode, mitigation actions that require MainApp processing, such as shun or rate-limit, may be unavailable. If the Cisco IPS is configured in inline mode, there may be the possibility that the sensor will not be able to correctly perform inspection and mitigation actions because the Analysis Engine process may not be working properly. A hard system reload is required to restore the full functionality of the affected system.
+
+
+
+Successful exploitation of the Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause a reload of the affected system, or cause the Analysis Engine process to become unresponsive. When the Analysis Engine process is unresponsive, the affected system will not process traffic, which will cause that traffic to be dropped. Additionally, if the Cisco ASA with a Cisco IPS SSP software module running an affected version of software is configured in HA mode, a fail-over event may be triggered when the Cisco IPS SSP reloads or stops forwarding traffic.
+
+
+
+Successful exploitation of the Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause a reload of a Cisco IPS NME.
+
+
+
+Successful exploitation of the Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause the kernel of the Cisco IDSM-2 Module to become unresponsive, which will create general system instability. This will prevent the affected system from executing several tasks, including alert notification, event store management, sensor authentication, and traffic inspection and mitigation. The Cisco IPS web server will also be unavailable and the system will be unreachable for remote management.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability and Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability
+
+
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability
+
+
+
+If an exploit of this vulnerability is causing traffic interruption, administrators can remove the Modular Policy Framework (MPF) configuration on the Cisco ASA that is used to direct the user traffic toward the Cisco IPS SSP. This change will cause all user traffic to bypass Cisco IPS SSP module inspection and allow it to pass through the Cisco ASA.
+
+
+
+The following example shows how to disable the redirecting of web traffic to the Cisco IPS Software module from the Cisco ASA firewall:
+
+ASA(config)# class-map ips_traffic
+ASA(config-cmap)# match any
+ASA(config)# policy-map ips_traffic_policy
+ASA(config-pmap)# class ips_traffic
+ASA(config-pmap-c)# no ips inline|promiscious
+
+Note: Configuring IPS bypass with the command fail-open or fail-close will not have any effect on the Cisco IPS software module for the Cisco ASA.
+
+
+
+If the IPS is running in promiscuous mode, as a mitigation, fragmented traffic can be disabled for IPS processing.
+
+
+
+The following example shows how to disable fragmented traffic on the Cisco IPS software module:
+
+sensor# conf t
+sensor(config)# ser sig sig0
+sensor(config-sig)# sig 1200 0
+sensor(config-sig-sig)# engine normalizer 
+sensor(config-sig-sig-nor)# edit-default-sigs-only default-signatures-only 
+sensor(config-sig-sig-nor-def)# specify-max-fragments yes
+sensor(config-sig-sig-nor-def-yes)# max-fragments 0
+sensor(config-sig-sig-nor-def-yes)# exit
+sensor(config-sig-sig-nor-def)# exit
+sensor(config-sig-sig-nor)# exit
+sensor(config-sig-sig)# exit
+sensor(config-sig)# exit
+Apply Changes?[yes]: yes
+
+This change requires a Cisco IPS software module reload.
+
+
+
+Note: This change will cause all non-TCP fragments to pass uninspected.
+
+
+
+Alternatively, fragmented traffic can be disallowed on the Cisco ASA firewall. This will cause the Cisco ASA firewall not to accept any fragments on its interfaces. Consequently, the Cisco ASA will not send any fragments to the Cisco IPS software module for inspection.
+
+
+
+The following example shows how to disable fragmented traffic on the Cisco ASA firewall:
+
+ASA(config)# fragment chain 1 
+
+Note: The preceding example will disable fragments on all the Cisco ASA interfaces.
+
+
+
+Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability
+
+
+
+There is no workaround for this vulnerability however, the Cisco IDSM-2 Module administrator should make sure to limit the number of hosts (IP addresses) allowed to connect to the management interface of system.
+
+
+
+To restrict the number of allowed hosts, the administrator should use the access-list command. The no access-list command should be used to remove any hosts or networks from the list.
+
+The following example shows the sequence of commands to remove the access to the full 192.168.1.0/24 network and allow access only to the host with IP address 192.168.1.1:
+
+    Use the show settings command in network-setting configuration mode to see the current allowed hosts or networks. The following example shows that the Cisco IDSM-2 is configured to allow all the hosts in the 192.168.1.0/24 network
+
+
+sensor(config-hos-net)# show settings
+   network-settings
+   -----------------------------------------------
+      [...]
+      access-list (min: 0, max: 512, current: 1)
+      -----------------------------------------------
+         network-address: 192.168.1.0/24
+         -----------------------------------------------
+      -----------------------------------------------
+      ftp-timeout: 300 seconds 
+      login-banner-text: 
+      [...]
+
+
+    Use the access-list command in network-setting configuration mode, to add the 192.168.1.1 hosts. Make sure that if this is the only allowed host, it is also the one from which you are executing the configuration to avoid losing connectivity to the Cisco IDSM-2 Module.
+
+
+sensor(config-hos-net)#access-list 192.168.1.1/32
+
+
+    Use the no access-list command in network-setting configuration mode, to remove the 192.168.1.0/32 network for the allowed hosts list.
+
+
+sensor(config-hos-net)#no access-list 192.168.1.0/24
+
+
+    Use the show setting command in network-setting configuration mode to check that the list of allowed hosts is correct:
+
+
+sensor(config-hos-net)# show settings
+   network-settings
+   -----------------------------------------------
+      [...]
+      access-list (min: 0, max: 512, current: 1)
+      -----------------------------------------------
+         network-address: 192.168.1.1/32
+         -----------------------------------------------
+      -----------------------------------------------
+      ftp-timeout: 300 seconds 
+      login-banner-text: 
+      [...]
+
+
+    Exit and apply the configuration:
+
+
+sensor(config-hos-net)# exit
+sensor(config-hos)# exit
+Apply Changes:?[yes]: 
+
+Note: Internal tests performed by Cisco have shown that this vulnerability cannot be exploited if the total number of hosts allowed is less than or equal to 254 hosts. Administrators who cannot reduce the number of allowed hosts to the number indicated in this advisory should contact Cisco Technical Assistance Center for additional support.
+
+
+
+Additional mitigation information for the vulnerabilities described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29271["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29271"]</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-ips</URL><Description>Multiple Vulnerabilities in Cisco Intrusion Prevention System Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCue51272</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">A vulnerability in the implementation of the code that processes fragmented traffic could allow an unauthenticated, remote attacker to cause the Analysis Engine process to become unresponsive or cause the affected system to reload.
+
+
+
+The vulnerability is due to improper handling of fragmented IP packets sent from the Cisco ASA data plane to the Cisco IPS processor for inspection and processing. An attacker could exploit this vulnerability by sending a combination of fragmented and other IP packets through the affected system. An exploit could allow the attacker to cause a reload of the affected system or cause the Analysis Engine process to become unresponsive. When the Analysis Engine process is unresponsive, the affected system will not process traffic, which will cause that traffic to be dropped. Additionally, if the Cisco ASA with a Cisco IPS SSP software module running an
+affected version of software is configured in High-Availability mode (HA), a failover event may be triggered when the Cisco IPS SSP reloads or stops forwarding traffic.
+
+
+
+The vulnerability can be triggered by IPv4 and IPv6 fragmented packets passing through the affected system. Traffic directed to the management IP address of the Cisco IPS software module will not trigger this vulnerability.</Note></Notes><CVE>CVE-2013-1218</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-189704</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause the MainApp process to become unresponsive and prevent it from executing several tasks including alert notification, event store management, and sensor authentication. The Cisco IPS web server will also be unavailable while the MainApp process is unresponsive, and other processes such as the Analysis Engine process may not work properly.
+
+
+
+If the Cisco IPS is configured in promiscuous mode, mitigation actions that require MainApp processing, such as shun or rate-limit, may be unavailable. If the Cisco IPS is configured in inline mode, there may be the possibility that the sensor will not be able to correctly perform inspection and mitigation actions because the Analysis Engine process may not be working properly. A hard system reload is required to restore the full functionality of the affected system.
+
+
+
+Successful exploitation of the Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause a reload of the affected system, or cause the Analysis Engine process to become unresponsive. When the Analysis Engine process is unresponsive, the affected system will not process traffic, which will cause that traffic to be dropped. Additionally, if the Cisco ASA with a Cisco IPS SSP software module running an affected version of software is configured in HA mode, a fail-over event may be triggered when the Cisco IPS SSP reloads or stops forwarding traffic.
+
+
+
+Successful exploitation of the Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause a reload of a Cisco IPS NME.
+
+
+
+Successful exploitation of the Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause the kernel of the Cisco IDSM-2 Module to become unresponsive, which will create general system instability. This will prevent the affected system from executing several tasks, including alert notification, event store management, sensor authentication, and traffic inspection and mitigation. The Cisco IPS web server will also be unavailable and the system will be unreachable for remote management.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability and Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability
+
+
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability
+
+
+
+If an exploit of this vulnerability is causing traffic interruption, administrators can remove the Modular Policy Framework (MPF) configuration on the Cisco ASA that is used to direct the user traffic toward the Cisco IPS SSP. This change will cause all user traffic to bypass Cisco IPS SSP module inspection and allow it to pass through the Cisco ASA.
+
+
+
+The following example shows how to disable the redirecting of web traffic to the Cisco IPS Software module from the Cisco ASA firewall:
+
+ASA(config)# class-map ips_traffic
+ASA(config-cmap)# match any
+ASA(config)# policy-map ips_traffic_policy
+ASA(config-pmap)# class ips_traffic
+ASA(config-pmap-c)# no ips inline|promiscious
+
+Note: Configuring IPS bypass with the command fail-open or fail-close will not have any effect on the Cisco IPS software module for the Cisco ASA.
+
+
+
+If the IPS is running in promiscuous mode, as a mitigation, fragmented traffic can be disabled for IPS processing.
+
+
+
+The following example shows how to disable fragmented traffic on the Cisco IPS software module:
+
+sensor# conf t
+sensor(config)# ser sig sig0
+sensor(config-sig)# sig 1200 0
+sensor(config-sig-sig)# engine normalizer 
+sensor(config-sig-sig-nor)# edit-default-sigs-only default-signatures-only 
+sensor(config-sig-sig-nor-def)# specify-max-fragments yes
+sensor(config-sig-sig-nor-def-yes)# max-fragments 0
+sensor(config-sig-sig-nor-def-yes)# exit
+sensor(config-sig-sig-nor-def)# exit
+sensor(config-sig-sig-nor)# exit
+sensor(config-sig-sig)# exit
+sensor(config-sig)# exit
+Apply Changes?[yes]: yes
+
+This change requires a Cisco IPS software module reload.
+
+
+
+Note: This change will cause all non-TCP fragments to pass uninspected.
+
+
+
+Alternatively, fragmented traffic can be disallowed on the Cisco ASA firewall. This will cause the Cisco ASA firewall not to accept any fragments on its interfaces. Consequently, the Cisco ASA will not send any fragments to the Cisco IPS software module for inspection.
+
+
+
+The following example shows how to disable fragmented traffic on the Cisco ASA firewall:
+
+ASA(config)# fragment chain 1 
+
+Note: The preceding example will disable fragments on all the Cisco ASA interfaces.
+
+
+
+Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability
+
+
+
+There is no workaround for this vulnerability however, the Cisco IDSM-2 Module administrator should make sure to limit the number of hosts (IP addresses) allowed to connect to the management interface of system.
+
+
+
+To restrict the number of allowed hosts, the administrator should use the access-list command. The no access-list command should be used to remove any hosts or networks from the list.
+
+The following example shows the sequence of commands to remove the access to the full 192.168.1.0/24 network and allow access only to the host with IP address 192.168.1.1:
+
+    Use the show settings command in network-setting configuration mode to see the current allowed hosts or networks. The following example shows that the Cisco IDSM-2 is configured to allow all the hosts in the 192.168.1.0/24 network
+
+
+sensor(config-hos-net)# show settings
+   network-settings
+   -----------------------------------------------
+      [...]
+      access-list (min: 0, max: 512, current: 1)
+      -----------------------------------------------
+         network-address: 192.168.1.0/24
+         -----------------------------------------------
+      -----------------------------------------------
+      ftp-timeout: 300 seconds 
+      login-banner-text: 
+      [...]
+
+
+    Use the access-list command in network-setting configuration mode, to add the 192.168.1.1 hosts. Make sure that if this is the only allowed host, it is also the one from which you are executing the configuration to avoid losing connectivity to the Cisco IDSM-2 Module.
+
+
+sensor(config-hos-net)#access-list 192.168.1.1/32
+
+
+    Use the no access-list command in network-setting configuration mode, to remove the 192.168.1.0/32 network for the allowed hosts list.
+
+
+sensor(config-hos-net)#no access-list 192.168.1.0/24
+
+
+    Use the show setting command in network-setting configuration mode to check that the list of allowed hosts is correct:
+
+
+sensor(config-hos-net)# show settings
+   network-settings
+   -----------------------------------------------
+      [...]
+      access-list (min: 0, max: 512, current: 1)
+      -----------------------------------------------
+         network-address: 192.168.1.1/32
+         -----------------------------------------------
+      -----------------------------------------------
+      ftp-timeout: 300 seconds 
+      login-banner-text: 
+      [...]
+
+
+    Exit and apply the configuration:
+
+
+sensor(config-hos-net)# exit
+sensor(config-hos)# exit
+Apply Changes:?[yes]: 
+
+Note: Internal tests performed by Cisco have shown that this vulnerability cannot be exploited if the total number of hosts allowed is less than or equal to 254 hosts. Administrators who cannot reduce the number of allowed hosts to the number indicated in this advisory should contact Cisco Technical Assistance Center for additional support.
+
+
+
+Additional mitigation information for the vulnerabilities described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29271["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29271"]</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-ips</URL><Description>Multiple Vulnerabilities in Cisco Intrusion Prevention System Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="3" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCua61977</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="3">A vulnerability in the memory allocation code could allow an unauthenticated, remote attacker to cause a reload of the affected system. The vulnerability is due to improper handling of memory allocation when malformed IP packets are received on the management interface of the affected system. An attacker may exploit this vulnerability by sending malformed IP packets to the management IP address.
+
+
+
+The vulnerability can be triggered only by IPv4 traffic directed to the management interface. Traffic passing through the sensing interfaces will not trigger this vulnerability.</Note></Notes><CVE>CVE-2013-3410</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-53266</ProductID><ProductID>CVRFPID-53267</ProductID><ProductID>CVRFPID-53268</ProductID><ProductID>CVRFPID-59008</ProductID><ProductID>CVRFPID-59009</ProductID><ProductID>CVRFPID-59010</ProductID><ProductID>CVRFPID-59011</ProductID><ProductID>CVRFPID-59012</ProductID><ProductID>CVRFPID-59013</ProductID><ProductID>CVRFPID-59025</ProductID><ProductID>CVRFPID-60463</ProductID><ProductID>CVRFPID-60464</ProductID><ProductID>CVRFPID-60465</ProductID><ProductID>CVRFPID-60466</ProductID><ProductID>CVRFPID-65005</ProductID><ProductID>CVRFPID-66050</ProductID><ProductID>CVRFPID-66051</ProductID><ProductID>CVRFPID-66052</ProductID><ProductID>CVRFPID-66053</ProductID><ProductID>CVRFPID-79296</ProductID><ProductID>CVRFPID-113565</ProductID><ProductID>CVRFPID-189702</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause the MainApp process to become unresponsive and prevent it from executing several tasks including alert notification, event store management, and sensor authentication. The Cisco IPS web server will also be unavailable while the MainApp process is unresponsive, and other processes such as the Analysis Engine process may not work properly.
+
+
+
+If the Cisco IPS is configured in promiscuous mode, mitigation actions that require MainApp processing, such as shun or rate-limit, may be unavailable. If the Cisco IPS is configured in inline mode, there may be the possibility that the sensor will not be able to correctly perform inspection and mitigation actions because the Analysis Engine process may not be working properly. A hard system reload is required to restore the full functionality of the affected system.
+
+
+
+Successful exploitation of the Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause a reload of the affected system, or cause the Analysis Engine process to become unresponsive. When the Analysis Engine process is unresponsive, the affected system will not process traffic, which will cause that traffic to be dropped. Additionally, if the Cisco ASA with a Cisco IPS SSP software module running an affected version of software is configured in HA mode, a fail-over event may be triggered when the Cisco IPS SSP reloads or stops forwarding traffic.
+
+
+
+Successful exploitation of the Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause a reload of a Cisco IPS NME.
+
+
+
+Successful exploitation of the Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause the kernel of the Cisco IDSM-2 Module to become unresponsive, which will create general system instability. This will prevent the affected system from executing several tasks, including alert notification, event store management, sensor authentication, and traffic inspection and mitigation. The Cisco IPS web server will also be unavailable and the system will be unreachable for remote management.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability and Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability
+
+
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability
+
+
+
+If an exploit of this vulnerability is causing traffic interruption, administrators can remove the Modular Policy Framework (MPF) configuration on the Cisco ASA that is used to direct the user traffic toward the Cisco IPS SSP. This change will cause all user traffic to bypass Cisco IPS SSP module inspection and allow it to pass through the Cisco ASA.
+
+
+
+The following example shows how to disable the redirecting of web traffic to the Cisco IPS Software module from the Cisco ASA firewall:
+
+ASA(config)# class-map ips_traffic
+ASA(config-cmap)# match any
+ASA(config)# policy-map ips_traffic_policy
+ASA(config-pmap)# class ips_traffic
+ASA(config-pmap-c)# no ips inline|promiscious
+
+Note: Configuring IPS bypass with the command fail-open or fail-close will not have any effect on the Cisco IPS software module for the Cisco ASA.
+
+
+
+If the IPS is running in promiscuous mode, as a mitigation, fragmented traffic can be disabled for IPS processing.
+
+
+
+The following example shows how to disable fragmented traffic on the Cisco IPS software module:
+
+sensor# conf t
+sensor(config)# ser sig sig0
+sensor(config-sig)# sig 1200 0
+sensor(config-sig-sig)# engine normalizer 
+sensor(config-sig-sig-nor)# edit-default-sigs-only default-signatures-only 
+sensor(config-sig-sig-nor-def)# specify-max-fragments yes
+sensor(config-sig-sig-nor-def-yes)# max-fragments 0
+sensor(config-sig-sig-nor-def-yes)# exit
+sensor(config-sig-sig-nor-def)# exit
+sensor(config-sig-sig-nor)# exit
+sensor(config-sig-sig)# exit
+sensor(config-sig)# exit
+Apply Changes?[yes]: yes
+
+This change requires a Cisco IPS software module reload.
+
+
+
+Note: This change will cause all non-TCP fragments to pass uninspected.
+
+
+
+Alternatively, fragmented traffic can be disallowed on the Cisco ASA firewall. This will cause the Cisco ASA firewall not to accept any fragments on its interfaces. Consequently, the Cisco ASA will not send any fragments to the Cisco IPS software module for inspection.
+
+
+
+The following example shows how to disable fragmented traffic on the Cisco ASA firewall:
+
+ASA(config)# fragment chain 1 
+
+Note: The preceding example will disable fragments on all the Cisco ASA interfaces.
+
+
+
+Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability
+
+
+
+There is no workaround for this vulnerability however, the Cisco IDSM-2 Module administrator should make sure to limit the number of hosts (IP addresses) allowed to connect to the management interface of system.
+
+
+
+To restrict the number of allowed hosts, the administrator should use the access-list command. The no access-list command should be used to remove any hosts or networks from the list.
+
+The following example shows the sequence of commands to remove the access to the full 192.168.1.0/24 network and allow access only to the host with IP address 192.168.1.1:
+
+    Use the show settings command in network-setting configuration mode to see the current allowed hosts or networks. The following example shows that the Cisco IDSM-2 is configured to allow all the hosts in the 192.168.1.0/24 network
+
+
+sensor(config-hos-net)# show settings
+   network-settings
+   -----------------------------------------------
+      [...]
+      access-list (min: 0, max: 512, current: 1)
+      -----------------------------------------------
+         network-address: 192.168.1.0/24
+         -----------------------------------------------
+      -----------------------------------------------
+      ftp-timeout: 300 seconds 
+      login-banner-text: 
+      [...]
+
+
+    Use the access-list command in network-setting configuration mode, to add the 192.168.1.1 hosts. Make sure that if this is the only allowed host, it is also the one from which you are executing the configuration to avoid losing connectivity to the Cisco IDSM-2 Module.
+
+
+sensor(config-hos-net)#access-list 192.168.1.1/32
+
+
+    Use the no access-list command in network-setting configuration mode, to remove the 192.168.1.0/32 network for the allowed hosts list.
+
+
+sensor(config-hos-net)#no access-list 192.168.1.0/24
+
+
+    Use the show setting command in network-setting configuration mode to check that the list of allowed hosts is correct:
+
+
+sensor(config-hos-net)# show settings
+   network-settings
+   -----------------------------------------------
+      [...]
+      access-list (min: 0, max: 512, current: 1)
+      -----------------------------------------------
+         network-address: 192.168.1.1/32
+         -----------------------------------------------
+      -----------------------------------------------
+      ftp-timeout: 300 seconds 
+      login-banner-text: 
+      [...]
+
+
+    Exit and apply the configuration:
+
+
+sensor(config-hos-net)# exit
+sensor(config-hos)# exit
+Apply Changes:?[yes]: 
+
+Note: Internal tests performed by Cisco have shown that this vulnerability cannot be exploited if the total number of hosts allowed is less than or equal to 254 hosts. Administrators who cannot reduce the number of allowed hosts to the number indicated in this advisory should contact Cisco Technical Assistance Center for additional support.
+
+
+
+Additional mitigation information for the vulnerabilities described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29271["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29271"]</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-ips</URL><Description>Multiple Vulnerabilities in Cisco Intrusion Prevention System Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="4" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCuh27460</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="4">A vulnerability in the IDSM-2 drivers could allow an unauthenticated, remote attacker to cause the system kernel to become unresponsive. This creates a denial of service (DoS) condition because the Cisco IPS sensor is not able to execute several critical tasks, including alert notification, event store management, sensor authentication, and traffic inspection. The Cisco IPS web server will also be unavailable.
+
+
+
+The vulnerability is due to improper handling of malformed TCP packets from the management interface of the affected system. An attacker may exploit this vulnerability by sending malformed IP packets to the management interface. A TCP three-way handshake is not required to exploit this vulnerability. A hard system reboot is needed to restore the functionality of the system.
+
+
+
+The vulnerability can be triggered only by IPv4 traffic directed to the management interface. Traffic passing through the sensing interfaces will not trigger this vulnerability.</Note></Notes><CVE>CVE-2013-3411</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-53266</ProductID><ProductID>CVRFPID-53267</ProductID><ProductID>CVRFPID-53268</ProductID><ProductID>CVRFPID-59008</ProductID><ProductID>CVRFPID-59009</ProductID><ProductID>CVRFPID-59010</ProductID><ProductID>CVRFPID-59011</ProductID><ProductID>CVRFPID-59012</ProductID><ProductID>CVRFPID-59013</ProductID><ProductID>CVRFPID-59025</ProductID><ProductID>CVRFPID-60463</ProductID><ProductID>CVRFPID-60464</ProductID><ProductID>CVRFPID-60465</ProductID><ProductID>CVRFPID-60466</ProductID><ProductID>CVRFPID-65005</ProductID><ProductID>CVRFPID-66050</ProductID><ProductID>CVRFPID-66051</ProductID><ProductID>CVRFPID-66052</ProductID><ProductID>CVRFPID-66053</ProductID><ProductID>CVRFPID-79296</ProductID><ProductID>CVRFPID-113565</ProductID><ProductID>CVRFPID-189702</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause the MainApp process to become unresponsive and prevent it from executing several tasks including alert notification, event store management, and sensor authentication. The Cisco IPS web server will also be unavailable while the MainApp process is unresponsive, and other processes such as the Analysis Engine process may not work properly.
+
+
+
+If the Cisco IPS is configured in promiscuous mode, mitigation actions that require MainApp processing, such as shun or rate-limit, may be unavailable. If the Cisco IPS is configured in inline mode, there may be the possibility that the sensor will not be able to correctly perform inspection and mitigation actions because the Analysis Engine process may not be working properly. A hard system reload is required to restore the full functionality of the affected system.
+
+
+
+Successful exploitation of the Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause a reload of the affected system, or cause the Analysis Engine process to become unresponsive. When the Analysis Engine process is unresponsive, the affected system will not process traffic, which will cause that traffic to be dropped. Additionally, if the Cisco ASA with a Cisco IPS SSP software module running an affected version of software is configured in HA mode, a fail-over event may be triggered when the Cisco IPS SSP reloads or stops forwarding traffic.
+
+
+
+Successful exploitation of the Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause a reload of a Cisco IPS NME.
+
+
+
+Successful exploitation of the Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability may allow a remote, unauthenticated attacker to cause the kernel of the Cisco IDSM-2 Module to become unresponsive, which will create general system instability. This will prevent the affected system from executing several tasks, including alert notification, event store management, sensor authentication, and traffic inspection and mitigation. The Cisco IPS web server will also be unavailable and the system will be unreachable for remote management.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>7.0</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:W/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability and Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability
+
+
+
+There are no workarounds to mitigate this vulnerability.
+
+
+
+Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability
+
+
+
+If an exploit of this vulnerability is causing traffic interruption, administrators can remove the Modular Policy Framework (MPF) configuration on the Cisco ASA that is used to direct the user traffic toward the Cisco IPS SSP. This change will cause all user traffic to bypass Cisco IPS SSP module inspection and allow it to pass through the Cisco ASA.
+
+
+
+The following example shows how to disable the redirecting of web traffic to the Cisco IPS Software module from the Cisco ASA firewall:
+
+ASA(config)# class-map ips_traffic
+ASA(config-cmap)# match any
+ASA(config)# policy-map ips_traffic_policy
+ASA(config-pmap)# class ips_traffic
+ASA(config-pmap-c)# no ips inline|promiscious
+
+Note: Configuring IPS bypass with the command fail-open or fail-close will not have any effect on the Cisco IPS software module for the Cisco ASA.
+
+
+
+If the IPS is running in promiscuous mode, as a mitigation, fragmented traffic can be disabled for IPS processing.
+
+
+
+The following example shows how to disable fragmented traffic on the Cisco IPS software module:
+
+sensor# conf t
+sensor(config)# ser sig sig0
+sensor(config-sig)# sig 1200 0
+sensor(config-sig-sig)# engine normalizer 
+sensor(config-sig-sig-nor)# edit-default-sigs-only default-signatures-only 
+sensor(config-sig-sig-nor-def)# specify-max-fragments yes
+sensor(config-sig-sig-nor-def-yes)# max-fragments 0
+sensor(config-sig-sig-nor-def-yes)# exit
+sensor(config-sig-sig-nor-def)# exit
+sensor(config-sig-sig-nor)# exit
+sensor(config-sig-sig)# exit
+sensor(config-sig)# exit
+Apply Changes?[yes]: yes
+
+This change requires a Cisco IPS software module reload.
+
+
+
+Note: This change will cause all non-TCP fragments to pass uninspected.
+
+
+
+Alternatively, fragmented traffic can be disallowed on the Cisco ASA firewall. This will cause the Cisco ASA firewall not to accept any fragments on its interfaces. Consequently, the Cisco ASA will not send any fragments to the Cisco IPS software module for inspection.
+
+
+
+The following example shows how to disable fragmented traffic on the Cisco ASA firewall:
+
+ASA(config)# fragment chain 1 
+
+Note: The preceding example will disable fragments on all the Cisco ASA interfaces.
+
+
+
+Cisco IDSM-2 Malformed TCP Packets Denial of Service Vulnerability
+
+
+
+There is no workaround for this vulnerability however, the Cisco IDSM-2 Module administrator should make sure to limit the number of hosts (IP addresses) allowed to connect to the management interface of system.
+
+
+
+To restrict the number of allowed hosts, the administrator should use the access-list command. The no access-list command should be used to remove any hosts or networks from the list.
+
+The following example shows the sequence of commands to remove the access to the full 192.168.1.0/24 network and allow access only to the host with IP address 192.168.1.1:
+
+    Use the show settings command in network-setting configuration mode to see the current allowed hosts or networks. The following example shows that the Cisco IDSM-2 is configured to allow all the hosts in the 192.168.1.0/24 network
+
+
+sensor(config-hos-net)# show settings
+   network-settings
+   -----------------------------------------------
+      [...]
+      access-list (min: 0, max: 512, current: 1)
+      -----------------------------------------------
+         network-address: 192.168.1.0/24
+         -----------------------------------------------
+      -----------------------------------------------
+      ftp-timeout: 300 seconds 
+      login-banner-text: 
+      [...]
+
+
+    Use the access-list command in network-setting configuration mode, to add the 192.168.1.1 hosts. Make sure that if this is the only allowed host, it is also the one from which you are executing the configuration to avoid losing connectivity to the Cisco IDSM-2 Module.
+
+
+sensor(config-hos-net)#access-list 192.168.1.1/32
+
+
+    Use the no access-list command in network-setting configuration mode, to remove the 192.168.1.0/32 network for the allowed hosts list.
+
+
+sensor(config-hos-net)#no access-list 192.168.1.0/24
+
+
+    Use the show setting command in network-setting configuration mode to check that the list of allowed hosts is correct:
+
+
+sensor(config-hos-net)# show settings
+   network-settings
+   -----------------------------------------------
+      [...]
+      access-list (min: 0, max: 512, current: 1)
+      -----------------------------------------------
+         network-address: 192.168.1.1/32
+         -----------------------------------------------
+      -----------------------------------------------
+      ftp-timeout: 300 seconds 
+      login-banner-text: 
+      [...]
+
+
+    Exit and apply the configuration:
+
+
+sensor(config-hos-net)# exit
+sensor(config-hos)# exit
+Apply Changes:?[yes]: 
+
+Note: Internal tests performed by Cisco have shown that this vulnerability cannot be exploited if the total number of hosts allowed is less than or equal to 254 hosts. Administrators who cannot reduce the number of allowed hosts to the number indicated in this advisory should contact Cisco Technical Assistance Center for additional support.
+
+
+
+Additional mitigation information for the vulnerabilities described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29271["http://tools.cisco.com/security/center/viewAMBAlert.x?alertId=29271"]</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-ips</URL><Description>Multiple Vulnerabilities in Cisco Intrusion Prevention System Software</Description></Reference></References></Vulnerability></cvrfdoc>

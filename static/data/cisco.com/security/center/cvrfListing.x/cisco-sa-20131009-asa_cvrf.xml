@@ -1,0 +1,1627 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Multiple Vulnerabilities in Cisco ASA Software</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20131009-asa</ID></Identification><Status>Final</Status><Version>2.2</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-10-09T15:05:39</Date><Description>Initial public release.</Description></Revision><Revision><Number>1.1</Number><Date>2013-10-10T13:29:21</Date><Description>Updated list of products not affected by the vulnerabilities.</Description></Revision><Revision><Number>2.0</Number><Date>2013-10-17T16:00:10</Date><Description>Added information about the [[Vulnerability(22867, {{Cisco ASA Crafted ICMP Packet Denial of Service Vulnerability}}).VulnerabilityName]] - [[Vulnerability(22867, {{Cisco ASA Crafted ICMP Packet Denial of Service Vulnerability}}).PAS(31721, {{Cisco Adaptive Security Appliance (ASA) Software}}).Identifiers.DDTS]]</Description></Revision><Revision><Number>2.1</Number><Date>2013-10-18T17:07:15</Date><Description>Added additional information about [[Vulnerability(22867, {{Cisco ASA Crafted ICMP Packet Denial of Service Vulnerability}}).PAS(31721, {{Cisco Adaptive Security Appliance (ASA) Software}}).Identifiers.DDTS]]</Description></Revision><Revision><Number>2.2</Number><Date>2013-12-13T05:29:03</Date><Description>Corrected some information about the [[Vulnerability(22289, {{Clientless SSL VPN Denial of Service Vulnerability}}).VulnerabilityName]] - [[Vulnerability(22289, {{Clientless SSL VPN Denial of Service Vulnerability}}).PAS(29663, {{Cisco Adaptive Security Appliance (ASA) Software}}).Identifiers.DDTS]]</Description></Revision></RevisionHistory><InitialReleaseDate>2013-10-09T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-12-13T05:29:03</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco Adaptive Security Appliance (ASA) Software is affected by the following vulnerabilities:
+
+
+    IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+    SQL*Net Inspection Engine Denial of Service Vulnerability
+    Digital Certificate Authentication Bypass Vulnerability
+    Remote Access VPN Authentication Bypass Vulnerability
+    Digital Certificate HTTP Authentication Bypass Vulnerability
+    HTTP Deep Packet Inspection Denial of Service Vulnerability 
+    DNS Inspection Denial of Service Vulnerability
+    AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability 
+    SSL VPN Web Portal Denial of Service Vulnerability 
+    Crafted ICMP Packet Denial of Service Vulnerability 
+
+
+
+These vulnerabilities are independent of one another; a release that is affected by one of the vulnerabilities may not be affected by the others.
+
+
+
+Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a denial of service (DoS) condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco Adaptive Security Device Management (ASDM).
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a denial of service (DoS) condition.
+
+
+
+Cisco has released free software updates that address these vulnerabilities. Workarounds are available for some of the vulnerabilities.
+
+
+
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa"]
+
+
+
+Note: The Cisco Firewall Services Module (FWSM) for Cisco Catalyst 6500 Series Switches and Cisco 7600 Series Routers may be affected by the SQL*Net Inspection Engine Denial of Service Vulnerability. A separate Cisco Security Advisory has been published to disclose the vulnerabilities that affect the Cisco FWSM. This advisory is available at:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-fwsm[" http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-fwsm"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa"]
+
+
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses:
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-54556">Cisco Adaptive Security Appliance (ASA) Software 7.0.1.4</FullProductName><FullProductName ProductID="CVRFPID-54555">Cisco Adaptive Security Appliance (ASA) Software 7.0.1</FullProductName><FullProductName ProductID="CVRFPID-55255">Cisco Adaptive Security Appliance (ASA) Software 7.0.2</FullProductName><FullProductName ProductID="CVRFPID-55256">Cisco Adaptive Security Appliance (ASA) Software 7.0.3</FullProductName><FullProductName ProductID="CVRFPID-55253">Cisco Adaptive Security Appliance (ASA) Software 7.0.4</FullProductName><FullProductName ProductID="CVRFPID-55254">Cisco Adaptive Security Appliance (ASA) Software 7.0.4.2</FullProductName><FullProductName ProductID="CVRFPID-91018">Cisco Adaptive Security Appliance (ASA) Software 7.0.5</FullProductName><FullProductName ProductID="CVRFPID-115151">Cisco Adaptive Security Appliance (ASA) Software 7.0.5.12</FullProductName><FullProductName ProductID="CVRFPID-91017">Cisco Adaptive Security Appliance (ASA) Software 7.0.6</FullProductName><FullProductName ProductID="CVRFPID-115153">Cisco Adaptive Security Appliance (ASA) Software 7.0.6.4</FullProductName><FullProductName ProductID="CVRFPID-115154">Cisco Adaptive Security Appliance (ASA) Software 7.0.6.8</FullProductName><FullProductName ProductID="CVRFPID-115155">Cisco Adaptive Security Appliance (ASA) Software 7.0.6.18</FullProductName><FullProductName ProductID="CVRFPID-115156">Cisco Adaptive Security Appliance (ASA) Software 7.0.6.22</FullProductName><FullProductName ProductID="CVRFPID-115157">Cisco Adaptive Security Appliance (ASA) Software 7.0.6.26</FullProductName><FullProductName ProductID="CVRFPID-115158">Cisco Adaptive Security Appliance (ASA) Software 7.0.6.29</FullProductName><FullProductName ProductID="CVRFPID-115159">Cisco Adaptive Security Appliance (ASA) Software 7.0.6.32</FullProductName><FullProductName ProductID="CVRFPID-91016">Cisco Adaptive Security Appliance (ASA) Software 7.0.7</FullProductName><FullProductName ProductID="CVRFPID-70758">Cisco Adaptive Security Appliance (ASA) Software 7.0.7.1</FullProductName><FullProductName ProductID="CVRFPID-115160">Cisco Adaptive Security Appliance (ASA) Software 7.0.7.4</FullProductName><FullProductName ProductID="CVRFPID-115161">Cisco Adaptive Security Appliance (ASA) Software 7.0.7.9</FullProductName><FullProductName ProductID="CVRFPID-115162">Cisco Adaptive Security Appliance (ASA) Software 7.0.7.12</FullProductName><FullProductName ProductID="CVRFPID-91015">Cisco Adaptive Security Appliance (ASA) Software 7.0.8</FullProductName><FullProductName ProductID="CVRFPID-115163">Cisco Adaptive Security Appliance (ASA) Software 7.0.8.2</FullProductName><FullProductName ProductID="CVRFPID-115164">Cisco Adaptive Security Appliance (ASA) Software 7.0.8.8</FullProductName><FullProductName ProductID="CVRFPID-115165">Cisco Adaptive Security Appliance (ASA) Software 7.0.8.12</FullProductName><FullProductName ProductID="CVRFPID-115166">Cisco Adaptive Security Appliance (ASA) Software 7.0.8.13</FullProductName><FullProductName ProductID="CVRFPID-91014">Cisco Adaptive Security Appliance (ASA) Software 7.1.2</FullProductName><FullProductName ProductID="CVRFPID-115199">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.16</FullProductName><FullProductName ProductID="CVRFPID-115200">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.20</FullProductName><FullProductName ProductID="CVRFPID-115201">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.24</FullProductName><FullProductName ProductID="CVRFPID-115202">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.28</FullProductName><FullProductName ProductID="CVRFPID-115203">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.38</FullProductName><FullProductName ProductID="CVRFPID-115204">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.42</FullProductName><FullProductName ProductID="CVRFPID-115205">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.46</FullProductName><FullProductName ProductID="CVRFPID-115206">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.49</FullProductName><FullProductName ProductID="CVRFPID-115207">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.53</FullProductName><FullProductName ProductID="CVRFPID-70759">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.61</FullProductName><FullProductName ProductID="CVRFPID-115197">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.64</FullProductName><FullProductName ProductID="CVRFPID-115198">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.72</FullProductName><FullProductName ProductID="CVRFPID-91091">Cisco Adaptive Security Appliance (ASA) Software 7.1.2.81</FullProductName><FullProductName ProductID="CVRFPID-91013">Cisco Adaptive Security Appliance (ASA) Software 7.2.1</FullProductName><FullProductName ProductID="CVRFPID-115208">Cisco Adaptive Security Appliance (ASA) Software 7.2.1.9</FullProductName><FullProductName ProductID="CVRFPID-115209">Cisco Adaptive Security Appliance (ASA) Software 7.2.1.13</FullProductName><FullProductName ProductID="CVRFPID-115210">Cisco Adaptive Security Appliance (ASA) Software 7.2.1.19</FullProductName><FullProductName ProductID="CVRFPID-115211">Cisco Adaptive Security Appliance (ASA) Software 7.2.1.24</FullProductName><FullProductName ProductID="CVRFPID-70764">Cisco Adaptive Security Appliance (ASA) Software 7.2.2</FullProductName><FullProductName ProductID="CVRFPID-115212">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.6</FullProductName><FullProductName ProductID="CVRFPID-115213">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.10</FullProductName><FullProductName ProductID="CVRFPID-115214">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.14</FullProductName><FullProductName ProductID="CVRFPID-115215">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.18</FullProductName><FullProductName ProductID="CVRFPID-115216">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.19</FullProductName><FullProductName ProductID="CVRFPID-115217">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.22</FullProductName><FullProductName ProductID="CVRFPID-70760">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.34</FullProductName><FullProductName ProductID="CVRFPID-91012">Cisco Adaptive Security Appliance (ASA) Software 7.2.3</FullProductName><FullProductName ProductID="CVRFPID-70763">Cisco Adaptive Security Appliance (ASA) Software 7.2.3.1</FullProductName><FullProductName ProductID="CVRFPID-115218">Cisco Adaptive Security Appliance (ASA) Software 7.2.3.12</FullProductName><FullProductName ProductID="CVRFPID-115219">Cisco Adaptive Security Appliance (ASA) Software 7.2.3.16</FullProductName><FullProductName ProductID="CVRFPID-91011">Cisco Adaptive Security Appliance (ASA) Software 7.2.4</FullProductName><FullProductName ProductID="CVRFPID-115220">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.6</FullProductName><FullProductName ProductID="CVRFPID-115221">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.9</FullProductName><FullProductName ProductID="CVRFPID-115222">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.18</FullProductName><FullProductName ProductID="CVRFPID-115223">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.25</FullProductName><FullProductName ProductID="CVRFPID-91089">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.27</FullProductName><FullProductName ProductID="CVRFPID-91090">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.30</FullProductName><FullProductName ProductID="CVRFPID-111872">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.33</FullProductName><FullProductName ProductID="CVRFPID-100027">Cisco Adaptive Security Appliance (ASA) Software 7.2.5</FullProductName><FullProductName ProductID="CVRFPID-115224">Cisco Adaptive Security Appliance (ASA) Software 7.2.5.2</FullProductName><FullProductName ProductID="CVRFPID-115225">Cisco Adaptive Security Appliance (ASA) Software 7.2.5.4</FullProductName><FullProductName ProductID="CVRFPID-115257">Cisco Adaptive Security Appliance (ASA) Software 7.2 5.7</FullProductName><FullProductName ProductID="CVRFPID-185260">Cisco Adaptive Security Appliance (ASA) Software 7.2.5.8</FullProductName><FullProductName ProductID="CVRFPID-191210">Cisco Adaptive Security Appliance (ASA) Software 7.2.5.10</FullProductName><FullProductName ProductID="CVRFPID-91006">Cisco Adaptive Security Appliance (ASA) Software 8.0.1.2</FullProductName><FullProductName ProductID="CVRFPID-91005">Cisco Adaptive Security Appliance (ASA) Software 8.0.2</FullProductName><FullProductName ProductID="CVRFPID-70761">Cisco Adaptive Security Appliance (ASA) Software 8.0.2.11</FullProductName><FullProductName ProductID="CVRFPID-115226">Cisco Adaptive Security Appliance (ASA) Software 8.0.2.15</FullProductName><FullProductName ProductID="CVRFPID-91004">Cisco Adaptive Security Appliance (ASA) Software 8.0.3</FullProductName><FullProductName ProductID="CVRFPID-115227">Cisco Adaptive Security Appliance (ASA) Software 8.0.3.6</FullProductName><FullProductName ProductID="CVRFPID-115228">Cisco Adaptive Security Appliance (ASA) Software 8.0.3.12</FullProductName><FullProductName ProductID="CVRFPID-115229">Cisco Adaptive Security Appliance (ASA) Software 8.0.3.19</FullProductName><FullProductName ProductID="CVRFPID-91003">Cisco Adaptive Security Appliance (ASA) Software 8.0.4</FullProductName><FullProductName ProductID="CVRFPID-115230">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.3</FullProductName><FullProductName ProductID="CVRFPID-115231">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.9</FullProductName><FullProductName ProductID="CVRFPID-115232">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.16</FullProductName><FullProductName ProductID="CVRFPID-115233">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.23</FullProductName><FullProductName ProductID="CVRFPID-91021">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.25</FullProductName><FullProductName ProductID="CVRFPID-91022">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.28</FullProductName><FullProductName ProductID="CVRFPID-115234">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.31</FullProductName><FullProductName ProductID="CVRFPID-92322">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.32</FullProductName><FullProductName ProductID="CVRFPID-92319">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.33</FullProductName><FullProductName ProductID="CVRFPID-97262">Cisco Adaptive Security Appliance (ASA) Software 8.0.5</FullProductName><FullProductName ProductID="CVRFPID-115235">Cisco Adaptive Security Appliance (ASA) Software 8.0.5.20</FullProductName><FullProductName ProductID="CVRFPID-115236">Cisco Adaptive Security Appliance (ASA) Software 8.0.5.23</FullProductName><FullProductName ProductID="CVRFPID-115237">Cisco Adaptive Security Appliance (ASA) Software 8.0.5.25</FullProductName><FullProductName ProductID="CVRFPID-115258">Cisco Adaptive Security Appliance (ASA) Software 8.0.5.27</FullProductName><FullProductName ProductID="CVRFPID-185259">Cisco Adaptive Security Appliance (ASA) Software 8.0.5.28</FullProductName><FullProductName ProductID="CVRFPID-191209">Cisco Adaptive Security Appliance (ASA) Software 8.0.5.31</FullProductName><FullProductName ProductID="CVRFPID-91009">Cisco Adaptive Security Appliance (ASA) Software 8.1.1</FullProductName><FullProductName ProductID="CVRFPID-115238">Cisco Adaptive Security Appliance (ASA) Software 8.1.1.6</FullProductName><FullProductName ProductID="CVRFPID-91010">Cisco Adaptive Security Appliance (ASA) Software 8.1.2</FullProductName><FullProductName ProductID="CVRFPID-115239">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.13</FullProductName><FullProductName ProductID="CVRFPID-91019">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.15</FullProductName><FullProductName ProductID="CVRFPID-91020">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.16</FullProductName><FullProductName ProductID="CVRFPID-91088">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.19</FullProductName><FullProductName ProductID="CVRFPID-92320">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.23</FullProductName><FullProductName ProductID="CVRFPID-92321">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.24</FullProductName><FullProductName ProductID="CVRFPID-115240">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.49</FullProductName><FullProductName ProductID="CVRFPID-112137">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.50</FullProductName><FullProductName ProductID="CVRFPID-115259">Cisco Adaptive Security Appliance (ASA) Software 8.1 2.55</FullProductName><FullProductName ProductID="CVRFPID-185258">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.56</FullProductName><FullProductName ProductID="CVRFPID-70762">Cisco Adaptive Security Appliance (ASA) Software 8.2.0.45</FullProductName><FullProductName ProductID="CVRFPID-97260">Cisco Adaptive Security Appliance (ASA) Software 8.2.1</FullProductName><FullProductName ProductID="CVRFPID-115241">Cisco Adaptive Security Appliance (ASA) Software 8.2.1.11</FullProductName><FullProductName ProductID="CVRFPID-97261">Cisco Adaptive Security Appliance (ASA) Software 8.2.2</FullProductName><FullProductName ProductID="CVRFPID-115242">Cisco Adaptive Security Appliance (ASA) Software 8.2.2.9</FullProductName><FullProductName ProductID="CVRFPID-99994">Cisco Adaptive Security Appliance (ASA) Software 8.2.3</FullProductName><FullProductName ProductID="CVRFPID-115243">Cisco Adaptive Security Appliance (ASA) Software 8.2.2.12</FullProductName><FullProductName ProductID="CVRFPID-115244">Cisco Adaptive Security Appliance (ASA) Software 8.2.2.16</FullProductName><FullProductName ProductID="CVRFPID-116857">Cisco Adaptive Security Appliance (ASA) Software 8.2.2.17</FullProductName><FullProductName ProductID="CVRFPID-108072">Cisco Adaptive Security Appliance (ASA) Software 8.2.3</FullProductName><FullProductName ProductID="CVRFPID-108074">Cisco Adaptive Security Appliance (ASA) Software 8.2.4</FullProductName><FullProductName ProductID="CVRFPID-115245">Cisco Adaptive Security Appliance (ASA) Software 8.2.4.1</FullProductName><FullProductName ProductID="CVRFPID-115246">Cisco Adaptive Security Appliance (ASA) Software 8.2.4.4</FullProductName><FullProductName ProductID="CVRFPID-115247">Cisco Adaptive Security Appliance (ASA) Software 8.2.5</FullProductName><FullProductName ProductID="CVRFPID-115248">Cisco Adaptive Security Appliance (ASA) Software 8.2.5.13</FullProductName><FullProductName ProductID="CVRFPID-115260">Cisco Adaptive Security Appliance (ASA) Software 8.2.5.22</FullProductName><FullProductName ProductID="CVRFPID-115261">Cisco Adaptive Security Appliance (ASA) Software 8.2.5.26</FullProductName><FullProductName ProductID="CVRFPID-185257">Cisco Adaptive Security Appliance (ASA) Software 8.2.2.34</FullProductName><FullProductName ProductID="CVRFPID-191207">Cisco Adaptive Security Appliance (ASA) Software 8.2.5.40</FullProductName><FullProductName ProductID="CVRFPID-191208">Cisco Adaptive Security Appliance (ASA) Software 8.2.5.41</FullProductName><FullProductName ProductID="CVRFPID-99997">Cisco Adaptive Security Appliance (ASA) Software .3.1</FullProductName><FullProductName ProductID="CVRFPID-99996">Cisco Adaptive Security Appliance (ASA) Software .3 Base</FullProductName><FullProductName ProductID="CVRFPID-115249">Cisco Adaptive Security Appliance (ASA) Software .3.1.4</FullProductName><FullProductName ProductID="CVRFPID-115250">Cisco Adaptive Security Appliance (ASA) Software .3.1.6</FullProductName><FullProductName ProductID="CVRFPID-108069">Cisco Adaptive Security Appliance (ASA) Software .3.2</FullProductName><FullProductName ProductID="CVRFPID-115251">Cisco Adaptive Security Appliance (ASA) Software .3.2.4</FullProductName><FullProductName ProductID="CVRFPID-115252">Cisco Adaptive Security Appliance (ASA) Software .3.2.13</FullProductName><FullProductName ProductID="CVRFPID-112138">Cisco Adaptive Security Appliance (ASA) Software .3.2.23</FullProductName><FullProductName ProductID="CVRFPID-112800">Cisco Adaptive Security Appliance (ASA) Software .3.2.25</FullProductName><FullProductName ProductID="CVRFPID-115262">Cisco Adaptive Security Appliance (ASA) Software .3.2.31</FullProductName><FullProductName ProductID="CVRFPID-115263">Cisco Adaptive Security Appliance (ASA) Software .3.2.33</FullProductName><FullProductName ProductID="CVRFPID-185256">Cisco Adaptive Security Appliance (ASA) Software .3.2.34</FullProductName><FullProductName ProductID="CVRFPID-191206">Cisco Adaptive Security Appliance (ASA) Software .3.2.37</FullProductName><FullProductName ProductID="CVRFPID-108073">Cisco Adaptive Security Appliance (ASA) Software .4.1</FullProductName><FullProductName ProductID="CVRFPID-115253">Cisco Adaptive Security Appliance (ASA) Software .4.1.3</FullProductName><FullProductName ProductID="CVRFPID-115254">Cisco Adaptive Security Appliance (ASA) Software .4.1.11</FullProductName><FullProductName ProductID="CVRFPID-112139">Cisco Adaptive Security Appliance (ASA) Software .4.2</FullProductName><FullProductName ProductID="CVRFPID-192947">Cisco Adaptive Security Appliance (ASA) Software .4.2.1</FullProductName><FullProductName ProductID="CVRFPID-115255">Cisco Adaptive Security Appliance (ASA) Software .4.2.8</FullProductName><FullProductName ProductID="CVRFPID-115256">Cisco Adaptive Security Appliance (ASA) Software .4.3</FullProductName><FullProductName ProductID="CVRFPID-115264">Cisco Adaptive Security Appliance (ASA) Software .4.3.8</FullProductName><FullProductName ProductID="CVRFPID-115265">Cisco Adaptive Security Appliance (ASA) Software .4.3.9</FullProductName><FullProductName ProductID="CVRFPID-115266">Cisco Adaptive Security Appliance (ASA) Software .4.4</FullProductName><FullProductName ProductID="CVRFPID-185251">Cisco Adaptive Security Appliance (ASA) Software .4.4.1</FullProductName><FullProductName ProductID="CVRFPID-185252">Cisco Adaptive Security Appliance (ASA) Software .4.4.3</FullProductName><FullProductName ProductID="CVRFPID-185253">Cisco Adaptive Security Appliance (ASA) Software .4.4.5</FullProductName><FullProductName ProductID="CVRFPID-185254">Cisco Adaptive Security Appliance (ASA) Software .4.4.9</FullProductName><FullProductName ProductID="CVRFPID-185255">Cisco Adaptive Security Appliance (ASA) Software .4.5</FullProductName><FullProductName ProductID="CVRFPID-191204">Cisco Adaptive Security Appliance (ASA) Software .4.5.6</FullProductName><FullProductName ProductID="CVRFPID-191205">Cisco Adaptive Security Appliance (ASA) Software .4.6</FullProductName><FullProductName ProductID="CVRFPID-195006">Cisco Adaptive Security Appliance (ASA) Software .4.7</FullProductName><FullProductName ProductID="CVRFPID-112136">Cisco Adaptive Security Appliance (ASA) Software 8.5.1</FullProductName><FullProductName ProductID="CVRFPID-112140">Cisco Adaptive Security Appliance (ASA) Software 8.5.1.1</FullProductName><FullProductName ProductID="CVRFPID-115269">Cisco Adaptive Security Appliance (ASA) Software 8.5.1.6</FullProductName><FullProductName ProductID="CVRFPID-115270">Cisco Adaptive Security Appliance (ASA) Software 8.5.1.7</FullProductName><FullProductName ProductID="CVRFPID-185180">Cisco Adaptive Security Appliance (ASA) Software 8.5.1.14</FullProductName><FullProductName ProductID="CVRFPID-191203">Cisco Adaptive Security Appliance (ASA) Software 8.5.1.17</FullProductName><FullProductName ProductID="CVRFPID-115276">Cisco Adaptive Security Appliance (ASA) Software 8.6.1</FullProductName><FullProductName ProductID="CVRFPID-115268">Cisco Adaptive Security Appliance (ASA) Software 8.6 Base</FullProductName><FullProductName ProductID="CVRFPID-185176">Cisco Adaptive Security Appliance (ASA) Software 8.6.1.2</FullProductName><FullProductName ProductID="CVRFPID-185177">Cisco Adaptive Security Appliance (ASA) Software 8.6.1.5</FullProductName><FullProductName ProductID="CVRFPID-191202">Cisco Adaptive Security Appliance (ASA) Software 8.6.1.10</FullProductName><FullProductName ProductID="CVRFPID-185179">Cisco Adaptive Security Appliance (ASA) Software 8.7 Base</FullProductName><FullProductName ProductID="CVRFPID-191201">Cisco Adaptive Security Appliance (ASA) Software 8.7.1.1</FullProductName><FullProductName ProductID="CVRFPID-191213">Cisco Adaptive Security Appliance (ASA) Software 8.7.1.3</FullProductName><FullProductName ProductID="CVRFPID-191214">Cisco Adaptive Security Appliance (ASA) Software 8.7.1.4</FullProductName><FullProductName ProductID="CVRFPID-195003">Cisco Adaptive Security Appliance (ASA) Software 8.7.1.7</FullProductName><FullProductName ProductID="CVRFPID-188865">Cisco Adaptive Security Appliance (ASA) Software 9.0.1</FullProductName><FullProductName ProductID="CVRFPID-188866">Cisco Adaptive Security Appliance (ASA) Software 9.0.2</FullProductName><FullProductName ProductID="CVRFPID-195000">Cisco Adaptive Security Appliance (ASA) Software 9.0.2.10</FullProductName><FullProductName ProductID="CVRFPID-195001">Cisco Adaptive Security Appliance (ASA) Software 9.0.3</FullProductName><FullProductName ProductID="CVRFPID-195002">Cisco Adaptive Security Appliance (ASA) Software 9.0.3.6</FullProductName><FullProductName ProductID="CVRFPID-188867">Cisco Adaptive Security Appliance (ASA) Software 9.1.1</FullProductName><FullProductName ProductID="CVRFPID-191211">Cisco Adaptive Security Appliance (ASA) Software 9.1.1.4</FullProductName><FullProductName ProductID="CVRFPID-191212">Cisco Adaptive Security Appliance (ASA) Software 9.1.2</FullProductName><FullProductName ProductID="CVRFPID-194999">Cisco Adaptive Security Appliance (ASA) Software 9.1.2.8</FullProductName><FullProductName ProductID="CVRFPID-194998">Cisco Adaptive Security Appliance (ASA) Software 9.1.3</FullProductName><FullProductName ProductID="CVRFPID-44207">Cisco Firewall Services Module (FWSM) 1.1.2</FullProductName><FullProductName ProductID="CVRFPID-45173">Cisco Firewall Services Module (FWSM) 1.1.3</FullProductName><FullProductName ProductID="CVRFPID-63371">Cisco Firewall Services Module (FWSM) 1.1.4</FullProductName><FullProductName ProductID="CVRFPID-63372">Cisco Firewall Services Module (FWSM) 2.1 Base</FullProductName><FullProductName ProductID="CVRFPID-63373">Cisco Firewall Services Module (FWSM) 2.1.1</FullProductName><FullProductName ProductID="CVRFPID-50768">Cisco Firewall Services Module (FWSM) 2.2 Base</FullProductName><FullProductName ProductID="CVRFPID-50767">Cisco Firewall Services Module (FWSM) 2.2.1</FullProductName><FullProductName ProductID="CVRFPID-50766">Cisco Firewall Services Module (FWSM) 2.3.1</FullProductName><FullProductName ProductID="CVRFPID-54557">Cisco Firewall Services Module (FWSM) 2.3.2</FullProductName><FullProductName ProductID="CVRFPID-54558">Cisco Firewall Services Module (FWSM) 2.3.3</FullProductName><FullProductName ProductID="CVRFPID-63370">Cisco Firewall Services Module (FWSM) 2.3.3(2)</FullProductName><FullProductName ProductID="CVRFPID-58081">Cisco Firewall Services Module (FWSM) 2.3.4</FullProductName><FullProductName ProductID="CVRFPID-63374">Cisco Firewall Services Module (FWSM) 2.3.4(7)</FullProductName><FullProductName ProductID="CVRFPID-58083">Cisco Firewall Services Module (FWSM) 3.1 Base</FullProductName><FullProductName ProductID="CVRFPID-58084">Cisco Firewall Services Module (FWSM) 3.1.1</FullProductName><FullProductName ProductID="CVRFPID-59741">Cisco Firewall Services Module (FWSM) 3.1.1(2)</FullProductName><FullProductName ProductID="CVRFPID-59744">Cisco Firewall Services Module (FWSM) 3.1.1(3)</FullProductName><FullProductName ProductID="CVRFPID-59739">Cisco Firewall Services Module (FWSM) 3.1.1(4)</FullProductName><FullProductName ProductID="CVRFPID-59743">Cisco Firewall Services Module (FWSM) 3.1.1(5)</FullProductName><FullProductName ProductID="CVRFPID-59740">Cisco Firewall Services Module (FWSM) 3.1.1(6)</FullProductName><FullProductName ProductID="CVRFPID-59742">Cisco Firewall Services Module (FWSM) 3.1.1(7)</FullProductName><FullProductName ProductID="CVRFPID-62225">Cisco Firewall Services Module (FWSM) 3.1.2</FullProductName><FullProductName ProductID="CVRFPID-62226">Cisco Firewall Services Module (FWSM) 3.1.3</FullProductName><FullProductName ProductID="CVRFPID-63369">Cisco Firewall Services Module (FWSM) 3.1.3(1)</FullProductName><FullProductName ProductID="CVRFPID-63366">Cisco Firewall Services Module (FWSM) 3.1.3(3)</FullProductName><FullProductName ProductID="CVRFPID-63368">Cisco Firewall Services Module (FWSM) 3.1.3(11)</FullProductName><FullProductName ProductID="CVRFPID-63367">Cisco Firewall Services Module (FWSM) 3.1.3(18)</FullProductName><FullProductName ProductID="CVRFPID-62227">Cisco Firewall Services Module (FWSM) 3.1.4</FullProductName><FullProductName ProductID="CVRFPID-71084">Cisco Firewall Services Module (FWSM) 3.1.5</FullProductName><FullProductName ProductID="CVRFPID-71085">Cisco Firewall Services Module (FWSM) 3.1.6</FullProductName><FullProductName ProductID="CVRFPID-71086">Cisco Firewall Services Module (FWSM) 3.1.7</FullProductName><FullProductName ProductID="CVRFPID-88037">Cisco Firewall Services Module (FWSM) 3.1.8</FullProductName><FullProductName ProductID="CVRFPID-88038">Cisco Firewall Services Module (FWSM) 3.1.9</FullProductName><FullProductName ProductID="CVRFPID-88039">Cisco Firewall Services Module (FWSM) 3.1.10</FullProductName><FullProductName ProductID="CVRFPID-88040">Cisco Firewall Services Module (FWSM) 3.1.11</FullProductName><FullProductName ProductID="CVRFPID-88041">Cisco Firewall Services Module (FWSM) 3.1.12</FullProductName><FullProductName ProductID="CVRFPID-88042">Cisco Firewall Services Module (FWSM) 3.1.13</FullProductName><FullProductName ProductID="CVRFPID-100055">Cisco Firewall Services Module (FWSM) 3.1.14</FullProductName><FullProductName ProductID="CVRFPID-100056">Cisco Firewall Services Module (FWSM) 3.1.15</FullProductName><FullProductName ProductID="CVRFPID-100057">Cisco Firewall Services Module (FWSM) 3.1.16</FullProductName><FullProductName ProductID="CVRFPID-100058">Cisco Firewall Services Module (FWSM) 3.1.17</FullProductName><FullProductName ProductID="CVRFPID-108082">Cisco Firewall Services Module (FWSM) 3.1.18</FullProductName><FullProductName ProductID="CVRFPID-108083">Cisco Firewall Services Module (FWSM) 3.1.19</FullProductName><FullProductName ProductID="CVRFPID-112156">Cisco Firewall Services Module (FWSM) 3.1.20</FullProductName><FullProductName ProductID="CVRFPID-112157">Cisco Firewall Services Module (FWSM) 3.1.21</FullProductName><FullProductName ProductID="CVRFPID-71087">Cisco Firewall Services Module (FWSM) 3.2 Base</FullProductName><FullProductName ProductID="CVRFPID-71089">Cisco Firewall Services Module (FWSM) 3.2.1</FullProductName><FullProductName ProductID="CVRFPID-71088">Cisco Firewall Services Module (FWSM) 3.2.2</FullProductName><FullProductName ProductID="CVRFPID-74112">Cisco Firewall Services Module (FWSM) 3.2.3</FullProductName><FullProductName ProductID="CVRFPID-88030">Cisco Firewall Services Module (FWSM) 3.2.4</FullProductName><FullProductName ProductID="CVRFPID-88031">Cisco Firewall Services Module (FWSM) 3.2.5</FullProductName><FullProductName ProductID="CVRFPID-88032">Cisco Firewall Services Module (FWSM) 3.2.6</FullProductName><FullProductName ProductID="CVRFPID-88033">Cisco Firewall Services Module (FWSM) 3.2.7</FullProductName><FullProductName ProductID="CVRFPID-88034">Cisco Firewall Services Module (FWSM) 3.2.8</FullProductName><FullProductName ProductID="CVRFPID-88035">Cisco Firewall Services Module (FWSM) 3.2.9</FullProductName><FullProductName ProductID="CVRFPID-88036">Cisco Firewall Services Module (FWSM) 3.2.10</FullProductName><FullProductName ProductID="CVRFPID-100047">Cisco Firewall Services Module (FWSM) 3.2.11</FullProductName><FullProductName ProductID="CVRFPID-100048">Cisco Firewall Services Module (FWSM) 3.2.12</FullProductName><FullProductName ProductID="CVRFPID-100049">Cisco Firewall Services Module (FWSM) 3.2.13</FullProductName><FullProductName ProductID="CVRFPID-100050">Cisco Firewall Services Module (FWSM) 3.2.14</FullProductName><FullProductName ProductID="CVRFPID-100051">Cisco Firewall Services Module (FWSM) 3.2.15</FullProductName><FullProductName ProductID="CVRFPID-100052">Cisco Firewall Services Module (FWSM) 3.2.16</FullProductName><FullProductName ProductID="CVRFPID-100053">Cisco Firewall Services Module (FWSM) 3.2.17</FullProductName><FullProductName ProductID="CVRFPID-100054">Cisco Firewall Services Module (FWSM) 3.2.18</FullProductName><FullProductName ProductID="CVRFPID-108081">Cisco Firewall Services Module (FWSM) 3.2.19</FullProductName><FullProductName ProductID="CVRFPID-112153">Cisco Firewall Services Module (FWSM) 3.2.20</FullProductName><FullProductName ProductID="CVRFPID-112154">Cisco Firewall Services Module (FWSM) 3.2.21</FullProductName><FullProductName ProductID="CVRFPID-112155">Cisco Firewall Services Module (FWSM) 3.2.22</FullProductName><FullProductName ProductID="CVRFPID-194954">Cisco Firewall Services Module (FWSM) 3.2.23</FullProductName><FullProductName ProductID="CVRFPID-194955">Cisco Firewall Services Module (FWSM) 3.2.24</FullProductName><FullProductName ProductID="CVRFPID-194956">Cisco Firewall Services Module (FWSM) 3.2.25</FullProductName><FullProductName ProductID="CVRFPID-194957">Cisco Firewall Services Module (FWSM) 3.2.26</FullProductName><FullProductName ProductID="CVRFPID-88044">Cisco Firewall Services Module (FWSM) 4.0.1</FullProductName><FullProductName ProductID="CVRFPID-88045">Cisco Firewall Services Module (FWSM) 4.0.2</FullProductName><FullProductName ProductID="CVRFPID-88046">Cisco Firewall Services Module (FWSM) 4.0.3</FullProductName><FullProductName ProductID="CVRFPID-97266">Cisco Firewall Services Module (FWSM) 4.0.6</FullProductName><FullProductName ProductID="CVRFPID-97267">Cisco Firewall Services Module (FWSM) 4.0.7</FullProductName><FullProductName ProductID="CVRFPID-100039">Cisco Firewall Services Module (FWSM) 4.0.8</FullProductName><FullProductName ProductID="CVRFPID-100040">Cisco Firewall Services Module (FWSM) 4.0.10</FullProductName><FullProductName ProductID="CVRFPID-100045">Cisco Firewall Services Module (FWSM) 4.0.11</FullProductName><FullProductName ProductID="CVRFPID-100046">Cisco Firewall Services Module (FWSM) 4.0.12</FullProductName><FullProductName ProductID="CVRFPID-108079">Cisco Firewall Services Module (FWSM) 4.0.13</FullProductName><FullProductName ProductID="CVRFPID-108080">Cisco Firewall Services Module (FWSM) 4.0.14</FullProductName><FullProductName ProductID="CVRFPID-112151">Cisco Firewall Services Module (FWSM) 4.0.15</FullProductName><FullProductName ProductID="CVRFPID-112152">Cisco Firewall Services Module (FWSM) 4.0.16</FullProductName><FullProductName ProductID="CVRFPID-116787">Cisco Firewall Services Module (FWSM) 4.0.0.17</FullProductName><FullProductName ProductID="CVRFPID-100042">Cisco Firewall Services Module (FWSM) 4.1 Base</FullProductName><FullProductName ProductID="CVRFPID-100043">Cisco Firewall Services Module (FWSM) 4.1.1</FullProductName><FullProductName ProductID="CVRFPID-100044">Cisco Firewall Services Module (FWSM) 4.1.2</FullProductName><FullProductName ProductID="CVRFPID-112146">Cisco Firewall Services Module (FWSM) 4.1.3</FullProductName><FullProductName ProductID="CVRFPID-112147">Cisco Firewall Services Module (FWSM) 4.1.4</FullProductName><FullProductName ProductID="CVRFPID-112148">Cisco Firewall Services Module (FWSM) 4.1.5</FullProductName><FullProductName ProductID="CVRFPID-112149">Cisco Firewall Services Module (FWSM) 4.1.6</FullProductName><FullProductName ProductID="CVRFPID-112150">Cisco Firewall Services Module (FWSM) 4.1.7</FullProductName><FullProductName ProductID="CVRFPID-194947">Cisco Firewall Services Module (FWSM) 4.1.8</FullProductName><FullProductName ProductID="CVRFPID-194948">Cisco Firewall Services Module (FWSM) 4.1.9</FullProductName><FullProductName ProductID="CVRFPID-194949">Cisco Firewall Services Module (FWSM) 4.1.10</FullProductName><FullProductName ProductID="CVRFPID-194950">Cisco Firewall Services Module (FWSM) 4.1.11</FullProductName><FullProductName ProductID="CVRFPID-194951">Cisco Firewall Services Module (FWSM) 4.1.12</FullProductName><FullProductName ProductID="CVRFPID-194952">Cisco Firewall Services Module (FWSM) 4.1.13</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCue18975</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in IPsec code  could allow an unauthenticated, remote attacker to cause a reload of an affected device.
+
+
+
+The vulnerability is due to an error in the code that decrypts packets transiting an active VPN tunnel. In particular the code is failing at properly handling crafted ICMP packets after a decryption operation. An attacker could exploit this vulnerability by sending crafted ICMP packets through an active VPN tunnel. An exploit could allow the attacker to cause a reload of the device that performs the decryption operation.</Note></Notes><CVE>CVE-2013-5507</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-191211</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a DoS condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco ASDM.
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a DoS condition.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.1</BaseScore><TemporalScore>5.9</TemporalScore><Vector>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+For VPN setup involving LAN-to-LAN tunnel, it is possible to avoid the decryption of an offending ICMP packet by implementing a vpn-filer access-list. The following commands will implement an access-list that blocks any ICMP packets flowing through a VPN tunnel that use the DfltGrpPolicy group-policy in both inbound and outbound direction:
+
+    ciscoasa(config)# access-list DENY_ICMP_ACL deny icmp any any
+    ciscoasa(config)# access-list DENY_ICMP_ACL permit ip any any
+    ciscoasa(config)# group-policy DfltGrpPolicy attributes
+    ciscoasa(config-group-policy)# vpn-filter value DENY_ICMP_ACL
+
+Note: Because the vulnerability is triggered during the decryption operation, this workaround should be implemented on both devices terminating the VPN tunnel. This workaround is ineffective if applied to only on one side of the tunnel.
+
+
+
+For Cisco remote IPsec VPN there is no workaround that mitigates this vulnerability. 
+
+
+
+SQL*Net Inspection Engine Denial of Service Vulnerability
+
+
+
+Disabling Cisco ASA SQL*Net inspection will mitigate this vulnerability. The following commands will disable the SQL*Net inspection that is configured by default:
+
+    ciscoasa(config)# policy-map global_policy
+    ciscoasa(config-pmap)# class inspection_default
+    ciscoasa(config-pmap-c)# no inspect sqlnet
+
+Digital Certificate Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+Remote Access VPN Authentication Bypass Vulnerability
+
+
+
+There are no workarounds other than disabling the override-account-disable option. 
+
+
+
+Digital Certificate HTTP Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+HTTP Deep Packet Inspection Denial of Service Vulnerability
+
+
+
+There are no workarounds other than removing the affected option from the HTTP DPI configuration
+
+
+
+DNS Inspection Denial of Service Vulnerability
+
+
+
+Administrators can workaround this issue by ensuring that only UDP traffic is sent to the DNS ALPI engine for inspection.
+
+
+
+To do that, first create an access-list to match only UDP traffic and then create a class-map to match on that access-list. Note that by default the Cisco ASA Software will only inspect DNS over UDP traffic. The following example shows Cisco ASA Software forwarding only UDP port 53 traffic to the DNS ALPI engine.
+
+ciscoasa# show running-config access-list
+access-list DNS_INSPECT extended permit udp any any eq 53
+
+ciscoasa# show running-config class-map
+!
+class-map DNS_INSPECT_CP
+ match access-list DNS_INSPECT
+[...]
+
+ciscoasa# show running-config policy-map
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect ftp
+  inspect h323 h225
+  [...]
+  class DNS_INSPECT_CP
+  inspect dns preset_dns_map
+!
+
+Note: Inspection of DNS traffic over TCP is currently not supported by the Cisco ASA Software. Implementing this workaround does not create any loss in functionality.
+
+
+
+AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling AnyConnect SSL VPN feature.
+
+
+
+SSL VPN Web Portal Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling the SSL VPN feature.
+
+
+
+Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+Administrators can disable the default ICMP policy and ICMP inspection engine to work around this vulnerability.
+
+To disable the default ICMP policy use the icmp deny any  command for all the configured interfaces of the Cisco ASA Software. To disable the default ICMP policy for ICMPv6 use the ipv6 icmp deny any  command for all the IPv6 enabled interfaces of the Cisco ASA Software. The following example shows how to disable the default ICMP policy and default ICMP policy for ICMPv6 on the outside interface
+
+
+ciscoasa(config)# icmp deny any outside
+ciscoasa(config)# ipv6 icmp deny any outside 
+
+Note: Disabling the ICMP processing on the firewall interface may result in administrators not being able to receive any more information from the firewall via ICMP, which includes ping, traceroute, etc. Disabling the ICMPv6 processing on the firewall interface may result in the firewall not being able to communicate on that interface due to a missing neighbor discovery and neighbor advertisement ICMPv6 packets.
+
+
+
+To disable the ICMP inspection engine, use the no inspect icmp command within the policy-map applied to the service polices.
+
+The following example shows how to disable the ICMP inspection engine in the policy-map called global_policy:
+
+
+ciscoasa(config)# policy-map global_policy 
+ciscoasa(config-pmap)# class inspection_default 
+ciscoasa(config-pmap-c)# no inspect icmp 
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>SQL*Net Inspection Engine Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCui34914</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="2">A vulnerability in SQL*Net inspection engine code could allow an unauthenticated, remote attacker to cause a reload of the affected system. 
+
+
+
+The vulnerability is due to improper handling of segmented Transparent Network Substrate (TNS) packets. An attacker could exploit this vulnerability by sending a crafted sequence of segmented TNS packets through the affected system.</Note></Notes><CVE>CVE-2013-5508</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-44207</ProductID><ProductID>CVRFPID-45173</ProductID><ProductID>CVRFPID-50766</ProductID><ProductID>CVRFPID-50767</ProductID><ProductID>CVRFPID-50768</ProductID><ProductID>CVRFPID-54557</ProductID><ProductID>CVRFPID-54558</ProductID><ProductID>CVRFPID-58081</ProductID><ProductID>CVRFPID-58083</ProductID><ProductID>CVRFPID-58084</ProductID><ProductID>CVRFPID-59739</ProductID><ProductID>CVRFPID-59740</ProductID><ProductID>CVRFPID-59741</ProductID><ProductID>CVRFPID-59742</ProductID><ProductID>CVRFPID-59743</ProductID><ProductID>CVRFPID-59744</ProductID><ProductID>CVRFPID-62225</ProductID><ProductID>CVRFPID-62226</ProductID><ProductID>CVRFPID-62227</ProductID><ProductID>CVRFPID-63366</ProductID><ProductID>CVRFPID-63367</ProductID><ProductID>CVRFPID-63368</ProductID><ProductID>CVRFPID-63369</ProductID><ProductID>CVRFPID-63370</ProductID><ProductID>CVRFPID-63371</ProductID><ProductID>CVRFPID-63372</ProductID><ProductID>CVRFPID-63373</ProductID><ProductID>CVRFPID-63374</ProductID><ProductID>CVRFPID-71084</ProductID><ProductID>CVRFPID-71085</ProductID><ProductID>CVRFPID-71086</ProductID><ProductID>CVRFPID-71087</ProductID><ProductID>CVRFPID-71088</ProductID><ProductID>CVRFPID-71089</ProductID><ProductID>CVRFPID-74112</ProductID><ProductID>CVRFPID-88030</ProductID><ProductID>CVRFPID-88031</ProductID><ProductID>CVRFPID-88032</ProductID><ProductID>CVRFPID-88033</ProductID><ProductID>CVRFPID-88034</ProductID><ProductID>CVRFPID-88035</ProductID><ProductID>CVRFPID-88036</ProductID><ProductID>CVRFPID-88037</ProductID><ProductID>CVRFPID-88038</ProductID><ProductID>CVRFPID-88039</ProductID><ProductID>CVRFPID-88040</ProductID><ProductID>CVRFPID-88041</ProductID><ProductID>CVRFPID-88042</ProductID><ProductID>CVRFPID-88044</ProductID><ProductID>CVRFPID-88045</ProductID><ProductID>CVRFPID-88046</ProductID><ProductID>CVRFPID-97266</ProductID><ProductID>CVRFPID-97267</ProductID><ProductID>CVRFPID-100039</ProductID><ProductID>CVRFPID-100040</ProductID><ProductID>CVRFPID-100042</ProductID><ProductID>CVRFPID-100043</ProductID><ProductID>CVRFPID-100044</ProductID><ProductID>CVRFPID-100045</ProductID><ProductID>CVRFPID-100046</ProductID><ProductID>CVRFPID-100047</ProductID><ProductID>CVRFPID-100048</ProductID><ProductID>CVRFPID-100049</ProductID><ProductID>CVRFPID-100050</ProductID><ProductID>CVRFPID-100051</ProductID><ProductID>CVRFPID-100052</ProductID><ProductID>CVRFPID-100053</ProductID><ProductID>CVRFPID-100054</ProductID><ProductID>CVRFPID-100055</ProductID><ProductID>CVRFPID-100056</ProductID><ProductID>CVRFPID-100057</ProductID><ProductID>CVRFPID-100058</ProductID><ProductID>CVRFPID-108079</ProductID><ProductID>CVRFPID-108080</ProductID><ProductID>CVRFPID-108081</ProductID><ProductID>CVRFPID-108082</ProductID><ProductID>CVRFPID-108083</ProductID><ProductID>CVRFPID-112146</ProductID><ProductID>CVRFPID-112147</ProductID><ProductID>CVRFPID-112148</ProductID><ProductID>CVRFPID-112149</ProductID><ProductID>CVRFPID-112150</ProductID><ProductID>CVRFPID-112151</ProductID><ProductID>CVRFPID-112152</ProductID><ProductID>CVRFPID-112153</ProductID><ProductID>CVRFPID-112154</ProductID><ProductID>CVRFPID-112155</ProductID><ProductID>CVRFPID-112156</ProductID><ProductID>CVRFPID-112157</ProductID><ProductID>CVRFPID-116787</ProductID><ProductID>CVRFPID-194947</ProductID><ProductID>CVRFPID-194948</ProductID><ProductID>CVRFPID-194949</ProductID><ProductID>CVRFPID-194950</ProductID><ProductID>CVRFPID-194951</ProductID><ProductID>CVRFPID-194952</ProductID><ProductID>CVRFPID-194954</ProductID><ProductID>CVRFPID-194955</ProductID><ProductID>CVRFPID-194956</ProductID><ProductID>CVRFPID-194957</ProductID><ProductID>CVRFPID-54555</ProductID><ProductID>CVRFPID-54556</ProductID><ProductID>CVRFPID-55253</ProductID><ProductID>CVRFPID-55254</ProductID><ProductID>CVRFPID-55255</ProductID><ProductID>CVRFPID-55256</ProductID><ProductID>CVRFPID-70758</ProductID><ProductID>CVRFPID-70759</ProductID><ProductID>CVRFPID-70760</ProductID><ProductID>CVRFPID-70761</ProductID><ProductID>CVRFPID-70762</ProductID><ProductID>CVRFPID-70763</ProductID><ProductID>CVRFPID-70764</ProductID><ProductID>CVRFPID-91003</ProductID><ProductID>CVRFPID-91004</ProductID><ProductID>CVRFPID-91005</ProductID><ProductID>CVRFPID-91006</ProductID><ProductID>CVRFPID-91009</ProductID><ProductID>CVRFPID-91010</ProductID><ProductID>CVRFPID-91011</ProductID><ProductID>CVRFPID-91012</ProductID><ProductID>CVRFPID-91013</ProductID><ProductID>CVRFPID-91014</ProductID><ProductID>CVRFPID-91015</ProductID><ProductID>CVRFPID-91016</ProductID><ProductID>CVRFPID-91017</ProductID><ProductID>CVRFPID-91018</ProductID><ProductID>CVRFPID-91019</ProductID><ProductID>CVRFPID-91020</ProductID><ProductID>CVRFPID-91021</ProductID><ProductID>CVRFPID-91022</ProductID><ProductID>CVRFPID-91088</ProductID><ProductID>CVRFPID-91089</ProductID><ProductID>CVRFPID-91090</ProductID><ProductID>CVRFPID-91091</ProductID><ProductID>CVRFPID-92319</ProductID><ProductID>CVRFPID-92320</ProductID><ProductID>CVRFPID-92321</ProductID><ProductID>CVRFPID-92322</ProductID><ProductID>CVRFPID-97260</ProductID><ProductID>CVRFPID-97261</ProductID><ProductID>CVRFPID-97262</ProductID><ProductID>CVRFPID-99994</ProductID><ProductID>CVRFPID-99996</ProductID><ProductID>CVRFPID-99997</ProductID><ProductID>CVRFPID-100027</ProductID><ProductID>CVRFPID-108069</ProductID><ProductID>CVRFPID-108072</ProductID><ProductID>CVRFPID-108073</ProductID><ProductID>CVRFPID-108074</ProductID><ProductID>CVRFPID-111872</ProductID><ProductID>CVRFPID-112136</ProductID><ProductID>CVRFPID-112137</ProductID><ProductID>CVRFPID-112138</ProductID><ProductID>CVRFPID-112139</ProductID><ProductID>CVRFPID-112140</ProductID><ProductID>CVRFPID-112800</ProductID><ProductID>CVRFPID-115151</ProductID><ProductID>CVRFPID-115153</ProductID><ProductID>CVRFPID-115154</ProductID><ProductID>CVRFPID-115155</ProductID><ProductID>CVRFPID-115156</ProductID><ProductID>CVRFPID-115157</ProductID><ProductID>CVRFPID-115158</ProductID><ProductID>CVRFPID-115159</ProductID><ProductID>CVRFPID-115160</ProductID><ProductID>CVRFPID-115161</ProductID><ProductID>CVRFPID-115162</ProductID><ProductID>CVRFPID-115163</ProductID><ProductID>CVRFPID-115164</ProductID><ProductID>CVRFPID-115165</ProductID><ProductID>CVRFPID-115166</ProductID><ProductID>CVRFPID-115197</ProductID><ProductID>CVRFPID-115198</ProductID><ProductID>CVRFPID-115199</ProductID><ProductID>CVRFPID-115200</ProductID><ProductID>CVRFPID-115201</ProductID><ProductID>CVRFPID-115202</ProductID><ProductID>CVRFPID-115203</ProductID><ProductID>CVRFPID-115204</ProductID><ProductID>CVRFPID-115205</ProductID><ProductID>CVRFPID-115206</ProductID><ProductID>CVRFPID-115207</ProductID><ProductID>CVRFPID-115208</ProductID><ProductID>CVRFPID-115209</ProductID><ProductID>CVRFPID-115210</ProductID><ProductID>CVRFPID-115211</ProductID><ProductID>CVRFPID-115212</ProductID><ProductID>CVRFPID-115213</ProductID><ProductID>CVRFPID-115214</ProductID><ProductID>CVRFPID-115215</ProductID><ProductID>CVRFPID-115216</ProductID><ProductID>CVRFPID-115217</ProductID><ProductID>CVRFPID-115218</ProductID><ProductID>CVRFPID-115219</ProductID><ProductID>CVRFPID-115220</ProductID><ProductID>CVRFPID-115221</ProductID><ProductID>CVRFPID-115222</ProductID><ProductID>CVRFPID-115223</ProductID><ProductID>CVRFPID-115224</ProductID><ProductID>CVRFPID-115225</ProductID><ProductID>CVRFPID-115226</ProductID><ProductID>CVRFPID-115227</ProductID><ProductID>CVRFPID-115228</ProductID><ProductID>CVRFPID-115229</ProductID><ProductID>CVRFPID-115230</ProductID><ProductID>CVRFPID-115231</ProductID><ProductID>CVRFPID-115232</ProductID><ProductID>CVRFPID-115233</ProductID><ProductID>CVRFPID-115234</ProductID><ProductID>CVRFPID-115235</ProductID><ProductID>CVRFPID-115236</ProductID><ProductID>CVRFPID-115237</ProductID><ProductID>CVRFPID-115238</ProductID><ProductID>CVRFPID-115239</ProductID><ProductID>CVRFPID-115240</ProductID><ProductID>CVRFPID-115241</ProductID><ProductID>CVRFPID-115242</ProductID><ProductID>CVRFPID-115243</ProductID><ProductID>CVRFPID-115244</ProductID><ProductID>CVRFPID-115245</ProductID><ProductID>CVRFPID-115246</ProductID><ProductID>CVRFPID-115247</ProductID><ProductID>CVRFPID-115248</ProductID><ProductID>CVRFPID-115249</ProductID><ProductID>CVRFPID-115250</ProductID><ProductID>CVRFPID-115251</ProductID><ProductID>CVRFPID-115252</ProductID><ProductID>CVRFPID-115253</ProductID><ProductID>CVRFPID-115254</ProductID><ProductID>CVRFPID-115255</ProductID><ProductID>CVRFPID-115256</ProductID><ProductID>CVRFPID-115257</ProductID><ProductID>CVRFPID-115258</ProductID><ProductID>CVRFPID-115259</ProductID><ProductID>CVRFPID-115260</ProductID><ProductID>CVRFPID-115261</ProductID><ProductID>CVRFPID-115262</ProductID><ProductID>CVRFPID-115263</ProductID><ProductID>CVRFPID-115264</ProductID><ProductID>CVRFPID-115265</ProductID><ProductID>CVRFPID-115266</ProductID><ProductID>CVRFPID-115268</ProductID><ProductID>CVRFPID-115269</ProductID><ProductID>CVRFPID-115270</ProductID><ProductID>CVRFPID-115276</ProductID><ProductID>CVRFPID-116857</ProductID><ProductID>CVRFPID-185176</ProductID><ProductID>CVRFPID-185177</ProductID><ProductID>CVRFPID-185179</ProductID><ProductID>CVRFPID-185180</ProductID><ProductID>CVRFPID-185251</ProductID><ProductID>CVRFPID-185252</ProductID><ProductID>CVRFPID-185253</ProductID><ProductID>CVRFPID-185254</ProductID><ProductID>CVRFPID-185255</ProductID><ProductID>CVRFPID-185256</ProductID><ProductID>CVRFPID-185257</ProductID><ProductID>CVRFPID-185258</ProductID><ProductID>CVRFPID-185259</ProductID><ProductID>CVRFPID-185260</ProductID><ProductID>CVRFPID-188865</ProductID><ProductID>CVRFPID-188866</ProductID><ProductID>CVRFPID-188867</ProductID><ProductID>CVRFPID-191201</ProductID><ProductID>CVRFPID-191202</ProductID><ProductID>CVRFPID-191203</ProductID><ProductID>CVRFPID-191204</ProductID><ProductID>CVRFPID-191206</ProductID><ProductID>CVRFPID-191207</ProductID><ProductID>CVRFPID-191208</ProductID><ProductID>CVRFPID-191209</ProductID><ProductID>CVRFPID-191210</ProductID><ProductID>CVRFPID-191211</ProductID><ProductID>CVRFPID-191212</ProductID><ProductID>CVRFPID-191213</ProductID><ProductID>CVRFPID-191214</ProductID><ProductID>CVRFPID-192947</ProductID><ProductID>CVRFPID-194998</ProductID><ProductID>CVRFPID-194999</ProductID><ProductID>CVRFPID-195000</ProductID><ProductID>CVRFPID-195001</ProductID><ProductID>CVRFPID-195002</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a DoS condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco ASDM.
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a DoS condition.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.1</BaseScore><TemporalScore>5.9</TemporalScore><Vector>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+For VPN setup involving LAN-to-LAN tunnel, it is possible to avoid the decryption of an offending ICMP packet by implementing a vpn-filer access-list. The following commands will implement an access-list that blocks any ICMP packets flowing through a VPN tunnel that use the DfltGrpPolicy group-policy in both inbound and outbound direction:
+
+    ciscoasa(config)# access-list DENY_ICMP_ACL deny icmp any any
+    ciscoasa(config)# access-list DENY_ICMP_ACL permit ip any any
+    ciscoasa(config)# group-policy DfltGrpPolicy attributes
+    ciscoasa(config-group-policy)# vpn-filter value DENY_ICMP_ACL
+
+Note: Because the vulnerability is triggered during the decryption operation, this workaround should be implemented on both devices terminating the VPN tunnel. This workaround is ineffective if applied to only on one side of the tunnel.
+
+
+
+For Cisco remote IPsec VPN there is no workaround that mitigates this vulnerability. 
+
+
+
+SQL*Net Inspection Engine Denial of Service Vulnerability
+
+
+
+Disabling Cisco ASA SQL*Net inspection will mitigate this vulnerability. The following commands will disable the SQL*Net inspection that is configured by default:
+
+    ciscoasa(config)# policy-map global_policy
+    ciscoasa(config-pmap)# class inspection_default
+    ciscoasa(config-pmap-c)# no inspect sqlnet
+
+Digital Certificate Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+Remote Access VPN Authentication Bypass Vulnerability
+
+
+
+There are no workarounds other than disabling the override-account-disable option. 
+
+
+
+Digital Certificate HTTP Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+HTTP Deep Packet Inspection Denial of Service Vulnerability
+
+
+
+There are no workarounds other than removing the affected option from the HTTP DPI configuration
+
+
+
+DNS Inspection Denial of Service Vulnerability
+
+
+
+Administrators can workaround this issue by ensuring that only UDP traffic is sent to the DNS ALPI engine for inspection.
+
+
+
+To do that, first create an access-list to match only UDP traffic and then create a class-map to match on that access-list. Note that by default the Cisco ASA Software will only inspect DNS over UDP traffic. The following example shows Cisco ASA Software forwarding only UDP port 53 traffic to the DNS ALPI engine.
+
+ciscoasa# show running-config access-list
+access-list DNS_INSPECT extended permit udp any any eq 53
+
+ciscoasa# show running-config class-map
+!
+class-map DNS_INSPECT_CP
+ match access-list DNS_INSPECT
+[...]
+
+ciscoasa# show running-config policy-map
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect ftp
+  inspect h323 h225
+  [...]
+  class DNS_INSPECT_CP
+  inspect dns preset_dns_map
+!
+
+Note: Inspection of DNS traffic over TCP is currently not supported by the Cisco ASA Software. Implementing this workaround does not create any loss in functionality.
+
+
+
+AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling AnyConnect SSL VPN feature.
+
+
+
+SSL VPN Web Portal Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling the SSL VPN feature.
+
+
+
+Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+Administrators can disable the default ICMP policy and ICMP inspection engine to work around this vulnerability.
+
+To disable the default ICMP policy use the icmp deny any  command for all the configured interfaces of the Cisco ASA Software. To disable the default ICMP policy for ICMPv6 use the ipv6 icmp deny any  command for all the IPv6 enabled interfaces of the Cisco ASA Software. The following example shows how to disable the default ICMP policy and default ICMP policy for ICMPv6 on the outside interface
+
+
+ciscoasa(config)# icmp deny any outside
+ciscoasa(config)# ipv6 icmp deny any outside 
+
+Note: Disabling the ICMP processing on the firewall interface may result in administrators not being able to receive any more information from the firewall via ICMP, which includes ping, traceroute, etc. Disabling the ICMPv6 processing on the firewall interface may result in the firewall not being able to communicate on that interface due to a missing neighbor discovery and neighbor advertisement ICMPv6 packets.
+
+
+
+To disable the ICMP inspection engine, use the no inspect icmp command within the policy-map applied to the service polices.
+
+The following example shows how to disable the ICMP inspection engine in the policy-map called global_policy:
+
+
+ciscoasa(config)# policy-map global_policy 
+ciscoasa(config-pmap)# class inspection_default 
+ciscoasa(config-pmap-c)# no inspect icmp 
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="3" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Digital Certificate Authentication Bypass Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCuf52468</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="3">A vulnerability in the code for SSL certificate validation of the Cisco ASA Software could allow an unauthenticated, remote attacker to bypass the certificate authentication.
+
+
+
+The vulnerability is due to an error in handling a client crafted certificate during the authentication phase. An attacker could exploit this vulnerability by trying to authenticate to the affected system using a crafted certificate. An exploit could allow the attacker to bypass the certificate authentication. Depending on the Cisco ASA configuration, this may allow the attacker to authenticate and access the network via Clientless or Anyconnect SSL VPN or to get administrative management access via Cisco Adaptive Security Device Management (ASDM).</Note></Notes><CVE>CVE-2013-5509</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-188865</ProductID><ProductID>CVRFPID-188866</ProductID><ProductID>CVRFPID-188867</ProductID><ProductID>CVRFPID-191211</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a DoS condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco ASDM.
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a DoS condition.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>10.0</BaseScore><TemporalScore>8.3</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+For VPN setup involving LAN-to-LAN tunnel, it is possible to avoid the decryption of an offending ICMP packet by implementing a vpn-filer access-list. The following commands will implement an access-list that blocks any ICMP packets flowing through a VPN tunnel that use the DfltGrpPolicy group-policy in both inbound and outbound direction:
+
+    ciscoasa(config)# access-list DENY_ICMP_ACL deny icmp any any
+    ciscoasa(config)# access-list DENY_ICMP_ACL permit ip any any
+    ciscoasa(config)# group-policy DfltGrpPolicy attributes
+    ciscoasa(config-group-policy)# vpn-filter value DENY_ICMP_ACL
+
+Note: Because the vulnerability is triggered during the decryption operation, this workaround should be implemented on both devices terminating the VPN tunnel. This workaround is ineffective if applied to only on one side of the tunnel.
+
+
+
+For Cisco remote IPsec VPN there is no workaround that mitigates this vulnerability. 
+
+
+
+SQL*Net Inspection Engine Denial of Service Vulnerability
+
+
+
+Disabling Cisco ASA SQL*Net inspection will mitigate this vulnerability. The following commands will disable the SQL*Net inspection that is configured by default:
+
+    ciscoasa(config)# policy-map global_policy
+    ciscoasa(config-pmap)# class inspection_default
+    ciscoasa(config-pmap-c)# no inspect sqlnet
+
+Digital Certificate Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+Remote Access VPN Authentication Bypass Vulnerability
+
+
+
+There are no workarounds other than disabling the override-account-disable option. 
+
+
+
+Digital Certificate HTTP Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+HTTP Deep Packet Inspection Denial of Service Vulnerability
+
+
+
+There are no workarounds other than removing the affected option from the HTTP DPI configuration
+
+
+
+DNS Inspection Denial of Service Vulnerability
+
+
+
+Administrators can workaround this issue by ensuring that only UDP traffic is sent to the DNS ALPI engine for inspection.
+
+
+
+To do that, first create an access-list to match only UDP traffic and then create a class-map to match on that access-list. Note that by default the Cisco ASA Software will only inspect DNS over UDP traffic. The following example shows Cisco ASA Software forwarding only UDP port 53 traffic to the DNS ALPI engine.
+
+ciscoasa# show running-config access-list
+access-list DNS_INSPECT extended permit udp any any eq 53
+
+ciscoasa# show running-config class-map
+!
+class-map DNS_INSPECT_CP
+ match access-list DNS_INSPECT
+[...]
+
+ciscoasa# show running-config policy-map
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect ftp
+  inspect h323 h225
+  [...]
+  class DNS_INSPECT_CP
+  inspect dns preset_dns_map
+!
+
+Note: Inspection of DNS traffic over TCP is currently not supported by the Cisco ASA Software. Implementing this workaround does not create any loss in functionality.
+
+
+
+AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling AnyConnect SSL VPN feature.
+
+
+
+SSL VPN Web Portal Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling the SSL VPN feature.
+
+
+
+Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+Administrators can disable the default ICMP policy and ICMP inspection engine to work around this vulnerability.
+
+To disable the default ICMP policy use the icmp deny any  command for all the configured interfaces of the Cisco ASA Software. To disable the default ICMP policy for ICMPv6 use the ipv6 icmp deny any  command for all the IPv6 enabled interfaces of the Cisco ASA Software. The following example shows how to disable the default ICMP policy and default ICMP policy for ICMPv6 on the outside interface
+
+
+ciscoasa(config)# icmp deny any outside
+ciscoasa(config)# ipv6 icmp deny any outside 
+
+Note: Disabling the ICMP processing on the firewall interface may result in administrators not being able to receive any more information from the firewall via ICMP, which includes ping, traceroute, etc. Disabling the ICMPv6 processing on the firewall interface may result in the firewall not being able to communicate on that interface due to a missing neighbor discovery and neighbor advertisement ICMPv6 packets.
+
+
+
+To disable the ICMP inspection engine, use the no inspect icmp command within the policy-map applied to the service polices.
+
+The following example shows how to disable the ICMP inspection engine in the policy-map called global_policy:
+
+
+ciscoasa(config)# policy-map global_policy 
+ciscoasa(config-pmap)# class inspection_default 
+ciscoasa(config-pmap-c)# no inspect icmp 
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="4" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Remote Access VPN Authentication Bypass Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCug83401</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="4">A vulnerability in the authentication code of the remote access VPN feature of Cisco ASA Software could allow an unauthenticated, remote attacker to bypass the remote VPN authentication, which could allow remote access to the inside network.
+
+
+
+The vulnerability is due to improper parsing of the LDAP response packet received from a remote AAA LDAP server when the override-account-disable option is configured in the general-attributes of the tunnel-group. An attacker could exploit this vulnerability by attempting to authenticate via remote VPN to the affected system. An exploit could allow the attacker to bypass the authentication and gain access to the network via remote VPN.</Note></Notes><CVE>CVE-2013-5510</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-54555</ProductID><ProductID>CVRFPID-54556</ProductID><ProductID>CVRFPID-55253</ProductID><ProductID>CVRFPID-55254</ProductID><ProductID>CVRFPID-55255</ProductID><ProductID>CVRFPID-55256</ProductID><ProductID>CVRFPID-70758</ProductID><ProductID>CVRFPID-70759</ProductID><ProductID>CVRFPID-70760</ProductID><ProductID>CVRFPID-70761</ProductID><ProductID>CVRFPID-70762</ProductID><ProductID>CVRFPID-70763</ProductID><ProductID>CVRFPID-70764</ProductID><ProductID>CVRFPID-91003</ProductID><ProductID>CVRFPID-91004</ProductID><ProductID>CVRFPID-91005</ProductID><ProductID>CVRFPID-91006</ProductID><ProductID>CVRFPID-91009</ProductID><ProductID>CVRFPID-91010</ProductID><ProductID>CVRFPID-91011</ProductID><ProductID>CVRFPID-91012</ProductID><ProductID>CVRFPID-91013</ProductID><ProductID>CVRFPID-91014</ProductID><ProductID>CVRFPID-91015</ProductID><ProductID>CVRFPID-91016</ProductID><ProductID>CVRFPID-91017</ProductID><ProductID>CVRFPID-91018</ProductID><ProductID>CVRFPID-91019</ProductID><ProductID>CVRFPID-91020</ProductID><ProductID>CVRFPID-91021</ProductID><ProductID>CVRFPID-91022</ProductID><ProductID>CVRFPID-91088</ProductID><ProductID>CVRFPID-91089</ProductID><ProductID>CVRFPID-91090</ProductID><ProductID>CVRFPID-91091</ProductID><ProductID>CVRFPID-92319</ProductID><ProductID>CVRFPID-92320</ProductID><ProductID>CVRFPID-92321</ProductID><ProductID>CVRFPID-92322</ProductID><ProductID>CVRFPID-97260</ProductID><ProductID>CVRFPID-97261</ProductID><ProductID>CVRFPID-97262</ProductID><ProductID>CVRFPID-99994</ProductID><ProductID>CVRFPID-99996</ProductID><ProductID>CVRFPID-99997</ProductID><ProductID>CVRFPID-100027</ProductID><ProductID>CVRFPID-108069</ProductID><ProductID>CVRFPID-108072</ProductID><ProductID>CVRFPID-108073</ProductID><ProductID>CVRFPID-108074</ProductID><ProductID>CVRFPID-111872</ProductID><ProductID>CVRFPID-112137</ProductID><ProductID>CVRFPID-112138</ProductID><ProductID>CVRFPID-112139</ProductID><ProductID>CVRFPID-112800</ProductID><ProductID>CVRFPID-115151</ProductID><ProductID>CVRFPID-115153</ProductID><ProductID>CVRFPID-115154</ProductID><ProductID>CVRFPID-115155</ProductID><ProductID>CVRFPID-115156</ProductID><ProductID>CVRFPID-115157</ProductID><ProductID>CVRFPID-115158</ProductID><ProductID>CVRFPID-115159</ProductID><ProductID>CVRFPID-115160</ProductID><ProductID>CVRFPID-115161</ProductID><ProductID>CVRFPID-115162</ProductID><ProductID>CVRFPID-115163</ProductID><ProductID>CVRFPID-115164</ProductID><ProductID>CVRFPID-115165</ProductID><ProductID>CVRFPID-115166</ProductID><ProductID>CVRFPID-115197</ProductID><ProductID>CVRFPID-115198</ProductID><ProductID>CVRFPID-115199</ProductID><ProductID>CVRFPID-115200</ProductID><ProductID>CVRFPID-115201</ProductID><ProductID>CVRFPID-115202</ProductID><ProductID>CVRFPID-115203</ProductID><ProductID>CVRFPID-115204</ProductID><ProductID>CVRFPID-115205</ProductID><ProductID>CVRFPID-115206</ProductID><ProductID>CVRFPID-115207</ProductID><ProductID>CVRFPID-115208</ProductID><ProductID>CVRFPID-115209</ProductID><ProductID>CVRFPID-115210</ProductID><ProductID>CVRFPID-115211</ProductID><ProductID>CVRFPID-115212</ProductID><ProductID>CVRFPID-115213</ProductID><ProductID>CVRFPID-115214</ProductID><ProductID>CVRFPID-115215</ProductID><ProductID>CVRFPID-115216</ProductID><ProductID>CVRFPID-115217</ProductID><ProductID>CVRFPID-115218</ProductID><ProductID>CVRFPID-115219</ProductID><ProductID>CVRFPID-115220</ProductID><ProductID>CVRFPID-115221</ProductID><ProductID>CVRFPID-115222</ProductID><ProductID>CVRFPID-115223</ProductID><ProductID>CVRFPID-115224</ProductID><ProductID>CVRFPID-115225</ProductID><ProductID>CVRFPID-115226</ProductID><ProductID>CVRFPID-115227</ProductID><ProductID>CVRFPID-115228</ProductID><ProductID>CVRFPID-115229</ProductID><ProductID>CVRFPID-115230</ProductID><ProductID>CVRFPID-115231</ProductID><ProductID>CVRFPID-115232</ProductID><ProductID>CVRFPID-115233</ProductID><ProductID>CVRFPID-115234</ProductID><ProductID>CVRFPID-115235</ProductID><ProductID>CVRFPID-115236</ProductID><ProductID>CVRFPID-115237</ProductID><ProductID>CVRFPID-115238</ProductID><ProductID>CVRFPID-115239</ProductID><ProductID>CVRFPID-115240</ProductID><ProductID>CVRFPID-115241</ProductID><ProductID>CVRFPID-115242</ProductID><ProductID>CVRFPID-115243</ProductID><ProductID>CVRFPID-115244</ProductID><ProductID>CVRFPID-115245</ProductID><ProductID>CVRFPID-115246</ProductID><ProductID>CVRFPID-115247</ProductID><ProductID>CVRFPID-115248</ProductID><ProductID>CVRFPID-115249</ProductID><ProductID>CVRFPID-115250</ProductID><ProductID>CVRFPID-115251</ProductID><ProductID>CVRFPID-115252</ProductID><ProductID>CVRFPID-115253</ProductID><ProductID>CVRFPID-115254</ProductID><ProductID>CVRFPID-115255</ProductID><ProductID>CVRFPID-115256</ProductID><ProductID>CVRFPID-115257</ProductID><ProductID>CVRFPID-115258</ProductID><ProductID>CVRFPID-115259</ProductID><ProductID>CVRFPID-115260</ProductID><ProductID>CVRFPID-115261</ProductID><ProductID>CVRFPID-115262</ProductID><ProductID>CVRFPID-115263</ProductID><ProductID>CVRFPID-115264</ProductID><ProductID>CVRFPID-115265</ProductID><ProductID>CVRFPID-115266</ProductID><ProductID>CVRFPID-115268</ProductID><ProductID>CVRFPID-115276</ProductID><ProductID>CVRFPID-116857</ProductID><ProductID>CVRFPID-185176</ProductID><ProductID>CVRFPID-185177</ProductID><ProductID>CVRFPID-185251</ProductID><ProductID>CVRFPID-185252</ProductID><ProductID>CVRFPID-185253</ProductID><ProductID>CVRFPID-185254</ProductID><ProductID>CVRFPID-185255</ProductID><ProductID>CVRFPID-185256</ProductID><ProductID>CVRFPID-185257</ProductID><ProductID>CVRFPID-185258</ProductID><ProductID>CVRFPID-185259</ProductID><ProductID>CVRFPID-185260</ProductID><ProductID>CVRFPID-188865</ProductID><ProductID>CVRFPID-188866</ProductID><ProductID>CVRFPID-188867</ProductID><ProductID>CVRFPID-191202</ProductID><ProductID>CVRFPID-191204</ProductID><ProductID>CVRFPID-191205</ProductID><ProductID>CVRFPID-191206</ProductID><ProductID>CVRFPID-191207</ProductID><ProductID>CVRFPID-191208</ProductID><ProductID>CVRFPID-191209</ProductID><ProductID>CVRFPID-191210</ProductID><ProductID>CVRFPID-191211</ProductID><ProductID>CVRFPID-191212</ProductID><ProductID>CVRFPID-192947</ProductID><ProductID>CVRFPID-195000</ProductID><ProductID>CVRFPID-195001</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a DoS condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco ASDM.
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a DoS condition.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>5.0</BaseScore><TemporalScore>4.1</TemporalScore><Vector>AV:N/AC:L/Au:N/C:P/I:N/A:N/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+For VPN setup involving LAN-to-LAN tunnel, it is possible to avoid the decryption of an offending ICMP packet by implementing a vpn-filer access-list. The following commands will implement an access-list that blocks any ICMP packets flowing through a VPN tunnel that use the DfltGrpPolicy group-policy in both inbound and outbound direction:
+
+    ciscoasa(config)# access-list DENY_ICMP_ACL deny icmp any any
+    ciscoasa(config)# access-list DENY_ICMP_ACL permit ip any any
+    ciscoasa(config)# group-policy DfltGrpPolicy attributes
+    ciscoasa(config-group-policy)# vpn-filter value DENY_ICMP_ACL
+
+Note: Because the vulnerability is triggered during the decryption operation, this workaround should be implemented on both devices terminating the VPN tunnel. This workaround is ineffective if applied to only on one side of the tunnel.
+
+
+
+For Cisco remote IPsec VPN there is no workaround that mitigates this vulnerability. 
+
+
+
+SQL*Net Inspection Engine Denial of Service Vulnerability
+
+
+
+Disabling Cisco ASA SQL*Net inspection will mitigate this vulnerability. The following commands will disable the SQL*Net inspection that is configured by default:
+
+    ciscoasa(config)# policy-map global_policy
+    ciscoasa(config-pmap)# class inspection_default
+    ciscoasa(config-pmap-c)# no inspect sqlnet
+
+Digital Certificate Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+Remote Access VPN Authentication Bypass Vulnerability
+
+
+
+There are no workarounds other than disabling the override-account-disable option. 
+
+
+
+Digital Certificate HTTP Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+HTTP Deep Packet Inspection Denial of Service Vulnerability
+
+
+
+There are no workarounds other than removing the affected option from the HTTP DPI configuration
+
+
+
+DNS Inspection Denial of Service Vulnerability
+
+
+
+Administrators can workaround this issue by ensuring that only UDP traffic is sent to the DNS ALPI engine for inspection.
+
+
+
+To do that, first create an access-list to match only UDP traffic and then create a class-map to match on that access-list. Note that by default the Cisco ASA Software will only inspect DNS over UDP traffic. The following example shows Cisco ASA Software forwarding only UDP port 53 traffic to the DNS ALPI engine.
+
+ciscoasa# show running-config access-list
+access-list DNS_INSPECT extended permit udp any any eq 53
+
+ciscoasa# show running-config class-map
+!
+class-map DNS_INSPECT_CP
+ match access-list DNS_INSPECT
+[...]
+
+ciscoasa# show running-config policy-map
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect ftp
+  inspect h323 h225
+  [...]
+  class DNS_INSPECT_CP
+  inspect dns preset_dns_map
+!
+
+Note: Inspection of DNS traffic over TCP is currently not supported by the Cisco ASA Software. Implementing this workaround does not create any loss in functionality.
+
+
+
+AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling AnyConnect SSL VPN feature.
+
+
+
+SSL VPN Web Portal Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling the SSL VPN feature.
+
+
+
+Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+Administrators can disable the default ICMP policy and ICMP inspection engine to work around this vulnerability.
+
+To disable the default ICMP policy use the icmp deny any  command for all the configured interfaces of the Cisco ASA Software. To disable the default ICMP policy for ICMPv6 use the ipv6 icmp deny any  command for all the IPv6 enabled interfaces of the Cisco ASA Software. The following example shows how to disable the default ICMP policy and default ICMP policy for ICMPv6 on the outside interface
+
+
+ciscoasa(config)# icmp deny any outside
+ciscoasa(config)# ipv6 icmp deny any outside 
+
+Note: Disabling the ICMP processing on the firewall interface may result in administrators not being able to receive any more information from the firewall via ICMP, which includes ping, traceroute, etc. Disabling the ICMPv6 processing on the firewall interface may result in the firewall not being able to communicate on that interface due to a missing neighbor discovery and neighbor advertisement ICMPv6 packets.
+
+
+
+To disable the ICMP inspection engine, use the no inspect icmp command within the policy-map applied to the service polices.
+
+The following example shows how to disable the ICMP inspection engine in the policy-map called global_policy:
+
+
+ciscoasa(config)# policy-map global_policy 
+ciscoasa(config-pmap)# class inspection_default 
+ciscoasa(config-pmap-c)# no inspect icmp 
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="5" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Digital Certificate HTTP Authentication Bypass Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCuh44815</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="5">A vulnerability in the authentication code of remote management via Cisco Adaptive Security Device Management (ASDM) could allow an unauthenticated, remote attacker to bypass the digital certificate authentication. Depending on the configuration, this may allow the attacker to remotely connect as administrator to the management interface via Cisco ASDM and take full control of the affected system.
+
+
+
+The vulnerability is due to an error in the implementation of the authentication-certificate option, which enables client-side digital certificate authentication. An attacker could exploit this vulnerability by trying to authenticate to an interface of the affected system where Cisco ASDM is enabled.</Note></Notes><CVE>CVE-2013-5511</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-70762</ProductID><ProductID>CVRFPID-97260</ProductID><ProductID>CVRFPID-97261</ProductID><ProductID>CVRFPID-99994</ProductID><ProductID>CVRFPID-99996</ProductID><ProductID>CVRFPID-99997</ProductID><ProductID>CVRFPID-108069</ProductID><ProductID>CVRFPID-108072</ProductID><ProductID>CVRFPID-108073</ProductID><ProductID>CVRFPID-108074</ProductID><ProductID>CVRFPID-112136</ProductID><ProductID>CVRFPID-112138</ProductID><ProductID>CVRFPID-112139</ProductID><ProductID>CVRFPID-112140</ProductID><ProductID>CVRFPID-112800</ProductID><ProductID>CVRFPID-115241</ProductID><ProductID>CVRFPID-115242</ProductID><ProductID>CVRFPID-115243</ProductID><ProductID>CVRFPID-115244</ProductID><ProductID>CVRFPID-115245</ProductID><ProductID>CVRFPID-115246</ProductID><ProductID>CVRFPID-115247</ProductID><ProductID>CVRFPID-115248</ProductID><ProductID>CVRFPID-115249</ProductID><ProductID>CVRFPID-115250</ProductID><ProductID>CVRFPID-115251</ProductID><ProductID>CVRFPID-115252</ProductID><ProductID>CVRFPID-115253</ProductID><ProductID>CVRFPID-115254</ProductID><ProductID>CVRFPID-115255</ProductID><ProductID>CVRFPID-115256</ProductID><ProductID>CVRFPID-115260</ProductID><ProductID>CVRFPID-115261</ProductID><ProductID>CVRFPID-115262</ProductID><ProductID>CVRFPID-115263</ProductID><ProductID>CVRFPID-115264</ProductID><ProductID>CVRFPID-115265</ProductID><ProductID>CVRFPID-115266</ProductID><ProductID>CVRFPID-115268</ProductID><ProductID>CVRFPID-115269</ProductID><ProductID>CVRFPID-115270</ProductID><ProductID>CVRFPID-115276</ProductID><ProductID>CVRFPID-116857</ProductID><ProductID>CVRFPID-185176</ProductID><ProductID>CVRFPID-185177</ProductID><ProductID>CVRFPID-185179</ProductID><ProductID>CVRFPID-185180</ProductID><ProductID>CVRFPID-185251</ProductID><ProductID>CVRFPID-185252</ProductID><ProductID>CVRFPID-185253</ProductID><ProductID>CVRFPID-185254</ProductID><ProductID>CVRFPID-185255</ProductID><ProductID>CVRFPID-185256</ProductID><ProductID>CVRFPID-185257</ProductID><ProductID>CVRFPID-188865</ProductID><ProductID>CVRFPID-188866</ProductID><ProductID>CVRFPID-188867</ProductID><ProductID>CVRFPID-191201</ProductID><ProductID>CVRFPID-191202</ProductID><ProductID>CVRFPID-191203</ProductID><ProductID>CVRFPID-191204</ProductID><ProductID>CVRFPID-191205</ProductID><ProductID>CVRFPID-191206</ProductID><ProductID>CVRFPID-191207</ProductID><ProductID>CVRFPID-191208</ProductID><ProductID>CVRFPID-191211</ProductID><ProductID>CVRFPID-191212</ProductID><ProductID>CVRFPID-191213</ProductID><ProductID>CVRFPID-191214</ProductID><ProductID>CVRFPID-192947</ProductID><ProductID>CVRFPID-195000</ProductID><ProductID>CVRFPID-195001</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a DoS condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco ASDM.
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a DoS condition.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>10.0</BaseScore><TemporalScore>8.3</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+For VPN setup involving LAN-to-LAN tunnel, it is possible to avoid the decryption of an offending ICMP packet by implementing a vpn-filer access-list. The following commands will implement an access-list that blocks any ICMP packets flowing through a VPN tunnel that use the DfltGrpPolicy group-policy in both inbound and outbound direction:
+
+    ciscoasa(config)# access-list DENY_ICMP_ACL deny icmp any any
+    ciscoasa(config)# access-list DENY_ICMP_ACL permit ip any any
+    ciscoasa(config)# group-policy DfltGrpPolicy attributes
+    ciscoasa(config-group-policy)# vpn-filter value DENY_ICMP_ACL
+
+Note: Because the vulnerability is triggered during the decryption operation, this workaround should be implemented on both devices terminating the VPN tunnel. This workaround is ineffective if applied to only on one side of the tunnel.
+
+
+
+For Cisco remote IPsec VPN there is no workaround that mitigates this vulnerability. 
+
+
+
+SQL*Net Inspection Engine Denial of Service Vulnerability
+
+
+
+Disabling Cisco ASA SQL*Net inspection will mitigate this vulnerability. The following commands will disable the SQL*Net inspection that is configured by default:
+
+    ciscoasa(config)# policy-map global_policy
+    ciscoasa(config-pmap)# class inspection_default
+    ciscoasa(config-pmap-c)# no inspect sqlnet
+
+Digital Certificate Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+Remote Access VPN Authentication Bypass Vulnerability
+
+
+
+There are no workarounds other than disabling the override-account-disable option. 
+
+
+
+Digital Certificate HTTP Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+HTTP Deep Packet Inspection Denial of Service Vulnerability
+
+
+
+There are no workarounds other than removing the affected option from the HTTP DPI configuration
+
+
+
+DNS Inspection Denial of Service Vulnerability
+
+
+
+Administrators can workaround this issue by ensuring that only UDP traffic is sent to the DNS ALPI engine for inspection.
+
+
+
+To do that, first create an access-list to match only UDP traffic and then create a class-map to match on that access-list. Note that by default the Cisco ASA Software will only inspect DNS over UDP traffic. The following example shows Cisco ASA Software forwarding only UDP port 53 traffic to the DNS ALPI engine.
+
+ciscoasa# show running-config access-list
+access-list DNS_INSPECT extended permit udp any any eq 53
+
+ciscoasa# show running-config class-map
+!
+class-map DNS_INSPECT_CP
+ match access-list DNS_INSPECT
+[...]
+
+ciscoasa# show running-config policy-map
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect ftp
+  inspect h323 h225
+  [...]
+  class DNS_INSPECT_CP
+  inspect dns preset_dns_map
+!
+
+Note: Inspection of DNS traffic over TCP is currently not supported by the Cisco ASA Software. Implementing this workaround does not create any loss in functionality.
+
+
+
+AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling AnyConnect SSL VPN feature.
+
+
+
+SSL VPN Web Portal Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling the SSL VPN feature.
+
+
+
+Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+Administrators can disable the default ICMP policy and ICMP inspection engine to work around this vulnerability.
+
+To disable the default ICMP policy use the icmp deny any  command for all the configured interfaces of the Cisco ASA Software. To disable the default ICMP policy for ICMPv6 use the ipv6 icmp deny any  command for all the IPv6 enabled interfaces of the Cisco ASA Software. The following example shows how to disable the default ICMP policy and default ICMP policy for ICMPv6 on the outside interface
+
+
+ciscoasa(config)# icmp deny any outside
+ciscoasa(config)# ipv6 icmp deny any outside 
+
+Note: Disabling the ICMP processing on the firewall interface may result in administrators not being able to receive any more information from the firewall via ICMP, which includes ping, traceroute, etc. Disabling the ICMPv6 processing on the firewall interface may result in the firewall not being able to communicate on that interface due to a missing neighbor discovery and neighbor advertisement ICMPv6 packets.
+
+
+
+To disable the ICMP inspection engine, use the no inspect icmp command within the policy-map applied to the service polices.
+
+The following example shows how to disable the ICMP inspection engine in the policy-map called global_policy:
+
+
+ciscoasa(config)# policy-map global_policy 
+ciscoasa(config-pmap)# class inspection_default 
+ciscoasa(config-pmap-c)# no inspect icmp 
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="6" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>HTTP Deep Packet Inspection Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCud37992</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="6">A vulnerability in HTTP Deep Packet Inspection (DPI) code could allow an unauthenticated, remote attacker to cause a reload of the affected system.
+
+
+
+The vulnerability is due to improper handling of a race condition when the HTTP DPI engine is inspecting HTTP packets and either the spoof-server parameters option is enabled or the Cisco ASA Software is configured to inspect and mask the HTTP response including active-x or java-applet in the response body. An attacker could exploit this vulnerability by sending a crafted HTTP response through the affected system.</Note></Notes><CVE>CVE-2013-5512</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-70762</ProductID><ProductID>CVRFPID-97260</ProductID><ProductID>CVRFPID-97261</ProductID><ProductID>CVRFPID-99994</ProductID><ProductID>CVRFPID-99996</ProductID><ProductID>CVRFPID-99997</ProductID><ProductID>CVRFPID-108069</ProductID><ProductID>CVRFPID-108072</ProductID><ProductID>CVRFPID-108073</ProductID><ProductID>CVRFPID-108074</ProductID><ProductID>CVRFPID-112136</ProductID><ProductID>CVRFPID-112138</ProductID><ProductID>CVRFPID-112139</ProductID><ProductID>CVRFPID-112140</ProductID><ProductID>CVRFPID-112800</ProductID><ProductID>CVRFPID-115241</ProductID><ProductID>CVRFPID-115242</ProductID><ProductID>CVRFPID-115243</ProductID><ProductID>CVRFPID-115244</ProductID><ProductID>CVRFPID-115245</ProductID><ProductID>CVRFPID-115246</ProductID><ProductID>CVRFPID-115247</ProductID><ProductID>CVRFPID-115248</ProductID><ProductID>CVRFPID-115249</ProductID><ProductID>CVRFPID-115250</ProductID><ProductID>CVRFPID-115251</ProductID><ProductID>CVRFPID-115252</ProductID><ProductID>CVRFPID-115253</ProductID><ProductID>CVRFPID-115254</ProductID><ProductID>CVRFPID-115255</ProductID><ProductID>CVRFPID-115256</ProductID><ProductID>CVRFPID-115260</ProductID><ProductID>CVRFPID-115261</ProductID><ProductID>CVRFPID-115262</ProductID><ProductID>CVRFPID-115263</ProductID><ProductID>CVRFPID-115264</ProductID><ProductID>CVRFPID-115265</ProductID><ProductID>CVRFPID-115266</ProductID><ProductID>CVRFPID-115268</ProductID><ProductID>CVRFPID-115269</ProductID><ProductID>CVRFPID-115270</ProductID><ProductID>CVRFPID-115276</ProductID><ProductID>CVRFPID-116857</ProductID><ProductID>CVRFPID-185176</ProductID><ProductID>CVRFPID-185177</ProductID><ProductID>CVRFPID-185179</ProductID><ProductID>CVRFPID-185180</ProductID><ProductID>CVRFPID-185251</ProductID><ProductID>CVRFPID-185252</ProductID><ProductID>CVRFPID-185253</ProductID><ProductID>CVRFPID-185254</ProductID><ProductID>CVRFPID-185255</ProductID><ProductID>CVRFPID-185256</ProductID><ProductID>CVRFPID-185257</ProductID><ProductID>CVRFPID-188865</ProductID><ProductID>CVRFPID-188866</ProductID><ProductID>CVRFPID-188867</ProductID><ProductID>CVRFPID-191201</ProductID><ProductID>CVRFPID-191202</ProductID><ProductID>CVRFPID-191203</ProductID><ProductID>CVRFPID-191206</ProductID><ProductID>CVRFPID-191207</ProductID><ProductID>CVRFPID-191208</ProductID><ProductID>CVRFPID-191213</ProductID><ProductID>CVRFPID-192947</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a DoS condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco ASDM.
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a DoS condition.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.1</BaseScore><TemporalScore>5.9</TemporalScore><Vector>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+For VPN setup involving LAN-to-LAN tunnel, it is possible to avoid the decryption of an offending ICMP packet by implementing a vpn-filer access-list. The following commands will implement an access-list that blocks any ICMP packets flowing through a VPN tunnel that use the DfltGrpPolicy group-policy in both inbound and outbound direction:
+
+    ciscoasa(config)# access-list DENY_ICMP_ACL deny icmp any any
+    ciscoasa(config)# access-list DENY_ICMP_ACL permit ip any any
+    ciscoasa(config)# group-policy DfltGrpPolicy attributes
+    ciscoasa(config-group-policy)# vpn-filter value DENY_ICMP_ACL
+
+Note: Because the vulnerability is triggered during the decryption operation, this workaround should be implemented on both devices terminating the VPN tunnel. This workaround is ineffective if applied to only on one side of the tunnel.
+
+
+
+For Cisco remote IPsec VPN there is no workaround that mitigates this vulnerability. 
+
+
+
+SQL*Net Inspection Engine Denial of Service Vulnerability
+
+
+
+Disabling Cisco ASA SQL*Net inspection will mitigate this vulnerability. The following commands will disable the SQL*Net inspection that is configured by default:
+
+    ciscoasa(config)# policy-map global_policy
+    ciscoasa(config-pmap)# class inspection_default
+    ciscoasa(config-pmap-c)# no inspect sqlnet
+
+Digital Certificate Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+Remote Access VPN Authentication Bypass Vulnerability
+
+
+
+There are no workarounds other than disabling the override-account-disable option. 
+
+
+
+Digital Certificate HTTP Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+HTTP Deep Packet Inspection Denial of Service Vulnerability
+
+
+
+There are no workarounds other than removing the affected option from the HTTP DPI configuration
+
+
+
+DNS Inspection Denial of Service Vulnerability
+
+
+
+Administrators can workaround this issue by ensuring that only UDP traffic is sent to the DNS ALPI engine for inspection.
+
+
+
+To do that, first create an access-list to match only UDP traffic and then create a class-map to match on that access-list. Note that by default the Cisco ASA Software will only inspect DNS over UDP traffic. The following example shows Cisco ASA Software forwarding only UDP port 53 traffic to the DNS ALPI engine.
+
+ciscoasa# show running-config access-list
+access-list DNS_INSPECT extended permit udp any any eq 53
+
+ciscoasa# show running-config class-map
+!
+class-map DNS_INSPECT_CP
+ match access-list DNS_INSPECT
+[...]
+
+ciscoasa# show running-config policy-map
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect ftp
+  inspect h323 h225
+  [...]
+  class DNS_INSPECT_CP
+  inspect dns preset_dns_map
+!
+
+Note: Inspection of DNS traffic over TCP is currently not supported by the Cisco ASA Software. Implementing this workaround does not create any loss in functionality.
+
+
+
+AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling AnyConnect SSL VPN feature.
+
+
+
+SSL VPN Web Portal Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling the SSL VPN feature.
+
+
+
+Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+Administrators can disable the default ICMP policy and ICMP inspection engine to work around this vulnerability.
+
+To disable the default ICMP policy use the icmp deny any  command for all the configured interfaces of the Cisco ASA Software. To disable the default ICMP policy for ICMPv6 use the ipv6 icmp deny any  command for all the IPv6 enabled interfaces of the Cisco ASA Software. The following example shows how to disable the default ICMP policy and default ICMP policy for ICMPv6 on the outside interface
+
+
+ciscoasa(config)# icmp deny any outside
+ciscoasa(config)# ipv6 icmp deny any outside 
+
+Note: Disabling the ICMP processing on the firewall interface may result in administrators not being able to receive any more information from the firewall via ICMP, which includes ping, traceroute, etc. Disabling the ICMPv6 processing on the firewall interface may result in the firewall not being able to communicate on that interface due to a missing neighbor discovery and neighbor advertisement ICMPv6 packets.
+
+
+
+To disable the ICMP inspection engine, use the no inspect icmp command within the policy-map applied to the service polices.
+
+The following example shows how to disable the ICMP inspection engine in the policy-map called global_policy:
+
+
+ciscoasa(config)# policy-map global_policy 
+ciscoasa(config-pmap)# class inspection_default 
+ciscoasa(config-pmap-c)# no inspect icmp 
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="7" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>DNS Inspection Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCug03975</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="7">A vulnerability in the DNS Application Layer Protocol Inspection (ALPI) engine of Cisco ASA Software could allow an unauthenticated, remote attacker to trigger a reload of the affected device.
+
+
+
+The vulnerability is due to improper processing of unsupported DNS over TCP packets by the DNS inspection engine. An attacker could exploit this vulnerability by sending crafted DNS messages over TCP through an affected device.</Note></Notes><CVE>CVE-2013-5513</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-70762</ProductID><ProductID>CVRFPID-97260</ProductID><ProductID>CVRFPID-97261</ProductID><ProductID>CVRFPID-99994</ProductID><ProductID>CVRFPID-99996</ProductID><ProductID>CVRFPID-99997</ProductID><ProductID>CVRFPID-108069</ProductID><ProductID>CVRFPID-108072</ProductID><ProductID>CVRFPID-108073</ProductID><ProductID>CVRFPID-108074</ProductID><ProductID>CVRFPID-112136</ProductID><ProductID>CVRFPID-112138</ProductID><ProductID>CVRFPID-112139</ProductID><ProductID>CVRFPID-112140</ProductID><ProductID>CVRFPID-112800</ProductID><ProductID>CVRFPID-115241</ProductID><ProductID>CVRFPID-115242</ProductID><ProductID>CVRFPID-115243</ProductID><ProductID>CVRFPID-115244</ProductID><ProductID>CVRFPID-115245</ProductID><ProductID>CVRFPID-115246</ProductID><ProductID>CVRFPID-115247</ProductID><ProductID>CVRFPID-115248</ProductID><ProductID>CVRFPID-115249</ProductID><ProductID>CVRFPID-115250</ProductID><ProductID>CVRFPID-115251</ProductID><ProductID>CVRFPID-115252</ProductID><ProductID>CVRFPID-115253</ProductID><ProductID>CVRFPID-115254</ProductID><ProductID>CVRFPID-115255</ProductID><ProductID>CVRFPID-115256</ProductID><ProductID>CVRFPID-115260</ProductID><ProductID>CVRFPID-115261</ProductID><ProductID>CVRFPID-115262</ProductID><ProductID>CVRFPID-115263</ProductID><ProductID>CVRFPID-115264</ProductID><ProductID>CVRFPID-115265</ProductID><ProductID>CVRFPID-115266</ProductID><ProductID>CVRFPID-115268</ProductID><ProductID>CVRFPID-115269</ProductID><ProductID>CVRFPID-115270</ProductID><ProductID>CVRFPID-115276</ProductID><ProductID>CVRFPID-116857</ProductID><ProductID>CVRFPID-185176</ProductID><ProductID>CVRFPID-185177</ProductID><ProductID>CVRFPID-185179</ProductID><ProductID>CVRFPID-185180</ProductID><ProductID>CVRFPID-185251</ProductID><ProductID>CVRFPID-185252</ProductID><ProductID>CVRFPID-185253</ProductID><ProductID>CVRFPID-185254</ProductID><ProductID>CVRFPID-185255</ProductID><ProductID>CVRFPID-185256</ProductID><ProductID>CVRFPID-185257</ProductID><ProductID>CVRFPID-188865</ProductID><ProductID>CVRFPID-188867</ProductID><ProductID>CVRFPID-191201</ProductID><ProductID>CVRFPID-191202</ProductID><ProductID>CVRFPID-191203</ProductID><ProductID>CVRFPID-191204</ProductID><ProductID>CVRFPID-191205</ProductID><ProductID>CVRFPID-191206</ProductID><ProductID>CVRFPID-191207</ProductID><ProductID>CVRFPID-191208</ProductID><ProductID>CVRFPID-191213</ProductID><ProductID>CVRFPID-192947</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a DoS condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco ASDM.
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a DoS condition.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.1</BaseScore><TemporalScore>5.9</TemporalScore><Vector>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+For VPN setup involving LAN-to-LAN tunnel, it is possible to avoid the decryption of an offending ICMP packet by implementing a vpn-filer access-list. The following commands will implement an access-list that blocks any ICMP packets flowing through a VPN tunnel that use the DfltGrpPolicy group-policy in both inbound and outbound direction:
+
+    ciscoasa(config)# access-list DENY_ICMP_ACL deny icmp any any
+    ciscoasa(config)# access-list DENY_ICMP_ACL permit ip any any
+    ciscoasa(config)# group-policy DfltGrpPolicy attributes
+    ciscoasa(config-group-policy)# vpn-filter value DENY_ICMP_ACL
+
+Note: Because the vulnerability is triggered during the decryption operation, this workaround should be implemented on both devices terminating the VPN tunnel. This workaround is ineffective if applied to only on one side of the tunnel.
+
+
+
+For Cisco remote IPsec VPN there is no workaround that mitigates this vulnerability. 
+
+
+
+SQL*Net Inspection Engine Denial of Service Vulnerability
+
+
+
+Disabling Cisco ASA SQL*Net inspection will mitigate this vulnerability. The following commands will disable the SQL*Net inspection that is configured by default:
+
+    ciscoasa(config)# policy-map global_policy
+    ciscoasa(config-pmap)# class inspection_default
+    ciscoasa(config-pmap-c)# no inspect sqlnet
+
+Digital Certificate Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+Remote Access VPN Authentication Bypass Vulnerability
+
+
+
+There are no workarounds other than disabling the override-account-disable option. 
+
+
+
+Digital Certificate HTTP Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+HTTP Deep Packet Inspection Denial of Service Vulnerability
+
+
+
+There are no workarounds other than removing the affected option from the HTTP DPI configuration
+
+
+
+DNS Inspection Denial of Service Vulnerability
+
+
+
+Administrators can workaround this issue by ensuring that only UDP traffic is sent to the DNS ALPI engine for inspection.
+
+
+
+To do that, first create an access-list to match only UDP traffic and then create a class-map to match on that access-list. Note that by default the Cisco ASA Software will only inspect DNS over UDP traffic. The following example shows Cisco ASA Software forwarding only UDP port 53 traffic to the DNS ALPI engine.
+
+ciscoasa# show running-config access-list
+access-list DNS_INSPECT extended permit udp any any eq 53
+
+ciscoasa# show running-config class-map
+!
+class-map DNS_INSPECT_CP
+ match access-list DNS_INSPECT
+[...]
+
+ciscoasa# show running-config policy-map
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect ftp
+  inspect h323 h225
+  [...]
+  class DNS_INSPECT_CP
+  inspect dns preset_dns_map
+!
+
+Note: Inspection of DNS traffic over TCP is currently not supported by the Cisco ASA Software. Implementing this workaround does not create any loss in functionality.
+
+
+
+AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling AnyConnect SSL VPN feature.
+
+
+
+SSL VPN Web Portal Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling the SSL VPN feature.
+
+
+
+Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+Administrators can disable the default ICMP policy and ICMP inspection engine to work around this vulnerability.
+
+To disable the default ICMP policy use the icmp deny any  command for all the configured interfaces of the Cisco ASA Software. To disable the default ICMP policy for ICMPv6 use the ipv6 icmp deny any  command for all the IPv6 enabled interfaces of the Cisco ASA Software. The following example shows how to disable the default ICMP policy and default ICMP policy for ICMPv6 on the outside interface
+
+
+ciscoasa(config)# icmp deny any outside
+ciscoasa(config)# ipv6 icmp deny any outside 
+
+Note: Disabling the ICMP processing on the firewall interface may result in administrators not being able to receive any more information from the firewall via ICMP, which includes ping, traceroute, etc. Disabling the ICMPv6 processing on the firewall interface may result in the firewall not being able to communicate on that interface due to a missing neighbor discovery and neighbor advertisement ICMPv6 packets.
+
+
+
+To disable the ICMP inspection engine, use the no inspect icmp command within the policy-map applied to the service polices.
+
+The following example shows how to disable the ICMP inspection engine in the policy-map called global_policy:
+
+
+ciscoasa(config)# policy-map global_policy 
+ciscoasa(config-pmap)# class inspection_default 
+ciscoasa(config-pmap-c)# no inspect icmp 
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="8" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCtt36737</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="8">A vulnerability in how Cisco ASA Software handles AnyConnect SSL VPN client connections  could allow an unauthenticated, remote attacker to exhaust available memory which could cause the affected system to become unresponsive and transit traffic to be dropped.
+
+
+
+The vulnerability is due to improperly clearing unused memory blocks after an AnyConnect SSL VPN client disconnects. An attacker could exploit this vulnerability by sending traffic to the IP address of the disconnected client.</Note></Notes><CVE>CVE-2013-3415</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-108073</ProductID><ProductID>CVRFPID-112139</ProductID><ProductID>CVRFPID-115253</ProductID><ProductID>CVRFPID-115254</ProductID><ProductID>CVRFPID-115255</ProductID><ProductID>CVRFPID-115256</ProductID><ProductID>CVRFPID-115268</ProductID><ProductID>CVRFPID-115276</ProductID><ProductID>CVRFPID-185176</ProductID><ProductID>CVRFPID-192947</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a DoS condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco ASDM.
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a DoS condition.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+For VPN setup involving LAN-to-LAN tunnel, it is possible to avoid the decryption of an offending ICMP packet by implementing a vpn-filer access-list. The following commands will implement an access-list that blocks any ICMP packets flowing through a VPN tunnel that use the DfltGrpPolicy group-policy in both inbound and outbound direction:
+
+    ciscoasa(config)# access-list DENY_ICMP_ACL deny icmp any any
+    ciscoasa(config)# access-list DENY_ICMP_ACL permit ip any any
+    ciscoasa(config)# group-policy DfltGrpPolicy attributes
+    ciscoasa(config-group-policy)# vpn-filter value DENY_ICMP_ACL
+
+Note: Because the vulnerability is triggered during the decryption operation, this workaround should be implemented on both devices terminating the VPN tunnel. This workaround is ineffective if applied to only on one side of the tunnel.
+
+
+
+For Cisco remote IPsec VPN there is no workaround that mitigates this vulnerability. 
+
+
+
+SQL*Net Inspection Engine Denial of Service Vulnerability
+
+
+
+Disabling Cisco ASA SQL*Net inspection will mitigate this vulnerability. The following commands will disable the SQL*Net inspection that is configured by default:
+
+    ciscoasa(config)# policy-map global_policy
+    ciscoasa(config-pmap)# class inspection_default
+    ciscoasa(config-pmap-c)# no inspect sqlnet
+
+Digital Certificate Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+Remote Access VPN Authentication Bypass Vulnerability
+
+
+
+There are no workarounds other than disabling the override-account-disable option. 
+
+
+
+Digital Certificate HTTP Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+HTTP Deep Packet Inspection Denial of Service Vulnerability
+
+
+
+There are no workarounds other than removing the affected option from the HTTP DPI configuration
+
+
+
+DNS Inspection Denial of Service Vulnerability
+
+
+
+Administrators can workaround this issue by ensuring that only UDP traffic is sent to the DNS ALPI engine for inspection.
+
+
+
+To do that, first create an access-list to match only UDP traffic and then create a class-map to match on that access-list. Note that by default the Cisco ASA Software will only inspect DNS over UDP traffic. The following example shows Cisco ASA Software forwarding only UDP port 53 traffic to the DNS ALPI engine.
+
+ciscoasa# show running-config access-list
+access-list DNS_INSPECT extended permit udp any any eq 53
+
+ciscoasa# show running-config class-map
+!
+class-map DNS_INSPECT_CP
+ match access-list DNS_INSPECT
+[...]
+
+ciscoasa# show running-config policy-map
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect ftp
+  inspect h323 h225
+  [...]
+  class DNS_INSPECT_CP
+  inspect dns preset_dns_map
+!
+
+Note: Inspection of DNS traffic over TCP is currently not supported by the Cisco ASA Software. Implementing this workaround does not create any loss in functionality.
+
+
+
+AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling AnyConnect SSL VPN feature.
+
+
+
+SSL VPN Web Portal Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling the SSL VPN feature.
+
+
+
+Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+Administrators can disable the default ICMP policy and ICMP inspection engine to work around this vulnerability.
+
+To disable the default ICMP policy use the icmp deny any  command for all the configured interfaces of the Cisco ASA Software. To disable the default ICMP policy for ICMPv6 use the ipv6 icmp deny any  command for all the IPv6 enabled interfaces of the Cisco ASA Software. The following example shows how to disable the default ICMP policy and default ICMP policy for ICMPv6 on the outside interface
+
+
+ciscoasa(config)# icmp deny any outside
+ciscoasa(config)# ipv6 icmp deny any outside 
+
+Note: Disabling the ICMP processing on the firewall interface may result in administrators not being able to receive any more information from the firewall via ICMP, which includes ping, traceroute, etc. Disabling the ICMPv6 processing on the firewall interface may result in the firewall not being able to communicate on that interface due to a missing neighbor discovery and neighbor advertisement ICMPv6 packets.
+
+
+
+To disable the ICMP inspection engine, use the no inspect icmp command within the policy-map applied to the service polices.
+
+The following example shows how to disable the ICMP inspection engine in the policy-map called global_policy:
+
+
+ciscoasa(config)# policy-map global_policy 
+ciscoasa(config-pmap)# class inspection_default 
+ciscoasa(config-pmap-c)# no inspect icmp 
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="9" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Clientless SSL VPN Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCua22709</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="9">A vulnerability in the Clientless SSL VPN code could allow an unauthenticated, remote attacker to cause the reload of the affected system.
+
+
+
+The vulnerability is due to improper handling of crafted HTTPS requests against the Cisco ASA Software configured for Clientless SSL VPN. An attacker could exploit this vulnerability by sending crafted HTTPS requests targeting the TCP port open for the Clientless SSL VPN feature.</Note></Notes><CVE>CVE-2013-5515</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-70761</ProductID><ProductID>CVRFPID-70762</ProductID><ProductID>CVRFPID-91003</ProductID><ProductID>CVRFPID-91004</ProductID><ProductID>CVRFPID-91005</ProductID><ProductID>CVRFPID-91006</ProductID><ProductID>CVRFPID-91009</ProductID><ProductID>CVRFPID-91010</ProductID><ProductID>CVRFPID-91019</ProductID><ProductID>CVRFPID-91020</ProductID><ProductID>CVRFPID-91021</ProductID><ProductID>CVRFPID-91022</ProductID><ProductID>CVRFPID-91088</ProductID><ProductID>CVRFPID-92319</ProductID><ProductID>CVRFPID-92320</ProductID><ProductID>CVRFPID-92321</ProductID><ProductID>CVRFPID-92322</ProductID><ProductID>CVRFPID-97260</ProductID><ProductID>CVRFPID-97261</ProductID><ProductID>CVRFPID-97262</ProductID><ProductID>CVRFPID-99994</ProductID><ProductID>CVRFPID-108072</ProductID><ProductID>CVRFPID-108073</ProductID><ProductID>CVRFPID-108074</ProductID><ProductID>CVRFPID-112137</ProductID><ProductID>CVRFPID-112139</ProductID><ProductID>CVRFPID-115226</ProductID><ProductID>CVRFPID-115227</ProductID><ProductID>CVRFPID-115228</ProductID><ProductID>CVRFPID-115229</ProductID><ProductID>CVRFPID-115230</ProductID><ProductID>CVRFPID-115231</ProductID><ProductID>CVRFPID-115232</ProductID><ProductID>CVRFPID-115233</ProductID><ProductID>CVRFPID-115234</ProductID><ProductID>CVRFPID-115235</ProductID><ProductID>CVRFPID-115236</ProductID><ProductID>CVRFPID-115237</ProductID><ProductID>CVRFPID-115238</ProductID><ProductID>CVRFPID-115239</ProductID><ProductID>CVRFPID-115240</ProductID><ProductID>CVRFPID-115241</ProductID><ProductID>CVRFPID-115242</ProductID><ProductID>CVRFPID-115243</ProductID><ProductID>CVRFPID-115244</ProductID><ProductID>CVRFPID-115245</ProductID><ProductID>CVRFPID-115246</ProductID><ProductID>CVRFPID-115247</ProductID><ProductID>CVRFPID-115248</ProductID><ProductID>CVRFPID-115253</ProductID><ProductID>CVRFPID-115254</ProductID><ProductID>CVRFPID-115255</ProductID><ProductID>CVRFPID-115256</ProductID><ProductID>CVRFPID-115258</ProductID><ProductID>CVRFPID-115259</ProductID><ProductID>CVRFPID-115260</ProductID><ProductID>CVRFPID-115261</ProductID><ProductID>CVRFPID-115264</ProductID><ProductID>CVRFPID-115265</ProductID><ProductID>CVRFPID-115266</ProductID><ProductID>CVRFPID-115268</ProductID><ProductID>CVRFPID-115276</ProductID><ProductID>CVRFPID-116857</ProductID><ProductID>CVRFPID-185176</ProductID><ProductID>CVRFPID-185177</ProductID><ProductID>CVRFPID-185251</ProductID><ProductID>CVRFPID-185252</ProductID><ProductID>CVRFPID-185253</ProductID><ProductID>CVRFPID-185254</ProductID><ProductID>CVRFPID-185255</ProductID><ProductID>CVRFPID-185257</ProductID><ProductID>CVRFPID-185258</ProductID><ProductID>CVRFPID-185259</ProductID><ProductID>CVRFPID-188865</ProductID><ProductID>CVRFPID-188866</ProductID><ProductID>CVRFPID-188867</ProductID><ProductID>CVRFPID-191202</ProductID><ProductID>CVRFPID-191204</ProductID><ProductID>CVRFPID-191207</ProductID><ProductID>CVRFPID-191208</ProductID><ProductID>CVRFPID-191209</ProductID><ProductID>CVRFPID-191211</ProductID><ProductID>CVRFPID-192947</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a DoS condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco ASDM.
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a DoS condition.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+For VPN setup involving LAN-to-LAN tunnel, it is possible to avoid the decryption of an offending ICMP packet by implementing a vpn-filer access-list. The following commands will implement an access-list that blocks any ICMP packets flowing through a VPN tunnel that use the DfltGrpPolicy group-policy in both inbound and outbound direction:
+
+    ciscoasa(config)# access-list DENY_ICMP_ACL deny icmp any any
+    ciscoasa(config)# access-list DENY_ICMP_ACL permit ip any any
+    ciscoasa(config)# group-policy DfltGrpPolicy attributes
+    ciscoasa(config-group-policy)# vpn-filter value DENY_ICMP_ACL
+
+Note: Because the vulnerability is triggered during the decryption operation, this workaround should be implemented on both devices terminating the VPN tunnel. This workaround is ineffective if applied to only on one side of the tunnel.
+
+
+
+For Cisco remote IPsec VPN there is no workaround that mitigates this vulnerability. 
+
+
+
+SQL*Net Inspection Engine Denial of Service Vulnerability
+
+
+
+Disabling Cisco ASA SQL*Net inspection will mitigate this vulnerability. The following commands will disable the SQL*Net inspection that is configured by default:
+
+    ciscoasa(config)# policy-map global_policy
+    ciscoasa(config-pmap)# class inspection_default
+    ciscoasa(config-pmap-c)# no inspect sqlnet
+
+Digital Certificate Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+Remote Access VPN Authentication Bypass Vulnerability
+
+
+
+There are no workarounds other than disabling the override-account-disable option. 
+
+
+
+Digital Certificate HTTP Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+HTTP Deep Packet Inspection Denial of Service Vulnerability
+
+
+
+There are no workarounds other than removing the affected option from the HTTP DPI configuration
+
+
+
+DNS Inspection Denial of Service Vulnerability
+
+
+
+Administrators can workaround this issue by ensuring that only UDP traffic is sent to the DNS ALPI engine for inspection.
+
+
+
+To do that, first create an access-list to match only UDP traffic and then create a class-map to match on that access-list. Note that by default the Cisco ASA Software will only inspect DNS over UDP traffic. The following example shows Cisco ASA Software forwarding only UDP port 53 traffic to the DNS ALPI engine.
+
+ciscoasa# show running-config access-list
+access-list DNS_INSPECT extended permit udp any any eq 53
+
+ciscoasa# show running-config class-map
+!
+class-map DNS_INSPECT_CP
+ match access-list DNS_INSPECT
+[...]
+
+ciscoasa# show running-config policy-map
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect ftp
+  inspect h323 h225
+  [...]
+  class DNS_INSPECT_CP
+  inspect dns preset_dns_map
+!
+
+Note: Inspection of DNS traffic over TCP is currently not supported by the Cisco ASA Software. Implementing this workaround does not create any loss in functionality.
+
+
+
+AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling AnyConnect SSL VPN feature.
+
+
+
+SSL VPN Web Portal Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling the SSL VPN feature.
+
+
+
+Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+Administrators can disable the default ICMP policy and ICMP inspection engine to work around this vulnerability.
+
+To disable the default ICMP policy use the icmp deny any  command for all the configured interfaces of the Cisco ASA Software. To disable the default ICMP policy for ICMPv6 use the ipv6 icmp deny any  command for all the IPv6 enabled interfaces of the Cisco ASA Software. The following example shows how to disable the default ICMP policy and default ICMP policy for ICMPv6 on the outside interface
+
+
+ciscoasa(config)# icmp deny any outside
+ciscoasa(config)# ipv6 icmp deny any outside 
+
+Note: Disabling the ICMP processing on the firewall interface may result in administrators not being able to receive any more information from the firewall via ICMP, which includes ping, traceroute, etc. Disabling the ICMPv6 processing on the firewall interface may result in the firewall not being able to communicate on that interface due to a missing neighbor discovery and neighbor advertisement ICMPv6 packets.
+
+
+
+To disable the ICMP inspection engine, use the no inspect icmp command within the policy-map applied to the service polices.
+
+The following example shows how to disable the ICMP inspection engine in the policy-map called global_policy:
+
+
+ciscoasa(config)# policy-map global_policy 
+ciscoasa(config-pmap)# class inspection_default 
+ciscoasa(config-pmap-c)# no inspect icmp 
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></References></Vulnerability><Vulnerability Ordinal="10" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Crafted ICMP Packet Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCui77398</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="10">A vulnerability in function handling ICMP packets of Cisco ASA Software could allow an unauthenticated, remote attacker to cause a arbitrary connections to be cleared and a reload of the affected device, leading to a denial of service (DoS) condition.
+
+
+
+The vulnerability is due to improper handling of crafted ICMP packets. An attacker could exploit this vulnerability by sending a number of crafted ICMP packets to or through an affected device. An exploit could allow the attacker to clear arbitrary connections on the firewall or cause a reload of the affected device, leading to a denial of service (DoS) condition.
+</Note></Notes><CVE>CVE-2013-5542</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-108073</ProductID><ProductID>CVRFPID-112139</ProductID><ProductID>CVRFPID-115253</ProductID><ProductID>CVRFPID-115254</ProductID><ProductID>CVRFPID-115255</ProductID><ProductID>CVRFPID-115256</ProductID><ProductID>CVRFPID-115264</ProductID><ProductID>CVRFPID-115265</ProductID><ProductID>CVRFPID-115266</ProductID><ProductID>CVRFPID-185179</ProductID><ProductID>CVRFPID-185251</ProductID><ProductID>CVRFPID-185252</ProductID><ProductID>CVRFPID-185253</ProductID><ProductID>CVRFPID-185254</ProductID><ProductID>CVRFPID-185255</ProductID><ProductID>CVRFPID-188865</ProductID><ProductID>CVRFPID-188866</ProductID><ProductID>CVRFPID-188867</ProductID><ProductID>CVRFPID-191201</ProductID><ProductID>CVRFPID-191204</ProductID><ProductID>CVRFPID-191205</ProductID><ProductID>CVRFPID-191211</ProductID><ProductID>CVRFPID-191212</ProductID><ProductID>CVRFPID-191213</ProductID><ProductID>CVRFPID-191214</ProductID><ProductID>CVRFPID-192947</ProductID><ProductID>CVRFPID-194998</ProductID><ProductID>CVRFPID-194999</ProductID><ProductID>CVRFPID-195000</ProductID><ProductID>CVRFPID-195001</ProductID><ProductID>CVRFPID-195002</ProductID><ProductID>CVRFPID-195003</ProductID><ProductID>CVRFPID-195006</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability, SQL*Net Inspection Engine Denial of Service Vulnerability, HTTP Deep Packet Inspection Denial of Service Vulnerability, DNS Inspection Denial of Service Vulnerability, and SSL VPN Web Portal Denial of Service Vulnerability may result in a reload of an affected device, leading to a DoS condition.
+
+
+
+Successful exploitation of the Digital Certificate Authentication Bypass Vulnerability, Remote Access VPN Authentication Bypass Vulnerability, and Digital Certificate HTTP Authentication Bypass Vulnerability may result in an authentication bypass, which could allow the attacker access to the inside network via remote access VPN or management access to the affected system via the Cisco ASDM.
+
+
+
+Successful exploitation of the AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability may exhaust available memory, which could result in general system instability and cause the affected system to become unresponsive and stop forwarding traffic.
+
+
+
+Successful exploitation of the Crafted ICMP Packet Denial of Service Vulnerability may cause valid connections that are passing through the affected system to be dropped, or cause a reload of the system, leading to a DoS condition.</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>8.5</BaseScore><TemporalScore>7.0</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:P/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+For VPN setup involving LAN-to-LAN tunnel, it is possible to avoid the decryption of an offending ICMP packet by implementing a vpn-filer access-list. The following commands will implement an access-list that blocks any ICMP packets flowing through a VPN tunnel that use the DfltGrpPolicy group-policy in both inbound and outbound direction:
+
+    ciscoasa(config)# access-list DENY_ICMP_ACL deny icmp any any
+    ciscoasa(config)# access-list DENY_ICMP_ACL permit ip any any
+    ciscoasa(config)# group-policy DfltGrpPolicy attributes
+    ciscoasa(config-group-policy)# vpn-filter value DENY_ICMP_ACL
+
+Note: Because the vulnerability is triggered during the decryption operation, this workaround should be implemented on both devices terminating the VPN tunnel. This workaround is ineffective if applied to only on one side of the tunnel.
+
+
+
+For Cisco remote IPsec VPN there is no workaround that mitigates this vulnerability. 
+
+
+
+SQL*Net Inspection Engine Denial of Service Vulnerability
+
+
+
+Disabling Cisco ASA SQL*Net inspection will mitigate this vulnerability. The following commands will disable the SQL*Net inspection that is configured by default:
+
+    ciscoasa(config)# policy-map global_policy
+    ciscoasa(config-pmap)# class inspection_default
+    ciscoasa(config-pmap-c)# no inspect sqlnet
+
+Digital Certificate Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+Remote Access VPN Authentication Bypass Vulnerability
+
+
+
+There are no workarounds other than disabling the override-account-disable option. 
+
+
+
+Digital Certificate HTTP Authentication Bypass Vulnerability
+
+
+
+There is no workaround that mitigate this vulnerability other than changing the authentication schema for the affected features.
+
+
+
+HTTP Deep Packet Inspection Denial of Service Vulnerability
+
+
+
+There are no workarounds other than removing the affected option from the HTTP DPI configuration
+
+
+
+DNS Inspection Denial of Service Vulnerability
+
+
+
+Administrators can workaround this issue by ensuring that only UDP traffic is sent to the DNS ALPI engine for inspection.
+
+
+
+To do that, first create an access-list to match only UDP traffic and then create a class-map to match on that access-list. Note that by default the Cisco ASA Software will only inspect DNS over UDP traffic. The following example shows Cisco ASA Software forwarding only UDP port 53 traffic to the DNS ALPI engine.
+
+ciscoasa# show running-config access-list
+access-list DNS_INSPECT extended permit udp any any eq 53
+
+ciscoasa# show running-config class-map
+!
+class-map DNS_INSPECT_CP
+ match access-list DNS_INSPECT
+[...]
+
+ciscoasa# show running-config policy-map
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect ftp
+  inspect h323 h225
+  [...]
+  class DNS_INSPECT_CP
+  inspect dns preset_dns_map
+!
+
+Note: Inspection of DNS traffic over TCP is currently not supported by the Cisco ASA Software. Implementing this workaround does not create any loss in functionality.
+
+
+
+AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling AnyConnect SSL VPN feature.
+
+
+
+SSL VPN Web Portal Denial of Service Vulnerability
+
+
+
+There is no workaround other than disabling the SSL VPN feature.
+
+
+
+Crafted ICMP Packet Denial of Service Vulnerability
+
+
+
+Administrators can disable the default ICMP policy and ICMP inspection engine to work around this vulnerability.
+
+To disable the default ICMP policy use the icmp deny any  command for all the configured interfaces of the Cisco ASA Software. To disable the default ICMP policy for ICMPv6 use the ipv6 icmp deny any  command for all the IPv6 enabled interfaces of the Cisco ASA Software. The following example shows how to disable the default ICMP policy and default ICMP policy for ICMPv6 on the outside interface
+
+
+ciscoasa(config)# icmp deny any outside
+ciscoasa(config)# ipv6 icmp deny any outside 
+
+Note: Disabling the ICMP processing on the firewall interface may result in administrators not being able to receive any more information from the firewall via ICMP, which includes ping, traceroute, etc. Disabling the ICMPv6 processing on the firewall interface may result in the firewall not being able to communicate on that interface due to a missing neighbor discovery and neighbor advertisement ICMPv6 packets.
+
+
+
+To disable the ICMP inspection engine, use the no inspect icmp command within the policy-map applied to the service polices.
+
+The following example shows how to disable the ICMP inspection engine in the policy-map called global_policy:
+
+
+ciscoasa(config)# policy-map global_policy 
+ciscoasa(config-pmap)# class inspection_default 
+ciscoasa(config-pmap-c)# no inspect icmp 
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa</URL><Description>Multiple Vulnerabilities in Cisco ASA Software</Description></Reference></References></Vulnerability></cvrfdoc>

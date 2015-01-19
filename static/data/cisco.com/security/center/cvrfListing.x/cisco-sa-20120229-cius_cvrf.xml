@@ -1,0 +1,46 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco Cius Denial of Service Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20120229-cius</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2012-02-29T15:57:45</Date><Description>Initial public release</Description></Revision></RevisionHistory><InitialReleaseDate>2012-02-29T16:00:00</InitialReleaseDate><CurrentReleaseDate>2012-02-29T15:57:45</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco Cius Software contains a denial of service vulnerability that could cause the device to stop responding. Devices running Cius Software Versions prior to 9.2(1) SR2 are vulnerable. A remote, unauthenticated
+attacker could exploit this vulnerability by sending malicious network traffic to affected devices. 
+
+
+
+Cisco has released free software updates that address this vulnerability. 
+
+
+
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-cius["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-cius"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-cius["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-cius"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-114109">Cisco Cius Firmware 9.2 Base</FullProductName><FullProductName ProductID="CVRFPID-114110">Cisco Cius Firmware 9.2(1)</FullProductName><FullProductName ProductID="CVRFPID-114113">Cisco Cius Firmware 9.2(1) SR1</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco Cius Denial of Service Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCto71445</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">Cius software contains a vulnerability when handling malformed traffic. A
+remote, unauthenticated attacker could exploit this vulnerability to create a denial of service (DoS) condition on the affected device.
+
+
+
+An attacker could exploit this vulnerability by sending malicious traffic to an affected device. Exploitation could allow the attacker to cause the Cius to stop responding, requiring a reboot.
+
+</Note></Notes><CVE>CVE-2012-0359</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-114109</ProductID><ProductID>CVRFPID-114110</ProductID><ProductID>CVRFPID-114113</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of this vulnerability may cause the device to crash or become non-responsive, requiring a device reboot.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There are no workarounds for the vulnerability disclosed in this advisory.
+</Description></Remediation></Remediations></Vulnerability></cvrfdoc>

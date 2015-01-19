@@ -1,0 +1,255 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Authenticated Command Injection Vulnerability in Multiple Cisco Content Network and Video Delivery Products</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130731-cm</ID></Identification><Status>Final</Status><Version>1.0</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-07-29T18:15:37</Date><Description>Initial public release</Description></Revision></RevisionHistory><InitialReleaseDate>2013-07-31T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-07-29T18:15:37</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Multiple Cisco content network and video delivery products contain a vulnerability
+when they are configured to run in central management mode. This vulnerability could allow an authenticated but unprivileged, remote attacker to
+execute arbitrary code on the affected system and on the devices managed by the affected system.
+
+
+
+Cisco has released free software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-cm["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-cm"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-cm["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-cm"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-cm</URL><Description>Authenticated Command Injection Vulnerability in Multiple Cisco Content Network and Video Delivery Products</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-44349">Cisco Application and Content Networking System (ACNS) Software 4.0.3 Base</FullProductName><FullProductName ProductID="CVRFPID-44350">Cisco Application and Content Networking System (ACNS) Software 4.1.3 Base</FullProductName><FullProductName ProductID="CVRFPID-44351">Cisco Application and Content Networking System (ACNS) Software 4.2 Base</FullProductName><FullProductName ProductID="CVRFPID-49769">Cisco Application and Content Networking System (ACNS) Software 4.2.3 Base</FullProductName><FullProductName ProductID="CVRFPID-49770">Cisco Application and Content Networking System (ACNS) Software 4.2.5 Base</FullProductName><FullProductName ProductID="CVRFPID-44352">Cisco Application and Content Networking System (ACNS) Software 4.2.7 Base</FullProductName><FullProductName ProductID="CVRFPID-44353">Cisco Application and Content Networking System (ACNS) Software 4.2.9 Base</FullProductName><FullProductName ProductID="CVRFPID-49771">Cisco Application and Content Networking System (ACNS) Software 4.2.11 Base</FullProductName><FullProductName ProductID="CVRFPID-49772">Cisco Application and Content Networking System (ACNS) Software 4.2.13 Base</FullProductName><FullProductName ProductID="CVRFPID-43595">Cisco Application and Content Networking System (ACNS) Software 5.0 Base</FullProductName><FullProductName ProductID="CVRFPID-43596">Cisco Application and Content Networking System (ACNS) Software 5.0.1 Base</FullProductName><FullProductName ProductID="CVRFPID-43597">Cisco Application and Content Networking System (ACNS) Software 5.0.3 Base</FullProductName><FullProductName ProductID="CVRFPID-43598">Cisco Application and Content Networking System (ACNS) Software 5.0.5 Base</FullProductName><FullProductName ProductID="CVRFPID-45233">Cisco Application and Content Networking System (ACNS) Software 5.0.7 Base</FullProductName><FullProductName ProductID="CVRFPID-45234">Cisco Application and Content Networking System (ACNS) Software 5.0.9 Base</FullProductName><FullProductName ProductID="CVRFPID-45235">Cisco Application and Content Networking System (ACNS) Software 5.0.11 Base</FullProductName><FullProductName ProductID="CVRFPID-49773">Cisco Application and Content Networking System (ACNS) Software 5.0.13 Base</FullProductName><FullProductName ProductID="CVRFPID-49775">Cisco Application and Content Networking System (ACNS) Software 5.0.15 Base</FullProductName><FullProductName ProductID="CVRFPID-49774">Cisco Application and Content Networking System (ACNS) Software 5.0.17 Base</FullProductName><FullProductName ProductID="CVRFPID-44354">Cisco Application and Content Networking System (ACNS) Software 5.1 Base</FullProductName><FullProductName ProductID="CVRFPID-49781">Cisco Application and Content Networking System (ACNS) Software 5.1.3 Base</FullProductName><FullProductName ProductID="CVRFPID-49780">Cisco Application and Content Networking System (ACNS) Software 5.1.5 Base</FullProductName><FullProductName ProductID="CVRFPID-49779">Cisco Application and Content Networking System (ACNS) Software 5.1.7 Base</FullProductName><FullProductName ProductID="CVRFPID-49776">Cisco Application and Content Networking System (ACNS) Software 5.1.13 Base</FullProductName><FullProductName ProductID="CVRFPID-49777">Cisco Application and Content Networking System (ACNS) Software 5.1.11 Base</FullProductName><FullProductName ProductID="CVRFPID-49778">Cisco Application and Content Networking System (ACNS) Software 5.1.9 Base</FullProductName><FullProductName ProductID="CVRFPID-49782">Cisco Application and Content Networking System (ACNS) Software 5.2 Base</FullProductName><FullProductName ProductID="CVRFPID-49784">Cisco Application and Content Networking System (ACNS) Software 5.2.3 Base</FullProductName><FullProductName ProductID="CVRFPID-49783">Cisco Application and Content Networking System (ACNS) Software 5.2.5 Base</FullProductName><FullProductName ProductID="CVRFPID-51039">Cisco Application and Content Networking System (ACNS) Software 5.3 Base</FullProductName><FullProductName ProductID="CVRFPID-51040">Cisco Application and Content Networking System (ACNS) Software 5.3.1 Base</FullProductName><FullProductName ProductID="CVRFPID-75602">Cisco Application and Content Networking System (ACNS) Software 5.4 Base</FullProductName><FullProductName ProductID="CVRFPID-192319">Cisco Application and Content Networking System (ACNS) Software 5.4.1</FullProductName><FullProductName ProductID="CVRFPID-192320">Cisco Application and Content Networking System (ACNS) Software 5.4.3</FullProductName><FullProductName ProductID="CVRFPID-192321">Cisco Application and Content Networking System (ACNS) Software 5.4.4</FullProductName><FullProductName ProductID="CVRFPID-192322">Cisco Application and Content Networking System (ACNS) Software 5.4.5</FullProductName><FullProductName ProductID="CVRFPID-192323">Cisco Application and Content Networking System (ACNS) Software 5.4.7</FullProductName><FullProductName ProductID="CVRFPID-61492">Cisco Application and Content Networking System (ACNS) Software 5.5 Base</FullProductName><FullProductName ProductID="CVRFPID-192304">Cisco Application and Content Networking System (ACNS) Software 5.5.1</FullProductName><FullProductName ProductID="CVRFPID-192305">Cisco Application and Content Networking System (ACNS) Software 5.5.3</FullProductName><FullProductName ProductID="CVRFPID-192306">Cisco Application and Content Networking System (ACNS) Software 5.5.5</FullProductName><FullProductName ProductID="CVRFPID-192307">Cisco Application and Content Networking System (ACNS) Software 5.5.7</FullProductName><FullProductName ProductID="CVRFPID-192308">Cisco Application and Content Networking System (ACNS) Software 5.5.9</FullProductName><FullProductName ProductID="CVRFPID-192309">Cisco Application and Content Networking System (ACNS) Software 5.5.11</FullProductName><FullProductName ProductID="CVRFPID-192310">Cisco Application and Content Networking System (ACNS) Software 5.5.13</FullProductName><FullProductName ProductID="CVRFPID-192311">Cisco Application and Content Networking System (ACNS) Software 5.5.15</FullProductName><FullProductName ProductID="CVRFPID-192312">Cisco Application and Content Networking System (ACNS) Software 5.5.17</FullProductName><FullProductName ProductID="CVRFPID-192313">Cisco Application and Content Networking System (ACNS) Software 5.5.19</FullProductName><FullProductName ProductID="CVRFPID-192314">Cisco Application and Content Networking System (ACNS) Software 5.5.21</FullProductName><FullProductName ProductID="CVRFPID-192315">Cisco Application and Content Networking System (ACNS) Software 5.5.23</FullProductName><FullProductName ProductID="CVRFPID-192316">Cisco Application and Content Networking System (ACNS) Software 5.5.25</FullProductName><FullProductName ProductID="CVRFPID-192317">Cisco Application and Content Networking System (ACNS) Software 5.5.27</FullProductName><FullProductName ProductID="CVRFPID-114279">Cisco Wide Area Application Services (WAAS) 4.3 Base</FullProductName><FullProductName ProductID="CVRFPID-114281">Cisco Wide Area Application Services (WAAS) 4.4 Base</FullProductName><FullProductName ProductID="CVRFPID-114282">Cisco Wide Area Application Services (WAAS) 4.4.3</FullProductName><FullProductName ProductID="CVRFPID-114283">Cisco Wide Area Application Services (WAAS) 4.4.3a</FullProductName><FullProductName ProductID="CVRFPID-114284">Cisco Wide Area Application Services (WAAS) 4.4.3b</FullProductName><FullProductName ProductID="CVRFPID-114285">Cisco Wide Area Application Services (WAAS) 4.4.3c</FullProductName><FullProductName ProductID="CVRFPID-184112">Cisco Wide Area Application Services (WAAS) 5.0 Base</FullProductName><FullProductName ProductID="CVRFPID-184113">Cisco Wide Area Application Services (WAAS) 5.0.1</FullProductName><FullProductName ProductID="CVRFPID-192294">Cisco Wide Area Application Services (WAAS) 5.0.3</FullProductName><FullProductName ProductID="CVRFPID-192295">Cisco Wide Area Application Services (WAAS) 5.0.3a</FullProductName><FullProductName ProductID="CVRFPID-192296">Cisco Wide Area Application Services (WAAS) 5.0.3c</FullProductName><FullProductName ProductID="CVRFPID-192297">Cisco Wide Area Application Services (WAAS) 5.0.3d</FullProductName><FullProductName ProductID="CVRFPID-192298">Cisco Wide Area Application Services (WAAS) 5.0.3e</FullProductName><FullProductName ProductID="CVRFPID-192291">Cisco Wide Area Application Services (WAAS) 5.1 Base</FullProductName><FullProductName ProductID="CVRFPID-192299">Cisco Wide Area Application Services (WAAS) 5.1.1</FullProductName><FullProductName ProductID="CVRFPID-192300">Cisco Wide Area Application Services (WAAS) 5.1.1a</FullProductName><FullProductName ProductID="CVRFPID-192301">Cisco Wide Area Application Services (WAAS) 5.1.1b</FullProductName><FullProductName ProductID="CVRFPID-192302">Cisco Wide Area Application Services (WAAS) 5.1.1c</FullProductName><FullProductName ProductID="CVRFPID-192293">Cisco Wide Area Application Services (WAAS) 5.2 Base</FullProductName><FullProductName ProductID="CVRFPID-192303">Cisco Wide Area Application Services (WAAS) 5.2.1</FullProductName><FullProductName ProductID="CVRFPID-99886">Cisco Internet Streamer Content Delivery System (CDS) 2.0 Base</FullProductName><FullProductName ProductID="CVRFPID-99888">Cisco Internet Streamer Content Delivery System (CDS) 2.1 Base</FullProductName><FullProductName ProductID="CVRFPID-99890">Cisco Internet Streamer Content Delivery System (CDS) 2.2 Base</FullProductName><FullProductName ProductID="CVRFPID-99899">Cisco Internet Streamer Content Delivery System (CDS) 2.3 Base</FullProductName><FullProductName ProductID="CVRFPID-99892">Cisco Internet Streamer Content Delivery System (CDS) 2.3 Base</FullProductName><FullProductName ProductID="CVRFPID-99897">Cisco Internet Streamer Content Delivery System (CDS) 2.3.5</FullProductName><FullProductName ProductID="CVRFPID-99898">Cisco Internet Streamer Content Delivery System (CDS) 2.3.7</FullProductName><FullProductName ProductID="CVRFPID-99900">Cisco Internet Streamer Content Delivery System (CDS) 2.3.9</FullProductName><FullProductName ProductID="CVRFPID-99894">Cisco Internet Streamer Content Delivery System (CDS) 2.4 Base</FullProductName><FullProductName ProductID="CVRFPID-99901">Cisco Internet Streamer Content Delivery System (CDS) 2.4.3</FullProductName><FullProductName ProductID="CVRFPID-99902">Cisco Internet Streamer Content Delivery System (CDS) 2.4.5</FullProductName><FullProductName ProductID="CVRFPID-99896">Cisco Internet Streamer Content Delivery System (CDS) 2.5 Base</FullProductName><FullProductName ProductID="CVRFPID-99903">Cisco Internet Streamer Content Delivery System (CDS) 2.5.3</FullProductName><FullProductName ProductID="CVRFPID-99904">Cisco Internet Streamer Content Delivery System (CDS) 2.5.7</FullProductName><FullProductName ProductID="CVRFPID-99905">Cisco Internet Streamer Content Delivery System (CDS) 2.5.9</FullProductName><FullProductName ProductID="CVRFPID-193232">Cisco Internet Streamer Content Delivery System (CDS) 2.5.11</FullProductName><FullProductName ProductID="CVRFPID-193225">Cisco Internet Streamer Content Delivery System (CDS) 2.6 Base</FullProductName><FullProductName ProductID="CVRFPID-193230">Cisco Internet Streamer Content Delivery System (CDS) 2.6.1</FullProductName><FullProductName ProductID="CVRFPID-193231">Cisco Internet Streamer Content Delivery System (CDS) 2.6.3</FullProductName><FullProductName ProductID="CVRFPID-193227">Cisco Internet Streamer Content Delivery System (CDS) 3.0 Base</FullProductName><FullProductName ProductID="CVRFPID-193233">Cisco Internet Streamer Content Delivery System (CDS) 3.0.0</FullProductName><FullProductName ProductID="CVRFPID-193229">Cisco Internet Streamer Content Delivery System (CDS) 3.1 Base</FullProductName><FullProductName ProductID="CVRFPID-193234">Cisco Internet Streamer Content Delivery System (CDS) 3.1.0</FullProductName><FullProductName ProductID="CVRFPID-193235">Cisco Internet Streamer Content Delivery System (CDS) 3.1.1</FullProductName><FullProductName ProductID="CVRFPID-193236">Cisco Internet Streamer Content Delivery System (CDS) 3.1.2</FullProductName><FullProductName ProductID="CVRFPID-192326">Cisco Enterprise Content Delivery System (ECDS) 2.5 Base</FullProductName><FullProductName ProductID="CVRFPID-192327">Cisco Enterprise Content Delivery System (ECDS) 2.5.3</FullProductName><FullProductName ProductID="CVRFPID-192328">Cisco Enterprise Content Delivery System (ECDS) 2.5.3 (S1)</FullProductName><FullProductName ProductID="CVRFPID-192329">Cisco Enterprise Content Delivery System (ECDS) 2.5.3 (S2)</FullProductName><FullProductName ProductID="CVRFPID-192330">Cisco Enterprise Content Delivery System (ECDS) 2.5.3 (S3)</FullProductName><FullProductName ProductID="CVRFPID-192331">Cisco Enterprise Content Delivery System (ECDS) 2.5.3 (S4)</FullProductName><FullProductName ProductID="CVRFPID-192332">Cisco Enterprise Content Delivery System (ECDS) 2.5.3 (S5)</FullProductName><FullProductName ProductID="CVRFPID-192333">Cisco Enterprise Content Delivery System (ECDS) 2.5.5</FullProductName><FullProductName ProductID="CVRFPID-192334">Cisco Enterprise Content Delivery System (ECDS) 2.5.5 (S1) </FullProductName><FullProductName ProductID="CVRFPID-193238">Cisco Videoscape Distribution Suite for Internet Streaming 3.2 Base</FullProductName><FullProductName ProductID="CVRFPID-193239">Cisco Videoscape Distribution Suite for Internet Streaming 3.2.1</FullProductName><FullProductName ProductID="CVRFPID-193213">Cisco Videoscape Distribution Suite Service Broker 1.0 Base</FullProductName><FullProductName ProductID="CVRFPID-193216">Cisco Videoscape Distribution Suite Service Broker 1.0.1</FullProductName><FullProductName ProductID="CVRFPID-193215">Cisco Videoscape Distribution Suite Service Broker 1.1 Base</FullProductName><FullProductName ProductID="CVRFPID-193219">Cisco Videoscape Distribution Suite Optimization Engine (VDS-OE) 1.0 Base</FullProductName><FullProductName ProductID="CVRFPID-193222">Cisco Videoscape Distribution Suite Origin Server 1.0 Base</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Authenticated Command Injection Vulnerability in Multiple Cisco Content Network and Video Delivery Products</Title><ID SystemName="Cisco Bug ID">CSCug40609</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the web
+framework  could allow an authenticated, remote attacker to execute
+arbitrary
+commands on the underlying operating system of the affected system  as well as on underlying operating system &lt;!--[if gte mso 9]&gt;
+ 
+  
+ &lt;/o:OfficeDocumentSettings&gt;
+&lt;![endif]--&gt; &lt;!--[if gte mso 9]&gt;
+ 
+  Normal&lt;/w:View&gt;
+  0&lt;/w:Zoom&gt;
+  
+  
+  
+  
+  false&lt;/w:SaveIfXMLInvalid&gt;
+  false&lt;/w:IgnoreMixedContent&gt;
+  false&lt;/w:AlwaysShowPlaceholderText&gt;
+  
+  EN-US&lt;/w:LidThemeOther&gt;
+  JA&lt;/w:LidThemeAsian&gt;
+  X-NONE&lt;/w:LidThemeComplexScript&gt;
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  &lt;/w:Compatibility&gt;
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  &lt;/m:mathPr&gt;&lt;/w:WordDocument&gt;
+&lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ &lt;/w:LatentStyles&gt;
+&lt;![endif]--&gt;&lt;!--[if gte mso 10]&gt;
+
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+
+&lt;![endif]--&gt;of the devices associated and managed by the affected
+system.
+
+The
+vulnerability is due to a failure to properly sanitize user
+input that is subsequently used to perform an action using the underlying command-line interface of the device. An authenticated but unprivileged attacker could exploit
+this vulnerability by logging in to the GUI of the affected system and
+appending arbitrary code to some of values passed to the system. </Note></Notes><CVE>CVE-2013-3444</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-114279</ProductID><ProductID>CVRFPID-114281</ProductID><ProductID>CVRFPID-114282</ProductID><ProductID>CVRFPID-114283</ProductID><ProductID>CVRFPID-114284</ProductID><ProductID>CVRFPID-114285</ProductID><ProductID>CVRFPID-184112</ProductID><ProductID>CVRFPID-184113</ProductID><ProductID>CVRFPID-192291</ProductID><ProductID>CVRFPID-192293</ProductID><ProductID>CVRFPID-192294</ProductID><ProductID>CVRFPID-192295</ProductID><ProductID>CVRFPID-192296</ProductID><ProductID>CVRFPID-192297</ProductID><ProductID>CVRFPID-192298</ProductID><ProductID>CVRFPID-192299</ProductID><ProductID>CVRFPID-192300</ProductID><ProductID>CVRFPID-192301</ProductID><ProductID>CVRFPID-192302</ProductID><ProductID>CVRFPID-192303</ProductID><ProductID>CVRFPID-43595</ProductID><ProductID>CVRFPID-43596</ProductID><ProductID>CVRFPID-43597</ProductID><ProductID>CVRFPID-43598</ProductID><ProductID>CVRFPID-44349</ProductID><ProductID>CVRFPID-44350</ProductID><ProductID>CVRFPID-44351</ProductID><ProductID>CVRFPID-44352</ProductID><ProductID>CVRFPID-44353</ProductID><ProductID>CVRFPID-44354</ProductID><ProductID>CVRFPID-45233</ProductID><ProductID>CVRFPID-45234</ProductID><ProductID>CVRFPID-45235</ProductID><ProductID>CVRFPID-49769</ProductID><ProductID>CVRFPID-49770</ProductID><ProductID>CVRFPID-49771</ProductID><ProductID>CVRFPID-49772</ProductID><ProductID>CVRFPID-49773</ProductID><ProductID>CVRFPID-49774</ProductID><ProductID>CVRFPID-49775</ProductID><ProductID>CVRFPID-49776</ProductID><ProductID>CVRFPID-49777</ProductID><ProductID>CVRFPID-49778</ProductID><ProductID>CVRFPID-49779</ProductID><ProductID>CVRFPID-49780</ProductID><ProductID>CVRFPID-49781</ProductID><ProductID>CVRFPID-49782</ProductID><ProductID>CVRFPID-49783</ProductID><ProductID>CVRFPID-49784</ProductID><ProductID>CVRFPID-51039</ProductID><ProductID>CVRFPID-51040</ProductID><ProductID>CVRFPID-61492</ProductID><ProductID>CVRFPID-75602</ProductID><ProductID>CVRFPID-192304</ProductID><ProductID>CVRFPID-192305</ProductID><ProductID>CVRFPID-192306</ProductID><ProductID>CVRFPID-192307</ProductID><ProductID>CVRFPID-192308</ProductID><ProductID>CVRFPID-192309</ProductID><ProductID>CVRFPID-192310</ProductID><ProductID>CVRFPID-192311</ProductID><ProductID>CVRFPID-192312</ProductID><ProductID>CVRFPID-192313</ProductID><ProductID>CVRFPID-192314</ProductID><ProductID>CVRFPID-192315</ProductID><ProductID>CVRFPID-192316</ProductID><ProductID>CVRFPID-192317</ProductID><ProductID>CVRFPID-192319</ProductID><ProductID>CVRFPID-192320</ProductID><ProductID>CVRFPID-192321</ProductID><ProductID>CVRFPID-192322</ProductID><ProductID>CVRFPID-192323</ProductID><ProductID>CVRFPID-99886</ProductID><ProductID>CVRFPID-99888</ProductID><ProductID>CVRFPID-99890</ProductID><ProductID>CVRFPID-99892</ProductID><ProductID>CVRFPID-99894</ProductID><ProductID>CVRFPID-99896</ProductID><ProductID>CVRFPID-99897</ProductID><ProductID>CVRFPID-99898</ProductID><ProductID>CVRFPID-99899</ProductID><ProductID>CVRFPID-99900</ProductID><ProductID>CVRFPID-99901</ProductID><ProductID>CVRFPID-99902</ProductID><ProductID>CVRFPID-99903</ProductID><ProductID>CVRFPID-99904</ProductID><ProductID>CVRFPID-99905</ProductID><ProductID>CVRFPID-193225</ProductID><ProductID>CVRFPID-193227</ProductID><ProductID>CVRFPID-193229</ProductID><ProductID>CVRFPID-193230</ProductID><ProductID>CVRFPID-193231</ProductID><ProductID>CVRFPID-193232</ProductID><ProductID>CVRFPID-193233</ProductID><ProductID>CVRFPID-193234</ProductID><ProductID>CVRFPID-193235</ProductID><ProductID>CVRFPID-193236</ProductID><ProductID>CVRFPID-192326</ProductID><ProductID>CVRFPID-192327</ProductID><ProductID>CVRFPID-192328</ProductID><ProductID>CVRFPID-192329</ProductID><ProductID>CVRFPID-192330</ProductID><ProductID>CVRFPID-192331</ProductID><ProductID>CVRFPID-192332</ProductID><ProductID>CVRFPID-192333</ProductID><ProductID>CVRFPID-192334</ProductID><ProductID>CVRFPID-193222</ProductID><ProductID>CVRFPID-193238</ProductID><ProductID>CVRFPID-193239</ProductID><ProductID>CVRFPID-193213</ProductID><ProductID>CVRFPID-193215</ProductID><ProductID>CVRFPID-193216</ProductID><ProductID>CVRFPID-193219</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of the vulnerability may cause an authenticated but unprivileged, remote attacker to execute arbitrary commands on the affected system and on the devices managed by the affected system itself.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>9.0</BaseScore><TemporalScore>7.4</TemporalScore><Vector>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>There is no workaround that mitigates this vulnerability.</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130731-cm</URL><Description>Authenticated Command Injection Vulnerability in Multiple Cisco Content Network and Video Delivery Products</Description></Reference></References></Vulnerability></cvrfdoc>

@@ -1,0 +1,219 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Multiple Vulnerabilities in Cisco IronPort Encryption Appliance</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20100210-ironport</ID></Identification><Status>Final</Status><Version>1.1</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2010-02-10T16:00:00</Date><Description>Initial public release.</Description></Revision><Revision><Number>1.1</Number><Date>2014-07-30T20:11:36</Date><Description>Updated the Workaround section with additional details.</Description></Revision></RevisionHistory><InitialReleaseDate>2010-02-10T16:00:00</InitialReleaseDate><CurrentReleaseDate>2014-07-30T20:11:36</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">Cisco IronPort Encryption Appliance devices contain two vulnerabilities
+that allow remote, unauthenticated access to any file on the device and one
+vulnerability that allows remote, unauthenticated users to execute arbitrary
+code with elevated privileges. There are workarounds available to mitigate
+these vulnerabilities.
+
+Cisco has released free software updates that address these
+vulnerabilities. This advisory is posted at
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport"].
+
+</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>
+This advisory is posted on Cisco's worldwide website at : 
+
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport"]
+
+
+ In addition to worldwide web posting, a text version of
+this notice is clear-signed with the Cisco PSIRT PGP key and is posted to the
+following e-mail and Usenet news recipients. 
+
+
+    
+    cust-security-announce@cisco.com
+    
+    first-bulletins@lists.first.org
+    
+    bugtraq@securityfocus.com
+    
+    vulnwatch@vulnwatch.org
+    
+    cisco@spot.colorado.edu
+    
+    cisco-nsp@puck.nether.net
+    
+    full-disclosure@lists.grok.org.uk
+    
+    comp.dcom.sys.cisco@newsgate.cisco.com
+
+ Future updates of this advisory, if any, will be placed on Cisco's
+worldwide website, but may or may not be actively announced on mailing lists or
+newsgroups. Users concerned about this problem are encouraged to check the
+above URL for any updates.
+
+</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport</URL><Description>Multiple Vulnerabilities in Cisco IronPort Encryption Appliance</Description></Reference><Reference><URL>http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport</URL><Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in IronPort Encryption Appliance</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-97209">Cisco IronPort PostX MAP 6.2.9 Base</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>HOLD for February 10th*******Cisco IronPort Encryption Appliance Remote Arbitrary Code Execution Vulnerability</Title><CVE>CVE-2010-0145</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-97209</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>
+Successful exploitation of these vulnerabilities may allow a remote,
+unauthenticated attacker to access arbitrary files or execute arbitrary code
+with elevated privileges.
+
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>10.0</BaseScore><TemporalScore>8.3</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>
+It is possible to mitigate the administration interface file access
+vulnerability (IronPort Bug 65921) by using the IP address restriction feature
+of the administration interface to limit access to trusted hosts. Access to the
+administration interface is not restricted by default. To configure access
+limits, an administrator should navigate to Configuration -&gt; Web
+Services -&gt; Admin -&gt; Console Security area in the Cisco IronPort
+Encryption Appliance administration interface.
+
+It is possible to workaround the remote code execution vulnerability
+(IronPort Bug 65923) by disabling HTTP Invoker in the Cisco IronPort Encryption
+Appliance configuration files. To disable the HTTP Invoker, an administrator
+must delete several files in the PostX application home directory and remove a
+directive from the web server configuration. The following files must be
+deleted:
+
+
+jboss/server/postx/deploy/http-invoker.sar
+
+
+jboss/server/postx/deploy/jms/jbossmq-httpil.sar
+
+The following directive must be removed from the
+jboss/server/postx/conf/jboss-service.xml web server
+configuration file.
+
+     
+      
+After deleting the files and removing the directive from the
+configuration file, the PostX application service must be restarted.
+
+
+
+Additional details to implement workaround:
+
+     cd /usr/local/postx/server/jboss/server/postx/deploy
+
+     mv jmx-console.war jmx-console-disabled.war
+
+     cd management
+
+     mv web-console.war web-console-disabled.war
+Additional mitigation techniques that can be deployed on Cisco devices
+within the network are available in the Cisco Applied Mitigation Bulletin
+companion document for this advisory: 
+
+
+http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport["http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport"]
+
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport</URL><Description>Multiple Vulnerabilities in Cisco IronPort Encryption Appliance</Description></Reference></References></Vulnerability><Vulnerability Ordinal="2" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>HOLD for February 10th*******Cisco IronPort Encryption Appliance WebSafe Servlet Remote Information Disclosure Vulnerability</Title><CVE>CVE-2010-0144</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-97209</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>
+Successful exploitation of these vulnerabilities may allow a remote,
+unauthenticated attacker to access arbitrary files or execute arbitrary code
+with elevated privileges.
+
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:N/A:N/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>
+It is possible to mitigate the administration interface file access
+vulnerability (IronPort Bug 65921) by using the IP address restriction feature
+of the administration interface to limit access to trusted hosts. Access to the
+administration interface is not restricted by default. To configure access
+limits, an administrator should navigate to Configuration -&gt; Web
+Services -&gt; Admin -&gt; Console Security area in the Cisco IronPort
+Encryption Appliance administration interface.
+
+It is possible to workaround the remote code execution vulnerability
+(IronPort Bug 65923) by disabling HTTP Invoker in the Cisco IronPort Encryption
+Appliance configuration files. To disable the HTTP Invoker, an administrator
+must delete several files in the PostX application home directory and remove a
+directive from the web server configuration. The following files must be
+deleted:
+
+
+jboss/server/postx/deploy/http-invoker.sar
+
+
+jboss/server/postx/deploy/jms/jbossmq-httpil.sar
+
+The following directive must be removed from the
+jboss/server/postx/conf/jboss-service.xml web server
+configuration file.
+
+     
+      
+After deleting the files and removing the directive from the
+configuration file, the PostX application service must be restarted.
+
+
+
+Additional details to implement workaround:
+
+     cd /usr/local/postx/server/jboss/server/postx/deploy
+
+     mv jmx-console.war jmx-console-disabled.war
+
+     cd management
+
+     mv web-console.war web-console-disabled.war
+Additional mitigation techniques that can be deployed on Cisco devices
+within the network are available in the Cisco Applied Mitigation Bulletin
+companion document for this advisory: 
+
+
+http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport["http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport"]
+
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport</URL><Description>Multiple Vulnerabilities in Cisco IronPort Encryption Appliance</Description></Reference></References></Vulnerability><Vulnerability Ordinal="3" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>HOLD for February 10th*******Cisco IronPort Encryption Appliance Administration Interface Remote Information Disclosure Vulnerability</Title><CVE>CVE-2010-0143</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-97209</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>
+Successful exploitation of these vulnerabilities may allow a remote,
+unauthenticated attacker to access arbitrary files or execute arbitrary code
+with elevated privileges.
+
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>7.8</BaseScore><TemporalScore>6.4</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:N/A:N/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>
+It is possible to mitigate the administration interface file access
+vulnerability (IronPort Bug 65921) by using the IP address restriction feature
+of the administration interface to limit access to trusted hosts. Access to the
+administration interface is not restricted by default. To configure access
+limits, an administrator should navigate to Configuration -&gt; Web
+Services -&gt; Admin -&gt; Console Security area in the Cisco IronPort
+Encryption Appliance administration interface.
+
+It is possible to workaround the remote code execution vulnerability
+(IronPort Bug 65923) by disabling HTTP Invoker in the Cisco IronPort Encryption
+Appliance configuration files. To disable the HTTP Invoker, an administrator
+must delete several files in the PostX application home directory and remove a
+directive from the web server configuration. The following files must be
+deleted:
+
+
+jboss/server/postx/deploy/http-invoker.sar
+
+
+jboss/server/postx/deploy/jms/jbossmq-httpil.sar
+
+The following directive must be removed from the
+jboss/server/postx/conf/jboss-service.xml web server
+configuration file.
+
+     
+      
+After deleting the files and removing the directive from the
+configuration file, the PostX application service must be restarted.
+
+
+
+Additional details to implement workaround:
+
+     cd /usr/local/postx/server/jboss/server/postx/deploy
+
+     mv jmx-console.war jmx-console-disabled.war
+
+     cd management
+
+     mv web-console.war web-console-disabled.war
+Additional mitigation techniques that can be deployed on Cisco devices
+within the network are available in the Cisco Applied Mitigation Bulletin
+companion document for this advisory: 
+
+
+http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport["http://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport"]
+
+
+</Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport</URL><Description>Multiple Vulnerabilities in Cisco IronPort Encryption Appliance</Description></Reference></References></Vulnerability></cvrfdoc>

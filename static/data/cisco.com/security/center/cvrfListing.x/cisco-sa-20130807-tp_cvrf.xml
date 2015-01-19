@@ -1,0 +1,79 @@
+<?xml version="1.0"?><cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1"><DocumentTitle>Cisco TelePresence System Default Credentials Vulnerability</DocumentTitle><DocumentType>Cisco Security Advisory</DocumentType><DocumentPublisher Type="Vendor"><ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</ContactDetails><IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</IssuingAuthority></DocumentPublisher><DocumentTracking><Identification><ID>cisco-sa-20130807-tp</ID></Identification><Status>Final</Status><Version>1.2</Version><RevisionHistory><Revision><Number>1.0</Number><Date>2013-08-07T14:15:32</Date><Description>Initial public release</Description></Revision><Revision><Number>1.1</Number><Date>2013-08-07T16:51:58</Date><Description>Change to CVSSv2 scoring</Description></Revision><Revision><Number>1.2</Number><Date>2013-08-09T15:36:04</Date><Description>Changes to "Vulnerable Products" and "Software Versions and Fixes" sections</Description></Revision></RevisionHistory><InitialReleaseDate>2013-08-07T16:00:00</InitialReleaseDate><CurrentReleaseDate>2013-08-09T16:30:03</CurrentReleaseDate><Generator><Engine>TVCE</Engine></Generator></DocumentTracking><DocumentNotes><Note Title="Summary" Type="General" Ordinal="1">A vulnerability in Cisco TelePresence System could allow a remote attacker to access the web server via a user account that is created with default credentials.
+
+
+
+The vulnerability is due to a default user account being created at installation time. An attacker could exploit this vulnerability by remotely accessing the web server and using the default account credentials. An exploit could allow the attacker to log in with the default credentials, which gives them full administrative rights to the system.
+
+
+
+Workarounds that mitigate this vulnerability are available.
+
+This advisory is available at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130807-tp["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130807-tp"]</Note><Note Title="Status of this Notice" Type="General" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or Paraphrase of the text of this document that omits the distribution URL in the following section is an uncontrolled copy, and may lack important information or contain factual errors.
+</Note></DocumentNotes><DocumentDistribution>This advisory is posted on Cisco Security Intelligence Operations at the following link:
+
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130807-tp["http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130807-tp"]
+
+Additionally, a text version of this advisory is clear signed with the Cisco PSIRT PGP key and circulated among the following e-mail addresses: 
+
+
+    cust-security-announce@cisco.com 
+    first-bulletins@lists.first.org 
+    bugtraq@securityfocus.com 
+    vulnwatch@vulnwatch.org 
+    cisco@spot.colorado.edu 
+    cisco-nsp@puck.nether.net 
+    full-disclosure@lists.grok.org.uk 
+
+Future updates of this advisory, if any, will reside on Cisco.com but may not be announced on mailing lists. Users can monitor this advisory's URL for any updates.
+</DocumentDistribution><DocumentReferences><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130807-tp</URL><Description>Cisco TelePresence System Default Credentials Vulnerability</Description></Reference></DocumentReferences><ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1"><FullProductName ProductID="CVRFPID-192201">Cisco TelePresence System Software 1.8.1(34)</FullProductName><FullProductName ProductID="CVRFPID-192202">Cisco TelePresence System Software 1.8.2(11)</FullProductName><FullProductName ProductID="CVRFPID-192203">Cisco TelePresence System Software 1.8.3(4)</FullProductName><FullProductName ProductID="CVRFPID-192204">Cisco TelePresence System Software 1.8.4(13)</FullProductName><FullProductName ProductID="CVRFPID-192205">Cisco TelePresence System Software 1.8.5(4)</FullProductName><FullProductName ProductID="CVRFPID-192177">Cisco TelePresence System Software 1.9 Base</FullProductName><FullProductName ProductID="CVRFPID-192206">Cisco TelePresence System Software 1.9.0(46)</FullProductName><FullProductName ProductID="CVRFPID-192207">Cisco TelePresence System Software 1.9.1(68)</FullProductName><FullProductName ProductID="CVRFPID-192208">Cisco TelePresence System Software 1.9.2(19)</FullProductName><FullProductName ProductID="CVRFPID-192209">Cisco TelePresence System Software 1.9.3(44)</FullProductName><FullProductName ProductID="CVRFPID-192210">Cisco TelePresence System Software 1.9.4(19)</FullProductName><FullProductName ProductID="CVRFPID-192211">Cisco TelePresence System Software 1.9.5(7)</FullProductName><FullProductName ProductID="CVRFPID-192212">Cisco TelePresence System Software 1.9.6(2)</FullProductName><FullProductName ProductID="CVRFPID-192179">Cisco TelePresence System Software 1.10 Base</FullProductName><FullProductName ProductID="CVRFPID-192213">Cisco TelePresence System Software 1.10.0(259)</FullProductName><FullProductName ProductID="CVRFPID-192214">Cisco TelePresence System Software 1.10.1(43)</FullProductName></ProductTree><Vulnerability Ordinal="1" xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1"><Title>Cisco TelePresence System Default Credentials Vulnerability</Title><ID SystemName="Cisco Bug ID">CSCui43128</ID><Notes><Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in Cisco TelePresence System could allow a remote attacker to access the web server via a user account that is created with default credentials.
+
+
+
+The vulnerability is due to a default user account being created at installation time. An attacker could exploit this vulnerability by remotely accessing the web server and using the default account credentials. An exploit could allow the attacker to log in with the default credentials, which gives them full administrative rights to the system.</Note></Notes><CVE>CVE-2013-3454</CVE><ProductStatuses><Status Type="Known Affected"><ProductID>CVRFPID-192177</ProductID><ProductID>CVRFPID-192179</ProductID><ProductID>CVRFPID-192201</ProductID><ProductID>CVRFPID-192202</ProductID><ProductID>CVRFPID-192203</ProductID><ProductID>CVRFPID-192204</ProductID><ProductID>CVRFPID-192205</ProductID><ProductID>CVRFPID-192206</ProductID><ProductID>CVRFPID-192207</ProductID><ProductID>CVRFPID-192208</ProductID><ProductID>CVRFPID-192209</ProductID><ProductID>CVRFPID-192210</ProductID><ProductID>CVRFPID-192211</ProductID><ProductID>CVRFPID-192212</ProductID><ProductID>CVRFPID-192213</ProductID><ProductID>CVRFPID-192214</ProductID></Status></ProductStatuses><Threats><Threat Type="Impact"><Description>Successful exploitation of this vulnerability could allow a remote attacker to use the default credentials for the password recovery account to modify the system configuration and settings and take full control of the affected system.
+</Description></Threat></Threats><CVSSScoreSets><ScoreSet><BaseScore>10.0</BaseScore><TemporalScore>9.5</TemporalScore><Vector>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:H/RL:W/RC:C/</Vector></ScoreSet></CVSSScoreSets><Remediations><Remediation Type="Workaround"><Description>Workarounds exist to mitigate this vulnerability. 
+
+
+
+For customers using Cisco TelePresence codecs registered with Cisco Unified Communications Manager (Unified CM), the following workaround exists:
+
+
+
+1. Proceed to Cisco Unified CM Administration and select Device &gt; Phone, search and select the configured Cisco TelePresence unit. 
+
+2. Under the Secure Shell Information (ssh), change the ssh helpdesk user name from the default helpdesk to pwrecovery, and then choose an alternate password.
+
+
+
+This will overwrite the pwrecovery account stored on the Cisco TelePresence unit, and permit changing the password from the default to one created by the Cisco Unfied CM administrator.
+
+ 
+
+
+Note: Password recovery will continue to function through ssh as designed, but the user is required to have physical access to the Cisco TelePresence unit in order to execute a recovery. The ssh access will have to use the updated password information for the pwrecovery account.
+
+ 
+
+3. Reboot the Cisco TelePresence codec to download the updated Cisco Unified CM configuration.
+
+ 
+
+This workaround is persistent because the codec downloads the configuration after every reboot.
+ 
+
+
+
+ As a result, the GUI access would require a user to know either the administrator or newly configured pwrecovery credentials as configured in Cisco Unified CM. Default pwrecovery credentials will cease to function.
+
+
+
+For customers with non-Cisco Unified CM registered Cisco TelePresence codecs, the workaround requires manual intervention on the affected system. Please contact the Cisco Technical Assistance Center (TAC) for instructions on how to implement this workaround. </Description></Remediation></Remediations><References><Reference Type="Self"><URL>http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130807-tp</URL><Description>Cisco TelePresence System Default Credentials Vulnerability</Description></Reference></References></Vulnerability></cvrfdoc>
