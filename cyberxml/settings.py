@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cvrf',
+    'cve',
 )
 
 MIDDLEWARE_CLASSES = (

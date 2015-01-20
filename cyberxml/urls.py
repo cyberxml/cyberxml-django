@@ -10,6 +10,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^cvrf/', include('cvrf.urls')),
+    url(r'^cve/', include('cve.urls')),
 )
 
 #urlpatterns += staticfiles_urlpatterns()
