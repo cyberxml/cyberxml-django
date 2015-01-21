@@ -47,8 +47,7 @@ def prettyxml(request,vendor,cvrfnum):
 		rootObj = cvrf.parse("static/data/"+vdir+cvrfnum+".xml",0)
 		xmlstr=StringIO()
 		rootObj.export(xmlstr, 0)
-		#return render(request, 'cvrf_pretty.html', {'test':msnum})
-		return render(request, 'cvrf_test.html', {'test':rootObj})
+		return render(request, 'cvrf_pretty.html', {'test':rootObj})
 	except:
 		raise Http404
 
