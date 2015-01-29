@@ -54,7 +54,7 @@ def cvexml(request, cvenum):
 		let $year := "'''+cveyear+'''"
 		let $thisdoc := concat("/db/cve/nvdcve-2.0-",$year,".xml")
 		let $input := doc($thisdoc)/nvd:nvd/nvd:entry[@id="'''+cvenum+'''"]
-		let $xsl := doc("/db/cyberxml/styles/cve.xsl")
+		let $xsl := doc("/db/cyberxml/styles/xsl/cve.xsl")
 		return
 			transform:transform($input, $xsl, ())
 		'''
