@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView
 
 from django.contrib import admin
 admin.autodiscover()
@@ -11,6 +12,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^cvrf/', include('cvrf.urls')),
     url(r'^cve/', include('cve.urls')),
+	(r'^vuln/$', TemplateView.as_view(template_name='vuln_index.html')),
+	(r'^$', TemplateView.as_view(template_name='index.html')),
 )
 
 #urlpatterns += staticfiles_urlpatterns()

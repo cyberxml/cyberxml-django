@@ -4,7 +4,6 @@ from django.http import Http404
 from StringIO import StringIO
 from . import cvrf
 
-
 from eulexistdb import db   
 
 def getVendorDirectory(vendor):
@@ -89,4 +88,4 @@ def vendor_index(request, vendor):
 	a = connExistDB()
 	idx =a.get_data(qrystr)
 	
-	return render(request, 'cvrf_vendor_index.html', {'idx':idx, 'vdir':vdir, 'vendor':vendor, 'qstr':qrystr})
+	return render(request, 'cvrf_catalog.html', {'idx':idx, 'vdir':vdir, 'vendor':vendor, 'qstr':qrystr})

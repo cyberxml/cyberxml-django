@@ -1,0 +1,18 @@
+{% extends "vuln_base.html" %}
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/cve/">cve</a> >> <a href="/cve/nist">nist</a> >> <a href="/cve/nist/catalog/">catalog</a> >> <a href="/cve/nist/catalog/{{year}}">year</a></div>
+{% endblock %}
+{% block content %}
+
+	<h3>CyberXML catalogs the following CVE from NIST NVD for {{year}}:</h3>
+	<table>
+		<thead><tr><th>id</th><th>title</th><th>initial release</th><th>current release</th></tr></thead>
+		<tbody>
+			{% autoescape off %}
+			{% for i in idx %}
+				{{i}}
+			{% endfor %}
+			{% endautoescape %}
+		</tbody>
+	</table>
+{% endblock %}

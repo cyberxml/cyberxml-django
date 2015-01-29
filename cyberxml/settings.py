@@ -14,6 +14,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 TEMPLATE_DIRS = (
 	'/home/action/workspace/cyberxml/templates',
 	'/home/action/workspace/cyberxml/cyberxml/cvrf/templates',
+	'/home/action/workspace/cyberxml/cyberxml/templates', # base, index, top menus
 )
 
 # Quick-start development settings - unsuitable for production
@@ -41,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'cvrf',
     'cve',
+    'deploy',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -85,7 +87,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/action/workspace/cyberxml/static/'
+#STATIC_ROOT = '/home/action/workspace/cyberxml/static/'
 STATICFILES_DIRS = (
 	'/home/action/workspace/cyberxml/static',
 )
+
+# include the eulexistdb settings 
+EXISTDB_SERVER_USER = 'admin'
+EXISTDB_SERVER_PASSWORD = 'notthispw'
+EXISTDB_SERVER_URL = "http://localhost:8080/exist"
+EXISTDB_ROOT_COLLECTION = "/db"
+
+# use the following to configure deployment settings
+# including overwriting public setting in this file
+# to display configured settings, run
+# python manage.py diffsettings --all
+try:
+	from deploy.settings import *
+except:
+	pass

@@ -1,5 +1,8 @@
-<html>
-<head>
+{% extends "vuln_base.html" %}
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/cvrf/">cvrf</a> >> <a href="/cvrf/{{vendor}}/">{{vendor}}</a></div>
+{% endblock %}
+{% block style %}
 <style>
 table {
         margin-bottom:50px;
@@ -17,8 +20,9 @@ td {
         /*padding-left:10px;*/
 }
 </style>
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
 <div>
 <table width="90%">
 <tr><th width="17%">Document Title: </th><td>{{ test.DocumentTitle.valueOf_ }}</td></tr>
@@ -43,7 +47,6 @@ td {
 <thead>
 <tr>
 <tr><th width="100%" colspan=3>Revision History</th></tr>
-</tr>
 <tr>
 <th width="17%">Number</th>
 <th width="17%">Date</th>
@@ -60,9 +63,7 @@ td {
 {% endfor %}
 </tbody>
 </table>
-</div>
 <!-- Document Notes -->
-<div>
 <table width="90%">
 <thead>
 <tr><th width="100%" colspan=3>Document Notes</th></tr>
@@ -82,9 +83,7 @@ td {
 {% endfor %}
 </tbody>
 </table>
-</div>
 <!-- Document References -->
-<div>
 <table width="90%">
 <thead>
 <tr><th width="100%" colspan=3>Document References</th></tr>
@@ -104,9 +103,7 @@ td {
 {% endfor %}
 </tbody>
 </table>
-</div>
 <!-- Full Product Name -->
-<div>
 <table width="90%">
 <thead>
 <tr><th width="100%" colspan=3>Product Tree</th></tr>
@@ -126,9 +123,7 @@ td {
 {% endfor %}
 </tbody>
 </table>
-</div>
 <!-- Vulnerabilities -->
-<div>
 <table width="90%">
 <thead>
 <tr><th width="100%" colspan=3>Vulnerabilities</th></tr>
@@ -191,7 +186,7 @@ td {
 	</tr>
 	{% endfor %}
 {% endfor %}
-</div>
+<!-- /div -->
 </tbody>
 </table>
 <!--/div>
@@ -199,7 +194,6 @@ td {
 </table>
 </div -->
 <!-- Acknowledgements -->
-<div>
 <table width="90%">
 <thead>
 <tr><th width="100%" colspan=3>Acknowledgements</th></tr>
@@ -224,5 +218,4 @@ td {
 </tbody>
 </table>
 </div>
-</body>
-</html>
+{% endblock %}

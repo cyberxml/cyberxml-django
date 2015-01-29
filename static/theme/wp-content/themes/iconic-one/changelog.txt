@@ -1,0 +1,130 @@
+Changelog for Iconic One WordPress Responsive Theme | Visit http://themonic.com/iconic-one/ for latest version
+
+
+-------------- January 2015 ----------------
+
+01/07/15  - Iconic One Version 1.4.4
+
+* Made Excerpt Read More pluggable for child themes, you can now change read more text in a child theme.
+* Removed sidebar active menu bg color
+* Added sanitization to the customizer functions
+
+-------------- August 2014 ----------------
+
+08/10/14  - Iconic One Version 1.4.3
+
+* Added Read More button after excerpts
+* Code improvements
+* Selective Social icons, Social icons will now hide if URL left empty
+
+
+-------------- May 2014 ----------------
+
+
+04/15/14  - Iconic One Version 1.4.2
+
+* Made excerpt thumbnail function pluggable, can now be overridden in child themes
+* Small sidebar width adjustment to fit 300px Advertisements
+
+-------------- April 2014 ----------------
+
+
+04/15/14  - Iconic One Version 1.4.1
+
+* Added support for Jetpack popular post widget
+* Minor CSS style changes
+* Search widget improvement
+
+04/04/14  - Iconic One Version 1.4
+
+* Removed stray span tag from content.php
+* Removed background color of <ins> tag, no more yellow background behind ads
+* Link color in posts is blue now instead of black
+* Home page title is now <H2> as per popular request, no change in single post pages
+* Added link to theme page where FAQs are being maintained 
+
+-------------- December 2013 ----------------
+
+12/16/13  - Iconic One Version 1.3.2
+
+
+* Minor sidebar style fix
+* Updated screenshot to higher resolution for WordPress 3.8
+
+
+12/14/13  - Iconic One Version 1.3.1
+
+* Changed tag to fuild layout as per WordPress 3.8
+* Small CSS bug fixes
+
+
+12/14/13  - Iconic One Version 1.3
+
+* Theme start page made compatible with WordPress 3.8
+* Footer Fix for large text in the footer boxes
+* Logo responsiveness fix in case of big logos 
+* Header area fixes in mobile view
+* Better and wide mobile menu
+* Much improved display compatibility on Internet Explorer, based on user feedback
+* Updated start page with pro version details
+
+-------------- August 2013 ----------------
+
+08/27/13  - Iconic One Version 1.2.3
+
+* Minor Header Logo text and description style changes, can be seen when logo is yet to be uploaded.
+* Removed the extra @custom.css import from style.css
+* Added iconic-one.pot file in /language folder for worldwide translation with a mini tutorial in the same folder.
+* Removed the weird looking active page background color from the sidebar
+
+
+08/18/13  - Iconic One Version 1.2.1.2
+
+* Better styling for below title meta.
+* Removed current page highlight from the sidebar.
+
+
+08/02/13  - Iconic One Version 1.2.1.1
+
+* Minor Search bar responsiveness margin fix at width below 1040px.
+* Tested with WordPress version 3.6. 
+
+-------------- JULY 2013 ----------------
+
+07/30/13  - Iconic One Version 1.2.1
+
+* Urgent update due to extra </div> in the footer from the last update 1.2, it broke the footer completely.
+
+* Replaced Category with pages in sidebar if no widgets are defined. 
+
+
+07/30/13  - Iconic One Version 1.2
+
+
+* Header width now Auto - Big Logos won't break the header.
+
+* Removed left-right border from sidebar elements.
+
+* Better looking sidebar search bar.
+
+* Sidebar will now show nice looking search bar, recent posts, categories and tag cloud if no widgets are defined.
+
+* Added live customizer link in the Appearance menu for ease of access.
+
+* Minor Options page style change.
+
+
+
+07/28/13  - Version 1.1.2.1
+
+* The Responsive Menu no longer requires setup, Iconic One menu responsiveness will now work automagically.
+* Nav menu <li> improvement, removed the background color for child hover.
+* Changelog.txt is now included.
+
+07/24/13 - Version 1.1.1
+
+* Minor menu style changes.
+
+07/13/13 - Version 1.1
+
+* Initial public release!
