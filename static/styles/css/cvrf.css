@@ -1,0 +1,337 @@
+/* 
+    Document   : cvrf.css
+    Created on : June 28, 2012
+    Author     : Chandan
+    Description: To Render CVRF XML in human readable form
+	Original Source: http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/1686935.css
+*/
+
+root,cvrfdoc { 
+    font-family:arial,sans-serif;
+    font-size: 15px;
+    background-color: #FEFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    display:block;
+}
+cvrfdoc {
+    margin: 0 auto;
+    max-width: 980px;
+    min-width: 630px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 0;
+}
+DocumentTitle {
+    font-size: 20px;
+    font-weight: 700;
+    display:block;
+    margin:1em 0 1em 0;
+}
+
+Identification ID,
+DocumentTracking > Status,
+DocumentTracking > Version,
+DocumentReferences,
+DocumentTracking > InitialReleaseDate,
+DocumentTracking > CurrentReleaseDate,
+RevisionHistory{
+    display:block;
+}
+DocumentType:before {
+    content: "Document Type: ";
+    font-weight: bold;
+}
+Identification ID:before {
+    content: "Document ID: ";
+    font-weight: bold;
+}
+
+DocumentTracking > Status:before {
+    content: "Status: ";
+    font-weight: bold;
+}
+DocumentTracking > Version:before {
+    content: "Version: ";
+    font-weight: bold;
+}
+
+DocumentTracking > InitialReleaseDate:before {
+    content: "Initial Release Date: ";
+    font-weight: bold;
+}
+
+DocumentTracking > CurrentReleaseDate:before {
+    content: "Current Release Date: ";
+    font-weight: bold;
+}
+DocumentReferences:before {
+    content: "References:";
+    font-weight: bold;
+}
+
+DocumentReferences > Reference {
+    display: list-item;
+    margin-left: 30px;
+}
+
+Reference > Description:before {
+    content:" - "
+}
+RevisionHistory:before {
+    content:"Revision History: ";
+    font-weight: bold;
+}
+RevisionHistory> Revision {
+    display:list-item;
+    margin-left: 30px;
+}
+
+Acknowledgments {
+    display: block;
+
+}
+
+h2, Acknowledgments:before, ProductTree:before{
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+Acknowledgments:before {
+    content: "Acknowledgments:";
+}
+
+Acknowledgments {
+    display: block;
+}
+
+Acknowledgment > Name {
+    font-weight: bold;
+}
+
+Acknowledgment > Organization:before {
+    content: " - ";
+}
+
+Acknowledgment > Organization:after {
+    content: "; ";
+}
+
+ProductTree:before {
+    content:"Affected Products";
+}
+
+FullProductName:before {
+    content: attr(ProductID) " = ";
+}
+
+FullProductName {
+    display: block;
+}
+
+Vulnerability {
+    display:block;
+    border:1px solid #dbdbdb;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+Vulnerability  Note {
+    display:block;
+    text-indent: 30px;
+    padding:5px;
+}
+
+Vulnerability > Title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+Vulnerability > Notes {
+    display:block;
+}
+Vulnerability > ReleaseDate:before {
+    content:"Release Date: ";
+    font-weight: bold;
+}
+Vulnerability Involvement:before {
+    content:"Involvement: ";
+    font-weight: bold;
+}
+Vulnerability > CVE:before {
+    content:"CVE Id: ";
+    font-weight: bold;
+}
+Vulnerability  ProductStatuses  Status:before {
+    content: " " attr(Type) ":";
+    font-weight: bold;
+}
+Vulnerability  Remediations:before {
+    content:"Remediations: ";
+    font-weight: bold;
+}
+Vulnerability  BaseScore:before {
+    content:"CVSS Base Score: ";
+    font-weight: bold;
+}
+
+Vulnerability > ReleaseDate,
+Vulnerability Involvement,
+Vulnerability > CVE,
+Vulnerability  Remediations,
+Vulnerability ScoreSet
+{
+    display:block;
+}
+Vulnerability ProductID {
+    display:list-item;
+    margin-left: 30px;
+}
+
+/* 
+    Document   : style
+    Created on : Jul 2, 2012, 8:14:04 PM
+    Author     : chandan
+    Description: Style sheet for cvrf.xml formatted with cvrf.xslt
+*/
+
+root { 
+    display: block;
+}
+
+a {
+    color:#004488;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family:arial,sans-serif;
+    font-size: 15px;
+    background-color: #FEFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+h2.title {
+    border-bottom: 2px solid #c0c0c0;
+    padding-bottom: 5px;
+}
+.logo {
+    background: url("1693758.png") no-repeat transparent;
+    background-position:0px 0px;
+    width:133px;
+    height:18px;
+    display:block;
+    margin:10px auto 10px 0px;
+    line-height: 0;
+    font-size: 0;
+}
+.arrow {
+    background: url("1693758.png") no-repeat transparent;
+    background-position:0 -18px;
+    width:16px;
+    height:8px;
+    display:inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+dl {
+    padding: 0px;
+    margin:2px;
+}
+.vuln {
+    background: url("1693758.png") repeat-x transparent;
+    background-position:0 -50px;
+    border: 1px solid #dbdbdb;
+    padding: 0px 20px 10px 20px;
+    margin-bottom: 1em;
+    border-radius: 7px;
+}
+.ack, .prod {
+    border-radius: 7px;
+    border: 1px solid #dbdbdb;
+    padding: 0px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding-bottom: 10px;
+}
+.prod b {
+    padding-left: 20px;
+}
+.ack h2, .prod h2 {
+    background: url("1693758.png") repeat-x transparent;
+    background-position:0 -28px;
+    margin: 0px;
+    margin-bottom: 10px;
+    height: 19px;
+    padding-left: 10px;
+    padding-top: 2px;
+    font-size: 12px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: #f4f4f4;
+}
+
+.vuln  h3 {
+    margin: 0px;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.vuln  p {
+    text-indent: 26px;
+}
+
+.vector dd {
+    display:inline-block;
+    font-size: 12px;
+    margin:0px 1px 1px 0px;
+    float:left;
+    vertical-align: middle;
+    width:86px;
+}
+
+dd.IC {
+    clear: left;
+}
+
+.vector b {
+    display:block;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+.vector dd {
+    padding: 3px 10px 3px 10px;
+}
+
+.vector dd.N {
+    background-color: #2CE9AA;
+}
+
+.vector dd.O, .vector dd.P {
+    background-color: #FFC970;
+}
+
+.vector dd.R, .vector dd.C {
+    background-color: #FF8987;
+}
+
+.vector dd.Y {
+    background-color: #FFFF90;
+}
+
+.vector {
+    clear: both;
+    display:block;
+    height:85px;
+    margin-left: 4em;
+    width:360px;
+    overflow: auto;
+}

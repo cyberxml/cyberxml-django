@@ -1,0 +1,16 @@
+{% extends "vuln_base.html" %}
+
+{% block style %}
+<link rel='stylesheet' id='custom-style-css'  href='/static/styles/css/cvrf.css' type='text/css' media='all' />
+{% endblock %}
+
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/cvrf/">cvrf</a> >>  <a href="/cvrf/{{vendor}}">{{vendor}}</a> >> <a href="/cvrf/{{vendor}}/xml/">xml</a> >> <a href="/cvrf/{{vendor}}/xml/{{cvrfnum}}">{{cvrfnum}}</a></div>
+{% endblock %}
+{% block content %}
+{% autoescape off %}	
+	{% for i in idx%}
+	{{i}}
+	{% endfor %}
+{% endautoescape %}	
+{% endblock %}

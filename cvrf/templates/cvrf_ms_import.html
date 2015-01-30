@@ -1,0 +1,41 @@
+{% extends "vuln_base.html" %}
+
+{% block style %}
+<link rel='stylesheet' id='custom-style-css'  href='/static/styles/css/cvrf.css' type='text/css' media='all' />
+{% endblock %}
+
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/cvrf/">cvrf</a> >> <a href="/cvrf/ms">ms</a> >> <a href="/cvrf/ms/import/">import</a></div>
+{% endblock %}
+{% block content %}
+    <div id="mscvrf_download">
+		<p>To import the MSRC-CVRF zip file, first download it from the following URL:</p>
+		<p><a target="msrc-cvrf" href="http://www.microsoft.com/en-us/download/details.aspx?id=36982">http://www.microsoft.com/en-us/download/details.aspx?id=36982</a></p>
+	</div>
+    <div id="mscvrf_upload">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+        <form enctype="multipart/form-data" action="/cvrf/ms/import" method="post">
+            {% csrf_token %}
+			<p>---</p>
+			<p>Select the zip file:</p>
+            <p><input type="file" name="mscvrf" id="mscvrf" value="" /></p>
+			<p>---</p>
+			<p>---</p>
+			<p>Select to upload:</p> 
+			<p><input type="submit" value="Upload" /></p>
+			<p>---</p>
+        </form>
+    </div>
+	{% if files %}
+	<div>
+		<p>The following MSRC-CVRF were uploaded:</p>
+		<ul>
+		{% for f in files %}
+		<li>{{f}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	{% endif %}
+	
+{% endblock %}

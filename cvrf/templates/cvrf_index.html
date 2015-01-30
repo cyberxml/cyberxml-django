@@ -1,9 +1,11 @@
-<html>
-<body>
+{% extends "vuln_base.html" %}
+
+{% block content %}
+
 	<h3>CyberXML has catalogs of CVRF from the following vendors</h3>
 	<div><a href="/cvrf/ms/">Microsoft</div>
 	<div><a href="/cvrf/redhat/">Red Hat</div>
 	<div><a href="/cvrf/cisco/">Cisco</div>
 	<div><a href="/cvrf/oracle/">Oracle</div>
-	</body>
-</html>
+
+{% endblock %}

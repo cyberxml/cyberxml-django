@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^cvrf/', include('cvrf.urls')),
     url(r'^cve/', include('cve.urls')),
+    url(r'^iavm/', include('iavm.urls')),
 	(r'^vuln/$', TemplateView.as_view(template_name='vuln_index.html')),
 	(r'^$', TemplateView.as_view(template_name='index.html')),
 )

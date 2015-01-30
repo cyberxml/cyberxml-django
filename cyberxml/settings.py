@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'cvrf',
     'cve',
     'deploy',
+	'iavm',
 )
 
 MIDDLEWARE_CLASSES = (

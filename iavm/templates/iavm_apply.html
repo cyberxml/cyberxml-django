@@ -1,0 +1,40 @@
+{% extends "vuln_base.html" %}\
+
+{% block style %}
+<style type="text/css" media="screen">
+
+table{
+border-collapse:collapse;
+border:1px solid #0000FF;
+}
+
+table td{
+border:1px solid #0000FF;
+}
+</style>
+{% endblock %}
+
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/iavm/">iavm</a> >>  <a href="/iavm/apply">apply</a></div>
+{% endblock %}
+
+{% block content %}
+<h3>Enter IAVM</h3>
+<form action="/iavm/apply/">
+IAVM: <input type="text" name="iavm" value="{{ iavm }}">
+<input type="submit" value="Submit">
+</form>
+	<table border="1">
+	<thead>
+		<tr<th span=4>IAVM {{ iavm }}</th></tr>
+		<tr><th>cve</th><th>cvrf</th><th>prod id</th><th>prodname</th></tr>
+	</thead>
+	<tbody>
+	{% autoescape off %}
+	{% for i in xqr%}
+	{{i}}
+	{% endfor %}
+	{% endautoescape %}
+	</tbody>
+	</table>
+{% endblock %}

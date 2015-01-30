@@ -1,10 +1,16 @@
 from django.shortcuts import render
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.http import Http404
 from StringIO import StringIO
 from . import cvrf
+from . import imports
 
-from eulexistdb import db   
+from eulexistdb import db	
+
+#import logging
+#logger = logging.getLogger(__name__)
 
 def getVendorDirectory(vendor):
 	vendor = vendor.lower()
@@ -29,16 +35,16 @@ def getVendorDirectory(vendor):
 		vroot ="oracle.com"
 	return (vroot,vdir)
 
-class connExistDB:    
-    def __init__(self):
-        self.db = db.ExistDB(server_url="http://localhost:8080/exist")    
-    def get_data(self, query):
-        result = list()
-        qresult = self.db.executeQuery(query)
-        hits = self.db.getHits(qresult)
-        for i in range(hits):
-            result.append(str(self.db.retrieve(qresult, i)))
-        return result
+class connExistDB:	  
+	def __init__(self):
+		self.db = db.ExistDB(server_url="http://localhost:8080/exist")	  
+	def get_data(self, query):
+		result = list()
+		qresult = self.db.executeQuery(query)
+		hits = self.db.getHits(qresult)
+		for i in range(hits):
+			result.append(str(self.db.retrieve(qresult, i)))
+		return result
 
 # Create your views here.
 def rawxml(request,vendor,cvrfnum):
@@ -81,7 +87,7 @@ def vendor_index(request, vendor):
 		let $crdate := substring($v/cvrf:DocumentTracking/cvrf:CurrentReleaseDate/text(),1,10)
 		let $fn := util:document-name($v)
 		return <tr><td>{$id}</td>
-			<td><a href="/cvrf/rawxml/{$vd}/{$fn}">{$title}</a></td>
+			<td><a href="/cvrf/{$vd}/xml/{$fn}">{$title}</a></td>
 			<td>{$irdate}</td>
 			<td>{$crdate}</td></tr>'''
 
@@ -89,3 +95,52 @@ def vendor_index(request, vendor):
 	idx =a.get_data(qrystr)
 	
 	return render(request, 'cvrf_catalog.html', {'idx':idx, 'vdir':vdir, 'vendor':vendor, 'qstr':qrystr})
+
+def cvrfxml(request,vendor,cvrfnum):
+	vendor = vendor.lower()
+	vroot,vdir = getVendorDirectory(vendor)
+	qrystr='''xquery version "3.0";
+		declare namespace cvrf = "http://www.icasi.org/CVRF/schema/cvrf/1.1";
+		let $cvrf := "'''+cvrfnum+'''"
+		let $vendor := "'''+vroot+'''"
+		let $thisdoc := concat("/db/cvrf/",$vendor,"/",$cvrf,".xml")
+		let $input := doc($thisdoc)
+		let $xsl := doc("/db/cyberxml/styles/xsl/cvrf.xsl")
+		return
+			transform:transform($input, $xsl, ())
+		'''
+
+	a = connExistDB()
+	idx =a.get_data(qrystr)
+	
+	return render(request, 'cvrf_xml.html', {'idx':idx, 'vendor':vendor, 'cvrfnum':cvrfnum, 'qstr':qrystr})
+
+#@login_required
+def upload_msrc_cvrf(request):
+	try:
+		i = request.FILES['mscvrf']
+		if (i == ""):
+			# Redisplay the iavm upload form, with error message
+			return render(request, 'cvrf_ms_import.html', {'error_message': "file not found.",})
+		else:
+			fn = "/tmp/msrc_cvrf.zip"
+			#logger.info('saving uploaded file as '+fn)
+			with open(fn, 'wb+') as destination:
+				for chunk in i.chunks():
+					destination.write(chunk)
+			destination.close()
+			#logger.info('starting MSRC CVRF parse_msrc_cvrf_zip function')
+			#fn=open("/tmp/msrc_cvrf.zip","rb")
+			files=imports.parse_msrc_cvrf_zip(fn)
+			#logger.info('finished MSRC CVRF parse_msrc_cvrf_zip function')
+			return render(request, 'cvrf_ms_import.html', {'files':files,})
+			
+	except:
+		return render(request, 'cvrf_ms_import.html', {'error_message': "no file provided.",})
+		
+		# Always return an HttpResponseRedirect after successfully dealing
+		# with POST data. This prevents data from being posted twice if a
+		# user hits the Back button.
+	#return HttpResponseRedirect('cvrf.views.upload_msrc_cvrf', {'files':files})
+
+
