@@ -116,7 +116,7 @@ def cvrfxml(request,vendor,cvrfnum):
 	return render(request, 'cvrf_xml.html', {'idx':idx, 'vendor':vendor, 'cvrfnum':cvrfnum, 'qstr':qrystr})
 
 #@login_required
-def upload_msrc_cvrf(request):
+def import_msrc_cvrf(request):
 	try:
 		i = request.FILES['mscvrf']
 		if (i == ""):
@@ -130,17 +130,45 @@ def upload_msrc_cvrf(request):
 					destination.write(chunk)
 			destination.close()
 			#logger.info('starting MSRC CVRF parse_msrc_cvrf_zip function')
-			#fn=open("/tmp/msrc_cvrf.zip","rb")
 			files=imports.parse_msrc_cvrf_zip(fn)
 			#logger.info('finished MSRC CVRF parse_msrc_cvrf_zip function')
 			return render(request, 'cvrf_ms_import.html', {'files':files,})
 			
 	except:
 		return render(request, 'cvrf_ms_import.html', {'error_message': "no file provided.",})
-		
-		# Always return an HttpResponseRedirect after successfully dealing
-		# with POST data. This prevents data from being posted twice if a
-		# user hits the Back button.
-	#return HttpResponseRedirect('cvrf.views.upload_msrc_cvrf', {'files':files})
+
+#@login_required
+def import_redhat_cvrf(request):
+	if request.method == 'POST':
+		try:
+			files=imports.import_redhat_cvrf()
+			return render(request, 'cvrf_redhat_import.html', {'files':files,})			
+		except:
+			return render(request, 'cvrf_redhat_import.html', {'error_message': "request failed",})
+	else:
+			return render(request, 'cvrf_redhat_import.html')
+	
+#@login_required
+def import_oracle_cvrf(request):
+	if request.method == 'POST':
+		try:
+			files=imports.import_oracle_cvrf()
+			return render(request, 'cvrf_oracle_import.html', {'files':files,})			
+		except:
+			return render(request, 'cvrf_oracle_import.html', {'error_message': "request failed",})
+	else:
+			return render(request, 'cvrf_oracle_import.html')
+
+#@login_required
+def import_cisco_cvrf(request):
+	if request.method == 'POST':
+		try:
+			files=imports.import_cisco_cvrf()
+			return render(request, 'cvrf_cisco_import.html', {'files':files,})			
+		except:
+			return render(request, 'cvrf_cisco_import.html', {'error_message': "request failed",})
+	else:
+			return render(request, 'cvrf_cisco_import.html')
+	
 
 

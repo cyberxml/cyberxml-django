@@ -1,0 +1,41 @@
+{% extends "vuln_base.html" %}
+
+{% block style %}
+<link rel='stylesheet' id='custom-style-css'  href='/static/styles/css/cvrf.css' type='text/css' media='all' />
+{% endblock %}
+
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/cvrf/">cvrf</a> >> <a href="/cvrf/redhat">redhat</a> >> <a href="/cvrf/redhat/import/">import</a></div>
+{% endblock %}
+{% block content %}
+	{% if files %}
+	<div>
+		<p>The following Red Hat CVRF were uploaded:</p>
+		<ul>
+		{% for f in files %}
+		<li>{{f}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	{% else %}
+    <div id="redhat_download">
+		<p>The Red Hat CVRF library includes thousands of entries.</p>
+		<p>To save processing time, only those CVRF files which are not already imported are downloaded.</p>
+		<p>This means that potential revisions are missed. To force a reimport of a particular Red Hat CVRF file, delete the Red Hat CVRF file from the file system.</p>
+	</div>
+    <div id="import_error">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	</div>
+	<div>
+        <form enctype="multipart/form-data" action="/cvrf/redhat/import" method="post">
+            {% csrf_token %}
+			<p>---</p>
+			<p>Select to import:</p> 
+			<p><input type="submit" value="Import" /></p>
+			<p>---</p>
+        </form>
+    </div>
+	{% endif %}
+
+	
+{% endblock %}

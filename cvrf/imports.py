@@ -1,13 +1,22 @@
-import zipfile
+import urllib2
+import urllib
 import os
+import os.path
+import zipfile
 import shutil
 from eulexistdb import db
+from lxml import etree
+from lxml.html import fromstring, tostring
+
 
 root_src_dir = '/tmp/cvrf/'
-root_dst_dir = '/opt/projects/django-cyberxml/static/data/microsoft.com/MSRC-CVRF/'
+ms_data_dir = '/opt/projects/django-cyberxml/static/data/microsoft.com/MSRC-CVRF/'
+redhat_data_dir = '/opt/projects/django-cyberxml/static/data/redhat.com/security/data/cvrf/'
+oracle_data_dir = '/opt/projects/django-cyberxml/static/data/oracle.com/documents/webcontent/cvrf/'
+cisco_data_dir = '/opt/projects/django-cyberxml/static/data/cisco.com/security/center/cvrfListing.x/'
 
 #------------------------------------------------------------------------------
-# parse zip main def
+# Microsoft MSRC-CVRF
 #------------------------------------------------------------------------------
 # filen=open("/tmp/iavms.zip","rb")
 def parse_msrc_cvrf_zip(fn):
@@ -40,7 +49,7 @@ def parse_msrc_cvrf_zip(fn):
 			#move tmp files to permanent location
 			#TODO: use static definition
 			src = root+'/'+f
-			dst = root_dst_dir+f
+			dst = ms_data_dir+f
 			try:
 				if f[-4:].lower()=='.xml':
 					if os.path.exists(dst):
@@ -61,4 +70,162 @@ def parse_msrc_cvrf_zip(fn):
 
 
 	flist.reverse()
+	return flist
+
+#------------------------------------------------------------------------------
+# Redhat CVRF
+#------------------------------------------------------------------------------
+def import_redhat_cvrf():
+	flist=[]
+	exdb = db.ExistDB()	 
+	# -----------------------------------------------------------------------------
+	# get list of cvrf urls
+	# -----------------------------------------------------------------------------
+	# need User-Agent or Red Hat blocks request
+	nurl="http://www.redhat.com/security/data/cvrf/index.txt"
+	headers = { 'User-Agent' : 'Mozilla/5.0' }
+	req = urllib2.Request(nurl, None, headers)
+	index = urllib2.urlopen(req).readlines()
+	urls = ['http://www.redhat.com/security/data/cvrf/'+i.replace('\n','') for i in index]
+	
+	# -----------------------------------------------------------------------------
+	# download files if they don't exist
+	# TODO: check for revisions and download those as well (check hashes?)
+	# -----------------------------------------------------------------------------
+	for u in urls:
+		uname = u.split('/')[-1]
+		# if file does not exist, download
+		if (not os.path.isfile(redhat_data_dir+uname) and os.access(redhat_data_dir, os.W_OK)):
+			try:
+				headers = { 'User-Agent' : 'Mozilla/5.0' }
+				req = urllib2.Request(u, None, headers)
+				cvrfxml = urllib2.urlopen(req).read()
+				urllib.urlretrieve (u, redhat_data_dir+uname)
+				f = open(redhat_data_dir+uname,'w')
+				f.write(cvrfxml)
+				f.close()
+				try:
+					fo = open(redhat_data_dir+uname, 'rb')
+					if exdb.load(fo, "/db/cvrf/redhat.com/"+uname, True):
+						flist.append(uname+": data import successful")
+					else:
+						flist.append(uname+": data import failed")
+					fo.close()
+				except:
+					flist.append(uname+": file read failed")
+			except:
+				flist.append(uname+": file download failed")
+		else:
+			flist.append(uname+": file write failed")
+	
+	return flist
+
+#------------------------------------------------------------------------------
+# Oracle CVRF
+#------------------------------------------------------------------------------
+def import_oracle_cvrf():
+	flist=[]
+	exdb = db.ExistDB()	 
+	# -----------------------------------------------------------------------------
+	# get list of cvrf urls
+	# -----------------------------------------------------------------------------
+	nurl="http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/1932662.xml"
+	request = urllib2.Request(nurl)
+	rawPage = urllib2.urlopen(request)
+	read = rawPage.read()
+	#print read
+	root = etree.fromstring(read)	 
+	arefs=root.xpath("//link/text()")
+	
+	urls=[]
+	for a in arefs:
+		if "@otn" in a:
+			urls.append(a.replace('\t','').replace('\n',''))
+	
+	# -----------------------------------------------------------------------------
+	# download files if they don't exist
+	# -----------------------------------------------------------------------------
+	for u in urls:
+		uname = u.split('/')[-1]
+		# if file does not exist, download
+		if (not os.path.isfile(uname) and os.access(".", os.W_OK)):
+			print ("downloading "+uname)
+			urllib.urlretrieve (u, uname)
+		
+		for u in urls:
+			uname = u.split('/')[-1]			
+			# if file does not exist, download
+			if (not os.path.isfile(oracle_data_dir+uname) and os.access(redhat_data_dir, os.W_OK)):
+				try:
+					urllib.urlretrieve (u, oracle_data_dir+uname)
+					try:
+						fo = open(oracle_data_dir+uname, 'rb')
+						if exdb.load(fo, "/db/cvrf/oracle.com/"+uname, True):
+							flist.append(uname+": data import successful")
+						else:
+							flist.append(uname+": data import failed")
+						fo.close()
+					except:
+						flist.append(uname+": file read failed")
+				except:
+					flist.append(uname+": file download failed")
+			else:
+				flist.append(uname+": file write failed")
+	
+	return flist
+
+#------------------------------------------------------------------------------
+# Cisco CVRF
+#------------------------------------------------------------------------------
+def import_cisco_cvrf():
+	flist=[]
+	exdb = db.ExistDB()	 
+	
+	# -----------------------------------------------------------------------------
+	# get list of cvrf urls
+	# -----------------------------------------------------------------------------
+	nurl="http://tools.cisco.com/security/center/cvrfListing.x"
+	request = urllib2.Request(nurl)
+	rawPage = urllib2.urlopen(request)
+	read = rawPage.read()
+	#print read
+	tree = etree.HTML(read)	   
+	tpath="//a[contains(@href,'cvrf.xml')]"
+	findall = etree.ETXPath(tpath)
+	arefs=findall(tree)
+	
+	urls=[]
+	for a in arefs:
+		urls.append(a.get('href').replace('\t','').replace('\n',''))
+	
+	# just for tracking for now, need to get cisco to fix or apply a fix
+	# i might ignore if it wasn't for poodle
+	badfiles=["/cisco-sa-20040420-tcp-nonios_cvrf.xml",
+		"cisco-sa-20120328-msdp_cvrf.xml",
+		"cisco-sa-20141015-poodle_cvrf.xml",]
+	
+	# -----------------------------------------------------------------------------
+	# download files if they don't exist
+	# -----------------------------------------------------------------------------
+	for u in urls:
+		uname = u.split('/')[-1]
+		# if file does not exist, download
+		if (not os.path.isfile(cisco_data_dir+uname) and os.access(".", os.W_OK)):
+			try:
+				print ("downloading "+uname)
+				urllib.urlretrieve (u, cisco_data_dir+uname)
+				try:
+					fo = open(cisco_data_dir+uname, 'rb')
+					if exdb.load(fo, "/db/cvrf/cisco.com/"+uname, True):
+						flist.append(uname+": data import successful")
+					else:
+						flist.append(uname+": data import failed")
+					fo.close()
+				except:
+					flist.append(uname+": file read failed")
+			except:
+				flist.append(uname+": file download failed")
+		else:
+			flist.append(uname+": file write failed")
+	
 	return flist

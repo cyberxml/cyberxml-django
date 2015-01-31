@@ -20,5 +20,6 @@ for u in urls:
 		# unzip in place
 		zip = ZipFile(uname)
 		zip.extractall()
+		zip.close()
 		# remove zip file
 		os.remove(uname)
