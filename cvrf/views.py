@@ -8,6 +8,7 @@ from . import cvrf
 from . import imports
 
 from eulexistdb import db	
+from django.conf import settings
 
 #import logging
 #logger = logging.getLogger(__name__)
@@ -37,7 +38,7 @@ def getVendorDirectory(vendor):
 
 class connExistDB:	  
 	def __init__(self):
-		self.db = db.ExistDB(server_url="http://localhost:8080/exist")	  
+		self.db = db.ExistDB()	  
 	def get_data(self, query):
 		result = list()
 		qresult = self.db.executeQuery(query)
@@ -80,7 +81,7 @@ def vendor_index(request, vendor):
 	qrystr='''xquery version "3.0";
 		declare namespace cvrf = "http://www.icasi.org/CVRF/schema/cvrf/1.1";
 		let $vd := "'''+vendor+'''"
-		for $v in reverse(collection("/cyberxml/data/cvrf/'''+vroot+'''/")/cvrf:cvrfdoc )
+		for $v in reverse(collection("/db/cyberxml/data/cvrf/'''+vroot+'''/")/cvrf:cvrfdoc )
 		let $id := $v/cvrf:DocumentTracking/cvrf:Identification/cvrf:ID/text()
 		let $title := $v/cvrf:DocumentTitle/text()
 		let $irdate := substring($v/cvrf:DocumentTracking/cvrf:InitialReleaseDate/text(),1,10)
@@ -103,9 +104,9 @@ def cvrfxml(request,vendor,cvrfnum):
 		declare namespace cvrf = "http://www.icasi.org/CVRF/schema/cvrf/1.1";
 		let $cvrf := "'''+cvrfnum+'''"
 		let $vendor := "'''+vroot+'''"
-		let $thisdoc := concat("/cyberxml/data/cvrf/",$vendor,"/",$cvrf,".xml")
+		let $thisdoc := concat("/db/cyberxml/data/cvrf/",$vendor,"/",$cvrf,".xml")
 		let $input := doc($thisdoc)
-		let $xsl := doc("/cyberxml/styles/xsl/cvrf.xsl")
+		let $xsl := doc("/db/cyberxml/styles/xsl/cvrf.xsl")
 		return
 			transform:transform($input, $xsl, ())
 		'''

@@ -17,10 +17,10 @@ redhat_data_dir = static_root+'/data/redhat.com/security/data/cvrf/'
 oracle_data_dir = static_root+'/data/oracle.com/documents/webcontent/cvrf/'
 cisco_data_dir = static_root+'/data/cisco.com/security/center/cvrfListing.x/'
 
-db_cvrf_cisco_collection = '/cyberxml/data/cvrf/cisco.com'
-db_cvrf_microsoft_collection = '/cyberxml/data/cvrf/microsoft.com'
-db_cvrf_oracle_collection = '/cyberxml/data/cvrf/oracle.com'
-db_cvrf_redhat_collection = '/cyberxml/data/cvrf/redhat.com'
+db_cvrf_cisco_collection = '/db/cyberxml/data/cvrf/cisco.com'
+db_cvrf_microsoft_collection = '/db/cyberxml/data/cvrf/microsoft.com'
+db_cvrf_oracle_collection = '/db/cyberxml/data/cvrf/oracle.com'
+db_cvrf_redhat_collection = '/db/cyberxml/data/cvrf/redhat.com'
 
 def validateCollection(xdb, path):
     p = path.split('/')
@@ -77,7 +77,7 @@ def parse_msrc_cvrf_zip(fn):
 					#logger.debug(': '.join(['move_iavm',src, dst]))
 					#parse_xml(root+'/'+f) this is where I database boogie!
 					fo = open(dst, 'rb')
-					if exdb.load(fo, db_cvrf_microsoft_collection+f, True):
+					if exdb.load(fo, db_cvrf_microsoft_collection+'/'+f, True):
 						flist.append(f+": data import successful")
 					else:
 						flist.append(f+": data import failed")
@@ -127,7 +127,7 @@ def import_redhat_cvrf():
 				f.close()
 				try:
 					fo = open(redhat_data_dir+uname, 'rb')
-					if exdb.load(fo, db_cvrf_redhat_collection+uname, True):
+					if exdb.load(fo, db_cvrf_redhat_collection+'/'+uname, True):
 						flist.append(uname+": data import successful")
 					else:
 						flist.append(uname+": data import failed")
@@ -176,7 +176,7 @@ def import_oracle_cvrf():
 				urllib.urlretrieve (u, oracle_data_dir+uname)
 				try:
 					fo = open(oracle_data_dir+uname)
-					if exdb.load(fo, db_cvrf_oracle_collection+uname, True):
+					if exdb.load(fo, db_cvrf_oracle_collection+'/'+uname, True):
 						flist.append(uname+": data import successful")
 					else:
 						flist.append(uname+": data import failed")
@@ -234,7 +234,7 @@ def import_cisco_cvrf():
 				urllib.urlretrieve (u, cisco_data_dir+uname)
 				try:
 					fo = open(cisco_data_dir+uname, 'rb')
-					if exdb.load(fo, db_cvrf_cisco_collection+uname, True):
+					if exdb.load(fo, db_cvrf_cisco_collection+'/'+uname, True):
 						flist.append(uname+": data import successful")
 					else:
 						flist.append(uname+": data import failed")
