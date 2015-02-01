@@ -80,7 +80,7 @@ def vendor_index(request, vendor):
 	qrystr='''xquery version "3.0";
 		declare namespace cvrf = "http://www.icasi.org/CVRF/schema/cvrf/1.1";
 		let $vd := "'''+vendor+'''"
-		for $v in reverse(collection("/db/cvrf/'''+vroot+'''/")/cvrf:cvrfdoc )
+		for $v in reverse(collection("/cyberxml/data/cvrf/'''+vroot+'''/")/cvrf:cvrfdoc )
 		let $id := $v/cvrf:DocumentTracking/cvrf:Identification/cvrf:ID/text()
 		let $title := $v/cvrf:DocumentTitle/text()
 		let $irdate := substring($v/cvrf:DocumentTracking/cvrf:InitialReleaseDate/text(),1,10)
@@ -103,9 +103,9 @@ def cvrfxml(request,vendor,cvrfnum):
 		declare namespace cvrf = "http://www.icasi.org/CVRF/schema/cvrf/1.1";
 		let $cvrf := "'''+cvrfnum+'''"
 		let $vendor := "'''+vroot+'''"
-		let $thisdoc := concat("/db/cvrf/",$vendor,"/",$cvrf,".xml")
+		let $thisdoc := concat("/cyberxml/data/cvrf/",$vendor,"/",$cvrf,".xml")
 		let $input := doc($thisdoc)
-		let $xsl := doc("/db/cyberxml/styles/xsl/cvrf.xsl")
+		let $xsl := doc("/cyberxml/styles/xsl/cvrf.xsl")
 		return
 			transform:transform($input, $xsl, ())
 		'''

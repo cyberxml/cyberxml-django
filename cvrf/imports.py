@@ -7,13 +7,31 @@ import shutil
 from eulexistdb import db
 from lxml import etree
 from lxml.html import fromstring, tostring
+from django.conf import settings
 
 
+static_root = settings.STATIC_ROOT
 root_src_dir = '/tmp/cvrf/'
-ms_data_dir = '/opt/projects/django-cyberxml/static/data/microsoft.com/MSRC-CVRF/'
-redhat_data_dir = '/opt/projects/django-cyberxml/static/data/redhat.com/security/data/cvrf/'
-oracle_data_dir = '/opt/projects/django-cyberxml/static/data/oracle.com/documents/webcontent/cvrf/'
-cisco_data_dir = '/opt/projects/django-cyberxml/static/data/cisco.com/security/center/cvrfListing.x/'
+ms_data_dir = static_root+'/data/microsoft.com/MSRC-CVRF/'
+redhat_data_dir = static_root+'/data/redhat.com/security/data/cvrf/'
+oracle_data_dir = static_root+'/data/oracle.com/documents/webcontent/cvrf/'
+cisco_data_dir = static_root+'/data/cisco.com/security/center/cvrfListing.x/'
+
+db_cvrf_cisco_collection = '/cyberxml/data/cvrf/cisco.com'
+db_cvrf_microsoft_collection = '/cyberxml/data/cvrf/microsoft.com'
+db_cvrf_oracle_collection = '/cyberxml/data/cvrf/oracle.com'
+db_cvrf_redhat_collection = '/cyberxml/data/cvrf/redhat.com'
+
+def validateCollection(xdb, path):
+    p = path.split('/')
+    flag =0
+    for i in range(len(p)):
+        if not xdb.hasCollection('/'.join(p[0:i+1])):
+            try:
+                xdb.createCollection('/'.join(p[0:i+1]))
+            except:
+                flag=-1
+    return flag
 
 #------------------------------------------------------------------------------
 # Microsoft MSRC-CVRF
@@ -22,7 +40,8 @@ cisco_data_dir = '/opt/projects/django-cyberxml/static/data/cisco.com/security/c
 def parse_msrc_cvrf_zip(fn):
 	flist=[]
 	filen=open(fn,"rb")
-	exdb = db.ExistDB()	  
+	exdb = db.ExistDB()
+	validateCollection(exdb,db_cvrf_microsoft_collection)
 	#logger.debug(': '.join(['parse_zip',filen.name]))
 
 	#create zipfile object from passed in zip file object
@@ -58,7 +77,7 @@ def parse_msrc_cvrf_zip(fn):
 					#logger.debug(': '.join(['move_iavm',src, dst]))
 					#parse_xml(root+'/'+f) this is where I database boogie!
 					fo = open(dst, 'rb')
-					if exdb.load(fo, "/db/cvrf/microsoft.com/"+f, True):
+					if exdb.load(fo, db_cvrf_microsoft_collection+f, True):
 						flist.append(f+": data import successful")
 					else:
 						flist.append(f+": data import failed")
@@ -78,6 +97,7 @@ def parse_msrc_cvrf_zip(fn):
 def import_redhat_cvrf():
 	flist=[]
 	exdb = db.ExistDB()	 
+	validateCollection(exdb,db_cvrf_redhat_collection)
 	# -----------------------------------------------------------------------------
 	# get list of cvrf urls
 	# -----------------------------------------------------------------------------
@@ -95,7 +115,8 @@ def import_redhat_cvrf():
 	for u in urls:
 		uname = u.split('/')[-1]
 		# if file does not exist, download
-		if (not os.path.isfile(redhat_data_dir+uname) and os.access(redhat_data_dir, os.W_OK)):
+		#if (not os.path.isfile(redhat_data_dir+uname) and os.access(redhat_data_dir, os.W_OK)):
+		if (os.access(redhat_data_dir, os.W_OK)):
 			try:
 				headers = { 'User-Agent' : 'Mozilla/5.0' }
 				req = urllib2.Request(u, None, headers)
@@ -106,7 +127,7 @@ def import_redhat_cvrf():
 				f.close()
 				try:
 					fo = open(redhat_data_dir+uname, 'rb')
-					if exdb.load(fo, "/db/cvrf/redhat.com/"+uname, True):
+					if exdb.load(fo, db_cvrf_redhat_collection+uname, True):
 						flist.append(uname+": data import successful")
 					else:
 						flist.append(uname+": data import failed")
@@ -125,7 +146,8 @@ def import_redhat_cvrf():
 #------------------------------------------------------------------------------
 def import_oracle_cvrf():
 	flist=[]
-	exdb = db.ExistDB()	 
+	exdb = db.ExistDB()
+	validateCollection(exdb,db_cvrf_oracle_collection)
 	# -----------------------------------------------------------------------------
 	# get list of cvrf urls
 	# -----------------------------------------------------------------------------
@@ -140,38 +162,32 @@ def import_oracle_cvrf():
 	urls=[]
 	for a in arefs:
 		if "@otn" in a:
-			urls.append(a.replace('\t','').replace('\n',''))
-	
+			urls.append(a.replace('\t','').replace('\n','').replace(' ',''))
+    
 	# -----------------------------------------------------------------------------
 	# download files if they don't exist
 	# -----------------------------------------------------------------------------
 	for u in urls:
-		uname = u.split('/')[-1]
+		uname = u.split('/')[-1]			
 		# if file does not exist, download
-		if (not os.path.isfile(uname) and os.access(".", os.W_OK)):
-			print ("downloading "+uname)
-			urllib.urlretrieve (u, uname)
-		
-		for u in urls:
-			uname = u.split('/')[-1]			
-			# if file does not exist, download
-			if (not os.path.isfile(oracle_data_dir+uname) and os.access(redhat_data_dir, os.W_OK)):
+		#if (not os.path.isfile(oracle_data_dir+uname) and os.access(oracle_data_dir, os.W_OK)):
+		if (os.access(oracle_data_dir, os.W_OK)):
+			try:
+				urllib.urlretrieve (u, oracle_data_dir+uname)
 				try:
-					urllib.urlretrieve (u, oracle_data_dir+uname)
-					try:
-						fo = open(oracle_data_dir+uname, 'rb')
-						if exdb.load(fo, "/db/cvrf/oracle.com/"+uname, True):
-							flist.append(uname+": data import successful")
-						else:
-							flist.append(uname+": data import failed")
-						fo.close()
-					except:
-						flist.append(uname+": file read failed")
+					fo = open(oracle_data_dir+uname)
+					if exdb.load(fo, db_cvrf_oracle_collection+uname, True):
+						flist.append(uname+": data import successful")
+					else:
+						flist.append(uname+": data import failed")
+					fo.close()
 				except:
-					flist.append(uname+": file download failed")
-			else:
-				flist.append(uname+": file write failed")
-	
+					flist.append(uname+": file read failed : "+oracle_data_dir+uname)
+			except:
+				flist.append(uname+": file download failed : " +u)
+		else:
+			flist.append(uname+": file write failed : "+oracle_data_dir+uname)
+    
 	return flist
 
 #------------------------------------------------------------------------------
@@ -180,6 +196,7 @@ def import_oracle_cvrf():
 def import_cisco_cvrf():
 	flist=[]
 	exdb = db.ExistDB()	 
+	validateCollection(exdb,db_cvrf_cisco_collection)
 	
 	# -----------------------------------------------------------------------------
 	# get list of cvrf urls
@@ -210,13 +227,14 @@ def import_cisco_cvrf():
 	for u in urls:
 		uname = u.split('/')[-1]
 		# if file does not exist, download
-		if (not os.path.isfile(cisco_data_dir+uname) and os.access(".", os.W_OK)):
+		#if (not os.path.isfile(cisco_data_dir+uname) and os.access(".", os.W_OK)):
+		if (os.access(".", os.W_OK)):
 			try:
 				print ("downloading "+uname)
 				urllib.urlretrieve (u, cisco_data_dir+uname)
 				try:
 					fo = open(cisco_data_dir+uname, 'rb')
-					if exdb.load(fo, "/db/cvrf/cisco.com/"+uname, True):
+					if exdb.load(fo, db_cvrf_cisco_collection+uname, True):
 						flist.append(uname+": data import successful")
 					else:
 						flist.append(uname+": data import failed")
