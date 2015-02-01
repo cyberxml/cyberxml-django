@@ -91,7 +91,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 #STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 STATICFILES_DIRS = (
-	'/home/action/workspace/cyberxml/static',
+	os.path.join(BASE_DIR, "static/"),
 )
 
 # include the eulexistdb settings 
