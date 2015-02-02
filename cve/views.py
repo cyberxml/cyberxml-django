@@ -12,7 +12,7 @@ from eulexistdb import db
 
 class connExistDB:    
     def __init__(self):
-        self.db = db.ExistDB(server_url="http://localhost:8080/exist")    
+        self.db = db.ExistDB()    
     def get_data(self, query):
         result = list()
         qresult = self.db.executeQuery(query)
@@ -27,7 +27,7 @@ def cve_index(request, cveyear):
 		declare namespace vuln = "http://scap.nist.gov/schema/vulnerability/0.4";
 		declare namespace nvd = "http://scap.nist.gov/schema/feed/vulnerability/2.0";
 		let $year := '''+cveyear+'''
-		let $thisdoc := concat("/db/cve/nvdcve-2.0-",$year,".xml")
+		let $thisdoc := concat("/db/cyberxml/data/cve/nist.gov/nvdcve-2.0-",$year,".xml")
 		for $v in doc($thisdoc)/nvd:nvd/nvd:entry
 		let $last := substring($v/vuln:last-modified-datetime/text(),1,10)
 		let $first := substring($v/vuln:published-datetime/text(),1,10)
@@ -52,7 +52,7 @@ def cvexml(request, cvenum):
 		declare namespace patch="http://scap.nist.gov/schema/patch/0.1" ;
 		declare namespace scap-core="http://scap.nist.gov/schema/scap-core/0.1";
 		let $year := "'''+cveyear+'''"
-		let $thisdoc := concat("/db/cve/nvdcve-2.0-",$year,".xml")
+		let $thisdoc := concat("/db/cyberxml/data/cve/nist.gov/nvdcve-2.0-",$year,".xml")
 		let $input := doc($thisdoc)/nvd:nvd/nvd:entry[@id="'''+cvenum+'''"]
 		let $xsl := doc("/db/cyberxml/styles/xsl/cve.xsl")
 		return
@@ -80,3 +80,13 @@ def rawxml(request,cvenum):
 	except:
 		raise Http404
 
+#@login_required
+def import_nist_cve(request):
+	if request.method == 'POST':
+		try:
+			files=imports.import_redhat_cvrf()
+			return render(request, 'cve_nist_import.html', {'files':files,})			
+		except:
+			return render(request, 'cve_nist_import.html', {'error_message': "request failed",})
+	else:
+			return render(request, 'cve_nist_import.html')

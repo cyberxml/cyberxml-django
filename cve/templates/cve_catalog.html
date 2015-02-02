@@ -3,16 +3,37 @@
 <div><a href="/vuln/">vuln</a> >> <a href="/cve/">cve</a> >> <a href="/cve/nist">nist</a> >> <a href="/cve/nist/catalog/">catalog</a> >> <a href="/cve/nist/catalog/{{year}}">year</a></div>
 {% endblock %}
 {% block content %}
-
-	<h3>CyberXML catalogs the following CVE from NIST NVD for {{year}}:</h3>
-	<table>
-		<thead><tr><th>id</th><th>title</th><th>initial release</th><th>current release</th></tr></thead>
-		<tbody>
-			{% autoescape off %}
-			{% for i in idx %}
-				{{i}}
-			{% endfor %}
-			{% endautoescape %}
-		</tbody>
-	</table>
+	<div class="applet" title="cve">
+	{% if idx %}
+		<h3>CyberXML catalogs the following CVE from NIST NVD for {{year}}:</h3>
+		<table>
+			<thead><tr><th>id</th><th>title</th><th>initial release</th><th>current release</th></tr></thead>
+			<tbody>
+				{% autoescape off %}
+				{% for i in idx %}
+					{{i}}
+				{% endfor %}
+				{% endautoescape %}
+			</tbody>
+		</table>
+	{% else %}
+		<h3>CyberXML catalogs the following CVE from NIST NVD for the following years:</h3>
+		<ul>
+		<li><a href="/cve/nist/catalog/2015">2015</a></li>
+		<li><a href="/cve/nist/catalog/2014">2013</a></li>
+		<li><a href="/cve/nist/catalog/2012">2013</a></li>
+		<li><a href="/cve/nist/catalog/2013">2012</a></li>
+		<li><a href="/cve/nist/catalog/2011">2011</a></li>
+		<li><a href="/cve/nist/catalog/2010">2010</a></li>
+		<li><a href="/cve/nist/catalog/2009">2009</a></li>
+		<li><a href="/cve/nist/catalog/2008">2008</a></li>
+		<li><a href="/cve/nist/catalog/2007">2007</a></li>
+		<li><a href="/cve/nist/catalog/2006">2006</a></li>
+		<li><a href="/cve/nist/catalog/2005">2005</a></li>
+		<li><a href="/cve/nist/catalog/2004">2004</a></li>
+		<li><a href="/cve/nist/catalog/2003">2003</a></li>
+		<li><a href="/cve/nist/catalog/2002">2002 and earlier</a></li>
+		</ul>	
+	{% endif %}
+	</div>
 {% endblock %}

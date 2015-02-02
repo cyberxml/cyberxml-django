@@ -53,7 +53,7 @@ def rawxml(request,vendor,cvrfnum):
 	vroot,vdir = getVendorDirectory(vendor)
 	if vdir == None: raise Http404
 	try:
-		rootObj = cvrf.parse("static/data/"+vdir+cvrfnum+".xml",0)
+		rootObj = cvrf.parse("media/data/"+vdir+cvrfnum+".xml",0)
 		xmlstr=StringIO()
 		rootObj.export(xmlstr, 0)
 		return HttpResponse(xmlstr.getvalue(), content_type="application/xml")
@@ -67,7 +67,7 @@ def prettyxml(request,vendor,cvrfnum):
 	vroot,vdir = getVendorDirectory(vendor)
 	if vdir == None: raise Http404
 	try:
-		rootObj = cvrf.parse("static/data/"+vdir+cvrfnum+".xml",0)
+		rootObj = cvrf.parse("media/data/"+vdir+cvrfnum+".xml",0)
 		xmlstr=StringIO()
 		rootObj.export(xmlstr, 0)
 		return render(request, 'cvrf_pretty.html', {'test':rootObj})

@@ -1,0 +1,42 @@
+{% extends "vuln_base.html" %}
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/iavm/">iavm</a> >> <a href="/iavm/disa">disa</a> >> <a href="/iavm/disa/catalog/">catalog</a> >> <a href="/iavm/disa/catalog/{{year}}">{{year}}</a></div>
+{% endblock %}
+{% block content %}
+	<div class="applet" title="iavm">
+	{% if idx %}
+		<h3>CyberXML catalogs the following IAVM from DISA IASE for {{year}}:</h3>
+		<table>
+			<thead><tr><th>id</th><th>title</th><th>initial release</th><th>current release</th></tr></thead>
+			<tbody>
+				{% autoescape off %}
+				{% for i in idx %}
+					{{i}}
+				{% endfor %}
+				{% endautoescape %}
+			</tbody>
+		</table>
+	{% else %}
+		<h3>CyberXML catalogs the following IAVM from DISA IASE for the following years:</h3>
+		<ul>
+		<li><a href="/iavm/disa/catalog/2015">2015</a></li>
+		<li><a href="/iavm/disa/catalog/2014">2013</a></li>
+		<li><a href="/iavm/disa/catalog/2012">2013</a></li>
+		<li><a href="/iavm/disa/catalog/2013">2012</a></li>
+		<li><a href="/iavm/disa/catalog/2011">2011</a></li>
+		<li><a href="/iavm/disa/catalog/2010">2010</a></li>
+		<li><a href="/iavm/disa/catalog/2009">2009</a></li>
+		<li><a href="/iavm/disa/catalog/2008">2008</a></li>
+		<li><a href="/iavm/disa/catalog/2007">2007</a></li>
+		<li><a href="/iavm/disa/catalog/2006">2006</a></li>
+		<li><a href="/iavm/disa/catalog/2005">2005</a></li>
+		<li><a href="/iavm/disa/catalog/2004">2004</a></li>
+		<li><a href="/iavm/disa/catalog/2003">2003</a></li>
+		<li><a href="/iavm/disa/catalog/2002">2002</a></li>
+		<li><a href="/iavm/disa/catalog/2001">2001</a></li>
+		<li><a href="/iavm/disa/catalog/2000">2000</a></li>
+		<li><a href="/iavm/disa/catalog/1999">1999</a></li>
+		</ul>	
+	{% endif %}
+	</div>
+{% endblock %}

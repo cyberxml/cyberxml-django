@@ -15,12 +15,12 @@ border:1px solid #0000FF;
 {% endblock %}
 
 {% block navpath %}
-<div><a href="/vuln/">vuln</a> >> <a href="/iavm/">iavm</a> >>  <a href="/iavm/apply">apply</a></div>
+<div><a href="/vuln/">vuln</a> >> <a href="/iavm/">iavm</a> >> <a href="/iavm/disa">disa</a> >>  <a href="/iavm/disa/apply">apply</a></div>
 {% endblock %}
 
 {% block content %}
 <h3>Enter IAVM</h3>
-<form action="/iavm/apply/">
+<form action="/iavm/disa/apply/">
 IAVM: <input type="text" name="iavm" value="{{ iavm }}">
 <input type="submit" value="Submit">
 </form>

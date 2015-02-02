@@ -1,0 +1,9 @@
+{% extends "vuln_base.html" %}
+
+{% block content %}
+<div class="applet"><h3>Vulnerability Catalogs</h3>
+{% include "block_content_cvrf_catalog.html" %}
+{% include "block_content_cve_catalog.html" %}
+{% include "block_content_iavm_catalog.html" %}
+</div>
+{% endblock %}

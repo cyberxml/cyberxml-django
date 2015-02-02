@@ -1,0 +1,39 @@
+{% extends "vuln_base.html" %}
+
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/iavm/">iavm</a> >> <a href="/iavm/disa">disa</a> >> <a href="/iavm/disa/import/">import</a></div>
+{% endblock %}
+{% block content %}
+	{% if files %}
+	<div>
+		<p>The following DISA IAVM were uploaded:</p>
+		<ul>
+		{% for f in files %}
+		<li>{{f}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	{% else %}
+    <div id="disa_iavm_download">
+		<p>To import the DISA IAVM zip file, first download it from the following URL. DoD certificates are required to access this site. The IAVM files themselves are Unclassified/FOUO. To create the DISA IAVM zip file, once you have authenticated to the site, select 'Notices' >> 'Search Notices' from the top of the page. On the search page, select a date range and any other filter options in which you are interested, then select "Download All in XML ZIP" button.</p>
+		<p><a target="disa-iavm" href="https://iavm.csd.disa.mil/">https://iavm.csd.disa.mil/</a></p>
+	</div>
+    <div id="import_error">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	</div>
+	<div id="disa_iavm_upload">
+        <form enctype="multipart/form-data" action="/iavm/disa/import" method="post">
+            {% csrf_token %}
+			<p>---</p>
+			<p>Select the zip file:</p>
+            <p><input type="file" name="disaiavm" id="disaiavm" value="" /></p>
+			<p>---</p>
+			<p>---</p>
+			<p>Select to upload and import:</p> 
+			<p><input type="submit" value="Upload" /></p>
+			<p>---</p>
+        </form>
+    </div>
+	{% endif %}
+	
+{% endblock %}
