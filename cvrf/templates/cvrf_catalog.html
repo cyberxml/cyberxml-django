@@ -1,18 +1,20 @@
 {% extends "vuln_base.html" %}
-{% block navpath %}
-<div><a href="/vuln/">vuln</a> >> <a href="/cvrf/">cvrf</a> >> <a href="/cvrf/{{vendor}}/">{{vendor}}</a> >> <a href="/cvrf/{{vendor}}/catalog/">catalog</a></div>
-{% endblock %}
-{% block content %}
 
-	<h3>CyberXML catalogs the following CVRF for {{vendor}}:</h3>
+{% block content %}
+<div class="app" title="catalog">
+{% if idx %}
 	<table>
-		<thead><tr><th>id</th><th>title</th><th>initial release</th><th>current release</th></tr></thead>
-		<tbody>
-			{% autoescape off %}
-			{% for i in idx %}
-				{{i}}
-			{% endfor %}
-			{% endautoescape %}
-		</tbody>
+	<thead><tr><th>INDEX</th><th>TITLE</th><th>INITIAL</th><th>MODIFIED</th></tr></thead>
+	<tbody>
+	{% autoescape off %}
+	{% for i in idx %}
+	{{i}}
+	{% endfor %}
+	{% endautoescape %}
+	</tbody>
 	</table>
+{% else %}
+	{% include "block_content_cvrf_catalog.html" %}
+{% endif %}
+</div>
 {% endblock %}

@@ -8,7 +8,7 @@ from eulexistdb import db
 
 class connExistDB:	  
 	def __init__(self):
-		self.db = db.ExistDB(server_url="http://localhost:8080/exist")	  
+		self.db = db.ExistDB()	  
 	def get_data(self, query):
 		result = list()
 		qresult = self.db.executeQuery(query)
@@ -33,9 +33,9 @@ def get_iavm_apply(request):
 			declare namespace vuln = "http://www.icasi.org/CVRF/schema/vuln/1.1";
 			declare namespace pt = "http://www.icasi.org/CVRF/schema/prod/1.1";
 			let $iavnum := "'''+iavm+'''"
-			let $iavdoc := concat("/db/iavm/",$iavnum,".xml")
+			let $iavdoc := concat("/db/cyberxml/data/iavm/disa.mil/",$iavnum,".xml")
 			for $iavcve in doc($iavdoc)/iavmNotice:iavmNotice/iavmNotice:techOverview/iavmNotice:entry/iavmNotice:title/text()
-			for $iavcvrf in collection("/db/cvrf")//cvrf:cvrfdoc/vuln:Vulnerability[vuln:CVE=$iavcve]
+			for $iavcvrf in collection("/db/cyberxml/data/cvrf")//cvrf:cvrfdoc/vuln:Vulnerability[vuln:CVE=$iavcve]
 			let $cvrfdoc := base-uri($iavcvrf)
 			let $fn := tokenize($cvrfdoc,'/')[last()]
 			for $prod in $iavcvrf/vuln:ProductStatuses/vuln:Status[not(contains(@Type, 'Not Affected'))]/vuln:ProductID/text()
@@ -48,4 +48,49 @@ def get_iavm_apply(request):
 	except MultiValueDictKeyError:
 		pass
 	return render(request,'iavm_apply.html',{'xqr':xqr, 'iavm':iavm})
+
+#@login_required
+def iavm_index(request, iavyear):
+	if iavyear == None: return render(request, 'iavm_catalog.html')	
+	qrystr='''xquery version "3.0";
+		declare namespace iav = "http://iavm.csd.disa.mil/schemas/IavmNoticeSchema/1.2";
+		let $year := "'''+iavyear+'''"
+		let $thiscollection := "/db/cyberxml/data/iavm/disa.mil"
+		for $v in collection($thiscollection)/iav:iavmNotice/iav:iavmNoticeNumber[starts-with(text(),$year)]
+		let $iavstr := base-uri($v)
+		let $iavdoc := doc($iavstr)
+		let $id := $v/text()
+		let $last := substring($iavdoc/iav:iavmNotice/iav:lastSaved/text(),1,10)
+		let $first := substring($iavdoc/iav:iavmNotice/iav:releaseDate/text(),1,10)
+		let $name := $iavdoc/iav:iavmNotice/iav:title/text()
+		return <tr><td><a href="/iavm/disa/xml/{$id}">{$id}</a></td><td>{$name}</td><td>{$first}</td><td>{$last}</td></tr>
+		'''
+
+	a = connExistDB()
+	idx =a.get_data(qrystr)
+	
+	return render(request, 'iavm_catalog.html', {'idx':idx, 'year':iavyear, 'qstr':qrystr})
+
+
+#@login_required
+def import_disa_iavm_request(request):
+	try:
+		i = request.FILES['disaiavm']
+		if (i == ""):
+			# Redisplay the iavm upload form, with error message
+			return render(request, 'iavm_disa_import.html', {'error_message': "file not found.",})
+		else:
+			fn = "/tmp/disa_iavm.zip"
+			#logger.info('saving uploaded file as '+fn)
+			with open(fn, 'wb+') as destination:
+				for chunk in i.chunks():
+					destination.write(chunk)
+			destination.close()
+			#logger.info('starting DISA IAVM parse_disa_iavm_zip function')
+			files=imports.parse_disa_iavm_zip(fn)
+			#logger.info('finished DISA IAVM parse_disa_iavm_zip function')
+			return render(request, 'iavm_disa_import.html', {'files':files,})
+			
+	except:
+		return render(request, 'iavm_disa_import.html', {'error_message': "no file provided.",})
 

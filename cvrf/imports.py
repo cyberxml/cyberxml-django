@@ -10,12 +10,12 @@ from lxml.html import fromstring, tostring
 from django.conf import settings
 
 
-static_root = settings.STATIC_ROOT
+media_root = settings.MEDIA_ROOT
 root_src_dir = '/tmp/cvrf/'
-ms_data_dir = static_root+'/data/microsoft.com/MSRC-CVRF/'
-redhat_data_dir = static_root+'/data/redhat.com/security/data/cvrf/'
-oracle_data_dir = static_root+'/data/oracle.com/documents/webcontent/cvrf/'
-cisco_data_dir = static_root+'/data/cisco.com/security/center/cvrfListing.x/'
+ms_data_dir = media_root+'/data/microsoft.com/MSRC-CVRF/'
+redhat_data_dir = media_root+'/data/redhat.com/security/data/cvrf/'
+oracle_data_dir = media_root+'/data/oracle.com/documents/webcontent/cvrf/'
+cisco_data_dir = media_root+'/data/cisco.com/security/center/cvrfListing.x/'
 
 db_cvrf_cisco_collection = '/db/cyberxml/data/cvrf/cisco.com'
 db_cvrf_microsoft_collection = '/db/cyberxml/data/cvrf/microsoft.com'
@@ -36,7 +36,7 @@ def validateCollection(xdb, path):
 #------------------------------------------------------------------------------
 # Microsoft MSRC-CVRF
 #------------------------------------------------------------------------------
-# filen=open("/tmp/iavms.zip","rb")
+# filen=open("/tmp/msrc_cvrf.zip","rb")
 def parse_msrc_cvrf_zip(fn):
 	flist=[]
 	filen=open(fn,"rb")
