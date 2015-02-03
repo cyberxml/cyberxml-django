@@ -121,7 +121,7 @@ def import_redhat_cvrf():
 				headers = { 'User-Agent' : 'Mozilla/5.0' }
 				req = urllib2.Request(u, None, headers)
 				cvrfxml = urllib2.urlopen(req).read()
-				urllib.urlretrieve (u, redhat_data_dir+uname)
+				#urllib.urlretrieve (u, redhat_data_dir+uname)
 				f = open(redhat_data_dir+uname,'w')
 				f.write(cvrfxml)
 				f.close()

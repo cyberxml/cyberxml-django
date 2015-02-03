@@ -1,0 +1,31 @@
+{% extends "asset_base.html" %}
+
+{% block content %}
+<div>
+{% if reqstr %}
+    <p>The requested search string was:</p>
+    <p>{{reqstr}}</p>
+    <p>Include deprecated? {{deprecated}}</p>
+{% elif error_message %}
+    {{ error_message }}
+{% else %}
+        <form enctype="multipart/form-data" action="/cpe/nist/search" method="post">
+            {% csrf_token %}
+            Include Deprecated<input type="checkbox" name="deprecated" value="deprecated"><br/>
+            Version<select name="version">
+				<option value="cpe">2.2</option>
+				<option value="cpe:2.3">2.3</option>
+				</select></br>
+            Part<select name="part">
+                <option value="a">Application</option>
+                <option value="h">Hardware</option>
+                <option value="o">Operating System</option>
+                </select></br>
+            Vendor: <input type="text" name="vendor"><br>
+            Product: <input type="text" name="product"><br>
+            <p>Select to upload and import:</p> 
+            <p><input type="submit" name="search" value="search" /></p>
+        </form>
+{% endif %}
+</div>
+{% endblock %}
