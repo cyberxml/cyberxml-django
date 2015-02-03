@@ -1,0 +1,17 @@
+{% extends "vuln_base.html" %}
+
+{% block content %}
+<div>
+<p>The Common Vulnerabilities and Exposures (CVE) system provides a reference-method for publicly known information-security vulnerabilities and exposures. MITRE Corporation maintains the system, with funding from the National Cyber Security Division of the United States Department of Homeland Security.[1] CVE is used by the Security Content Automation Protocol, and CVE IDs are listed on MITRE's system[2] as well as the US National Vulnerability Database.</p>
+<p>MITRE Corporation's documentation defines CVE Identifiers (also called "CVE names", "CVE numbers", "CVE-IDs", and "CVEs") as unique, common identifiers for publicly known information-security vulnerabilities in publicly released software packages. Historically, CVE identifiers had a status of "candidate" ("CAN-") and could then be promoted to entries ("CVE-"), however this practice was ended some time ago and all identifiers are now assigned as CVEs (the collective noun for which is an "infestation" of CVEs[citation needed]). The assignment of a CVE number is not a guarantee that it will become an official CVE entry (e.g. a CVE may be improperly assigned to an issue which is not a security vulnerability, or which duplicates an existing entry). CVEs are assigned by a CVE Numbering Authority (CNA); there are three primary types of CVE number assignments:
+<ul>
+    <li>The MITRE Corporation functions as Editor and Primary CNA</li>
+    <li>Various CNAs assign CVE entries for their own products (e.g. Microsoft, Oracle, HP, Red Hat, etc.)</li>
+    <li>Red Hat also provides CVE numbers for open source projects that are not a CNA</li>
+</ul>
+<p>When investigating a vulnerability or potential vulnerability it helps to acquire a CVE number early on. CVE numbers may not appear in the MITRE or NVD CVE databases for some time (days, weeks, months or potentially years) due to issues that are embargoed (the CVE number has been assigned but the issue has not been made public), or in cases where the entry is not researched and written up by MITRE due to resource issues. The benefit of early CVE candidacy is that all future correspondence can refer to the CVE number. Information on getting CVE identifiers for issues with open source projects is available from Red Hat.</p>
+
+<p>CVEs are for software that has been publicly released; this can include betas and other pre-release versions if they are widely used. Commercial software is included in the "publicly released" category, however custom-built software that is not distributed would generally not be given a CVE. Additionally services (e.g. a Web-based email provider) are not assigned CVEs for vulnerabilities found in the service (e.g. an XSS vulnerability) unless the issue exists in an underlying software product that is publicly distributed</p>
+<p>-- <a href="http://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures">Wikipedia</a></p>
+</div>
+{% endblock %}

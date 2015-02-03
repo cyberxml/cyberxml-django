@@ -1,3 +1,4 @@
 static/data
+media
 db.sqlite3
 *pyc

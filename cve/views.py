@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.http import Http404
-# from lxml import etree
+#from django.http import HttpResponse
+#from django.http import Http404
+#from lxml import etree
+import imports
 
 from eulexistdb import db   
 
@@ -10,16 +11,16 @@ from eulexistdb import db
 #tree2014 = etree.parse(cvestub+"2014"+".xml")
 #tree2015 = etree.parse(cvestub+"2015"+".xml")
 
-class connExistDB:    
-    def __init__(self):
-        self.db = db.ExistDB()    
-    def get_data(self, query):
-        result = list()
-        qresult = self.db.executeQuery(query)
-        hits = self.db.getHits(qresult)
-        for i in range(hits):
-            result.append(str(self.db.retrieve(qresult, i)))
-        return result
+class connExistDB:	
+	def __init__(self):
+		self.db = db.ExistDB()	
+	def get_data(self, query):
+		result = list()
+		qresult = self.db.executeQuery(query)
+		hits = self.db.getHits(qresult)
+		for i in range(hits):
+			result.append(str(self.db.retrieve(qresult, i)))
+		return result
 
 def cve_index(request, cveyear):
 	if cveyear == None: return render(request, 'cvrf_index.html')	
@@ -64,7 +65,8 @@ def cvexml(request, cvenum):
 	
 	return render(request, 'cve_xml.html', {'idx':idx, 'cvenum':cvenum, 'qstr':qrystr})
 
-
+'''
+# redo this
 def rawxml(request,cvenum):
 	cvenum = cvenum.upper()
 	try:
@@ -79,14 +81,15 @@ def rawxml(request,cvenum):
 			raise Http404
 	except:
 		raise Http404
+'''
 
 #@login_required
 def import_nist_cve(request):
 	if request.method == 'POST':
 		try:
-			files=imports.import_redhat_cvrf()
-			return render(request, 'cve_nist_import.html', {'files':files,})			
+			files=imports.import_nist_cve()
+			return render(request, 'cve_import.html', {'files':files,})			
 		except:
-			return render(request, 'cve_nist_import.html', {'error_message': "request failed",})
+			return render(request, 'cve_import.html', {'error_message': "request failed",})
 	else:
-			return render(request, 'cve_nist_import.html')
+			return render(request, 'cve_import.html')
