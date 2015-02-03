@@ -1,0 +1,32 @@
+{% extends "asset_base.html" %}
+
+{% block style %}
+<style type="text/css" media="screen">
+
+table{
+border-collapse:collapse;
+border:1px solid #0000FF;
+}
+
+table td{
+border:1px solid #0000FF;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="app" title="catalog">
+{% if idx %}
+	<table border="1px">
+	<thead><tr><th>Red Hat CPE</th><th>Red Hat Software Name</th></tr></thead>
+	<tbody>
+	{% autoescape off %}
+	{% for i in idx %}
+	{{i}}
+	{% endfor %}
+	{% endautoescape %}
+	</tbody>
+	</table>
+{% endif %}
+</div>
+{% endblock %}

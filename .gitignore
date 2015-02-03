@@ -1,4 +1,5 @@
 static/data
 media
 db.sqlite3
+deploy
 *pyc
