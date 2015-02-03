@@ -24,7 +24,7 @@ urlpatterns = patterns('cvrf.views',
 	url(r'^[oO][rR][aA][cC][lL][eE]/import', views.import_oracle_cvrf),
 	url(r'^[cC][iI][sS][cC][oO]/import', views.import_cisco_cvrf),
 	url(r'^catalog', TemplateView.as_view(template_name='cvrf_catalog.html')),
-	url(r'.*', TemplateView.as_view(template_name='cvrf_catalog.html')),
+	url(r'.*', TemplateView.as_view(template_name='cvrf_index.html')),
 	#url(r'^pretty/([mM][sS])/([mM][sS]\d{2}-\d{3})', views.prettyxmltest),
 	#url(r'^pretty/([rR][eE][dD][hH][aA][tT])/(cvrf-rhsa-\d{4}-\d{4})', views.prettyxmltest),
 )

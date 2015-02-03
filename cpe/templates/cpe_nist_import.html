@@ -1,0 +1,40 @@
+{% extends "asset_base.html" %}
+
+{% block style %}
+<link rel='stylesheet' id='custom-style-css'  href='/static/styles/css/cvrf.css' type='text/css' media='all' />
+{% endblock %}
+
+{% block navpath %}
+<div><a href="/asset/">asset</a> >> <a href="/cpe/">cpe</a> >> <a href="/cpe/nist">nist</a> >> <a href="/cpe/nist/import/">import</a></div>
+{% endblock %}
+{% block content %}
+	{% if files %}
+	<div>
+		<p>The following NIST NVD CPE were uploaded:</p>
+		<ul>
+		{% for f in files %}
+		<li>{{f}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	{% else %}
+    <div id="download">
+		<p>The NIST NVD CPE contains over many entries and consists of two versionsL 2.2 and 2.3</p>
+		<p>Download and import takes some time. Please be patient.</p>
+	</div>
+    <div id="import_error">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	</div>
+	<div>
+        <form enctype="multipart/form-data" action="/cpe/nist/import" method="post">
+            {% csrf_token %}
+			<p>---</p>
+			<p>Select to import:</p> 
+			<p><input type="submit" value="Import" /></p>
+			<p>---</p>
+        </form>
+    </div>
+	{% endif %}
+
+	
+{% endblock %}
