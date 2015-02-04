@@ -1,23 +1,22 @@
 {% block content %}
-    <div class="applet" title="cpe">
-        <div class="applet" title="NIST NVD">
-            <p><a href="/cpe/nist/index"><img src="/static/icons/nist-small.jpg" width="32px"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<polygon points="30,16 16,2.001 16,10 2,10 2,22 16,22 16,30 "/>
-</svg>
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<g>
-    <path d="M24,14.059V5.584L18.414,0H0v32h24v-0.059c4.499-0.5,7.998-4.309,8-8.941C31.998,18.366,28.499,14.556,24,14.059z
-         M17.998,2.413L21.586,6h-3.588V2.413z M2,30V1.998h14v6.001h6v6.06c-4.501,0.498-8,4.308-8,8.941c0,2.829,1.308,5.352,3.35,7H2z
-         M23,29.883c-3.801-0.009-6.876-3.084-6.885-6.883c0.009-3.801,3.084-6.876,6.885-6.885c3.799,0.009,6.874,3.084,6.883,6.885
-        C29.874,26.799,26.799,29.874,23,29.883z"/>
-    <rect x="22" y="22" width="2" height="6"/>
-    <rect x="22" y="18" width="2" height="2"/>
-</g>
-</svg>
-</a>
-NIST NVD CPE
-</p>        </div>
+<div class="applet" title="cpe">
+    <div class="applet" title="NIST">
+        <a href="/cpe/nist/index"
+        <table><tr>
+        <td style="vertical-align:middle;"><img src="/static/icons/nist-small.jpg" width="32px" height="32px"></td>
+        <td style="vertical-align:middle;">{% include "arrow130.svg" %}</td>
+        <td style="vertical-align:middle;">{% include "document20.svg" %}</td>
+        <td style="vertical-align:middle;"> Info on NIST NVD CPE</td>
+        </tr></table>
     </div>
+    <div class="applet" title="Red Hat">
+        <a href="/cpe/redhat/index"
+        <table><tr>
+        <td style="vertical-align:middle;"><img src="/static/icons/redhat-small.jpeg" width="32px" height="32px"></td>
+        <td style="vertical-align:middle;">{% include "arrow130.svg" %}</td>
+        <td style="vertical-align:middle;">{% include "document20.svg" %}</td>
+        <td style="vertical-align:middle;"> Info on Red Hat Vendor CPE</td>
+        </tr></table>
+    </div>
+</div>
 {% endblock %}

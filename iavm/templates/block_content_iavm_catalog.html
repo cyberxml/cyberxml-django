@@ -1,25 +1,13 @@
 {% block content %}
-	<div class="applet" title="iavm">
-		<div class="applet" title="DISA">
-			<p><a href="/iavm/disa/catalog"><img src="/static/icons/uscert-small.png" width="32px"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<polygon points="30,16 16,2.001 16,10 2,10 2,22 16,22 16,30 "/>
-</svg>
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<g>
-	<rect x="10" y="4" width="20" height="2"/>
-	<rect x="10" y="14" width="20" height="2"/>
-	<rect x="10" y="24" width="20" height="2"/>
-	<rect x="2" y="24" width="6" height="6"/>
-	<rect x="2" y="14" width="6" height="6"/>
-	<rect x="2" y="4" width="6" height="6"/>
-</g>
-</svg>
-</a>
-DISA IAVM
-</p>
-
-		</div>
-	</div>
+<div class="applet" title="iavm">
+    <div class="applet" title="DISA">
+        <a href="/iavm/disa/catalog"
+        <table><tr>
+        <td style="vertical-align:middle;"><img src="/static/icons/uscert-small.png" width="32px" height="32px"></td>
+        <td style="vertical-align:middle;">{% include "arrow130.svg" %}</td>
+        <td style="vertical-align:middle;">{% include "list18.svg" %}</td>
+        <td style="vertical-align:middle;"> DISA IAVM</td>
+        </tr></table>
+    </div>
+</div>
 {% endblock %}
