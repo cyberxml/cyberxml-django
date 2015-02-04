@@ -8,3 +8,11 @@ hgroup {
 	padding: 4px 0;
    	float:none;
 	}
+.socialmedia{
+    float: right;
+     padding: 7px 10px;
+    text-align: right;
+    width: 25%;
+    margin-top:9px;
+    }
+	
