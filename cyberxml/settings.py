@@ -13,8 +13,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 TEMPLATE_DIRS = (
 	'/home/action/workspace/cyberxml/templates',
-	'/home/action/workspace/cyberxml/cyberxml/cvrf/templates',
 	'/home/action/workspace/cyberxml/cyberxml/templates', # base, index, top menus
+	'/home/action/workspace/cyberxml/cyberxml/templates/icons', # base, index, top menus
 )
 
 # Quick-start development settings - unsuitable for production
