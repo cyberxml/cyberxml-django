@@ -1,5 +1,18 @@
 {% extends "vuln_base.html" %}
 
+{% block script %}
+<script type="text/javascript">
+   function getId(id) {
+       return document.getElementById(id);
+   }
+   function validation() {
+       getId("submit_btn").style.display="none";
+       getId("wait_tip").style.display="";
+       return true;
+   }
+</script>
+{% endblock %}
+
 {% block style %}
 <link rel='stylesheet' id='custom-style-css'  href='/static/styles/css/cvrf.css' type='text/css' media='all' />
 {% endblock %}
@@ -26,7 +39,7 @@
         {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 	</div>
 	<div id="mscvrf_upload">
-        <form enctype="multipart/form-data" action="/cvrf/ms/import" method="post">
+        <form enctype="multipart/form-data" action="/cvrf/ms/import" method="post"  onsubmit="return validation();">
             {% csrf_token %}
 			<p>---</p>
 			<p>Select the zip file:</p>
@@ -34,7 +47,8 @@
 			<p>---</p>
 			<p>---</p>
 			<p>Select to upload and import:</p> 
-			<p><input type="submit" value="Upload" /></p>
+            <p><input type="submit" value="Import" id="submit_btn"/></p>
+            <span id="wait_tip" style="display:none;">{% include "icons/refresh23.svg" %} ... Please wait...</span>
 			<p>---</p>
         </form>
     </div>
