@@ -13,5 +13,7 @@ urlpatterns = patterns('cpe.views',
 	url(r'^nist/search', views.search_nist_cpe),
 	#url(r'^nist/xml/([cC][vV][eE]-\d{4}-\d{3}\d+)', views.cpexml),
 	#url(r'^rawxml/([cC][vV][eE]-\d{4}-\d{3}\d+)', views.rawxml),
+	url(r'^nist/index', TemplateView.as_view(template_name='cpe_nist_index.html')),
+	url(r'^redhat/index', TemplateView.as_view(template_name='cpe_redhat_index.html')),
 	url(r'.*', TemplateView.as_view(template_name='cpe_index.html')),
 )
