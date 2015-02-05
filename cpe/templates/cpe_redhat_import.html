@@ -20,6 +20,7 @@
 {% block navpath %}
 <div><a href="/asset/">asset</a> >> <a href="/cpe/">cpe</a> >> <a href="/cpe/redhat">redhat</a> >> <a href="/cpe/redhat/import/">import</a></div>
 {% endblock %}
+
 {% block content %}
 	{% if files %}
 	<div>
@@ -48,6 +49,10 @@
         </form>
     </div>
 	{% endif %}
-
 	
 {% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_redhat_cpe.html" %}
+{% endblock %}
+ 

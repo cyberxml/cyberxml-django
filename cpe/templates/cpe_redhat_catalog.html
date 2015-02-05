@@ -1,5 +1,9 @@
 {% extends "asset_base.html" %}
 
+{% block navpath %}
+<div><a href="/asset">asset</a> >> <a href="/cpe/">cpe</a> >>  <a href="/cpe/redhat">redhat</a> >> <a href="/cpe/redhat/catalog">catalog</a>
+{% endblock %}
+
 {% block style %}
 <style type="text/css" media="screen">
 
@@ -30,3 +34,8 @@ border:1px solid #0000FF;
 {% endif %}
 </div>
 {% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_redhat_cpe.html" %}
+{% endblock %}
+ 

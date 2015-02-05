@@ -1,6 +1,14 @@
 {% extends "asset_base.html" %}
 
+{% block navpath %}
+<div><a href="/asset">asset</a> >> <a href="/cpe/">cpe</a> >>  <a href="/cpe/redhat">redhat</a> >> <a href="/cpe/redhat/index">index</a>
+{% endblock %}
+
 {% block content %}
 {% include "block_content_cpe_redhat_index.html" %}
+{% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_redhat_cpe.html" %}
 {% endblock %}
  

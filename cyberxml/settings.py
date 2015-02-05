@@ -40,11 +40,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'cce',
 	'cpe',
     'cvrf',
     'cve',
 	'deploy',
 	'iavm',
+	'stig',
+	'swcat',
+	'usgcb',
 )
 
 MIDDLEWARE_CLASSES = (

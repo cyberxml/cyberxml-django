@@ -16,6 +16,7 @@
 {% block navpath %}
 <div><a href="/vuln/">vuln</a> >> <a href="/iavm/">iavm</a> >> <a href="/iavm/disa">disa</a> >> <a href="/iavm/disa/import/">import</a></div>
 {% endblock %}
+
 {% block content %}
 	{% if files %}
 	<div>
@@ -50,4 +51,8 @@
     </div>
 	{% endif %}
 	
+{% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_disa_iavm.html" %}
 {% endblock %}

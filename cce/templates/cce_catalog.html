@@ -1,0 +1,30 @@
+{% extends "config_base.html" %}
+{% block navpath %}
+<div><a href="/config">config</a> >> <a href="/cce/">cce</a> >> <a href="/cce/nist">nist</a> >> <a href="/cce/nist/catalog/">catalog</a> >> <a href="/cve/nist/catalog/{{year}}">year</a></div>
+{% endblock %}
+{% block content %}
+	<div class="applet" title="cce">
+	{% if idx %}
+		<h3>CyberXML catalogs the following CCE from NIST NVD for {{year}}:</h3>
+		<table>
+			<thead><tr><th>id</th><th>title</th><th>initial release</th><th>current release</th></tr></thead>
+			<tbody>
+				{% autoescape off %}
+				{% for i in idx %}
+					{{i}}
+				{% endfor %}
+				{% endautoescape %}
+			</tbody>
+		</table>
+	{% else %}
+		<h3>CyberXML catalogs the following CCE from NIST NVD for the following years:</h3>
+		<ul>
+		<li><a href="/cve/nist/catalog/2002">2002 and earlier</a></li>
+		</ul>	
+	{% endif %}
+	</div>
+{% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_nist_cce.html" %}
+{% endblock %}
