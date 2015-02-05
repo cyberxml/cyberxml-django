@@ -1,5 +1,7 @@
 {% extends "vuln_base.html" %}
-
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/cve/">cve</a> >>  <a href="/cve/nist">nist</a></div>
+{% endblock %}
 {% block content %}
 <div>
 <p>The Common Vulnerabilities and Exposures (CVE) system provides a reference-method for publicly known information-security vulnerabilities and exposures. MITRE Corporation maintains the system, with funding from the National Cyber Security Division of the United States Department of Homeland Security.[1] CVE is used by the Security Content Automation Protocol, and CVE IDs are listed on MITRE's system[2] as well as the US National Vulnerability Database.</p>
@@ -14,4 +16,8 @@
 <p>CVEs are for software that has been publicly released; this can include betas and other pre-release versions if they are widely used. Commercial software is included in the "publicly released" category, however custom-built software that is not distributed would generally not be given a CVE. Additionally services (e.g. a Web-based email provider) are not assigned CVEs for vulnerabilities found in the service (e.g. an XSS vulnerability) unless the issue exists in an underlying software product that is publicly distributed</p>
 <p>-- <a href="http://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures">Wikipedia</a></p>
 </div>
+{% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_nist_cve.html" %}
 {% endblock %}

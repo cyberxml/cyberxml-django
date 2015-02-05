@@ -2,6 +2,7 @@
 {% block navpath %}
 <div><a href="/vuln/">vuln</a> >> <a href="/iavm/">iavm</a> >> <a href="/iavm/disa">disa</a> >> <a href="/iavm/disa/catalog/">catalog</a> >> <a href="/iavm/disa/catalog/{{year}}">{{year}}</a></div>
 {% endblock %}
+
 {% block content %}
 	<div class="applet" title="iavm">
 	{% if idx %}
@@ -39,4 +40,8 @@
 		</ul>	
 	{% endif %}
 	</div>
+{% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_disa_iavm.html" %}
 {% endblock %}

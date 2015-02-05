@@ -1,5 +1,9 @@
 {% extends "asset_base.html" %}
 
+{% block navpath %}
+<div><a href="/asset">asset</a> >> <a href="/cpe/">cpe</a> >>  <a href="/cpe/nist">nist</a> >> <a href="/cpe/nist/search">search</a>
+{% endblock %}
+
 {% block content %}
 <div>
 {% if reqstr %}
@@ -29,3 +33,8 @@
 {% endif %}
 </div>
 {% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_nist_cpe.html" %}
+{% endblock %}
+ 

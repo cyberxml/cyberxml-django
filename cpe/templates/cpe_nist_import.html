@@ -11,9 +11,11 @@
    }
 </script>
 {% endblock %}
+
 {% block navpath %}
 <div><a href="/asset/">asset</a> >> <a href="/cpe/">cpe</a> >> <a href="/cpe/nist">nist</a> >> <a href="/cpe/nist/import/">import</a></div>
 {% endblock %}
+
 {% block content %}
 	{% if files %}
 	<div>
@@ -48,4 +50,8 @@
 	{% endif %}
 
 	
+{% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_nist_cpe.html" %}
 {% endblock %}

@@ -1,22 +1,32 @@
 {% block content %}
 <div class="applet" title="cpe">
-    <div class="applet" title="NIST">
-        <a href="/cpe/nist/index"
-        <table><tr>
-        <td style="vertical-align:middle;"><img src="/static/icons/nist-small.jpg" width="32px" height="32px"></td>
-        <td style="vertical-align:middle;">{% include "arrow130.svg" %}</td>
-        <td style="vertical-align:middle;">{% include "document20.svg" %}</td>
-        <td style="vertical-align:middle;"> Info on NIST NVD CPE</td>
-        </tr></table>
-    </div>
-    <div class="applet" title="Red Hat">
-        <a href="/cpe/redhat/index"
-        <table><tr>
-        <td style="vertical-align:middle;"><img src="/static/icons/redhat-small.jpeg" width="32px" height="32px"></td>
-        <td style="vertical-align:middle;">{% include "arrow130.svg" %}</td>
-        <td style="vertical-align:middle;">{% include "document20.svg" %}</td>
-        <td style="vertical-align:middle;"> Info on Red Hat Vendor CPE</td>
-        </tr></table>
-    </div>
-</div>
+<h3>Use Cases - Archive</h3>
+
+<p>There are many areas within the community that can benefit from CPE. However, there is one use of CPE - to facilitate software inventory management (also referred to as credentialed endpoint management) - that is viewed as a "must-have" across the CPE community. It is this use case that is the focus of the current version of CPE.
+</p>
+<p>
+<strong>Software Inventory Management</strong>
+</p>
+<p>
+The use case is as follows: A software inventory management product vendor uses CPE Names to tag data elements within their product's data model. These data elements may directly represent the individual software products that exist on an end system (e.g., a laptop, desktop, or server), in which case the CPE Name represents a standard identifier for instances of that record type. Or, the data elements may represent some other object (e.g., a configuration check, a vulnerability check, a patch check, a configuration control change, or a patch), in which case the CPE Name implies a relationship to a software product type as identified by the CPE Name.
+</p>
+<p>
+With this tagging, the product vendor can develop, or can enable their product to interoperate with, different tools that share information about the individual software products on the end systems. Whether those tools perform asset management, vulnerability management, configuration assessments, or tactical descriptions of a given network, they have a common need to share software inventory information. The tools are expected to use CPE Names for this purpose.
+</p>
+<p>
+<strong>2008 Use Case Analysis</strong>
+</p>
+<p>
+A common theme taken from discussions at the Common Platform Enumeration (CPE) Developer Day (April 30th, 2008) was that differences in how and why CPE is being utilized across the community create conflicts among members of the CPE community, and thus create obstacles to CPE's success. In its non-competitive FFRDC role as moderator of CPE, The MITRE Corporation conducted a series of interviews with representatives of the CPE community (under a combination of implied and formal NDAs) and has performed an analysis of the different technical use cases for CPE. The white paper below presents the results of that analysis.
+The use case is as follows: A software inventory management product vendor uses CPE Names to tag data elements within their product's data model. These data elements may directly represent the individual software products that exist on an end system (e.g., a laptop, desktop, or server), in which case the CPE Name represents a standard identifier for instances of that record type. Or, the data elements may represent some other object (e.g., a configuration check, a vulnerability check, a patch check, a configuration control change, or a patch), in which case the CPE Name implies a relationship to a software product type as identified by the CPE Name.
+</p>
+<p>
+With this tagging, the product vendor can develop, or can enable their product to interoperate with, different tools that share information about the individual software products on the end systems. Whether those tools perform asset management, vulnerability management, configuration assessments, or tactical descriptions of a given network, they have a common need to share software inventory information. The tools are expected to use CPE Names for this purpose.
+2008 Use Case Analysis
+</p>
+<p>
+A common theme taken from discussions at the Common Platform Enumeration (CPE) Developer Day (April 30th, 2008) was that differences in how and why CPE is being utilized across the community create conflicts among members of the CPE community, and thus create obstacles to CPE's success. In its non-competitive FFRDC role as moderator of CPE, The MITRE Corporation conducted a series of interviews with representatives of the CPE community (under a combination of implied and formal NDAs) and has performed an analysis of the different technical use cases for CPE. The white paper below presents the results of that analysis.
+</p>
+<p>
+-- <a href="https://cpe.mitre.org/about/use_cases.html">MITRE CPE Use Cases</a></div>
 {% endblock %}

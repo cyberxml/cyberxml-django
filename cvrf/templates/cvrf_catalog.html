@@ -1,5 +1,9 @@
 {% extends "vuln_base.html" %}
 
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/cvrf/">cvrf</a> >> <a href="/cvrf/{{vendor}}">{{vendor}}</a> >> <a href="/cvrf/{{vendor}}/catalog/">catalog</a></div>
+{% endblock %}
+
 {% block content %}
 <div class="app" title="catalog">
 {% if idx %}
@@ -17,4 +21,18 @@
 	{% include "block_content_cvrf_catalog.html" %}
 {% endif %}
 </div>
+{% endblock %}
+
+{% block secondary %}
+	{% if vendor == "cisco" %}
+	    {% include "sideshow_bob_cisco_cvrf.html" %}
+	{% elif vendor == "microsoft" %}
+	    {% include "sideshow_bob_microsoft_cvrf.html" %}
+	{% elif vendor == "oracle" %}
+	    {% include "sideshow_bob_oracle_cvrf.html" %}
+	{% elif vendor == "redhat" %}
+	    {% include "sideshow_bob_redhat_cvrf.html" %}
+	{% else %}
+	    {% include "sideshow_bob_cvrf.html" %}
+	{% endif %}
 {% endblock %}

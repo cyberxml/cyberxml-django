@@ -74,6 +74,10 @@ def prettyxml(request,vendor,cvrfnum):
 	except:
 		raise Http404
 
+def index_cvrf(request, vendor):
+	vendor = vendor.lower()
+	return render(request, 'cvrf_index.html', {'vendor':vendor,})
+	
 def vendor_index(request, vendor):
 	vendor = vendor.lower()
 	vroot,vdir = getVendorDirectory(vendor)

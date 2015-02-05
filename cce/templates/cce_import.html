@@ -1,0 +1,59 @@
+{% extends "config_base.html" %}
+
+{% block script %}
+<script type="text/javascript">
+   function getId(id) {
+       return document.getElementById(id);
+   }
+   function validation() {
+       getId("submit_btn").style.display="none";
+       getId("wait_tip").style.display="";
+       return true;
+   }
+</script>
+{% endblock %}
+
+{% block style %}
+<link rel='stylesheet' id='custom-style-css'  href='/static/styles/css/cvrf.css' type='text/css' media='all' />
+{% endblock %}
+
+{% block navpath %}
+<div><a href="/config/">vuln</a> >> <a href="/cce/">cce</a> >> <a href="/cce/nist">nist</a> >> <a href="/cce/nist/import/">import</a></div>
+{% endblock %}
+
+{% block content %}
+	{% if files %}
+	<div>
+		<p>The following NIST NVD CCE were uploaded:</p>
+		<ul>
+		{% for f in files %}
+		<li>{{f}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	{% else %}
+    <div id="download">
+		<p>The NIST NVD CCE contains many entries.</p>
+		<p>Download and import takes some time. Please be patient.</p>
+	</div>
+    <div id="import_error">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	</div>
+	<div>
+        <form enctype="multipart/form-data" action="/cce/nist/import" method="post" onsubmit="return validation();">
+            {% csrf_token %}
+			<p>---</p>
+			<p>Select to import:</p> 
+            <p><input type="submit" value="Import" id="submit_btn"/></p>
+            <span id="wait_tip" style="display:none;">{% include "icons/refresh23.svg" %} ... Please wait...</span>
+			<p>---</p>
+        </form>
+    </div>
+	{% endif %}
+
+	
+{% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_nist_cce.html" %}
+{% endblock %}

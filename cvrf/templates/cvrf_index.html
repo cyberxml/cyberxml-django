@@ -1,61 +1,116 @@
 {% extends "vuln_base.html" %}
 
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/cvrf/">cvrf</a> >> <a href="/cvrf/{{vendor}}">{{vendor}}</a> >> <a href="/cvrf/{{vendor}}/index/">index</a></div>
+{% endblock %}
+
 {% block content %}
 <div>
-ICASI is the organization responsible for the Common Vulnerability Reporting Framework. The NIST Common Vulnerability Enumeration (CVE) can be (and is) expressed in CVRF, but the CVRF is a superset of the CVE which is to say that there are more fields and information available in CVRF than in the CVE. There is industry support for the CVRF by several larger vendors even though I am uncertain how frequently the CVRF is used in the workflow of downstream security professionals.
-<br/>
-<strong>ICASI</strong>
-<br/>
-<a href="http://www.icasi.org/cvrf" target="_blank">ICASI CVRF</a> (official references)
-<br/>
-<a href="http://www.icasi.org/external-references" target="_blank">CVRF External References</a>
-<br/>
-<strong>Cisco - Michael Schiffman</strong>
-<br/>
-<a href="http://blogs.cisco.com/security/the-missing-manual-cvrf-1-1-part-1-of-2/" target="_blank">The Missing Manual: CVRF 1.1 Part 1 of 2 </a>
-<br/>
-<a href="http://blogs.cisco.com/security/the-missing-manual-cvrf-1-1-part-2-of-2/" target="_blank">The Missing Manual: CVRF 1.1 Part 2 of 2 </a>
-<br/>
-<a href="http://blogs.cisco.com/security/tools-of-the-trade-cvrfparse/" target="_blank">Tools of the Trade: cvrfparse </a>
-<br/>
-<a href="http://tools.cisco.com/security/center/cvrfListing.x">Cisco CVRF Repository</a>
-<br/>
-<strong>RedHat</strong>
-<br/>
-<a href="https://access.redhat.com/articles/124913" target="_blank">Red Hat and CVRF compatibility</a>
-<br/>
-<a href="https://access.redhat.com/articles/118023" target="_blank">Sample Red Hat Security Advisory in CVRF 1.1 format</a>
-<br/>
-<a href="https://www.redhat.com/security/data/cvrf/" target="_blank">CVRF definitions for Red Hat security advisories </a>(data files)
-<br/>
-<strong>Microsoft</strong>
-<br/>
-<a href="http://blogs.technet.com/b/msrc/archive/2012/05/17/microsoft-security-updates-and-the-common-vulnerability-reporting-framework.aspx" target="_blank">Microsoft security updates and the Common Vulnerability Reporting Framework</a>
-<br/>
-<a href="http://www.microsoft.com/en-us/download/details.aspx?id=36982" target="_blank">Microsoft Security Bulletin Data</a> (download link)
-<br/>
-<strong> Oracle</strong>
-<br/>
-<a href="https://blogs.oracle.com/security/entry/use_of_the_common_vulnerability">Use of the Common Vulnerability Reporting Format (CVRF) for Oracle's Security Advisories</a>
-<br/>
-"The advisory in the CVRF format can be found in the 'references' section of each [CPU] advisory."
-<br/>
-<a href="http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/1932662.xml">http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/1932662.xml</a> (RSS)
-<br/>
-<strong>IBM</strong>
-<br/>
-<a href="http://www-03.ibm.com/security/secure-engineering/bulletins.html">IBM Security Bulletins</a>
-<br/>
-<a href="https://www.ibm.com/developerworks/community/blogs/a9ba1efe-b731-4317-9724-a181d6155e3a/entry/keeping_up_with_security1?lang=en">Keeping up with security</a>
-<br/>
-<a href="http://www-01.ibm.com/support/docview.wss?uid=ssg1S1004897">Security Bulletin: Potential Security exposures with WebSphere Application Server (CVE-2014-4770 and CVE-2014-4816)</a> (sample bulletin)
-<br/>
-<strong>MITRE CVE</strong>
-<br/>
-<a href="https://cve.mitre.org/cve/cvrf.html">CVE Usage of CVRF</a>
-<br/>
-<a href="https://cve.mitre.org/data/downloads/index.html">Download CVE in CVRF format</a>
-<br/>
+{% if vendor == "cisco" %}
+	<strong>Cisco - Michael Schiffman</strong>
+	<br/>
+	<a href="http://blogs.cisco.com/security/the-missing-manual-cvrf-1-1-part-1-of-2/" target="_blank">The Missing Manual: CVRF 1.1 Part 1 of 2 </a>
+	<br/>
+	<a href="http://blogs.cisco.com/security/the-missing-manual-cvrf-1-1-part-2-of-2/" target="_blank">The Missing Manual: CVRF 1.1 Part 2 of 2 </a>
+	<br/>
+	<a href="http://blogs.cisco.com/security/tools-of-the-trade-cvrfparse/" target="_blank">Tools of the Trade: cvrfparse </a>
+	<br/>
+	<a href="http://tools.cisco.com/security/center/cvrfListing.x">Cisco CVRF Repository</a>
+	<br/>
+{% elif vendor == "microsoft" %}
+	<strong>Microsoft</strong>
+	<br/>
+	<a href="http://blogs.technet.com/b/msrc/archive/2012/05/17/microsoft-security-updates-and-the-common-vulnerability-reporting-framework.aspx" target="_blank">Microsoft security updates and the Common Vulnerability Reporting Framework</a>
+	<br/>
+	<a href="http://www.microsoft.com/en-us/download/details.aspx?id=36982" target="_blank">Microsoft Security Bulletin Data</a> (download link)
+	<br/>
+{% elif vendor == "oracle" %}
+	<strong> Oracle</strong>
+	<br/>
+	<a href="https://blogs.oracle.com/security/entry/use_of_the_common_vulnerability">Use of the Common Vulnerability Reporting Format (CVRF) for Oracle's Security Advisories</a>
+	<br/>
+	"The advisory in the CVRF format can be found in the 'references' section of each [CPU] advisory."
+	<br/>
+	<a href="http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/1932662.xml">http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/1932662.xml</a> (RSS)
+	<br/>
+{% elif vendor == "redhat" %}
+	<strong>RedHat</strong>
+	<br/>
+	<a href="https://access.redhat.com/articles/124913" target="_blank">Red Hat and CVRF compatibility</a>
+	<br/>
+	<a href="https://access.redhat.com/articles/118023" target="_blank">Sample Red Hat Security Advisory in CVRF 1.1 format</a>
+	<br/>
+	<a href="https://www.redhat.com/security/data/cvrf/" target="_blank">CVRF definitions for Red Hat security advisories </a>(data files)
+	<br/>
+{% else %}
+    <strong>ICASI</strong>
+	<br/>
+	ICASI is the organization responsible for the Common Vulnerability Reporting Framework. The NIST Common Vulnerability Enumeration (CVE) can be (and is) expressed in CVRF, but the CVRF is a superset of the CVE which is to say that there are more fields and information available in CVRF than in the CVE. There is industry support for the CVRF by several larger vendors even though I am uncertain how frequently the CVRF is used in the workflow of downstream security professionals.
+	<br/>
+	<a href="http://www.icasi.org/cvrf" target="_blank">ICASI CVRF</a> (official references)
+	<br/>
+	<a href="http://www.icasi.org/external-references" target="_blank">CVRF External References</a>
+	<br/>
+	<strong>Cisco - Michael Schiffman</strong>
+	<br/>
+	<a href="http://blogs.cisco.com/security/the-missing-manual-cvrf-1-1-part-1-of-2/" target="_blank">The Missing Manual: CVRF 1.1 Part 1 of 2 </a>
+	<br/>
+	<a href="http://blogs.cisco.com/security/the-missing-manual-cvrf-1-1-part-2-of-2/" target="_blank">The Missing Manual: CVRF 1.1 Part 2 of 2 </a>
+	<br/>
+	<a href="http://blogs.cisco.com/security/tools-of-the-trade-cvrfparse/" target="_blank">Tools of the Trade: cvrfparse </a>
+	<br/>
+	<a href="http://tools.cisco.com/security/center/cvrfListing.x">Cisco CVRF Repository</a>
+	<br/>
+	<strong>Microsoft</strong>
+	<br/>
+	<a href="http://blogs.technet.com/b/msrc/archive/2012/05/17/microsoft-security-updates-and-the-common-vulnerability-reporting-framework.aspx" target="_blank">Microsoft security updates and the Common Vulnerability Reporting Framework</a>
+	<br/>
+	<a href="http://www.microsoft.com/en-us/download/details.aspx?id=36982" target="_blank">Microsoft Security Bulletin Data</a> (download link)
+	<br/>
+	<strong> Oracle</strong>
+	<br/>
+	<a href="https://blogs.oracle.com/security/entry/use_of_the_common_vulnerability">Use of the Common Vulnerability Reporting Format (CVRF) for Oracle's Security Advisories</a>
+	<br/>
+	"The advisory in the CVRF format can be found in the 'references' section of each [CPU] advisory."
+	<br/>
+	<a href="http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/1932662.xml">http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/1932662.xml</a> (RSS)
+	<br/>
+	<strong>RedHat</strong>
+	<br/>
+	<a href="https://access.redhat.com/articles/124913" target="_blank">Red Hat and CVRF compatibility</a>
+	<br/>
+	<a href="https://access.redhat.com/articles/118023" target="_blank">Sample Red Hat Security Advisory in CVRF 1.1 format</a>
+	<br/>
+	<a href="https://www.redhat.com/security/data/cvrf/" target="_blank">CVRF definitions for Red Hat security advisories </a>(data files)
+	<br/>
+	<strong>IBM</strong>
+	<br/>
+	<a href="http://www-03.ibm.com/security/secure-engineering/bulletins.html">IBM Security Bulletins</a>
+	<br/>
+	<a href="https://www.ibm.com/developerworks/community/blogs/a9ba1efe-b731-4317-9724-a181d6155e3a/entry/keeping_up_with_security1?lang=en">Keeping up with security</a>
+	<br/>
+	<a href="http://www-01.ibm.com/support/docview.wss?uid=ssg1S1004897">Security Bulletin: Potential Security exposures with WebSphere Application Server (CVE-2014-4770 and CVE-2014-4816)</a> (sample bulletin)
+	<br/>
+	<strong>MITRE CVE</strong>
+	<br/>
+	<a href="https://cve.mitre.org/cve/cvrf.html">CVE Usage of CVRF</a>
+	<br/>
+	<a href="https://cve.mitre.org/data/downloads/index.html">Download CVE in CVRF format</a>
+	<br/>
+{% endif %}
 </div>
+{% endblock %}
 
+{% block secondary %}
+    {% if vendor == "cisco" %}
+        {% include "sideshow_bob_cisco_cvrf.html" %}
+    {% elif vendor == "microsoft" %}
+        {% include "sideshow_bob_microsoft_cvrf.html" %}
+    {% elif vendor == "oracle" %}
+        {% include "sideshow_bob_oracle_cvrf.html" %}
+    {% elif vendor == "redhat" %}
+        {% include "sideshow_bob_redhat_cvrf.html" %}
+    {% else %}
+        {% include "sideshow_bob_cvrf.html" %}
+    {% endif %}
 {% endblock %}
