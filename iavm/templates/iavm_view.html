@@ -1,0 +1,38 @@
+{% extends "vuln_base.html" %}
+
+{% block style %}
+<link rel='stylesheet' id='custom-style-css'  href='/static/styles/css/iavm.css' type='text/css' media='all' />
+{% endblock %}
+
+
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/iavm/">iavm</a> >> <a href="/iavm/disa">disa</a>  >> <a href="/iavm/disa/view">view</a> </div>
+{% endblock %}
+
+{% block content %}
+<div>
+<div>
+<h3>Enter IAVM</h3>
+<form action="/iavm/disa/view/">
+IAVM: <input type="text" name="iavm" value="{{ iavm }}">
+<input type="submit" value="Submit">
+</form>
+</div>
+{% if iavxml %}
+<hr/>
+<div>
+{% autoescape off %}    
+    {% for i in iavxml%}
+    {{i}}
+    {% endfor %}
+{% endautoescape %} 
+
+</div>
+{% endif %}
+
+</div>
+{% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_disa_iavm.html" %}
+{% endblock %}

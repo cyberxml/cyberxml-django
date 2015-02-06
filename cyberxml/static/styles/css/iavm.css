@@ -1,0 +1,69 @@
+body {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: Arial, Helvetica, Calibri, sans-serif;
+}
+.mainsection tr th {
+    text-align: left;
+    vertical-align: top;
+    width: 180px;
+    padding: 8px 0px 8px 0px;
+}
+.mainsection tr td {
+    padding: 8px 0px 8px 0px;
+}
+.timeline {
+    border: 1px solid black;
+    width: 100%;
+}
+.timeline tr th {
+    border: 1px solid black;
+    padding: 6px;
+    background-color: silver;
+}
+.timeline tr td {
+    border: 1px solid black;
+    text-align: center;
+}
+.previewLabel {
+    font-weight: bold;
+    color: black;
+}
+.previewLabelUndln {
+    font-weight: bold;
+    color: black;
+    font-style: italic;
+    text-decoration: underline;
+}
+.button {
+    margin: 30px;
+}
+.previewHeader{
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 17px;
+    font-weight: bolder;
+    margin: 20px;
+}
+.previewCYBERCOM {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bolder;
+    margin: 20px;
+}
+.red {
+    color: red;
+}
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.externalLinkText {     
+    color: red;     
+    text-align: center;             
+    font-size: 10px;
+}
+

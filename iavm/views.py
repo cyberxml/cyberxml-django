@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import Http404
 from django.utils.datastructures import MultiValueDictKeyError
+from . import imports
 # from lxml import etree
 
 from eulexistdb import db	
@@ -48,6 +49,27 @@ def get_iavm_apply(request):
 	except MultiValueDictKeyError:
 		pass
 	return render(request,'iavm_apply.html',{'xqr':xqr, 'iavm':iavm})
+
+def get_iavm_view(request):
+	iavm='1899-Z-0001'
+	smrs=[]
+	xqr=[]
+	try:
+		iavm=request.GET['iavm']
+		qryIavmApply='''
+			xquery version "3.0";
+			declare namespace iavmNotice = "http://iavm.csd.disa.mil/schemas/IavmNoticeSchema/1.2";
+			let $thisiavm := "'''+iavm+'''"
+			let $thisdoc := concat('/db/cyberxml/data/iavm/disa.mil/',$thisiavm,'.xml')
+			let $iav := doc($thisdoc)
+			let $xsl := doc("/db/cyberxml/styles/xsl/iavm.xsl")
+			return transform:transform($iav,$xsl,())
+			'''
+		a = connExistDB()
+		xqr =a.get_data(qryIavmApply)
+	except MultiValueDictKeyError:
+		pass
+	return render(request,'iavm_view.html',{'iavxml':xqr, 'iavm':iavm})
 
 #@login_required
 def iavm_index(request, iavyear):
