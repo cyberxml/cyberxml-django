@@ -1,0 +1,152 @@
+{% extends "vuln_base.html" %}
+
+{% block style %}
+<link rel='stylesheet' id='custom-style-css'  href='/static/styles/css/cvrf.css' type='text/css' media='all' />
+<style>
+	.import {
+   top: 0; bottom: 0;
+   position: relative;
+   width: 100%;
+    border: 2px solid;
+    border-radius: 25px;
+		text-indent:30px;
+}
+</style>
+{% endblock %}
+
+{% block navpath %}
+<div><a href="/vuln/">vuln</a> >> <a href="/cvrf/">cvrf</a> >> <a href="/cvrf/ms">ms</a> >> <a href="/cvrf/ms/import/">import</a></div>
+{% endblock %}
+{% block content %}
+<!-- CISCCO -->
+<div class="import">
+	{% if files %}
+	<div>
+		<p>The following Cisco CVRF were uploaded:</p>
+		<ul>
+		{% for f in files %}
+		<li>{{f}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	{% else %}
+    <div id="cisco_download">
+		<p>Cisco publishes frequent CVRF updates. Some of which do not parse into the database.</p>
+		<p>Those files are downloaded but not imported.</p>
+		<p>To save processing time, only those CVRF files which are not already imported are downloaded.</p>
+		<p>This means that potential revisions are missed. To force a reimport of a particular Cisco CVRF file, delete the Cisco CVRF file from the file system.</p>
+	</div>
+    <div id="import_error">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	</div>
+	<div>
+        <form enctype="multipart/form-data" action="/cvrf/cisco/import" method="post">
+            {% csrf_token %}
+			<p>---</p>
+			<p>Select to import:</p> 
+			<p><input type="submit" value="Import" /></p>
+			<p>---</p>
+        </form>
+    </div>
+	{% endif %}
+</div>
+
+<!-- MICROSOFT -->
+<div class="import">
+	{% if files %}
+	<div>
+		<p>The following MSRC CVRF were uploaded:</p>
+		<ul>
+		{% for f in files %}
+		<li>{{f}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	{% else %}
+    <div id="mscvrf_download">
+		<p>To import the MSRC-CVRF zip file, first download it from the following URL:</p>
+		<p><a target="msrc-cvrf" href="http://www.microsoft.com/en-us/download/details.aspx?id=36982">http://www.microsoft.com/en-us/download/details.aspx?id=36982</a></p>
+	</div>
+    <div id="import_error">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	</div>
+	<div id="mscvrf_upload">
+        <form enctype="multipart/form-data" action="/cvrf/ms/import" method="post">
+            {% csrf_token %}
+			<p>---</p>
+			<p>Select the zip file:</p>
+            <p><input type="file" name="mscvrf" id="mscvrf" value="" /></p>
+			<p>---</p>
+			<p>---</p>
+			<p>Select to upload and import:</p> 
+			<p><input type="submit" value="Upload" /></p>
+			<p>---</p>
+        </form>
+    </div>
+	{% endif %}
+</div>	
+
+<!-- Oracle -->
+<div class="import">
+	{% if files %}
+	<div>
+		<p>The following Oracle CVRF were uploaded:</p>
+		<ul>
+		{% for f in files %}
+		<li>{{f}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	{% else %}
+    <div id="redhat_download">
+		<p>Oracle publishes CVRF on a quarterly basis with a few critical out-of-cycle CVRF.</p>
+		<p>The quarterly CVRF can include dozens of vulnerabilities.</p>
+		<p>This will reimport all the Oracle CVRF</p>
+	</div>
+    <div id="import_error">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	</div>
+	<div>
+        <form enctype="multipart/form-data" action="/cvrf/oracle/import" method="post">
+            {% csrf_token %}
+			<p>---</p>
+			<p>Select to import:</p> 
+			<p><input type="submit" value="Import" /></p>
+			<p>---</p>
+        </form>
+    </div>
+	{% endif %}
+</div>
+<!-- RED HAT -->
+<div class="import">
+	{% if files %}
+	<div>
+		<p>The following Red Hat CVRF were uploaded:</p>
+		<ul>
+		{% for f in files %}
+		<li>{{f}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	{% else %}
+    <div id="redhat_download">
+		<p>The Red Hat CVRF library includes thousands of entries.</p>
+		<p>To save processing time, only those CVRF files which are not already imported are downloaded.</p>
+		<p>This means that potential revisions are missed. To force a reimport of a particular Red Hat CVRF file, delete the Red Hat CVRF file from the file system.</p>
+	</div>
+    <div id="import_error">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	</div>
+	<div>
+        <form enctype="multipart/form-data" action="/cvrf/redhat/import" method="post">
+            {% csrf_token %}
+			<p>---</p>
+			<p>Select to import:</p> 
+			<p><input type="submit" value="Import" /></p>
+			<p>---</p>
+        </form>
+    </div>
+	{% endif %}
+</div>
+
+{% endblock %}

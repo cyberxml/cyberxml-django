@@ -131,7 +131,7 @@ def import_disa_iavm_request(request):
 			return render(request, 'iavm_disa_import.html', {'files':files,'disa_pki_flag':disa_pki_flag})
 			
 	except:
-		return render(request, 'iavm_disa_import.html', {'error_message': "no file provided.",'disa_pki_flag':disa_pki_flag})
+		return render(request, 'iavm_disa_import.html', {'disa_pki_flag':disa_pki_flag})
 
 #@login_required
 def import_disa_iavm_cve_request(request):

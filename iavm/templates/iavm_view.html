@@ -11,8 +11,8 @@
 
 {% block content %}
 <div>
-<div>
-<h3>Enter IAVM</h3>
+<div id="applet">
+<h1><span>Search IAVM</span></h1>
 <form action="/iavm/disa/view/">
 IAVM: <input type="text" name="iavm" value="{{ iavm }}">
 <input type="submit" value="Submit">
@@ -20,7 +20,8 @@ IAVM: <input type="text" name="iavm" value="{{ iavm }}">
 </div>
 {% if iavxml %}
 <hr/>
-<div>
+<div id="applet">
+<h1><span>{{ iavm }}</span></h1>
 {% autoescape off %}    
     {% for i in iavxml%}
     {{i}}

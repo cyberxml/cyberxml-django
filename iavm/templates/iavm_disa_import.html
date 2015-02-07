@@ -19,6 +19,8 @@
 
 {% block content %}
 	{% if files %}
+	<div id="applet">
+	<h1><span>Import Success</span></h1>
 	<div>
 		<p>The following DISA IAVM files were uploaded:</p>
 		<ul>
@@ -27,46 +29,58 @@
 		{% endfor %}
 		</ul>
 	</div>
+	</div>
 	{% else %}
-    <div id="disa_iavm_download">
-		<p> To import the DISA IAVM zip file, first download it from the following URL. DoD certificates are required to access this site. The IAVM files themselves are Unclassified/FOUO. To create the DISA IAVM zip file, once you have authenticated to the site, select 'Notices' >> 'Search Notices' from the top of the page. On the search page, select a date range and any other filter options in which you are interested, then select "Download All in XML ZIP" button.</p>
-		<p><a target="disa-iavm" href="https://iavm.csd.disa.mil/">https://iavm.csd.disa.mil/</a></p>
-	</div>
-    <div id="import_error">
-        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-	</div>
-    {% if disa_pki_flag == True %}
-	<div id="disa_iavm_upload">
-        <form enctype="multipart/form-data" action="/iavm/disa/import" method="post"  onsubmit="return validation();">
-            {% csrf_token %}
-			<p>---</p>
-			<p>Select the zip file:</p>
-            <p><input type="file" name="disaiavm" id="disaiavm" value="" /></p>
-			<p>---</p>
-			<p>---</p>
-			<p>Select to upload and import:</p> 
-            <p><input type="submit" value="Import" id="submit_btn"/></p>
-            <span id="wait_tip" style="display:none;">{% include "icons/refresh23.svg" %} ... Please wait...</span>
-			<p>---</p>
-        </form>
-    </div>
-	{% else %}
-	<div>This server is not authorized to import PKI FOUO DISA IAVM files</div>
-	{% endif %}
-	<hr/>
-    <div id="disa_iavm_cve_download">
-		<p>DISA publishes an IAVM to CVE file which can be used for in lieu of the individual DISA IAVM.</p>
-		<p><a target="disa-iavm" href="http://iasecontent.disa.mil/stigs/xml/iavm-to-cve%28u%29.xml">http://iasecontent.disa.mil/stigs/xml/iavm-to-cve%28u%29.xml</a></p>
-	</div>
-	<div id="disa_iavm_upload">
-        <form enctype="multipart/form-data" action="/iavm/disa/importcve" method="post"  onsubmit="return validation();">
-            {% csrf_token %}
-			<p>Select to import:</p> 
-            <p><input type="submit" value="Import" id="submit_btn"/></p>
-            <span id="wait_tip" style="display:none;">{% include "icons/refresh23.svg" %} ... Please wait...</span>
-			<p>---</p>
-        </form>
-    </div>
+		{% if disa_pki_flag == True %}
+		<div id="applet">
+		<h1><span>USCYBERCOM/DISA IAVM</span></h1>
+		<div id="disa_iavm_download">
+			<p> To import the DISA IAVM zip file, first download it from the following URL. DoD certificates are required to access this site. The IAVM files themselves are Unclassified/FOUO. To create the DISA IAVM zip file, once you have authenticated to the site, select 'Notices' >> 'Search Notices' from the top of the page. On the search page, select a date range and any other filter options in which you are interested, then select "Download All in XML ZIP" button.</p>
+			<p><a target="disa-iavm" href="https://iavm.csd.disa.mil/">https://iavm.csd.disa.mil/</a></p>
+		</div>
+		<div id="disa_iavm_upload">
+			<form enctype="multipart/form-data" action="/iavm/disa/import" method="post"  onsubmit="return validation();">
+				{% csrf_token %}
+				<p>---</p>
+				<p>Select the zip file:</p>
+				<p><input type="file" name="disaiavm" id="disaiavm" value="" /></p>
+				<p>---</p>
+				<p>---</p>
+				<p>Select to upload and import:</p> 
+				<p><input type="submit" value="Import" id="submit_btn"/></p>
+				<span id="wait_tip" style="display:none;">{% include "icons/refresh23.svg" %} ... Please wait...</span>
+				<p>---</p>
+			</form>
+		</div>
+		<div id="import_error">
+			{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+		</div>
+		{% else %}
+		<div id="applet">
+		<h1><span>USCYBERCOM/DISA IAVM</span></h1>
+		<div>This server is not authorized to import PKI FOUO DISA IAVM files</div>
+		</div>
+		{% endif %}
+		<hr/>
+		<div id="applet">
+		<h1><span>DISA IAVM to CVE</span></h1>
+		<div id="disa_iavm_cve_download">
+			<p>DISA publishes an IAVM to CVE file which can be used for in lieu of the individual DISA IAVM.</p>
+			<p><a target="disa-iavm" href="http://iasecontent.disa.mil/stigs/xml/iavm-to-cve%28u%29.xml">http://iasecontent.disa.mil/stigs/xml/iavm-to-cve%28u%29.xml</a></p>
+		</div>
+		<div id="disa_iavm_upload">
+			<form enctype="multipart/form-data" action="/iavm/disa/importcve" method="post"  onsubmit="return validation();">
+				{% csrf_token %}
+				<p>Select to import:</p> 
+				<p><input type="submit" value="Import" id="submit_btn"/></p>
+				<span id="wait_tip" style="display:none;">{% include "icons/refresh23.svg" %} ... Please wait...</span>
+				<p>---</p>
+			</form>
+		</div>
+		<div id="import_error">
+			{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+		</div>
+		</div>
 	{% endif %}
 
 {% endblock %}
