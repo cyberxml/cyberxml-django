@@ -30,6 +30,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+USE_DISA_PKI = False
 
 # Application definition
 
