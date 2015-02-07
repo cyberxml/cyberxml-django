@@ -12,6 +12,7 @@ from datetime import date
 thisyear = date.today().year
 
 media_root = settings.MEDIA_ROOT
+disa_pki_flag = settings.USE_DISA_PKI
 root_src_dir = '/tmp/iavms/'
 iavm_cve_data_dir = media_root+'/data/disa.mil/iavm/cve/'
 iavm_data_dir = media_root+'/data/disa.mil/iavm/'
@@ -29,14 +30,25 @@ def validateCollection(xdb, path):
                 flag=-1
     return flag
 
+def validateDataPath(path):
+	p = path.split('/')
+	flag =0
+	for i in range(len(p)):
+		if not os.path.exists('/'.join(p[0:i+1])):
+			try:
+				os.mkdir('/'.join(p[0:i+1]))
+			except:
+				flag=-1
+	return flag
 
 #------------------------------------------------------------------------------
-# NIST NVD CVE
+# DISA IAVM to CVE
 #------------------------------------------------------------------------------
 def import_disa_iavm_cve():
 	flist=[]
 	exdb = db.ExistDB()	 
 	validateCollection(exdb,db_iavm_cve_disa_collection)
+	validateDataPath(iavm_cve_data_dir)
 		
 	urls=[]
 	urls.append(("http://iasecontent.disa.mil/stigs/xml/iavm-to-cve%28u%29.xml","u_iavm-to-cve.xml"))
@@ -53,9 +65,10 @@ def import_disa_iavm_cve():
 				urllib.urlretrieve (u, iavm_cve_data_dir+uname)
 				try:
 					fo = open(iavm_cve_data_dir+uname, 'rb')
-					if exdb.load(fo, db_iavm_cve_disa_collection+'/'+uname, True):
-						flist.append(uname+": data import successful")
-					else:
+					try:
+						if exdb.load(fo, db_iavm_cve_disa_collection+'/'+uname, True):
+							flist.append(uname+": data import successful")
+					except:
 						flist.append(uname+": data import failed")
 					fo.close()
 				except:
@@ -72,6 +85,8 @@ def import_disa_iavm_cve():
 #------------------------------------------------------------------------------
 # fn="/tmp/disa_iavm.zip"
 def parse_disa_iavm_zip(fn):
+	if not use_disa_pki:
+		return []
 	flist=[]
 	filen=open(fn,"rb")
 	exdb = db.ExistDB()
