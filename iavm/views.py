@@ -51,8 +51,8 @@ def get_iavm_apply(request):
 				declare namespace vuln = "http://www.icasi.org/CVRF/schema/vuln/1.1";
 				declare namespace pt = "http://www.icasi.org/CVRF/schema/prod/1.1";
 				let $iavnum := "'''+iavm+'''"
-				let $iavdoc := "/db/cyberxml/data/iavm/cve/disa.mil/"
-				for $iavcve in doc($iavdoc)/IAVMtoCVE/IAVM//S[@iavm=$iavnum]/CVEs/CVENumber/text()
+				let $iavdoc := "/db/cyberxml/data/iavm/cve/disa.mil/u_iavm-to-cve.xml"
+				for $iavcve in doc($iavdoc)//node()[S/@IAVM=$iavnum]/CVEs/CVENumber/text()
 				for $iavcvrf in collection("/db/cyberxml/data/cvrf")//cvrf:cvrfdoc/vuln:Vulnerability[vuln:CVE=$iavcve]
 				let $cvrfdoc := base-uri($iavcvrf)
 				let $fn := tokenize($cvrfdoc,'/')[last()]
