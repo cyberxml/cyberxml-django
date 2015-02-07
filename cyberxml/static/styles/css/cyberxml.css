@@ -1,0 +1,29 @@
+.import {
+	top: 0;
+	bottom: 0;
+	position: relative;
+	width: 100%;
+	border: 2px solid;
+	border-radius: 25px;
+	text-indent:30px;
+}
+
+#applet {
+    border: 2px solid #a1a1a1;
+    background: #eaeaff;
+    border-radius: 25px;
+    padding: 0px 40px 10px 40px; 
+}
+div h1{
+    text-align: left;
+    margin-top: -12px;
+    height: 30px;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+div h1 span{
+    background: #eaeaff;
+    padding: 0px 4px; 
+    border-radius: 200px;
+}

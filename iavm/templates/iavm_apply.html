@@ -19,12 +19,17 @@ border:1px solid #0000FF;
 {% endblock %}
 
 {% block content %}
-<h3>Enter IAVM</h3>
+<div id="applet">
+<h1><span>IAVM Applicability Analysis</span></h1>
 <form action="/iavm/disa/apply/">
 IAVM: <input type="text" name="iavm" value="{{ iavm }}">
 <input type="submit" value="Submit">
 </form>
-	<table border="1">
+</div>
+{% if xqr %}
+<div id="applet">
+<h1><span>Analysis Report</span></h1>
+<table border="1">
 	<thead>
 		<tr<th span=4>IAVM {{ iavm }}</th></tr>
 		<tr><th>cve</th><th>cvrf</th><th>prod id</th><th>prodname</th></tr>
@@ -37,6 +42,8 @@ IAVM: <input type="text" name="iavm" value="{{ iavm }}">
 	{% endautoescape %}
 	</tbody>
 	</table>
+</div>
+{% endif %}
 {% endblock %}
 
 {% block secondary %}
