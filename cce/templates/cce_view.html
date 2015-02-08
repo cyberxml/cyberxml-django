@@ -1,0 +1,30 @@
+{% extends "config_base.html" %}
+{% block navpath %}
+<div><a href="/config/">config</a> >> <a href="/cce/">cde</a> >>  <a href="/cce/nist">nist</a> >> <a href="/cce/nist/xml/">view</a> >> <a href="/cce/nist/view/{{ccenum}}">{{ccenum}}</a></div>
+{% endblock %}
+{% block content %}
+<div id="applet">
+<h1><span>Search CCE</span></h1>
+<form action="/cce/nist/view/">
+CCE: <input type="text" name="cce" value="{{ ccenum }}">
+<input type="submit" value="Submit">
+</form>
+</div>
+{% if ccexml %}
+<hr/>
+<div id="applet">
+<h1><span>{{ccenum}}</span></h1>
+{% autoescape off %}    
+    {% for i in ccexml%}
+    {{i}}
+    {% endfor %}
+{% endautoescape %} 
+{% endif %}
+</div>
+
+		{% endblock %}
+
+{% block secondary %}
+{% include "sideshow_bob_nist_cce.html" %}
+{% endblock %}
+ 
