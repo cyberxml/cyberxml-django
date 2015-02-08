@@ -3,7 +3,8 @@
 <div><a href="/config">config</a> >> <a href="/cce/">cce</a> >> <a href="/cce/nist">nist</a> >> <a href="/cce/nist/catalog/">catalog</a> >> <a href="/cve/nist/catalog/{{year}}">year</a></div>
 {% endblock %}
 {% block content %}
-	<div class="applet" title="cce">
+	<div id="applet">
+	<h1><span>IAVM Applicability Analysis</span></h1>
 	{% if idx %}
 		<h3>CyberXML catalogs the following CCE from NIST NVD for {{year}}:</h3>
 		<table>

@@ -23,7 +23,8 @@
 
 {% block content %}
 	{% if files %}
-	<div>
+	<div id="applet">
+	<h1><span>CCE Import Results</span></h1>
 		<p>The following NIST NVD CCE were uploaded:</p>
 		<ul>
 		{% for f in files %}
@@ -32,12 +33,11 @@
 		</ul>
 	</div>
 	{% else %}
+	<div id="applet">
+	<h1><span>Import NIST CCE</span></h1>
     <div id="download">
 		<p>The NIST NVD CCE contains many entries.</p>
 		<p>Download and import takes some time. Please be patient.</p>
-	</div>
-    <div id="import_error">
-        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 	</div>
 	<div>
         <form enctype="multipart/form-data" action="/cce/nist/import" method="post" onsubmit="return validation();">
@@ -49,6 +49,10 @@
 			<p>---</p>
         </form>
     </div>
+    <div id="import_error">
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	</div>
+	</div>
 	{% endif %}
 
 	

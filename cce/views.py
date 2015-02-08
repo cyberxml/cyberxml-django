@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.utils.datastructures import MultiValueDictKeyError
 #from django.http import HttpResponse
 #from django.http import Http404
 #from lxml import etree
@@ -75,4 +76,25 @@ def import_nist_cce(request):
 			return render(request, 'cce_import.html', {'error_message': "request failed",})
 	else:
 			return render(request, 'cce_import.html')
-# Create your views here.
+
+def view_nist_cce(request):
+	cce='CCE-13-3'
+	xqr=[]
+	try:
+		cce=request.GET['cce']
+		qryIavmApply='''
+			xquery version "3.0";
+			declare namespace config = "http://scap.nist.gov/schema/configuration/0.1";
+			declare namespace nvd = "http://scap.nist.gov/schema/feed/configuration/0.1";
+			let $thiscce := "'''+cce+'''"
+			let $thisdoc := '/db/cyberxml/data/cce/nist.gov/nvdcce-0.1-feed.xml'
+			let $cce := doc($thisdoc)//nvd:entry[@id=$thiscce]
+			let $xsl := doc("/db/cyberxml/styles/xsl/cce.xsl")
+			return transform:transform($cce,$xsl,())
+			'''
+		a = connExistDB()
+		xqr =a.get_data(qryIavmApply)
+	except MultiValueDictKeyError:
+		pass
+	return render(request,'cce_view.html',{'ccexml':xqr, 'ccenum':cce})
+
