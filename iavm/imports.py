@@ -85,7 +85,7 @@ def import_disa_iavm_cve():
 #------------------------------------------------------------------------------
 # fn="/tmp/disa_iavm.zip"
 def parse_disa_iavm_zip(fn):
-	if not use_disa_pki:
+	if not disa_pki_flag:
 		return []
 	flist=[]
 	filen=open(fn,"rb")
