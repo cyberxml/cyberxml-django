@@ -102,7 +102,7 @@ def iavm_index(request, iavyear):
 		let $last := substring($iavdoc/iav:iavmNotice/iav:lastSaved/text(),1,10)
 		let $first := substring($iavdoc/iav:iavmNotice/iav:releaseDate/text(),1,10)
 		let $name := $iavdoc/iav:iavmNotice/iav:title/text()
-		return <tr><td><a href="/iavm/disa/xml/{$id}">{$id}</a></td><td>{$name}</td><td>{$first}</td><td>{$last}</td></tr>
+		return <tr><td><a href="/iavm/disa/view/?iavm={$id}">{$id}</a></td><td>{$name}</td><td>{$first}</td><td>{$last}</td></tr>
 		'''
 
 	a = connExistDB()
