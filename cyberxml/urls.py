@@ -26,6 +26,7 @@ urlpatterns = patterns('',
 	(r'^vuln/catalog', TemplateView.as_view(template_name='vuln_catalog.html')),
 	(r'^vuln/import', TemplateView.as_view(template_name='vuln_import.html')),
 	(r'^vuln', TemplateView.as_view(template_name='vuln_index.html')),
+	(r'^robots.txt', TemplateView.as_view(template_name='robots.txt',content_type='text/plain')),
 	(r'^$', TemplateView.as_view(template_name='index.html')),
 )
 
