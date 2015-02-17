@@ -4,6 +4,7 @@ from django.http import Http404
 from django.utils.datastructures import MultiValueDictKeyError
 from django.conf import settings
 from . import imports
+from libs import IAVM
 from eulexistdb import db	
 
 disa_pki_flag = settings.USE_DISA_PKI
@@ -143,3 +144,15 @@ def import_disa_iavm_cve_request(request):
 			return render(request, 'iavm_disa_import.html', {'error_message': "request failed",'disa_pki_flag':disa_pki_flag})
 	else:
 			return render(request, 'iavm_disa_import.html', {'disa_pki_flag':disa_pki_flag})
+
+#@login_required
+# TODO: make this PKI sensitive?
+def generate_iavm_to_cpe_doc(request):
+	if request.method == 'POST':
+		try:
+			IAVM.iavm_to_cpe_doc()
+			return render(request,'iavm_apply.html',{'disa_pki_flag':disa_pki_flag})
+		except:
+			return render(request,'iavm_apply.html',{'disa_pki_flag':disa_pki_flag})
+	else:
+			return render(request,'iavm_apply.html',{'disa_pki_flag':disa_pki_flag})

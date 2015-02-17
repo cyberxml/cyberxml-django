@@ -1,0 +1,28 @@
+entry,
+vuln:cve-id,
+vuln:published-datetime,
+vuln:last-modified-datetime,
+vuln:cwe,
+cpe-lang:fact-ref,
+vuln:product,
+cvss:score,
+cvss:access-vector,
+cvss:access-complexity,
+cvss:authentication,
+cvss:confidentiality-impact,
+cvss:integrity-impact,
+cvss:availability-impact,
+cvss:source,
+cvss:generated-on-datetime,
+vuln:source,
+vuln:reference
+{ display: inline }
+
+vuln:vulnerable-configuration,
+cpe-lang:logical-test,
+vuln:vulnerable-software-list,
+vuln:cvss,
+cvss:base_metrics,
+vuln:references,
+vuln:summary
+{ display: block }
