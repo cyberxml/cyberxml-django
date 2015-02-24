@@ -15,9 +15,3 @@ for u in urls:
 	if os.access(".", os.W_OK):
 		print ("downloading "+uname)
 		urllib.urlretrieve (u, uname)
-		# unzip in place
-		zip = ZipFile(uname)
-		zip.extractall()
-		zip.close()
-		# remove zip file
-		os.remove(uname)

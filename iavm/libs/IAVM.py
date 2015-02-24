@@ -1,5 +1,6 @@
 from cvrf.libs import redhat
 from cvrf.libs import microsoft
+from cvrf.libs import oracle
 
 from lxml import etree
 
@@ -44,7 +45,7 @@ def get_qryDisaIavmCve(iavm):
 	else:
 		qry='''
 			xquery version "3.0";
-			let $thisiavm := "2015-A-0029"
+			let $thisiavm := "'''+iavm+'''"
 			let $thisdoc := '/db/cyberxml/data/iavm/cve/disa.mil/u_iavm-to-cve.xml'
 			for $cves in doc($thisdoc)//node()[S[@IAVM=$thisiavm]]/CVEs/CVENumber/text()
 			return $cves'''
@@ -66,6 +67,7 @@ def getCpeFromIavm(iavm):
 	for cve in cves:
 		cpes=cpes+redhat.getCpeFromCve(cve)
 		cpes=cpes+microsoft.getCpeFromCve(cve)
+		cpes=cpes+oracle.getCpeFromCve(cve)
 	return(cpes)
 
 def getCpeFromCve(cve):
@@ -74,6 +76,12 @@ def getCpeFromCve(cve):
 		vendor_cpes=microsoft.getCpeFromCve(cve)
 		if len(vendor_cpes)>1:
 			cpes=cpes+[["microsoft.com",vendor_cpes]]
+	except:
+		pass
+	try:
+		vendor_cpes=oracle.getCpeFromCve(cve)
+		if len(vendor_cpes)>1:
+			cpes=cpes+[["oracle.com",vendor_cpes]]
 	except:
 		pass
 	try:
