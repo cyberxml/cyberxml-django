@@ -22,16 +22,15 @@ def get_qryOracleCvrfCveCpe(cve):
 	declare namespace prod = "http://www.icasi.org/CVRF/schema/prod/1.1";
 	declare namespace vuln = "http://www.icasi.org/CVRF/schema/vuln/1.1";
 	let $thiscve := "'''+cve+'''"
-	for $pid in collection('/db/cyberxml/data/cvrf/oracle.com')//node()[vuln:CVE[.=$thiscve]]/vuln:ProductStatuses/vuln:Status[@Type="Known Affected"]/vuln:ProductID/text()
-	let $prodid := replace($pid,'V-.*$','')
-	for $cpe in doc('/db/cyberxml/apps/cvrf/oracle.com/oraprodid2cpe.xml')//node()[starts-with(ProductID,$prodid)]/CPE2.2/text()
-	return $cpe'''
+	for $cpe in doc('/db/cyberxml/apps/cvrf/oracle.com/oraprodid2cpe.xml')//entry
+	for $pid in collection('/db/cyberxml/data/cvrf/oracle.com')//node()[vuln:CVE[.=$thiscve]]/vuln:ProductStatuses/vuln:Status[@Type="Known Affected"]/vuln:ProductID[starts-with(.,$cpe/ProductID/text())]
+	return $cpe/CPE2.2/text()'''
 	return qry
 
 
 def getCpeFromCve(cve):
 	try:
-		qrystr=get_qryMicrosoftCvrfCveCpe(cve)
+		qrystr=get_qryOracleCvrfCveCpe(cve)
 		a = connExistDB()
 		cpes =list(set(a.get_data(qrystr)))
 	except:
