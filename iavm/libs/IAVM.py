@@ -161,6 +161,7 @@ def iavm_to_cpe_doc():
 	iavms = find(root)
 	
 	for i in range(len(iavms)):
+		print(iavms[i].find('./S').get('IAVM'))
 		cves = iavms[i].findall('./CVEs/CVENumber')
 		for j in range(len(cves)):
 			cpes = getCpeFromCve(cves[j].text)
@@ -176,6 +177,26 @@ def iavm_to_cpe_doc():
 							v_elem.append(etree.Element('CPE'))
 							this = v_elem.findall('./CPE')[-1]
 							this.text = cpe
+	
+
+	# rewrite the above loop to just query once for each cve in the IAVMs
+	# create a dict for each cve with cpe values
+	# get all IAVMs
+	# this is 1800 CVEs at roughly 1.5 seconds = 45 minutes.
+	'''
+	find = etree.XPath('//CVENumber')
+	cvenodes = find(root)
+	cves=[]
+	for j in range(len(cvenodes)):
+		cves.append(cvenodes[j].text)
+	
+	cves = list(set(cves)) # create unique list
+	cves.sort()
+	cve2cpe = {} # dictionary
+	for cve in cves:
+		print cve
+		cve2cpe[cve]=getCpeFromCve(cve)
+	'''
 	
 	# print(etree.tostring(iavms[0],pretty_print=True))
 	
