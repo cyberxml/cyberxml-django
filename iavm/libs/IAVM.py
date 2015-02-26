@@ -1,6 +1,7 @@
 from cvrf.libs import redhat
 from cvrf.libs import microsoft
 from cvrf.libs import oracle
+from cve.libs import nist
 
 from lxml import etree
 
@@ -68,6 +69,7 @@ def getCpeFromIavm(iavm):
 		cpes=cpes+redhat.getCpeFromCve(cve)
 		cpes=cpes+microsoft.getCpeFromCve(cve)
 		cpes=cpes+oracle.getCpeFromCve(cve)
+		cpes=cpes+nist.getCpeFromCve(cve)
 	return(cpes)
 
 def getCpeFromCve(cve):
@@ -88,6 +90,12 @@ def getCpeFromCve(cve):
 		vendor_cpes=redhat.getCpeFromCve(cve)
 		if len(vendor_cpes)>1:
 			cpes=cpes+[["redhat.com",vendor_cpes]]
+	except:
+		pass
+	try:
+		vendor_cpes=redhat.getCpeFromCve(cve)
+		if len(vendor_cpes)>1:
+			cpes=cpes+[["nist.gov",vendor_cpes]]
 	except:
 		pass
 	return(cpes)
@@ -146,6 +154,10 @@ def filter_iavm_references(vendor, references):
 			if 'Google' in ref.get('RefName') and vendor == 'google.com': return True
 		except:
 			pass
+		
+		# not sure how best to combine nist with vendor
+		if vendor == 'nist.gov': return True
+		
 		return False
 
 def iavm_to_cpe_doc():
