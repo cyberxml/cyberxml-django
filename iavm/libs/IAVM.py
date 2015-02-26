@@ -93,7 +93,7 @@ def getCpeFromCve(cve):
 	except:
 		pass
 	try:
-		vendor_cpes=redhat.getCpeFromCve(cve)
+		vendor_cpes=nist.getCpeFromCve(cve)
 		if len(vendor_cpes)>1:
 			cpes=cpes+[["nist.gov",vendor_cpes]]
 	except:
