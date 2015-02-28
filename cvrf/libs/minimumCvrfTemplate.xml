@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cvrf-common="http://www.icasi.org/CVRF/schema/common/1.1" xmlns:prod="http://www.icasi.org/CVRF/schema/prod/1.1" xmlns:vuln="http://www.icasi.org/CVRF/schema/vuln/1.1" xmlns:cvrf="http://www.icasi.org/CVRF/schema/cvrf/1.1"  xmlns:scap-core="http://scap.nist.gov/schema/scap-core/1.0" xmlns:cvssv2="http://scap.nist.gov/schema/cvss-v2/1.0" xmlns:cpe-lang="http://cpe.mitre.org/language/2.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+  <cvrf:DocumentTitle xml:lang="en">%DocumentTitle%</cvrf:DocumentTitle>
+  <cvrf:DocumentType xml:lang="en">%DocumentType%</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor" VendorID="">
+    <cvrf:ContactDetails xml:lang="en">cyberxml@mail.com</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority xml:lang="en">CyberXML translates upstream vendor Security Notices into CVRF format. These CVRF publications are neither approved nor authorized by the upstream vendor.</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID xml:lang="en">%DocumentTrackingID%</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:InitialReleaseDate>%DocumentTrackingInitialReleaseDate%</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>%DocumentTrackingCurrentReleaseDate%</cvrf:CurrentReleaseDate>
+    <cvrf:Status>Draft</cvrf:Status>
+    <cvrf:Version>0.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>0.0</cvrf:Number>
+        <cvrf:Date>%DocumentTrackingRevisionDate%</cvrf:Date>
+        <cvrf:Description xml:lang="en">CyberXML Draft CVRF translated from Vendor HTML</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Legal Disclaimer" Audience="Public" Type="Legal Disclaimer" Ordinal="1" xml:lang="en">The information provided is provided "as is" without warranty of any kind. CyberXML disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall CyberXML be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if CyberXML has been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply.</cvrf:Note>
+    <cvrf:Note Title="Publication Statement" Audience="Public" Type="Legal Disclaimer" Ordinal="2" xml:lang="en">The CVRF document reformats information published by an upstream vendor without consent, authorization, or approval of the original source.</cvrf:Note>
+    <cvrf:Note Title="Executive Summary" Audience="Public" Type="Summary" Ordinal="3" xml:lang="en">%DocumentNote%</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="External">
+      <cvrf:URL>%ReferenceURL%</cvrf:URL>
+      <cvrf:Description xml:lang="en">%ReferenceDescription%</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <prod:ProductTree>
+  </prod:ProductTree>
+</cvrf:cvrfdoc>
