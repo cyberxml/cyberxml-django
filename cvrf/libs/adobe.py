@@ -14,6 +14,7 @@ import urllib
 from StringIO import StringIO
 
 media_root = settings.MEDIA_ROOT
+static_root = settings.STATIC_ROOT
 adobe_data_dir = media_root+'/data/adobe.com/support/security/'
 db_cvrf_adobe_collection = '/db/cyberxml/data/cvrf/adobe.com'
 
@@ -48,14 +49,14 @@ def get_qryAdobeCvrfCveCpe(cve):
 	declare namespace prod = "http://www.icasi.org/CVRF/schema/prod/1.1";
 	declare namespace vuln = "http://www.icasi.org/CVRF/schema/vuln/1.1";
 	let $thiscve := "'''+cve+'''"
-	for $pid in collection('/db/cyberxml/data/cvrf/oracle.com')//node()[vuln:CVE[.=$thiscve]]/vuln:ProductStatuses/vuln:Status[@Type="Known Affected"]/vuln:ProductID[starts-with(.,$cpe/ProductID/text())]
-	return $cpe/CPE2.2/text()'''
+	for $cpe in collection('/db/cyberxml/data/cvrf/adobe.com')//node()[vuln:CVE[.=$thiscve]]/vuln:ProductStatuses/vuln:Status[@Type="Known Affected"]/vuln:ProductID/text()
+	return $cpe'''
 	return qry
 
 
 def getCpeFromCve(cve):
 	try:
-		qrystr=get_qryOracleCvrfCveCpe(cve)
+		qrystr=get_qryAdobeCvrfCveCpe(cve)
 		a = connExistDB()
 		cpes =list(set(a.get_data(qrystr)))
 	except:
@@ -78,6 +79,7 @@ def translateAdobeHtmlToCvrf(fullname):
 	#cvrf['ProductID']=""
 	
 	uname=os.path.basename(fullname)
+	print("adobe::translateAdobeHtmlToCvrf::"+fullname)
 	parser = etree.HTMLParser()
 	tree   = etree.parse(fullname, parser)
 	root = tree.getroot()
@@ -180,7 +182,7 @@ def translateAdobeHtmlToCvrf(fullname):
 		this = this.replace('(','')
 		these = this.split('and')
 		cpe = these[0].replace(' ','')
-		print cpe
+		#print cpe
 		if 'for' in sw[i]:
 			for x in sw[i].split('for')[1].split():
 				x=x.replace(',','').lower()
@@ -194,7 +196,7 @@ def translateAdobeHtmlToCvrf(fullname):
 			products.append([sw[i],cpe])
 	
 	# import cvrf template
-	mincvrf=etree.parse('minimumCvrfTemplate.xml')
+	mincvrf=etree.parse(static_root+'/templates/minimumCvrfTemplate.xml')
 	mincvrf.find("//{http://www.icasi.org/CVRF/schema/cvrf/1.1}DocumentTitle").text=cvrf['DocumentTitle']
 	mincvrf.find("//{http://www.icasi.org/CVRF/schema/cvrf/1.1}DocumentType").text=cvrf['DocumentType']
 	mincvrf.find("//{http://www.icasi.org/CVRF/schema/cvrf/1.1}InitialReleaseDate").text=cvrf['DocumentTrackingInitialReleaseDate']
@@ -258,9 +260,14 @@ def translateAdobeHtmlToCvrf(fullname):
 	except:
 		print("No CVEs found")
 	
+	outfile=fullname.replace(".html","-cvrf.xml")
+	print("Saving Adobe CVRF: "+outfile)
 	mincvrf.write(outfile,pretty_print=True,xml_declaration=True, encoding='utf-8')
 
 def importAdobeHtml():
+	exdb = db.ExistDB()	 
+	validateCollection(exdb,db_cvrf_adobe_collection)
+	flist=[]
 	produrls = [
 		"https://helpx.adobe.com/security/products/reader.html",
 		"https://helpx.adobe.com/security/products/flash-player.html",
@@ -295,6 +302,19 @@ def importAdobeHtml():
 			#f.close()
 			try:
 				if int(uname[4:6])>13:
-					translateAdobeHtmlToCvrf(adobe_data_dir+uname)
+					try:
+						translateAdobeHtmlToCvrf(adobe_data_dir+uname)
+						try:
+							cvrfname=uname.replace(".html","-cvrf.xml")
+							fo = open(adobe_data_dir+cvrfname, 'rb')
+							if exdb.load(fo, db_cvrf_adobe_collection+'/'+cvrfname, True):
+								flist.append(cvrfname+": data import successful")
+							else:
+								flist.append(cvrfname+": data import failed")
+							fo.close()
+						except:
+							flist.append(uname+": file read failed")
+					except:
+						print("failed to translate: "+uname)
 			except:
 				pass
