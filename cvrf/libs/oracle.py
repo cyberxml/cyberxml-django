@@ -33,6 +33,7 @@ def getCpeFromCve(cve):
 		qrystr=get_qryOracleCvrfCveCpe(cve)
 		a = connExistDB()
 		cpes =list(set(a.get_data(qrystr)))
+		cpes.sort()
 	except:
 		cpes=[]
 	return(cpes)
