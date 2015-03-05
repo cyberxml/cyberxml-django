@@ -15,8 +15,8 @@ from StringIO import StringIO
 
 media_root = settings.MEDIA_ROOT
 static_root = settings.STATIC_ROOT
-vmware_data_dir = media_root+'/data/vmware.com/security/advisories/'
-db_cvrf_vmware_collection = '/db/cyberxml/data/cvrf/vmware.com'
+juniper_data_dir = media_root+'/data/juniper.net/security/advisories/'
+db_cvrf_juniper_collection = '/db/cyberxml/data/cvrf/juniper.net'
 
 thisyear = date.today().year
 
@@ -43,28 +43,29 @@ class connExistDB:
             result.append(str(self.db.retrieve(qresult, i)))
         return result
     
-def get_qryVmwareCvrfCveCpe(cve):
+def get_qryJuniperCvrfCveCpe(cve):
     qry = '''xquery version "3.0";
     declare namespace cvrf = "http://www.icasi.org/CVRF/schema/cvrf/1.1";
     declare namespace prod = "http://www.icasi.org/CVRF/schema/prod/1.1";
     declare namespace vuln = "http://www.icasi.org/CVRF/schema/vuln/1.1";
     let $thiscve := "'''+cve+'''"
-    for $cpe in collection('/db/cyberxml/data/cvrf/vmware.com')//node()[vuln:CVE[.=$thiscve]]/vuln:ProductStatuses/vuln:Status[@Type="Known Affected"]/vuln:ProductID/text()
+    for $cpe in collection('/db/cyberxml/data/cvrf/juniper.net')//node()[vuln:CVE[.=$thiscve]]/vuln:ProductStatuses/vuln:Status[@Type="Known Affected"]/vuln:ProductID/text()
     return $cpe'''
     return qry
 
 
 def getCpeFromCve(cve):
     try:
-        qrystr=get_qryVmwareCvrfCveCpe(cve)
+        qrystr=get_qryJuniperCvrfCveCpe(cve)
         a = connExistDB()
         cpes =list(set(a.get_data(qrystr)))
-        cpes.sort()
-    except:
+		cpes.sort()
+	except:
         cpes=[]
     return(cpes)
 
-def translateVmwareHtmlToCvrf(fullname):
+# 20150304: Juniper SIRT HTML sucks and I don't know if its possible to automate CVRF generation
+def translateJuniperHtmlToCvrf(fullname):
     cvrf={}
     cvrf['DocumentTitle']=""
     cvrf['DocumentType']="Security Advisory"
@@ -85,62 +86,53 @@ def translateVmwareHtmlToCvrf(fullname):
     tree   = etree.parse(fullname, parser)
     root = tree.getroot()
     
-    # DocumentTitle
-    try:
-        cvrf['DocumentTitle']=root.find(".//h3[@class='h-3 pd-b15']").get('content').strip()
-    except:
-        print("No description found; creating one")
-        vmsa=root.find(".//meta[@name='title']").get('content').strip()
-        cvrf['DocumentTitle']= "Security Advisory for "+vmsa
-    
-    # DocumentType
-    '''
-    try:
-        cvrf['DocumentType']=root.find(".//meta[@name='title']").get('content').strip()
-    except:
-        print("No title found")
-    '''
-    
-    # DocumentTrackingInitialReleaseDate
-    try:
-        cvrf['DocumentTrackingInitialReleaseDate']=root.find(".//meta[@name='date']").get('content').strip()+"T00:00:00Z"
-    except:
-        print("No InitialReleaseDate found; creating one")
-        cvrf['DocumentTrackingInitialReleaseDate']=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
-    
-    # DocumentTrackingCurrentReleaseDate
-    try:
-        cvrf['DocumentTrackingCurrentReleaseDate']=root.find(".//meta[@name='date']").get('content').strip()+"T00:00:00Z"
-    except:
-        print("No CurrentReleaseDate found; creating one")
-        cvrf['DocumentTrackingCurrentReleaseDate']=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
-    
-    # DocumentTrackingID
-    try:
-        cvrf['DocumentTrackingID']=root.find(".//meta[@name='title']").get('content').strip()
-    except:
-        print("No vulnerability identifier found; creating one")
-        cvrf['DocumentTrackingID']=uname.upper().replace('.html','')
-    
-    # DocumentNote
-    # only retrieves first such content note
-    try:
-        cvrf['DocumentNote']=root.find(".//div[@class='security_content']").get('content').strip()
-    except:
-        try:
-            cvrf['DocumentNote']=root.find(".//div[@class='h-3 pd-b15']").get('content').strip()
-        except:
-            print("Document note not found; creating one")
-            cvrf['DocumentNote']="CyberXML placeholder. HTML security notice not in current format."
-    
-    # ReferenceURL
-    try:
-        cvrf['ReferenceURL']="https://www.vmware.com"+tree.xpath('.//a[contains(@href,"VMSA")]')[0].get('href').strip()
-    except:
-        cvrf['ReferenceURL']='https://www.vmware.com/security/advisories/'+cvrf['DocumentTrackingID']+".html"
-    
-    # ReferenceDescription
-    cvrf['ReferenceDescription']=cvrf['DocumentTitle']
+	# DocumentTitle
+	try:
+		cvrf['DocumentTitle']=tree.xpath("//div[@class='kb_ident']")[0].text.strip()
+	except:
+		print("No description found; creating one")
+		cvrf['DocumentTitle']= "Security Advisory for "+uname.replace(".html","")
+	
+	# DocumentTrackingInitialReleaseDate
+	try:
+		cvrf['DocumentTrackingInitialReleaseDate']=root.find(".//meta[@name='date']").get('content').strip()+"T00:00:00Z"
+	except:
+		print("No InitialReleaseDate found; creating one")
+		cvrf['DocumentTrackingInitialReleaseDate']=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
+	
+	# DocumentTrackingCurrentReleaseDate
+	try:
+		datestr = tree.xpath("//node()[td[contains(.,'Last Updated')]]/td")[3].text
+		ds = datestr.split()
+		datestr = ds[2]+'-'+str((strptime(ds[1],'%b')).tm_mon).zfill(2)+'-'+str(int(ds[0])).zfill(2)+'T00:00:00Z'
+		cvrf['DocumentTrackingCurrentReleaseDate']=datestr
+	except:
+		print("No CurrentReleaseDate found; creating one")
+		cvrf['DocumentTrackingCurrentReleaseDate']=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
+	
+	# DocumentTrackingID
+	cvrf['DocumentTrackingID']=uname.replace(".html","")
+	
+	# DocumentNote
+	# only retrieves first such content note
+	try:
+		cvrf['DocumentNote']=root.find(".//div[@class='security_content']").get('content').strip()
+	except:
+		try:
+			cvrf['DocumentNote']=root.find(".//div[@class='h-3 pd-b15']").get('content').strip()
+		except:
+			print("Document note not found; creating one")
+			cvrf['DocumentNote']="CyberXML placeholder. HTML security notice not in current format."
+	
+	# ReferenceURL
+	try:
+		cvrf['ReferenceURL']="https://www.vmware.com"+tree.xpath('.//a[contains(@href,"VMSA")]')[0].get('href').strip()
+	except:
+		cvrf['ReferenceURL']='https://www.vmware.com/security/advisories/'+cvrf['DocumentTrackingID']+".html"
+
+	# ReferenceDescription
+	cvrf['ReferenceDescription']=cvrf['DocumentTitle']
+
     
     # -----------------------------------------------------------------------------
     # create cpe for productID and keep FullProductName as in Affected Software
@@ -203,7 +195,7 @@ def translateVmwareHtmlToCvrf(fullname):
             print("translateVmwareHtmlToCvrf: cannot find minimumCvrfTemplate.xml")
             # throw exception
             mincvrf=etree.parse('minimumCvrfTemplate.xml')
-    
+	
     mincvrf.find("//{http://www.icasi.org/CVRF/schema/cvrf/1.1}DocumentTitle").text=cvrf['DocumentTitle']
     mincvrf.find("//{http://www.icasi.org/CVRF/schema/cvrf/1.1}DocumentType").text=cvrf['DocumentType']
     mincvrf.find("//{http://www.icasi.org/CVRF/schema/cvrf/1.1}InitialReleaseDate").text=cvrf['DocumentTrackingInitialReleaseDate']
@@ -274,20 +266,20 @@ def translateVmwareHtmlToCvrf(fullname):
     print("Saving Adobe CVRF: "+outfile)
     mincvrf.write(outfile,pretty_print=True,xml_declaration=True, encoding='utf-8')
 
-def importVmwareHtml():
+def importJuniperHtml():
     exdb = db.ExistDB()  
-    validateCollection(exdb,db_cvrf_vmware_collection)
+    validateCollection(exdb,db_cvrf_juniper_collection)
     flist=[]
     produrls = [
-        "http://www.vmware.com/security/advisories",
+        "http://kb.juniper.net/InfoCenter/index?page=content&channel=SECURITY_ADVISORIES&cat=SIRT_ADVISORY&&actp=&sort=datemodified&dir=descending&max=1000&batch=1000&rss=true&itData.offset=0",
         ]
     
     apslinks=[]
     for pu in produrls:
         content = urllib.urlopen(pu).read()
         doc = fromstring(content)
-        doc.make_links_absolute("https://www.vmware.com")
-        for a in doc.xpath('//a[contains(@class,"l-reg")]'):
+        doc.make_links_absolute("http://kb.juniper.net/InfoCenter/")
+        for a in doc.xpath('//a[contains(@href,"id=JSA") and contains(@href,"showDraft")]'):
             apslinks.append(a.get('href'))
     
     apslinks = list(set(list(apslinks)))
@@ -298,17 +290,18 @@ def importVmwareHtml():
     # TODO: check for revisions and download those as well (check hashes?)
     # -----------------------------------------------------------------------------
     for u in apslinks:
-        uname = u.split('/')[-1]
+        uname = u.split('id=')[1].split('&')[0]+'.html'
         # if file does not exist, download
         if (not os.path.isfile(uname) and os.access(".", os.W_OK)):
             print ("downloading "+uname)
             headers = { 'User-Agent' : 'Mozilla/5.0' }
             req = urllib2.Request(u, None, headers)
             #cvrfhtml = urllib2.urlopen(req).read()
-            urllib.urlretrieve (u, vmware_data_dir+uname)
+            urllib.urlretrieve (u, juniper_data_dir+uname)
             #f = open(uname,'w')
             #f.write(cvrfhtml)
             #f.close()
+			'''
             try:
                 if int(uname[7:9])>8:
                     try:
@@ -327,3 +320,4 @@ def importVmwareHtml():
                         print("failed to translate: "+uname)
             except:
                 pass
+			'''

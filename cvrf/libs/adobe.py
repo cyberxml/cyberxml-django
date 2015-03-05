@@ -59,6 +59,7 @@ def getCpeFromCve(cve):
 		qrystr=get_qryAdobeCvrfCveCpe(cve)
 		a = connExistDB()
 		cpes =list(set(a.get_data(qrystr)))
+		cpes.sort()
 	except:
 		cpes=[]
 	return(cpes)
@@ -83,6 +84,12 @@ def translateAdobeHtmlToCvrf(fullname):
 	parser = etree.HTMLParser()
 	tree   = etree.parse(fullname, parser)
 	root = tree.getroot()
+	# DocumentTitle: Security update for Flash Player, released December 10 2013
+	try:
+		cvrf['DocumentTitle']=root.find(".//meta[@name='description']").get('content').strip()
+	except:
+		print("No description found; creating one")
+		cvrf['DocumentTitle']= "Security update for Adobe Product, cvrf dated "+strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
 	# DocumentType
 	try:
 		cvrf['DocumentType']=root.find(".//meta[@name='title']").get('content').strip()
@@ -100,36 +107,24 @@ def translateAdobeHtmlToCvrf(fullname):
 	except:
 		print("No CurrentReleaseDate found; creating one")
 		cvrf['DocumentTrackingCurrentReleaseDate']=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
-	# DocumentTitle: Security update for Flash Player, released December 10 2013
-	try:
-		cvrf['DocumentTitle']=root.find(".//meta[@name='description']").get('content').strip()
-	except:
-		print("No description found; creating one")
-		cvrf['DocumentTitle']= "Security update for Adobe Product, cvrf dated "+strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
-	# DocumentTrackingCurrentReleaseDate
+	# DocumentTrackingID
 	try:
 		cvrf['DocumentTrackingID']=''.join(tree.xpath('//node()[strong[.="Vulnerability identifier:"]]')[0].itertext()).split(':')[1].replace(' ','').strip()
 	except:
 		print("No vulnerability identifier found; creating one")
 		cvrf['DocumentTrackingID']=uname.upper().replace('.html','')
-	# DocumentTrackingCurrentReleaseDate
-	try:
-		cvrf['DocumentTrackingID']=''.join(tree.xpath('//node()[strong[.="Vulnerability identifier:"]]')[0].itertext()).split(':')[1].replace(' ','').strip()
-	except:
-		print("No vulnerability identifier found; creating one")
-		cvrf['DocumentTrackingCurrentReleaseDate']=uname.upper().replace('.html','')
 	# DocumentNote
 	try:
 		cvrf['DocumentNote']=''.join(tree.xpath('.//div[@class="text parbase section"]')[1].itertext()).replace('\r','').replace('\n','').replace('	 ',' ').strip()
 	except:
 		print("Document note not found; creating one")
 		cvrf['DocumentNote']="CyberXML placeholder. HTML security notice not in current format."
-	# DocumentNote
+	# DocumentReferenceURL
 	try:
 		cvrf['ReferenceURL']=tree.xpath('.//link[contains(@href,"'+uname+'")]')[0].get('href')
 	except:
 		print("ReferenceURL note not found; creating one")
-		cvrf['DocumentNote']="https://helpx.adobe.com/security.html"
+		cvrf['ReferenceURL']="https://helpx.adobe.com/security.html"
 	# ReferenceDescription
 	cvrf['ReferenceDescription']=cvrf['DocumentTitle']
 	
