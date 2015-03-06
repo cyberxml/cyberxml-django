@@ -172,6 +172,10 @@ def translateVmwareHtmlToCvrf(fullname):
                 flag=False
             if ts[1]=='':
                 flag=False
+			if ts[0]=="vpd":
+				ts[0]="vsphere_data_protection"
+			if ts[1]=="any":
+				ts[1]=""
             if flag:
                 #print ':'.join(["cpe:/a:vmware"]+ts[0:2]).lower().replace(' ','_').replace('.x','')
                 prod.append(':'.join(["cpe:/a:vmware"]+ts[0:2]).lower().replace(' ','_').replace('.x',''))
@@ -187,6 +191,7 @@ def translateVmwareHtmlToCvrf(fullname):
         ps = p.replace("cpe:/a:vmware","VMware").split(":")
         if ps[1][0]=='v':
             ps[1]=ps[1].replace("vcenter_server","vCenter Server")
+            ps[1]=ps[1].replace("vsphere_data_protection","vSphere Data Protection")
         elif 'esx' in ps[1]:
             ps[1]=ps[1].replace("esx","ESX")
         else:
