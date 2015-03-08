@@ -2,6 +2,8 @@ from cvrf.libs import redhat
 from cvrf.libs import microsoft
 from cvrf.libs import oracle
 from cvrf.libs import adobe
+from cvrf.libs import cisco
+from cvrf.libs import vmware
 from cve.libs import nist
 
 from lxml import etree
@@ -71,6 +73,11 @@ def getCpeFromIavm(iavm):
 		cpes=cpes+microsoft.getCpeFromCve(cve)
 		cpes=cpes+oracle.getCpeFromCve(cve)
 		cpes=cpes+adobe.getCpeFromCve(cve)
+<<<<<<< HEAD
+=======
+		cpes=cpes+vmware.getCpeFromCve(cve)
+		cpes=cpes+cisco.getCpeFromCve(cve)
+>>>>>>> 39edb0c76fa215251368c65a45a1a0278a5c7a34
 		cpes=cpes+nist.getCpeFromCve(cve)
 	return(cpes)
 
@@ -101,6 +108,21 @@ def getCpeFromCve(cve):
 	except:
 		pass
 	try:
+<<<<<<< HEAD
+=======
+		vendor_cpes=vmware.getCpeFromCve(cve)
+		if len(vendor_cpes)>1:
+			cpes=cpes+[["vmware.com",vendor_cpes]]
+	except:
+		pass
+	try:
+		vendor_cpes=cisco.getCpeFromCve(cve)
+		if len(vendor_cpes)>1:
+			cpes=cpes+[["cisco.com",vendor_cpes]]
+	except:
+		pass
+	try:
+>>>>>>> 39edb0c76fa215251368c65a45a1a0278a5c7a34
 		vendor_cpes=nist.getCpeFromCve(cve)
 		if len(vendor_cpes)>1:
 			cpes=cpes+[["nist.gov",vendor_cpes]]

@@ -33,6 +33,7 @@ def getCpeFromCve(cve):
 		qrystr=get_qryMicrosoftCvrfCveCpe(cve)
 		a = connExistDB()
 		cpes =a.get_data(qrystr)
+		cpes.sort()
 	except:
 		cpes=[]
 	return(cpes)

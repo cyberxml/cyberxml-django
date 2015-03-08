@@ -34,6 +34,7 @@ def getCpeFromCve(cve):
 		qrystr=get_qryNistCveCpe(cve)
 		a = connExistDB()
 		cpes =a.get_data(qrystr)
+		cpse.sort()
 	except:
 		cpes=[]
 	return(cpes)
