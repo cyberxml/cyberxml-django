@@ -107,6 +107,12 @@ def translateAdobeHtmlToCvrf(fullname):
 	except:
 		print("No CurrentReleaseDate found; creating one")
 		cvrf['DocumentTrackingCurrentReleaseDate']=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
+	# DocumentTitle: Security update for Flash Player, released December 10 2013
+	try:
+		cvrf['DocumentTitle']=root.find(".//meta[@name='description']").get('content').strip()
+	except:
+		print("No description found; creating one")
+		cvrf['DocumentTitle']= "Security update for Adobe Product, cvrf dated "+strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
 	# DocumentTrackingID
 	try:
 		cvrf['DocumentTrackingID']=''.join(tree.xpath('//node()[strong[.="Vulnerability identifier:"]]')[0].itertext()).split(':')[1].replace(' ','').strip()
