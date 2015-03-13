@@ -140,7 +140,7 @@ def filter_iavm_references(vendor, references):
 	# refernces is an etree element
 	refs = references.findall('./Reference')
 	for ref in refs:
-		try: 		
+		try:
 			if 'microsoft.com' in ref.get('URL') and vendor == 'microsoft.com': return True
 			if 'redhat.com' in ref.get('URL') and vendor == 'redhat.com': return True
 			if 'adobe.com' in ref.get('URL') and vendor == 'adobe.com': return True
