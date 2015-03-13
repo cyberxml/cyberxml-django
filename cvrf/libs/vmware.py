@@ -331,8 +331,5 @@ def importVmwareHtml():
                     except:
                         print("failed to translate: "+uname)
             except:
-<<<<<<< HEAD
                 pass
-=======
-                pass
->>>>>>> 535930ec4e8f7b678cca660f25f49faf75557a8c
+

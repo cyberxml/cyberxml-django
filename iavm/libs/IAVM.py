@@ -238,4 +238,4 @@ def iavm_to_cpe_doc():
 	
 	# write xml doc to database
 	exdb.load(etree.tostring(root,pretty_print=True),iavm_to_cpe_path,True)
-	
+
