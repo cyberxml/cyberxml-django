@@ -73,11 +73,8 @@ def getCpeFromIavm(iavm):
 		cpes=cpes+microsoft.getCpeFromCve(cve)
 		cpes=cpes+oracle.getCpeFromCve(cve)
 		cpes=cpes+adobe.getCpeFromCve(cve)
-<<<<<<< HEAD
-=======
 		cpes=cpes+vmware.getCpeFromCve(cve)
 		cpes=cpes+cisco.getCpeFromCve(cve)
->>>>>>> 39edb0c76fa215251368c65a45a1a0278a5c7a34
 		cpes=cpes+nist.getCpeFromCve(cve)
 	return(cpes)
 
