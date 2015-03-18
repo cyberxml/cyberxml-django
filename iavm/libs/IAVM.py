@@ -137,7 +137,10 @@ def validateCollection(xdb, path):
 
 def filter_iavm_references(vendor, references):
 	# vendor is a string
-	# refernces is an etree element
+	# references is an etree element
+	# not sure how best to combine nist with vendor
+	if vendor == 'nist.gov': return True
+	
 	refs = references.findall('./Reference')
 	for ref in refs:
 		try:
@@ -179,10 +182,8 @@ def filter_iavm_references(vendor, references):
 		except:
 			pass
 		
-		# not sure how best to combine nist with vendor
-		if vendor == 'nist.gov': return True
 		
-		return False
+	return False
 
 def iavm_to_cpe_doc():
 	exdb = db.ExistDB()
