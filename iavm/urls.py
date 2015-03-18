@@ -11,5 +11,6 @@ urlpatterns = patterns('iavm.views',
 	url(r'^disa/catalog', TemplateView.as_view(template_name='iavm_catalog.html')),
 	url(r'^disa/importcve', views.import_disa_iavm_cve_request),
 	url(r'^disa/import', views.import_disa_iavm_request),
+	url(r'^disa/export/iavmcpe', views.export_iavm_to_cpe_doc),
 	url(r'.*', TemplateView.as_view(template_name='iavm_index.html')),
 )
