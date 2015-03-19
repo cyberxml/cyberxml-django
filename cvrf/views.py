@@ -85,12 +85,13 @@ def vendor_index(request, vendor):
 	qrystr='''xquery version "3.0";
 		declare namespace cvrf = "http://www.icasi.org/CVRF/schema/cvrf/1.1";
 		let $vd := "'''+vendor+'''"
-		for $v in reverse(collection("/db/cyberxml/data/cvrf/'''+vroot+'''/")/cvrf:cvrfdoc )
+		for $v in collection("/db/cyberxml/data/cvrf/'''+vroot+'''/")/cvrf:cvrfdoc
 		let $id := $v/cvrf:DocumentTracking/cvrf:Identification/cvrf:ID/text()
 		let $title := $v/cvrf:DocumentTitle/text()
 		let $irdate := substring($v/cvrf:DocumentTracking/cvrf:InitialReleaseDate/text(),1,10)
 		let $crdate := substring($v/cvrf:DocumentTracking/cvrf:CurrentReleaseDate/text(),1,10)
 		let $fn := util:document-name($v)
+		order by $id descending
 		return <tr><td>{$id}</td>
 			<td><a href="/cvrf/{$vd}/xml/{$fn}">{$title}</a></td>
 			<td>{$irdate}</td>
