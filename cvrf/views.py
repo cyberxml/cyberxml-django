@@ -97,7 +97,7 @@ def vendor_index(request, vendor):
 		let $irdate := substring($v/cvrf:DocumentTracking/cvrf:InitialReleaseDate/text(),1,10)
 		let $crdate := substring($v/cvrf:DocumentTracking/cvrf:CurrentReleaseDate/text(),1,10)
 		let $fn := util:document-name($v)
-		order by $id descending
+		order by $crdate descending
 		return <tr><td>{$id}</td>
 			<td><a href="/cvrf/{$vd}/xml/{$fn}">{$title}</a></td>
 			<td>{$irdate}</td>
