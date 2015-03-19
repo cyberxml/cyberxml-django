@@ -31,6 +31,12 @@ def getVendorDirectory(vendor):
 	elif vendor == "cisco":
 		vdir = "cisco.com/security/center/cvrfListing.x/"
 		vroot ="cisco.com"
+	elif vendor == "vmware":
+		vdir = "vmware.com/security/advisories"
+		vroot ="vmware.com"
+	elif vendor == "adobe":
+		vdir = "adobe.com/support/security/"
+		vroot ="adobe.com"
 	elif vendor == "oracle":
 		vdir = "oracle.com/documents/webcontent/cvrf/"
 		vroot ="oracle.com"
