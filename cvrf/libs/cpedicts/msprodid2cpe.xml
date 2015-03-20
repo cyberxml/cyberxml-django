@@ -1,0 +1,2816 @@
+<ProductCpeDictionary>
+    <Entry>
+        <ProductID>10175</ProductID>
+        <ProductName>Active Directory</ProductName>
+        <CPE2.2>cpe:/a:microsoft:active_directory:-</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>8372</ProductID>
+        <ProductName>Active Directory Application Mode (ADAM)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:active_directory_application_mode:-</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10530</ProductID>
+        <ProductName>Active Directory Federation Services 1.x</ProductName>
+        <CPE2.2>cpe:/a:microsoft:active_directory_federation_services:1.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10530</ProductID>
+        <ProductName>Active Directory Federation Services 1.x</ProductName>
+        <CPE2.2>cpe:/a:microsoft:active_directory_federation_services:1.1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10531</ProductID>
+        <ProductName>Active Directory Federation Services 2.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:active_directory_federation_services:2.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10532</ProductID>
+        <ProductName>Active Directory Federation Services 2.1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:active_directory_federation_services:2.1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10640</ProductID>
+        <ProductName>Active Directory Federation Services 3.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:active_directory_federation_services:3.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9317</ProductID>
+        <ProductName>Active Directory Lightweight Directory Service (AD LDS)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:active_directory_lightweight_directory_service:-</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>6481</ProductID>
+        <ProductName>Active Directory Services</ProductName>
+        <CPE2.2>cpe:/a:microsoft:active_directory_services:-</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10642</ProductID>
+        <ProductName>ASP.NET MVC 2.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net:2.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10643</ProductID>
+        <ProductName>ASP.NET MVC 3.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net:3.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10644</ProductID>
+        <ProductName>ASP.NET MVC 4.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net:4.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10645</ProductID>
+        <ProductName>ASP.NET MVC 5.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net:5.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10646</ProductID>
+        <ProductName>ASP.NET MVC 5.1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net:5.1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10570</ProductID>
+        <ProductName>ASP.NET SignalR 1.0.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net_signalr:1.0.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10571</ProductID>
+        <ProductName>ASP.NET SignalR 1.0.1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net_signalr:1.0.1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10572</ProductID>
+        <ProductName>ASP.NET SignalR 1.1.x</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net_signalr:1.1.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10572</ProductID>
+        <ProductName>ASP.NET SignalR 1.1.x</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net_signalr:1.1.1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10572</ProductID>
+        <ProductName>ASP.NET SignalR 1.1.x</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net_signalr:1.1.2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10572</ProductID>
+        <ProductName>ASP.NET SignalR 1.1.x</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net_signalr:1.1.3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10572</ProductID>
+        <ProductName>ASP.NET SignalR 1.1.x</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net_signalr:1.1.4</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10573</ProductID>
+        <ProductName>ASP.NET SignalR 2.0.x</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net_signalr:2.0.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10573</ProductID>
+        <ProductName>ASP.NET SignalR 2.0.x</ProductName>
+        <CPE2.2>cpe:/a:microsoft:asp.net_signalr:2.0.1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9171</ProductID>
+        <ProductName>Excel Services</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10002</ProductID>
+        <ProductName>FAST ESP 5.2</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10003</ProductID>
+        <ProductName>FAST ESP 5.3</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10337</ProductID>
+        <ProductName>FAST Search Server 2010 for Internal Applications</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10338</ProductID>
+        <ProductName>FAST Search Server 2010 for Internet Business</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10340</ProductID>
+        <ProductName>FAST Search Server 2010 for SharePoint Internet Sites</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10341</ProductID>
+        <ProductName>FAST Search Server 2010 for SharePoint Service Pack 1</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10081</ProductID>
+        <ProductName>Forefront Online Protection for Exchange</ProductName>
+        <CPE2.2>cpe:/a:microsoft:microsoft_forefront_protection_2010:-::~~~exchange_server~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10578</ProductID>
+        <ProductName>Forefront Protection 2010 for Exchange Server</ProductName>
+        <CPE2.2>cpe:/a:microsoft:microsoft_forefront_protection_2010:-::~~~exchange_server~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10463</ProductID>
+        <ProductName>iSCSI Software Target 3.3</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9158</ProductID>
+        <ProductName>JScript 5.7</ProductName>
+        <CPE2.2>cpe:/a:microsoft:jscript:5.7</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9343</ProductID>
+        <ProductName>JScript 5.8</ProductName>
+        <CPE2.2>cpe:/a:microsoft:jscript:5.8</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>5257</ProductID>
+        <ProductName>Microsoft .NET Framework 1.0 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:1.0:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>3899</ProductID>
+        <ProductName>Microsoft .NET Framework 1.1 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:1.0:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9292</ProductID>
+        <ProductName>Microsoft .NET Framework 2.0 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:2.0:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9195</ProductID>
+        <ProductName>Microsoft .NET Framework 3.0 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:3.0:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>2472</ProductID>
+        <ProductName>Microsoft .NET Framework 3.5</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:3.5</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>7683</ProductID>
+        <ProductName>Microsoft .NET Framework 3.5 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:3.5:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9495</ProductID>
+        <ProductName>Microsoft .NET Framework 3.5.1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:3.5.1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4937</ProductID>
+        <ProductName>Microsoft .NET Framework 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:4.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10310</ProductID>
+        <ProductName>Microsoft .NET Framework 4.5</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:4.5</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10579</ProductID>
+        <ProductName>Microsoft .NET Framework 4.5.1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:4.5.1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10638</ProductID>
+        <ProductName>Microsoft .NET Framework 4.5.1/4.5.2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:4.5</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10639</ProductID>
+        <ProductName>Microsoft .NET Framework 4.5.1/4.5.2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:4.5</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10636</ProductID>
+        <ProductName>Microsoft .NET Framework 4.5.2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:.net_framework:4.5.2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10545</ProductID>
+        <ProductName>Microsoft Business Productivity Servers</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>7097</ProductID>
+        <ProductName>Microsoft Commerce Server 2002 Service Pack 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:commerce_server:2002:sp4</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4134</ProductID>
+        <ProductName>Microsoft Commerce Server 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:commerce_server:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>350</ProductID>
+        <ProductName>Microsoft Commerce Server 2009</ProductName>
+        <CPE2.2>cpe:/a:microsoft:commerce_server:2009</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10234</ProductID>
+        <ProductName>Microsoft Commerce Server 2009 R2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:commerce_server:2009:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10064</ProductID>
+        <ProductName>Microsoft Communications Server 2007</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_communications_server</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10065</ProductID>
+        <ProductName>Microsoft Communications Server 2007 R2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_communications_server</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10298</ProductID>
+        <ProductName>Microsoft Communications Server 2007 Speech Server</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_communications_server</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10072</ProductID>
+        <ProductName>Microsoft Communicator 2005</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_communicator:2005</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10288</ProductID>
+        <ProductName>Microsoft Communicator 2005 Web Access</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10073</ProductID>
+        <ProductName>Microsoft Communicator 2007</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_communicator:2007</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10074</ProductID>
+        <ProductName>Microsoft Communicator 2007 R2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_communicator:2007:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10291</ProductID>
+        <ProductName>Microsoft Communicator 2007 R2 Attendant</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_communicator:2007:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10292</ProductID>
+        <ProductName>Microsoft Communicator 2007 R2 Group Chat Admin</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_communicator:2007:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10293</ProductID>
+        <ProductName>Microsoft Communicator 2007 R2 Group Chat Client</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_communicator:2007:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10289</ProductID>
+        <ProductName>Microsoft Communicator 2007 Web Access</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_communicator:2007:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10029</ProductID>
+        <ProductName>Microsoft Communicator for Mac 2011</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10076</ProductID>
+        <ProductName>Microsoft Communicator Mobile</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10075</ProductID>
+        <ProductName>Microsoft Communicator Phone Edition</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4513</ProductID>
+        <ProductName>Microsoft Data Access Components 2.8 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:data_access_components:2.8:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>6004</ProductID>
+        <ProductName>Microsoft Data Access Components 2.8 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:data_access_components:2.8:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9285</ProductID>
+        <ProductName>Microsoft Data Engine (MSDE) 1.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:data_engine:1.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9347</ProductID>
+        <ProductName>Microsoft Data Engine (MSDE) 1.0 Service Pack 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:data_engine:1.0:sp4</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4028</ProductID>
+        <ProductName>Microsoft Data Engine 1.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:data_engine:1.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>3579</ProductID>
+        <ProductName>Microsoft Dynamics AX 2009 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:dynamics_ax:2009:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10163</ProductID>
+        <ProductName>Microsoft Dynamics AX 2012</ProductName>
+        <CPE2.2>cpe:/a:microsoft:dynamics_ax:2012</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10576</ProductID>
+        <ProductName>Microsoft Dynamics AX 2012 R2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:dynamics_ax:2012:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4667</ProductID>
+        <ProductName>Microsoft Dynamics AX 3.0 Service Pack 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:dynamics_ax:3.0:sp4</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>7447</ProductID>
+        <ProductName>Microsoft Dynamics AX 3.0 Service Pack 5</ProductName>
+        <CPE2.2>cpe:/a:microsoft:dynamics_ax:3.0:sp5</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>7775</ProductID>
+        <ProductName>Microsoft Dynamics AX 4.0 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:dynamics_ax:4.0:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>5803</ProductID>
+        <ProductName>Microsoft Dynamics AX 4.0 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:dynamics_ax:4.0:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9262</ProductID>
+        <ProductName>Microsoft Excel 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9309</ProductID>
+        <ProductName>Microsoft Excel 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10152</ProductID>
+        <ProductName>Microsoft Excel 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9438</ProductID>
+        <ProductName>Microsoft Excel 2010 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2010::~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9439</ProductID>
+        <ProductName>Microsoft Excel 2010 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2010::~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10182</ProductID>
+        <ProductName>Microsoft Excel 2010 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2010:sp1:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10181</ProductID>
+        <ProductName>Microsoft Excel 2010 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2010:sp1:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10489</ProductID>
+        <ProductName>Microsoft Excel 2010 Service Pack 2 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2010:sp2:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10490</ProductID>
+        <ProductName>Microsoft Excel 2010 Service Pack 2 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2010:sp2:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10313</ProductID>
+        <ProductName>Microsoft Excel 2013 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2013::~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10314</ProductID>
+        <ProductName>Microsoft Excel 2013 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2013::~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10405</ProductID>
+        <ProductName>Microsoft Excel 2013 RT</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2013::~~rt_gold~~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10654</ProductID>
+        <ProductName>Microsoft Excel 2013 Service Pack 1 (32-bit editions) </ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2010:sp1:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10655</ProductID>
+        <ProductName>Microsoft Excel 2013 Service Pack 1 (64-bit editions) </ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel:2010:sp1:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>196</ProductID>
+        <ProductName>Microsoft Excel Viewer 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:excel_viewer:-:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10236</ProductID>
+        <ProductName>Microsoft Excel Web App 2010 Service Pack 1</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10516</ProductID>
+        <ProductName>Microsoft Excel Web App 2010 Service Pack 2</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10408</ProductID>
+        <ProductName>Microsoft Excel Web App 2013</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>6180</ProductID>
+        <ProductName>Microsoft Exchange Server 2003 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:exchange_server:2003:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>1140</ProductID>
+        <ProductName>Microsoft Exchange Server 2003 Service Pack 2 </ProductName>
+        <CPE2.2>cpe:/a:microsoft:exchange_server:2003:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10004</ProductID>
+        <ProductName>Microsoft Exchange Server 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:exchange_server:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9362</ProductID>
+        <ProductName>Microsoft Exchange Server 2010 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:exchange_server:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10178</ProductID>
+        <ProductName>Microsoft Exchange Server 2010 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:exchange_server:2010:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10476</ProductID>
+        <ProductName>Microsoft Exchange Server 2010 Service Pack 3 </ProductName>
+        <CPE2.2>cpe:/a:microsoft:exchange_server:2010:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10574</ProductID>
+        <ProductName>Microsoft Exchange Server 2013 Cumulative Update 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:exchange_server:2013:cumulative_update_2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10575</ProductID>
+        <ProductName>Microsoft Exchange Server 2013 Cumulative Update 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:exchange_server:2013:cumulative_update_3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10651</ProductID>
+        <ProductName>Microsoft Exchange Server 2013 Cumulative Update 6</ProductName>
+        <CPE2.2>cpe:/a:microsoft:exchange_server:2013:cumulative_update_6</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10650</ProductID>
+        <ProductName>Microsoft Exchange Server 2013 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:exchange_server:2013:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10537</ProductID>
+        <ProductName>Microsoft FrontPage 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:frontpage:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9350</ProductID>
+        <ProductName>Microsoft Groove 2007 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:groove:2007:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10107</ProductID>
+        <ProductName>Microsoft Groove 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:groove:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10153</ProductID>
+        <ProductName>Microsoft Groove 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:groove:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10110</ProductID>
+        <ProductName>Microsoft Groove Server 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:groove_server:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10305</ProductID>
+        <ProductName>Microsoft Groove Server 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:groove_server:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10112</ProductID>
+        <ProductName>Microsoft Groove Server 2010</ProductName>
+        <CPE2.2>cpe:/a:microsoft:groove_server:2010</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10111</ProductID>
+        <ProductName>Microsoft Groove Server 2010 Service Pack 1 </ProductName>
+        <CPE2.2>cpe:/a:microsoft:groove_server:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10464</ProductID>
+        <ProductName>Microsoft Groove Server 2013</ProductName>
+        <CPE2.2>cpe:/a:microsoft:groove_server:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>2710</ProductID>
+        <ProductName>Microsoft Host Integration Server 2004 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:host_integration_server:2004:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9473</ProductID>
+        <ProductName>Microsoft InfoPath 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_infopath:2003:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9468</ProductID>
+        <ProductName>Microsoft InfoPath 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:infopath:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10154</ProductID>
+        <ProductName>Microsoft InfoPath 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:infopath:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9470</ProductID>
+        <ProductName>Microsoft InfoPath 2010 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:infopath:2010::x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9471</ProductID>
+        <ProductName>Microsoft InfoPath 2010 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:infopath:2010::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10270</ProductID>
+        <ProductName>Microsoft InfoPath 2010 Service Pack 1 (32-bit editions) </ProductName>
+        <CPE2.2>cpe:/a:microsoft:infopath:2010:sp1:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10271</ProductID>
+        <ProductName>Microsoft InfoPath 2010 Service Pack 1 (64-bit editions) </ProductName>
+        <CPE2.2>cpe:/a:microsoft:infopath:2010:sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10467</ProductID>
+        <ProductName>Microsoft InfoPath 2013 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:infopath:2013::x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10468</ProductID>
+        <ProductName>Microsoft InfoPath 2013 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:infopath:2013::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>2385</ProductID>
+        <ProductName>Microsoft Internet Explorer 6.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:internet_explorer:6</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>2547</ProductID>
+        <ProductName>Microsoft Internet Explorer 6.0 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:internet_explorer:6:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>7789</ProductID>
+        <ProductName>Microsoft Internet Information Services 7.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:iis:7.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9352</ProductID>
+        <ProductName>Microsoft Internet Information Services 7.5</ProductName>
+        <CPE2.2>cpe:/a:microsoft:iis:7.5</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10068</ProductID>
+        <ProductName>Microsoft Live Communications Server 2003</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10067</ProductID>
+        <ProductName>Microsoft Live Communications Server 2005 Service Pack 1</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10290</ProductID>
+        <ProductName>Microsoft Live Meeting 2007 Console</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10069</ProductID>
+        <ProductName>Microsoft Lync 2010 (32-bit)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync:2010:-:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10303</ProductID>
+        <ProductName>Microsoft Lync 2010 (64-bit) </ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync:2010:-:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10267</ProductID>
+        <ProductName>Microsoft Lync 2010 Attendant (32-bit)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync:2010::attendant_x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10294</ProductID>
+        <ProductName>Microsoft Lync 2010 Attendant (64-bit)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync:2010::attendant_x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10268</ProductID>
+        <ProductName>Microsoft Lync 2010 Attendee (admin level install)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync:2010::attendee</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10295</ProductID>
+        <ProductName>Microsoft Lync 2010 Attendee (user level install)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync:2010::attendee</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10425</ProductID>
+        <ProductName>Microsoft Lync 2013 (32-bit)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync:2013:-:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10426</ProductID>
+        <ProductName>Microsoft Lync 2013 (64-bit)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync:2013:-:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10628</ProductID>
+        <ProductName>Microsoft Lync 2013 Service Pack 1 (32-bit)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync:2013:-:x86:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10630</ProductID>
+        <ProductName>Microsoft Lync 2013 Service Pack 1 (64-bit)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync:2013:-:x64:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10470</ProductID>
+        <ProductName>Microsoft Lync Basic 2013 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync_basic:2013:-:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10471</ProductID>
+        <ProductName>Microsoft Lync Basic 2013 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync_basic:2013:-:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10629</ProductID>
+        <ProductName>Microsoft Lync Basic 2013 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync_basic:2013:-:x86:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10631</ProductID>
+        <ProductName>Microsoft Lync Basic 2013 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync_basic:2013:-:x64:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10139</ProductID>
+        <ProductName>Microsoft Lync for Mac 2011</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10066</ProductID>
+        <ProductName>Microsoft Lync Server 2010</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync_server:2010</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10070</ProductID>
+        <ProductName>Microsoft Lync Server 2010 Group Chat Software Development Kit</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10071</ProductID>
+        <ProductName>Microsoft Lync Server 2010 Software Development Kit</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10428</ProductID>
+        <ProductName>Microsoft Lync Server 2013</ProductName>
+        <CPE2.2>cpe:/a:microsoft:lync_server:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10269</ProductID>
+        <ProductName>Microsoft Lync Web Access 2013</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10444</ProductID>
+        <ProductName>Microsoft Lync Web Access 2013 </ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>3283</ProductID>
+        <ProductName>Microsoft Office 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9340</ProductID>
+        <ProductName>Microsoft Office 2003 Web Components Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_web_components:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4862</ProductID>
+        <ProductName>Microsoft Office 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10150</ProductID>
+        <ProductName>Microsoft Office 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>6918</ProductID>
+        <ProductName>Microsoft Office 2008 for Mac</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2008::mac</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9424</ProductID>
+        <ProductName>Microsoft Office 2010 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2010::x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9425</ProductID>
+        <ProductName>Microsoft Office 2010 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2010::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10126</ProductID>
+        <ProductName>Microsoft Office 2010 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2010:sp1:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10127</ProductID>
+        <ProductName>Microsoft Office 2010 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2010:sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10521</ProductID>
+        <ProductName>Microsoft Office 2010 Service Pack 2 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2010:sp2:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10523</ProductID>
+        <ProductName>Microsoft Office 2010 Service Pack 2 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2010:sp2:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10522</ProductID>
+        <ProductName>Microsoft Office 2010 Service Pack 2 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2010:sp2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10524</ProductID>
+        <ProductName>Microsoft Office 2010 Service Pack 2 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2010:sp2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10311</ProductID>
+        <ProductName>Microsoft Office 2013 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2013:-:~-~-~-~x86~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10312</ProductID>
+        <ProductName>Microsoft Office 2013 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2013:-:~-~-~-~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10407</ProductID>
+        <ProductName>Microsoft Office 2013 RT</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2013::~~~rt~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10544</ProductID>
+        <ProductName>Microsoft Office 2013 RT</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2013::~~~rt~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10603</ProductID>
+        <ProductName>Microsoft Office 2013 RT Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2013:sp1:~~~rt~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10656</ProductID>
+        <ProductName>Microsoft Office 2013 RT Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2013:sp1:~~~rt~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10601</ProductID>
+        <ProductName>Microsoft Office 2013 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2013:sp1:~-~-~-~x86~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10602</ProductID>
+        <ProductName>Microsoft Office 2013 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2013:sp1:~-~-~-~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9307</ProductID>
+        <ProductName>Microsoft Office Compatibility Pack Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4497</ProductID>
+        <ProductName>Microsoft Office Compatibility Pack Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_compatibility_pack</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4997</ProductID>
+        <ProductName>Microsoft Office Compatibility Pack Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_compatibility_pack</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10024</ProductID>
+        <ProductName>Microsoft Office for Mac 2011</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office:2011::mac</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10055</ProductID>
+        <ProductName>Microsoft Office Web Apps 2010</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_web_apps:2010</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10275</ProductID>
+        <ProductName>Microsoft Office Web Apps 2010 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_web_apps:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10525</ProductID>
+        <ProductName>Microsoft Office Web Apps 2010 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_web_apps:2010:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10414</ProductID>
+        <ProductName>Microsoft Office Web Apps Server 2013</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_web_apps_server:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10611</ProductID>
+        <ProductName>Microsoft Office Web Apps Server 2013 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_web_apps_server:2013:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>3354</ProductID>
+        <ProductName>Microsoft OneNote 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:onenote:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10155</ProductID>
+        <ProductName>Microsoft OneNote 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:onenote:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10202</ProductID>
+        <ProductName>Microsoft OneNote 2010 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:onenote:2010:sp1:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10203</ProductID>
+        <ProductName>Microsoft OneNote 2010 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:onenote:2010:sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10409</ProductID>
+        <ProductName>Microsoft OneNote 2013</ProductName>
+        <CPE2.2>cpe:/a:microsoft:onenote:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10059</ProductID>
+        <ProductName>Microsoft OneNote Web App</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10272</ProductID>
+        <ProductName>Microsoft OneNote Web App 2010 Service Pack 1</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10526</ProductID>
+        <ProductName>Microsoft OneNote Web App 2010 Service Pack 2</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9257</ProductID>
+        <ProductName>Microsoft Outlook 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9459</ProductID>
+        <ProductName>Microsoft Outlook 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10156</ProductID>
+        <ProductName>Microsoft Outlook 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>8976</ProductID>
+        <ProductName>Microsoft Outlook 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9460</ProductID>
+        <ProductName>Microsoft Outlook 2010 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2010::~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9461</ProductID>
+        <ProductName>Microsoft Outlook 2010 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2010::~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10196</ProductID>
+        <ProductName>Microsoft Outlook 2010 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2010:sp1:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10197</ProductID>
+        <ProductName>Microsoft Outlook 2010 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2010:sp1:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10527</ProductID>
+        <ProductName>Microsoft Outlook 2010 Service Pack 2 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2010:sp2:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10528</ProductID>
+        <ProductName>Microsoft Outlook 2010 Service Pack 2 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2010:sp2:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10317</ProductID>
+        <ProductName>Microsoft Outlook 2013 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2013:-:~-~-~-~x86~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10318</ProductID>
+        <ProductName>Microsoft Outlook 2013 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:outlook:2013:-:~-~-~-~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9254</ProductID>
+        <ProductName>Microsoft PowerPoint 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:powerpoint:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9305</ProductID>
+        <ProductName>Microsoft PowerPoint 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:powerpoint:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10157</ProductID>
+        <ProductName>Microsoft PowerPoint 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:powerpoint:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9436</ProductID>
+        <ProductName>Microsoft PowerPoint 2010 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:powerpoint:2010::~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9437</ProductID>
+        <ProductName>Microsoft PowerPoint 2010 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:powerpoint:2010::~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10180</ProductID>
+        <ProductName>Microsoft PowerPoint 2010 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:powerpoint:2010:sp1:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10179</ProductID>
+        <ProductName>Microsoft PowerPoint 2010 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:powerpoint:2010:sp1:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>7305</ProductID>
+        <ProductName>Microsoft PowerPoint Viewer 2003</ProductName>
+        <CPE2.2>cpe:/a:microsoft:powerpoint_viewer:2003</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>1541</ProductID>
+        <ProductName>Microsoft PowerPoint Viewer 2007</ProductName>
+        <CPE2.2>cpe:/a:microsoft:powerpoint_viewer:2007</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10278</ProductID>
+        <ProductName>Microsoft Project Server 2010 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:project_server:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10502</ProductID>
+        <ProductName>Microsoft Project Server 2010 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:project_server:2010:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10613</ProductID>
+        <ProductName>Microsoft Project Server 2013</ProductName>
+        <CPE2.2>cpe:/a:microsoft:project_server:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10614</ProductID>
+        <ProductName>Microsoft Project Server 2013 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:project_server:2013:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9338</ProductID>
+        <ProductName>Microsoft Publisher 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:publisher:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10159</ProductID>
+        <ProductName>Microsoft Publisher 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:publisher:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10184</ProductID>
+        <ProductName>Microsoft Publisher 2010 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:publisher:2010:sp1:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10183</ProductID>
+        <ProductName>Microsoft Publisher 2010 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:publisher:2010:sp1:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10503</ProductID>
+        <ProductName>Microsoft Publisher 2010 Service Pack 2 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:publisher:2010:sp2:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10504</ProductID>
+        <ProductName>Microsoft Publisher 2010 Service Pack 2 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:publisher:2010:sp2:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10411</ProductID>
+        <ProductName>Microsoft Publisher 2013 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:publisher:2013:-:~~~~x86~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10412</ProductID>
+        <ProductName>Microsoft Publisher 2013 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:publisher:2013:-:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10609</ProductID>
+        <ProductName>Microsoft Publisher 2013 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:publisher:2013:sp1:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10610</ProductID>
+        <ProductName>Microsoft Publisher 2013 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:publisher:2013:sp1:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10632</ProductID>
+        <ProductName>Microsoft Service Bus 1.1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:service_bus:1.1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10160</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_designer:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10535</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2010 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_designer:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10615</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2010 Service Pack 1 (32-bit versions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:web_applications:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10617</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2010 Service Pack 1 (64-bit versions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:web_applications:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10536</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2010 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_designer:2010:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10616</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2010 Service Pack 2 (32-bit versions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:web_applications:2010:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10618</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2010 Service Pack 2 (64-bit versions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:web_applications:2010:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10416</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2013</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_designer:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10619</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2013 (32-bit versions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_designer:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10621</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2013 (64-bit versions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_designer:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10623</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2013 Service Pack 1 (32-bit versions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_designer:2013:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10622</ProductID>
+        <ProductName>Microsoft SharePoint Designer 2013 Service Pack 1 (64-bit versions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_designer:2013:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10043</ProductID>
+        <ProductName>Microsoft SharePoint Foundation 2010</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_foundation:2010</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10115</ProductID>
+        <ProductName>Microsoft SharePoint Foundation 2010 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_foundation:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10505</ProductID>
+        <ProductName>Microsoft SharePoint Foundation 2010 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_foundation:2010:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10417</ProductID>
+        <ProductName>Microsoft SharePoint Foundation 2013</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_foundation:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10612</ProductID>
+        <ProductName>Microsoft SharePoint Foundation 2013 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_foundation:2013:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9452</ProductID>
+        <ProductName>Microsoft SharePoint Portal Server 2003 Service Pack 3 (32-bit editions)</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4293</ProductID>
+        <ProductName>Microsoft SharePoint Portal Server 2003 Service Pack 3 (64-bit editions)</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9453</ProductID>
+        <ProductName>Microsoft SharePoint Portal Server 2003 Service Pack 3 (64-bit editions)</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9407</ProductID>
+        <ProductName>Microsoft SharePoint Server 2007 Service Pack 2 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9408</ProductID>
+        <ProductName>Microsoft SharePoint Server 2007 Service Pack 2 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10308</ProductID>
+        <ProductName>Microsoft SharePoint Server 2007 Service Pack 3 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10307</ProductID>
+        <ProductName>Microsoft SharePoint Server 2007 Service Pack 3 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9430</ProductID>
+        <ProductName>Microsoft SharePoint Server 2010</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server:2010</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10120</ProductID>
+        <ProductName>Microsoft SharePoint Server 2010 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10495</ProductID>
+        <ProductName>Microsoft SharePoint Server 2010 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server:2010:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10415</ProductID>
+        <ProductName>Microsoft SharePoint Server 2013</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10607</ProductID>
+        <ProductName>Microsoft SharePoint Server 2013 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server:2013:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10114</ProductID>
+        <ProductName>Microsoft SharePoint Workspace 2010 Service Pack 1</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10465</ProductID>
+        <ProductName>Microsoft SharePoint Workspace 2013 (32-bit editions)</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10466</ProductID>
+        <ProductName>Microsoft SharePoint Workspace 2013 (64-bit editions)</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10099</ProductID>
+        <ProductName>Microsoft Silverlight 5</ProductName>
+        <CPE2.2>cpe:/a:microsoft:silverlight</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10100</ProductID>
+        <ProductName>Microsoft Silverlight 5</ProductName>
+        <CPE2.2>cpe:/a:microsoft:silverlight</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10451</ProductID>
+        <ProductName>Microsoft Silverlight 5</ProductName>
+        <CPE2.2>cpe:/a:microsoft:silverlight</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10450</ProductID>
+        <ProductName>Microsoft Silverlight 5 Developer Runtime</ProductName>
+        <CPE2.2>cpe:/a:microsoft:silverlight</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10452</ProductID>
+        <ProductName>Microsoft Silverlight 5 Developer Runtime</ProductName>
+        <CPE2.2>cpe:/a:microsoft:silverlight</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10453</ProductID>
+        <ProductName>Microsoft Silverlight 5 Developer Runtime</ProductName>
+        <CPE2.2>cpe:/a:microsoft:silverlight</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10297</ProductID>
+        <ProductName>Microsoft Speech Server 2004</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10296</ProductID>
+        <ProductName>Microsoft Speech Server 2004 R2</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10232</ProductID>
+        <ProductName>Microsoft SQL Server 2000 Analysis Services Service Pack 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2000:sp4:analysis_services</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9286</ProductID>
+        <ProductName>Microsoft SQL Server 2000 Desktop Engine (MSDE 2000) Service Pack 4</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9287</ProductID>
+        <ProductName>Microsoft SQL Server 2000 Desktop Engine (MSDE)</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9205</ProductID>
+        <ProductName>Microsoft SQL Server 2000 Itanium Edition Service Pack 4</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>3571</ProductID>
+        <ProductName>Microsoft SQL Server 2000 Reporting Services Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server_reporting_services:2000:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10261</ProductID>
+        <ProductName>Microsoft SQL Server 2000 Service Pack 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2000:sp4</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>3403</ProductID>
+        <ProductName>Microsoft SQL Server 2000 Service Pack 4 </ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2000:sp4</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10089</ProductID>
+        <ProductName>Microsoft SQL Server 2005 Express Edition Service Pack 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2005:sp4:express</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10090</ProductID>
+        <ProductName>Microsoft SQL Server 2005 Express Edition with Advanced Services Service Pack 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2005:sp4:express_advanced_services</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10211</ProductID>
+        <ProductName>Microsoft SQL Server 2005 Express Edition with Advanced Services Service Pack 4 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2005:sp4:express_advanced_services</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10091</ProductID>
+        <ProductName>Microsoft SQL Server 2005 for 32-bit Systems Service Pack 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2005:sp4:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10207</ProductID>
+        <ProductName>Microsoft SQL Server 2005 for 32-bit Systems Service Pack 4 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2005:sp4:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10092</ProductID>
+        <ProductName>Microsoft SQL Server 2005 for Itanium-Based Systems Service Pack 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2005:sp4:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10209</ProductID>
+        <ProductName>Microsoft SQL Server 2005 for Itanium-Based Systems Service Pack 4 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2005:sp4:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10093</ProductID>
+        <ProductName>Microsoft SQL Server 2005 for x64-based Systems Service Pack 4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2005:sp4:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10208</ProductID>
+        <ProductName>Microsoft SQL Server 2005 for x64-based Systems Service Pack 4 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2005:sp4:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10084</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for 32-bit Systems Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp2:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10212</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for 32-bit Systems Service Pack 2 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp2:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10166</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for 32-bit Systems Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp3:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10213</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for 32-bit Systems Service Pack 3 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp3:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10083</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for Itanium-Based Systems Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp2:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10215</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for Itanium-Based Systems Service Pack 2 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp2:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10167</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for Itanium-Based Systems Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp3:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10217</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for Itanium-Based Systems Service Pack 3 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp3:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10085</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for x64-based Systems Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10214</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for x64-based Systems Service Pack 2 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10168</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for x64-based Systems Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp3:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10216</ProductID>
+        <ProductName>Microsoft SQL Server 2008 for x64-based Systems Service Pack 3 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:sp3:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10086</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for 32-bit Systems</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10367</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for 32-bit Systems Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2_sp1:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10386</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for 32-bit Systems Service Pack 1 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2_sp1:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10368</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for 32-bit Systems Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2_sp2:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10088</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for Itanium-Based Systems</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10371</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for Itanium-based Systems Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2_sp1:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10391</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for Itanium-based Systems Service Pack 1 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2_sp1:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10372</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for Itanium-based Systems Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2_sp2:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10087</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for x64-based Systems</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10369</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for x64-based Systems Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2_sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10388</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for x64-based Systems Service Pack 1 (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2_sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10370</ProductID>
+        <ProductName>Microsoft SQL Server 2008 R2 for x64-based Systems Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2008:r2_sp2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10302</ProductID>
+        <ProductName>Microsoft SQL Server 2012 for 32-bit Systems</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2012::x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10301</ProductID>
+        <ProductName>Microsoft SQL Server 2012 for 32-bit Systems (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2012::x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10299</ProductID>
+        <ProductName>Microsoft SQL Server 2012 for x64-based Systems</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2012::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10300</ProductID>
+        <ProductName>Microsoft SQL Server 2012 for x64-based Systems (QFE)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2012::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10637</ProductID>
+        <ProductName>Microsoft SQL Server 2014 for 32-bit Systems</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2014::x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10634</ProductID>
+        <ProductName>Microsoft SQL Server 2014 for x64-based Systems</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sql_server:2014::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10095</ProductID>
+        <ProductName>Microsoft SQL Server Management Studio Express (SSMSE) 2005</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10348</ProductID>
+        <ProductName>Microsoft System Center 2012 Configuration Manager </ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10352</ProductID>
+        <ProductName>Microsoft System Center 2012 Operations Manager</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10346</ProductID>
+        <ProductName>Microsoft System Center Configuration Manager 2007 R2 </ProductName>
+        <CPE2.2>cpe:/a:microsoft:system_center_configuration_manager:2007:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10347</ProductID>
+        <ProductName>Microsoft System Center Configuration Manager 2007 R3 </ProductName>
+        <CPE2.2>cpe:/a:microsoft:system_center_configuration_manager:2007:r3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10345</ProductID>
+        <ProductName>Microsoft System Center Configuration Manager 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:system_center_configuration_manager:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10356</ProductID>
+        <ProductName>Microsoft System Center Operations Manager 2007 R2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:system_center_operations_manager:2007:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10355</ProductID>
+        <ProductName>Microsoft System Center Operations Manager 2007 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:system_center_operations_manager:2007:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>3452</ProductID>
+        <ProductName>Microsoft Systems Management Server 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:systems_management_server:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>5598</ProductID>
+        <ProductName>Microsoft Visio 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10033</ProductID>
+        <ProductName>Microsoft Visio 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10161</ProductID>
+        <ProductName>Microsoft Visio 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10198</ProductID>
+        <ProductName>Microsoft Visio 2010 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio:2010:sp1:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10199</ProductID>
+        <ProductName>Microsoft Visio 2010 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio:2010:sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10321</ProductID>
+        <ProductName>Microsoft Visio 2013 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio:2013:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10322</ProductID>
+        <ProductName>Microsoft Visio 2013 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio:2013:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10265</ProductID>
+        <ProductName>Microsoft Visio Viewer 2010 Service Pack 1 (32-bit Edition)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio_viewer:2010:sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10266</ProductID>
+        <ProductName>Microsoft Visio Viewer 2010 Service Pack 1 (64-bit Edition)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio_viewer:2010:sp1:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10454</ProductID>
+        <ProductName>Microsoft Visio Viewer 2013 (32-bit Edition)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio_viewer:2013::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10455</ProductID>
+        <ProductName>Microsoft Visio Viewer 2013 (64-bit Edition)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visio_viewer:2013::x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9481</ProductID>
+        <ProductName>Microsoft Visual Basic for Applications 6.3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_basic:6.3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9482</ProductID>
+        <ProductName>Microsoft Visual Basic for Applications 6.4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_basic:6.4</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9483</ProductID>
+        <ProductName>Microsoft Visual Basic for Applications 6.5</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_basic:6.5</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9484</ProductID>
+        <ProductName>Microsoft Visual Basic for Applications SDK 6.3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_basic_software_development_kit:6.3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9485</ProductID>
+        <ProductName>Microsoft Visual Basic for Applications SDK 6.4</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_basic_software_development_kit:6.4</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9486</ProductID>
+        <ProductName>Microsoft Visual Basic for Applications SDK 6.5</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_basic_software_development_kit:6.5</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>7400</ProductID>
+        <ProductName>Microsoft Visual FoxPro 8.0 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_foxpro:8.0:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>8577</ProductID>
+        <ProductName>Microsoft Visual FoxPro 9.0 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_foxpro:9.0:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>6475</ProductID>
+        <ProductName>Microsoft Visual Studio .NET 2003 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_studio_.net:2003:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>3845</ProductID>
+        <ProductName>Microsoft Visual Studio 2005 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_studio:2005:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4992</ProductID>
+        <ProductName>Microsoft Visual Studio 2008 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_studio:2008:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10098</ProductID>
+        <ProductName>Microsoft Visual Studio 2010 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_studio:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10326</ProductID>
+        <ProductName>Microsoft Visual Studio 2012</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_studio:2012</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10174</ProductID>
+        <ProductName>Microsoft Visual Studio LightSwitch 2011</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10382</ProductID>
+        <ProductName>Microsoft Visual Studio Team Foundation Server 2005 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_studio_team_foundation_server:2005:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10383</ProductID>
+        <ProductName>Microsoft Visual Studio Team Foundation Server 2008 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_studio_team_foundation_server:2008:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10380</ProductID>
+        <ProductName>Microsoft Visual Studio Team Foundation Server 2010 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_studio_team_foundation_server:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10381</ProductID>
+        <ProductName>Microsoft Visual Studio Team Foundation Server 2012</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_studio_team_foundation_server:2012</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10565</ProductID>
+        <ProductName>Microsoft Visual Studio Team Foundation Server 2013 </ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_studio_team_foundation_server:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10410</ProductID>
+        <ProductName>Microsoft Web Apps Server 2013</ProductName>
+        <CPE2.2>cpe:/a:microsoft:office_web_apps_server:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>1414</ProductID>
+        <ProductName>Microsoft Windows Server 2003</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2003</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>5177</ProductID>
+        <ProductName>Microsoft Windows Server 2003 for Itanium-based Systems Service Pack 1</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2003::sp1:~~~~itanium~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>6236</ProductID>
+        <ProductName>Microsoft Windows Server 2003 for Itanium-based Systems Service Pack 2</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2003::sp2:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4898</ProductID>
+        <ProductName>Microsoft Windows Server 2003 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2003::sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9245</ProductID>
+        <ProductName>Microsoft Windows Server 2003 x64 Edition</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2003:::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>5867</ProductID>
+        <ProductName>Microsoft Windows Server 2003 x64 Edition Service Pack 2</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2003::sp2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9442</ProductID>
+        <ProductName>Microsoft Windows SharePoint Services 2.0 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_services:2.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9443</ProductID>
+        <ProductName>Microsoft Windows SharePoint Services 2.0 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_services:2.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9446</ProductID>
+        <ProductName>Microsoft Windows SharePoint Services 3.0 Service Pack 2 (32-bit version)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_services:3.0:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9447</ProductID>
+        <ProductName>Microsoft Windows SharePoint Services 3.0 Service Pack 2 (64-bit version)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_services:3.0:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10402</ProductID>
+        <ProductName>Microsoft Windows SharePoint Services 3.0 Service Pack 3 (32-bit version)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_services:3.0:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10403</ProductID>
+        <ProductName>Microsoft Windows SharePoint Services 3.0 Service Pack 3 (64-bit version)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_services:3.0:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9328</ProductID>
+        <ProductName>Microsoft Windows XP Media Center Edition 2005 Service Pack 3</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>3126</ProductID>
+        <ProductName>Microsoft Windows XP Professional x64 Edition Service Pack 2</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_xp:-:sp2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>3700</ProductID>
+        <ProductName>Microsoft Windows XP Service Pack 3</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_xp::sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9321</ProductID>
+        <ProductName>Microsoft Windows XP Tablet PC Edition 2005</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9264</ProductID>
+        <ProductName>Microsoft Word 2003 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2003:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9427</ProductID>
+        <ProductName>Microsoft Word 2007 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2007:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10162</ProductID>
+        <ProductName>Microsoft Word 2007 Service Pack 3</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2007:sp3</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9386</ProductID>
+        <ProductName>Microsoft Word 2010 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2010::~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9428</ProductID>
+        <ProductName>Microsoft Word 2010 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2010::~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10200</ProductID>
+        <ProductName>Microsoft Word 2010 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2010:sp1:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10201</ProductID>
+        <ProductName>Microsoft Word 2010 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2010:sp1:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10513</ProductID>
+        <ProductName>Microsoft Word 2010 Service Pack 2 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2010:sp2:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10514</ProductID>
+        <ProductName>Microsoft Word 2010 Service Pack 2 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2010:sp2:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10323</ProductID>
+        <ProductName>Microsoft Word 2013 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2013::~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10324</ProductID>
+        <ProductName>Microsoft Word 2013 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2013::~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10406</ProductID>
+        <ProductName>Microsoft Word 2013 RT</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2013:-:~-~-~rt~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10606</ProductID>
+        <ProductName>Microsoft Word 2013 RT Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2013:sp1:~-~-~rt~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10604</ProductID>
+        <ProductName>Microsoft Word 2013 Service Pack 1 (32-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2013:sp1:~~~x86~~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10605</ProductID>
+        <ProductName>Microsoft Word 2013 Service Pack 1 (64-bit editions)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word:2013:sp1:~~~~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>1160</ProductID>
+        <ProductName>Microsoft Word Viewer</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word_viewer</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10056</ProductID>
+        <ProductName>Microsoft Word Web App 2010</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word_web_apps:2010</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10238</ProductID>
+        <ProductName>Microsoft Word Web App 2010 Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word_web_apps:2010:sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10515</ProductID>
+        <ProductName>Microsoft Word Web App 2010 Service Pack 2</ProductName>
+        <CPE2.2>cpe:/a:microsoft:word_web_apps:2010:sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>925</ProductID>
+        <ProductName>Microsoft Works 9</ProductName>
+        <CPE2.2>cpe:/a:microsoft:works:9.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>7177</ProductID>
+        <ProductName>Microsoft XML Core Services 3.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:xml_core_services:3.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>7717</ProductID>
+        <ProductName>Microsoft XML Core Services 3.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:xml_core_services:3.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>1399</ProductID>
+        <ProductName>Microsoft XML Core Services 4.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:xml_core_services:4.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9240</ProductID>
+        <ProductName>Microsoft XML Core Services 5.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:xml_core_services:5.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>6710</ProductID>
+        <ProductName>Microsoft XML Core Services 6.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:xml_core_services:6.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10045</ProductID>
+        <ProductName>Remote Desktop Connection 6.1 Client</ProductName>
+        <CPE2.2>cpe:/a:microsoft:remote_desktop_connection:6.1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10046</ProductID>
+        <ProductName>Remote Desktop Connection 7.0 Client</ProductName>
+        <CPE2.2>cpe:/a:microsoft:remote_desktop_connection:7.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10458</ProductID>
+        <ProductName>Remote Desktop Connection 8.0 Client</ProductName>
+        <CPE2.2>cpe:/a:microsoft:remote_desktop_connection:8.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10625</ProductID>
+        <ProductName>SharePoint Server 2013 Client Components SDK (32-bit version)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server_client_components_sdk:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10626</ProductID>
+        <ProductName>SharePoint Server 2013 Client Components SDK (64-bit version)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:sharepoint_server_client_components_sdk:2013</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9238</ProductID>
+        <ProductName>VBScript 5.6</ProductName>
+        <CPE2.2>cpe:/a:microsoft:vbscript:5.6</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9414</ProductID>
+        <ProductName>VBScript 5.7</ProductName>
+        <CPE2.2>cpe:/a:microsoft:vbscript:5.7</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9415</ProductID>
+        <ProductName>VBScript 5.8</ProductName>
+        <CPE2.2>cpe:/a:microsoft:vbscript:5.8</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10192</ProductID>
+        <ProductName>Visual Basic 6.0 Runtime</ProductName>
+        <CPE2.2>cpe:/a:microsoft:visual_basic:6.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9303</ProductID>
+        <ProductName>Windows 7 for 32-bit Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_7:::x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10047</ProductID>
+        <ProductName>Windows 7 for 32-bit Systems Service Pack 1</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_7::sp1:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9345</ProductID>
+        <ProductName>Windows 7 for x64-based Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_7:::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10048</ProductID>
+        <ProductName>Windows 7 for x64-based Systems Service Pack 1</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_7::sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10375</ProductID>
+        <ProductName>Windows 8 Embedded Standard for 32-bit Systems</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10376</ProductID>
+        <ProductName>Windows 8 Embedded Standard for 64-bit Systems</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10373</ProductID>
+        <ProductName>Windows 8 for 32-bit Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_8:-:-:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10374</ProductID>
+        <ProductName>Windows 8 for x64-based Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_8:-:-:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10281</ProductID>
+        <ProductName>Windows 8 Release Preview for 32-bit systems</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10282</ProductID>
+        <ProductName>Windows 8 Release Preview for x64-based systems</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10481</ProductID>
+        <ProductName>Windows 8.1 for 32-bit Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x86~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10624</ProductID>
+        <ProductName>Windows 8.1 for 64-bit Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10482</ProductID>
+        <ProductName>Windows 8.1 for x64-based Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x64~</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10477</ProductID>
+        <ProductName>Windows 8.1 with Windows Media Center for 32-bit Systems</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10478</ProductID>
+        <ProductName>Windows 8.1 with Windows Media Center for x64-based Systems</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10031</ProductID>
+        <ProductName>Windows Data Access Components 6.0</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_data_access_components:6.0</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>251</ProductID>
+        <ProductName>Windows Defender for Windows Server 2008 R2 for x64-based Systems Service Pack 1</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_defender</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10333</ProductID>
+        <ProductName>Windows Defender Offline</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_defender</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9500</ProductID>
+        <ProductName>Windows Embedded Standard 7 for 32-bit based Systems</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9502</ProductID>
+        <ProductName>Windows Embedded Standard 7 for x64-based Systems</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10474</ProductID>
+        <ProductName>Windows Essentials 2011</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_essentials:2011</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10475</ProductID>
+        <ProductName>Windows Essentials 2012</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_essentials:2012</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10129</ProductID>
+        <ProductName>Windows Internet Explorer 10</ProductName>
+        <CPE2.2>cpe:/a:microsoft:internet_explorer:10</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10401</ProductID>
+        <ProductName>Windows Internet Explorer 10</ProductName>
+        <CPE2.2>cpe:/a:microsoft:internet_explorer:10</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10486</ProductID>
+        <ProductName>Windows Internet Explorer 11</ProductName>
+        <CPE2.2>cpe:/a:microsoft:internet_explorer:11:-</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>1282</ProductID>
+        <ProductName>Windows Internet Explorer 7</ProductName>
+        <CPE2.2>cpe:/a:microsoft:internet_explorer:7</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>1233</ProductID>
+        <ProductName>Windows Internet Explorer 8</ProductName>
+        <CPE2.2>cpe:/a:microsoft:internet_explorer:8</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10054</ProductID>
+        <ProductName>Windows Internet Explorer 9</ProductName>
+        <CPE2.2>cpe:/a:microsoft:internet_explorer:9</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10491</ProductID>
+        <ProductName>Windows Media Format Runtime 11 (wmvdmod.dll)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_media_format_runtime:11</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10494</ProductID>
+        <ProductName>Windows Media Format Runtime 9 (wmvdmod.dll)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_media_format_runtime:9</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10492</ProductID>
+        <ProductName>Windows Media Format Runtime 9.5 (wmvdmod.dll)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_media_format_runtime:9.5</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10493</ProductID>
+        <ProductName>Windows Media Format Runtime 9.5 x64 (wmvdmod.dll)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_media_format_runtime:9.5</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>234</ProductID>
+        <ProductName>Windows Media Player 11 (wmvdecod.dll)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_media_player:11</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9310</ProductID>
+        <ProductName>Windows Media Player 12 (wmvdecod.dll)</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_media_player:12</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10377</ProductID>
+        <ProductName>Windows RT</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_rt:-:gold</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10484</ProductID>
+        <ProductName>Windows RT 8.1</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_rt_8.1:-</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10284</ProductID>
+        <ProductName>Windows RT Release Preview</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>5672</ProductID>
+        <ProductName>Windows Script 5.6</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_script:5.6</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10567</ProductID>
+        <ProductName>Windows Script 5.7</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_script:5.7</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10568</ProductID>
+        <ProductName>Windows Script 5.8</ProductName>
+        <CPE2.2>cpe:/a:microsoft:windows_script:5.8</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>73</ProductID>
+        <ProductName>Windows Server 2008 for 32-bit Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008:::x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9312</ProductID>
+        <ProductName>Windows Server 2008 for 32-bit Systems Service Pack 2</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008::sp2:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10287</ProductID>
+        <ProductName>Windows Server 2008 for 32-bit Systems Service Pack 2 (Server Core installation)</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008::sp2:x86</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>7741</ProductID>
+        <ProductName>Windows Server 2008 for Itanium-Based Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008:::itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9311</ProductID>
+        <ProductName>Windows Server 2008 for Itanium-Based Systems Service Pack 2</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008::sp2:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9189</ProductID>
+        <ProductName>Windows Server 2008 for x64-based Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008:::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9318</ProductID>
+        <ProductName>Windows Server 2008 for x64-based Systems Service Pack 2</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008::sp2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9344</ProductID>
+        <ProductName>Windows Server 2008 for x64-based Systems Service Pack 2 (Server Core installation)</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008::sp2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>6257</ProductID>
+        <ProductName>Windows Server 2008 R2 for Itanium-based Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008:r2::itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10050</ProductID>
+        <ProductName>Windows Server 2008 R2 for Itanium-Based Systems Service Pack 1</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008:r2:sp1:itanium</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9351</ProductID>
+        <ProductName>Windows Server 2008 R2 for x64-based Systems</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008:r2::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9488</ProductID>
+        <ProductName>Windows Server 2008 R2 for x64-based Systems (Server Core installation)</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008:r2::x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10051</ProductID>
+        <ProductName>Windows Server 2008 R2 for x64-based Systems Service Pack 1</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008:r2:sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10049</ProductID>
+        <ProductName>Windows Server 2008 R2 for x64-based Systems Service Pack 1 (Server Core installation)</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2008:r2:sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10378</ProductID>
+        <ProductName>Windows Server 2012</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2012:-</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10379</ProductID>
+        <ProductName>Windows Server 2012 (Server Core installation)</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2012:-</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10483</ProductID>
+        <ProductName>Windows Server 2012 R2</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2012:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10543</ProductID>
+        <ProductName>Windows Server 2012 R2 (Server Core installation)</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2012:r2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10283</ProductID>
+        <ProductName>Windows Server 2012 Release Candidate</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2012:-</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>10306</ProductID>
+        <ProductName>Windows Server 2012 Release Candidate (Server Core installation)</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_server_2012:-</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>1634</ProductID>
+        <ProductName>Windows Vista Service Pack 1</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_vista::sp1</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>4393</ProductID>
+        <ProductName>Windows Vista Service Pack 2</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_vista::sp2</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>8832</ProductID>
+        <ProductName>Windows Vista x64 Edition Service Pack 1</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_vista::sp1:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9316</ProductID>
+        <ProductName>Windows Vista x64 Edition Service Pack 2</ProductName>
+        <CPE2.2>cpe:/o:microsoft:windows_vista::sp2:x64</CPE2.2>
+        <CPE2.3/>
+    </Entry>
+    <Entry>
+        <ProductID>9432</ProductID>
+        <ProductName>Word Automation Services</ProductName>
+        <CPE2.2/>
+        <CPE2.3/>
+    </Entry>
+</ProductCpeDictionary>
