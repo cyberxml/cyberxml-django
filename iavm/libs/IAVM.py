@@ -178,9 +178,22 @@ def filter_iavm_title(cpe, title):
         return False
     if "VMware Workstation" in title and not "cpe:/a:vmware:workstation" in cpe:
         return False
-    if "vSphereClient" in title and not "cpe:/a:vmware:vsphere_client" in cpe:
+    if "vSphere Client" in title and not "cpe:/a:vmware:vsphere_client" in cpe:
         return False
     if "Update Manager" in title and not "cpe:/a:vmware:update_manager:" in cpe:
+        return False
+	# misplaced NIST OS CPEs from OVAL logic
+    if "McAfee" in title and "cpe:/o:" in cpe:
+        return False
+    if "Blue Coat" in title and "cpe:/o:" in cpe:
+        return False
+    if "AIX" in title and "cpe:/o:" in cpe:
+        return False
+    if "Chrome" in title and "cpe:/o:" in cpe:
+        return False
+    if "HP" in title and "cpe:/o:" in cpe:
+        return False
+    if "Chrome" in title and "cpe:/o:" in cpe:
         return False
     return True
 
