@@ -174,6 +174,12 @@ def translateVmwareHtmlToCvrf(fullname):
                 flag=False
             if ts[0]=='vpd':
                 ts[0]="vsphere_data_protection"
+            if ts[0]=='vcsa':
+                ts[0]="vcenter_server_appliance"
+            if ts[0]=='vcops':
+                ts[0]="vcenter_operations_manager"
+            if ts[0]=='vco':
+                ts[0]="vcenter_orchestrator"
             if ts[0]=='any':
                 ts[1]=""
             if flag:
