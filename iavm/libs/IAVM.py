@@ -193,7 +193,7 @@ def filter_iavm_title(cpe, title):
         return False
     if "IBM" in title and not ":ibm:" in cpe:
         return False
-    if "HP" in title and not ":hp"" in cpe:
+    if "HP" in title and not ":hp" in cpe:
         return False
     if "Chrome" in title and "cpe:/o:" in cpe:
         return False
