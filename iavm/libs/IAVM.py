@@ -138,15 +138,19 @@ def validateCollection(xdb, path):
 # first pass on this is to vet cpe against IAVM title
 # this is targeted at the granular VMware IAVM written against bulk VMSA
 def filter_iavm_title(cpe, title):
-    if "ESXi 4.0" in title and not "cpe:/a:vmware:esxi:4.0" in cpe:
+    if "ESXi 3.0.3" in title and not ":esxi:3.0.3" in cpe:
         return False
-    if "ESXi 4.1" in title and not "cpe:/a:vmware:esxi:4.1" in cpe:
+    if "ESXi 3.5" in title and not ":esxi:3.5" in cpe:
         return False
-    if "ESXi 5.0" in title and not "cpe:/a:vmware:esxi:5.0" in cpe:
+    if "ESXi 4.0" in title and not ":esxi:4.0" in cpe:
         return False
-    if "ESXi 5.1" in title and not "cpe:/a:vmware:esxi:5.1" in cpe:
+    if "ESXi 4.1" in title and not ":esxi:4.1" in cpe:
         return False
-    if "ESXi 5.5" in title and not "cpe:/a:vmware:esxi:5.5" in cpe:
+    if "ESXi 5.0" in title and not ":esxi:5.0" in cpe:
+        return False
+    if "ESXi 5.1" in title and not ":esxi:5.1" in cpe:
+        return False
+    if "ESXi 5.5" in title and not ":esxi:5.5" in cpe:
         return False
     if "Horizon View" in title and not "cpe:/a:vmware:horizon_view" in cpe:
         return False
@@ -183,15 +187,13 @@ def filter_iavm_title(cpe, title):
     if "Update Manager" in title and not "cpe:/a:vmware:update_manager:" in cpe:
         return False
 	# misplaced NIST OS CPEs from OVAL logic
-    if "McAfee" in title and "cpe:/o:" in cpe:
+    if "McAfee" in title and not ":mcafee:" in cpe:
         return False
-    if "Blue Coat" in title and "cpe:/o:" in cpe:
+    if "Blue Coat" in title and not ":blue_coat:" in cpe:
         return False
-    if "AIX" in title and "cpe:/o:" in cpe:
+    if "IBM" in title and not ":ibm:" in cpe:
         return False
-    if "Chrome" in title and "cpe:/o:" in cpe:
-        return False
-    if "HP" in title and "cpe:/o:" in cpe:
+    if "HP" in title and not ":hp"" in cpe:
         return False
     if "Chrome" in title and "cpe:/o:" in cpe:
         return False
