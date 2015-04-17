@@ -82,43 +82,43 @@ def getCpeFromCve(cve):
     cpes=[]
     try:
         vendor_cpes=microsoft.getCpeFromCve(cve)
-        if len(vendor_cpes)>1:
+        if len(vendor_cpes)>0:
             cpes=cpes+[["microsoft.com",vendor_cpes]]
     except:
         pass
     try:
         vendor_cpes=oracle.getCpeFromCve(cve)
-        if len(vendor_cpes)>1:
+        if len(vendor_cpes)>0:
             cpes=cpes+[["oracle.com",vendor_cpes]]
     except:
         pass
     try:
         vendor_cpes=redhat.getCpeFromCve(cve)
-        if len(vendor_cpes)>1:
+        if len(vendor_cpes)>0:
             cpes=cpes+[["redhat.com",vendor_cpes]]
     except:
         pass
     try:
         vendor_cpes=adobe.getCpeFromCve(cve)
-        if len(vendor_cpes)>1:
+        if len(vendor_cpes)>0:
             cpes=cpes+[["adobe.com",vendor_cpes]]
     except:
         pass
     try:
         vendor_cpes=vmware.getCpeFromCve(cve)
-        if len(vendor_cpes)>1:
+        if len(vendor_cpes)>0:
             cpes=cpes+[["vmware.com",vendor_cpes]]
     except:
         pass
     try:
         vendor_cpes=cisco.getCpeFromCve(cve)
-        if len(vendor_cpes)>1:
+        if len(vendor_cpes)>0:
             cpes=cpes+[["cisco.com",vendor_cpes]]
     except:
         pass
     try:
         vendor_cpes=nist.getCpeFromCve(cve)
-        if len(vendor_cpes)>1:
+        if len(vendor_cpes)>0:
             cpes=cpes+[["nist.gov",vendor_cpes]]
     except:
         pass
