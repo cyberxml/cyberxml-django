@@ -188,7 +188,7 @@ def filter_iavm_title(cpe, title):
         return False
     if "Solaris" in title and not "cpe:/o:oracle:solaris" in cpe:
         return False
-    if "Oracle" in title and "Sun" in title not "cpe:/o:oracle:solaris" in cpe:
+    if "Oracle" in title and "Sun" in title and not "cpe:/o:oracle:solaris" in cpe:
         return False
     if "Oracle" in title and "Java" in title and not ("cpe:/o:oracle:jre" in cpe or "cpe:/o:oracle:jdk" in cpe):
         return False
