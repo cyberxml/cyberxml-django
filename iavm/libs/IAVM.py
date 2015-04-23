@@ -186,6 +186,22 @@ def filter_iavm_title(cpe, title):
         return False
     if "Update Manager" in title and not "cpe:/a:vmware:update_manager:" in cpe:
         return False
+    if "Solaris" in title and not "cpe:/o:oracle:solaris" in cpe:
+        return False
+    if "Oracle" in title and "Sun" in title not "cpe:/o:oracle:solaris" in cpe:
+        return False
+    if "Oracle" in title and "Java" in title and not ("cpe:/o:oracle:jre" in cpe or "cpe:/o:oracle:jdk" in cpe):
+        return False
+    if "Oracle" in title and "Database" in title and not "cpe:/a:oracle:database" in cpe:
+        return False
+    if "Oracle" in title and "Fusion" in title and not "cpe:/a:oracle:fusion_middleware" in cpe:
+        return False
+    if "Oracle" in title and "Enterprise Manager" in title and not "cpe:/a:oracle:enterprise_manager" in cpe:
+        return False
+    if "Oracle" in title and "E-Business" in title and not "cpe:/a:oracle:e-business_suite" in cpe:
+        return False
+    if "Apple" in title and not ("cpe:/a:apple" in cpe or "cpe:/o:apple" in cpe):
+        return False
 	# misplaced NIST OS CPEs from OVAL logic
     if "McAfee" in title and not ":mcafee:" in cpe:
         return False
