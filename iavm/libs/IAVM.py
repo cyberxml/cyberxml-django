@@ -4,6 +4,7 @@ from cvrf.libs import oracle
 from cvrf.libs import adobe
 from cvrf.libs import cisco
 from cvrf.libs import vmware
+from cvrf.libs import wireshark
 from cve.libs import nist
 
 from lxml import etree
@@ -75,6 +76,7 @@ def getCpeFromIavm(iavm):
         cpes=cpes+adobe.getCpeFromCve(cve)
         cpes=cpes+vmware.getCpeFromCve(cve)
         cpes=cpes+cisco.getCpeFromCve(cve)
+        cpes=cpes+wireshark.getCpeFromCve(cve)
         cpes=cpes+nist.getCpeFromCve(cve)
     return(cpes)
 
@@ -108,6 +110,12 @@ def getCpeFromCve(cve):
         vendor_cpes=vmware.getCpeFromCve(cve)
         if len(vendor_cpes)>0:
             cpes=cpes+[["vmware.com",vendor_cpes]]
+    except:
+        pass
+    try:
+        vendor_cpes=vmware.getCpeFromCve(cve)
+        if len(vendor_cpes)>0:
+            cpes=cpes+[["wireshark.org",vendor_cpes]]
     except:
         pass
     try:
@@ -204,7 +212,7 @@ def filter_iavm_title(cpe, title):
         return False
     if "Apple" in title and not ("cpe:/a:apple" in cpe or "cpe:/o:apple" in cpe):
         return False
-	# misplaced NIST OS CPEs from OVAL logic
+    # misplaced NIST OS CPEs from OVAL logic
     if "McAfee" in title and not ":mcafee:" in cpe:
         return False
     if "Blue Coat" in title and not ":blue_coat:" in cpe:
@@ -242,6 +250,7 @@ def filter_iavm_references(vendor, references):
             if 'juniper.net' in ref.get('URL') and vendor == 'juniper.net': return True
             if 'oracle.com' in ref.get('URL') and vendor == 'oracle.com': return True
             if 'google.com' in ref.get('URL') and vendor == 'google.com': return True
+            if 'wireshark.org' in ref.get('URL') and vendor == 'wireshark.org': return True
         except:
             pass
         
@@ -262,6 +271,7 @@ def filter_iavm_references(vendor, references):
             if 'Juniper' in ref.get('RefName') and vendor == 'juniper.net': return True
             if 'Oracle' in ref.get('RefName') and vendor == 'oracle.com': return True
             if 'Google' in ref.get('RefName') and vendor == 'google.com': return True
+            if 'Wireshark' in ref.get('RefName') and vendor == 'wireshark.org': return True
         except:
             pass
         
