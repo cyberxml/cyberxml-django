@@ -59,8 +59,8 @@ def getCpeFromCve(cve):
         qrystr=get_qryJuniperCvrfCveCpe(cve)
         a = connExistDB()
         cpes =list(set(a.get_data(qrystr)))
-		cpes.sort()
-	except:
+        cpes.sort()
+    except:
         cpes=[]
     return(cpes)
 
@@ -86,52 +86,52 @@ def translateJuniperHtmlToCvrf(fullname):
     tree   = etree.parse(fullname, parser)
     root = tree.getroot()
     
-	# DocumentTitle
-	try:
-		cvrf['DocumentTitle']=tree.xpath("//div[@class='kb_ident']")[0].text.strip()
-	except:
-		print("No description found; creating one")
-		cvrf['DocumentTitle']= "Security Advisory for "+uname.replace(".html","")
-	
-	# DocumentTrackingInitialReleaseDate
-	try:
-		cvrf['DocumentTrackingInitialReleaseDate']=root.find(".//meta[@name='date']").get('content').strip()+"T00:00:00Z"
-	except:
-		print("No InitialReleaseDate found; creating one")
-		cvrf['DocumentTrackingInitialReleaseDate']=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
-	
-	# DocumentTrackingCurrentReleaseDate
-	try:
-		datestr = tree.xpath("//node()[td[contains(.,'Last Updated')]]/td")[3].text
-		ds = datestr.split()
-		datestr = ds[2]+'-'+str((strptime(ds[1],'%b')).tm_mon).zfill(2)+'-'+str(int(ds[0])).zfill(2)+'T00:00:00Z'
-		cvrf['DocumentTrackingCurrentReleaseDate']=datestr
-	except:
-		print("No CurrentReleaseDate found; creating one")
-		cvrf['DocumentTrackingCurrentReleaseDate']=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
-	
-	# DocumentTrackingID
-	cvrf['DocumentTrackingID']=uname.replace(".html","")
-	
-	# DocumentNote
-	# only retrieves first such content note
-	try:
-		cvrf['DocumentNote']=root.find(".//div[@class='security_content']").get('content').strip()
-	except:
-		try:
-			cvrf['DocumentNote']=root.find(".//div[@class='h-3 pd-b15']").get('content').strip()
-		except:
-			print("Document note not found; creating one")
-			cvrf['DocumentNote']="CyberXML placeholder. HTML security notice not in current format."
-	
-	# ReferenceURL
-	try:
-		cvrf['ReferenceURL']="https://www.vmware.com"+tree.xpath('.//a[contains(@href,"VMSA")]')[0].get('href').strip()
-	except:
-		cvrf['ReferenceURL']='https://www.vmware.com/security/advisories/'+cvrf['DocumentTrackingID']+".html"
+    # DocumentTitle
+    try:
+        cvrf['DocumentTitle']=tree.xpath("//div[@class='kb_ident']")[0].text.strip()
+    except:
+        print("No description found; creating one")
+        cvrf['DocumentTitle']= "Security Advisory for "+uname.replace(".html","")
+    
+    # DocumentTrackingInitialReleaseDate
+    try:
+        cvrf['DocumentTrackingInitialReleaseDate']=root.find(".//meta[@name='date']").get('content').strip()+"T00:00:00Z"
+    except:
+        print("No InitialReleaseDate found; creating one")
+        cvrf['DocumentTrackingInitialReleaseDate']=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
+    
+    # DocumentTrackingCurrentReleaseDate
+    try:
+        datestr = tree.xpath("//node()[td[contains(.,'Last Updated')]]/td")[3].text
+        ds = datestr.split()
+        datestr = ds[2]+'-'+str((strptime(ds[1],'%b')).tm_mon).zfill(2)+'-'+str(int(ds[0])).zfill(2)+'T00:00:00Z'
+        cvrf['DocumentTrackingCurrentReleaseDate']=datestr
+    except:
+        print("No CurrentReleaseDate found; creating one")
+        cvrf['DocumentTrackingCurrentReleaseDate']=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
+    
+    # DocumentTrackingID
+    cvrf['DocumentTrackingID']=uname.replace(".html","")
+    
+    # DocumentNote
+    # only retrieves first such content note
+    try:
+        cvrf['DocumentNote']=root.find(".//div[@class='security_content']").get('content').strip()
+    except:
+        try:
+            cvrf['DocumentNote']=root.find(".//div[@class='h-3 pd-b15']").get('content').strip()
+        except:
+            print("Document note not found; creating one")
+            cvrf['DocumentNote']="CyberXML placeholder. HTML security notice not in current format."
+    
+    # ReferenceURL
+    try:
+        cvrf['ReferenceURL']="https://www.vmware.com"+tree.xpath('.//a[contains(@href,"VMSA")]')[0].get('href').strip()
+    except:
+        cvrf['ReferenceURL']='https://www.vmware.com/security/advisories/'+cvrf['DocumentTrackingID']+".html"
 
-	# ReferenceDescription
-	cvrf['ReferenceDescription']=cvrf['DocumentTitle']
+    # ReferenceDescription
+    cvrf['ReferenceDescription']=cvrf['DocumentTitle']
 
     
     # -----------------------------------------------------------------------------
@@ -195,7 +195,7 @@ def translateJuniperHtmlToCvrf(fullname):
             print("translateVmwareHtmlToCvrf: cannot find minimumCvrfTemplate.xml")
             # throw exception
             mincvrf=etree.parse('minimumCvrfTemplate.xml')
-	
+    
     mincvrf.find("//{http://www.icasi.org/CVRF/schema/cvrf/1.1}DocumentTitle").text=cvrf['DocumentTitle']
     mincvrf.find("//{http://www.icasi.org/CVRF/schema/cvrf/1.1}DocumentType").text=cvrf['DocumentType']
     mincvrf.find("//{http://www.icasi.org/CVRF/schema/cvrf/1.1}InitialReleaseDate").text=cvrf['DocumentTrackingInitialReleaseDate']
@@ -301,7 +301,7 @@ def importJuniperHtml():
             #f = open(uname,'w')
             #f.write(cvrfhtml)
             #f.close()
-			'''
+            '''
             try:
                 if int(uname[7:9])>8:
                     try:
@@ -320,4 +320,4 @@ def importJuniperHtml():
                         print("failed to translate: "+uname)
             except:
                 pass
-			'''
+            '''
