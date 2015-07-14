@@ -200,6 +200,7 @@ def translateVmwareHtmlToCvrf(fullname):
             ps[1]=ps[1].replace("vsphere_data_protection","vSphere Data Protection")
         elif 'esx' in ps[1]:
             ps[1]=ps[1].replace("esx","ESX")
+            ps[1]=ps[1].replace(":/a:",":/o:")
         else:
             ps[1]=ps[1].title()
         products.append([' '.join(ps),p])
@@ -338,4 +339,3 @@ def importVmwareHtml():
                         print("failed to translate: "+uname)
             except:
                 pass
-

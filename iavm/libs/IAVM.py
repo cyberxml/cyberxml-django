@@ -223,6 +223,10 @@ def filter_iavm_title(cpe, title):
         return False
     if "Chrome" in title and "cpe:/o:" in cpe:
         return False
+    if "Juniper" in title and not ":juniper" in cpe:
+        return False
+    if "Cisco" in title and not ":cisco" in cpe:
+        return False
     return True
 
 
@@ -275,10 +279,12 @@ def filter_iavm_references(vendor, references):
         except:
             pass
         
-        
+        # some IAVMs only reference upstream vendor even when applies to Linux vendor
+        if '.org/' in ref.get('URL') and vendor == 'redhat.com': return True
+         
     return False
 
-def iavm_to_cpe_doc():
+def iavm_to_cpe_doc(flag=False):
     exdb = db.ExistDB()
     validateCollection(exdb, iavm_to_cpe_coll)
     
@@ -292,26 +298,26 @@ def iavm_to_cpe_doc():
     
     for i in range(len(iavms)):
         print(iavms[i].find('./S').get('IAVM'))
-        iav_title = iavms[i].find('./S').get('Title')
-        cves = iavms[i].findall('./CVEs/CVENumber')
-        for j in range(len(cves)):
-            cpes = getCpeFromCve(cves[j].text)
-            if len(cpes) > 0:
-                cves[j].append(etree.Element('CPEs'))
-                cpes_elem=cves[j].find('./CPEs')
-                for v in cpes:
-                    # apply vendor/reference filter
-                    if filter_iavm_references(v[0],iavms[i].find("./References")):
-                        cpes_elem.append(etree.Element('Vendor',id=v[0]))
-                        v_elem=cpes_elem.findall('./Vendor')[-1]
-                        for cpe in v[1]:
-                            # apply cpe/title filter
-                            if filter_iavm_title(cpe,iav_title):
-                                v_elem.append(etree.Element('CPE'))
-                                this = v_elem.findall('./CPE')[-1]
-                                this.text = cpe
+        if ((flag and iavms[i].find('./S').get('IAVM').startswith('2015-')) or (not flag)):
+            iav_title = iavms[i].find('./S').get('Title')
+            cves = iavms[i].findall('./CVEs/CVENumber')
+            for j in range(len(cves)):
+                cpes = getCpeFromCve(cves[j].text)
+                if len(cpes) > 0:
+                    cves[j].append(etree.Element('CPEs'))
+                    cpes_elem=cves[j].find('./CPEs')
+                    for v in cpes:
+                        # apply vendor/reference filter
+                        if filter_iavm_references(v[0],iavms[i].find("./References")):
+                            cpes_elem.append(etree.Element('Vendor',id=v[0]))
+                            v_elem=cpes_elem.findall('./Vendor')[-1]
+                            for cpe in v[1]:
+                                # apply cpe/title filter
+                                if filter_iavm_title(cpe,iav_title):
+                                    v_elem.append(etree.Element('CPE'))
+                                    this = v_elem.findall('./CPE')[-1]
+                                    this.text = cpe
     
-
     # rewrite the above loop to just query once for each cve in the IAVMs
     # create a dict for each cve with cpe values
     # get all IAVMs
