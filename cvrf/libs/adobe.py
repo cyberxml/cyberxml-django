@@ -153,6 +153,7 @@ def translateAdobeHtmlToCvrf(fullname):
 		this = sw[i].replace('Adobe Flash Player','cpe:/a:adobe:flash-player:')
 		this = this.replace('Adobe Reader','cpe:/a:adobe:reader:')
 		this = this.replace('Adobe Acrobat','cpe:/a:adobe:acrobat:')
+		this = this.replace('Adobe Shockwave Player','cpe:/a:adobe:shockwave:')
 		# 14-09
 		# Adobe AIR 4.0.0.1628 SDK and earlier versions
 		# Adobe AIR 4.0.0.1628 SDK &amp; Compiler 
@@ -272,6 +273,7 @@ def importAdobeHtml():
 	produrls = [
 		"https://helpx.adobe.com/security/products/reader.html",
 		"https://helpx.adobe.com/security/products/flash-player.html",
+		"https://helpx.adobe.com/security/products/shockwave.html",
 		]
 	
 	apslinks=[]

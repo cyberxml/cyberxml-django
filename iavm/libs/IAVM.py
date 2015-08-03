@@ -70,6 +70,8 @@ def getCpeFromIavm(iavm):
     cves=getCveFromIavm(iavm)
     cpes=[]
     for cve in cves:
+        # more accurate to use Oval, too slow
+        #cpes=cpes+redhat.getCpeFromCveOval(cve)
         cpes=cpes+redhat.getCpeFromCve(cve)
         cpes=cpes+microsoft.getCpeFromCve(cve)
         cpes=cpes+oracle.getCpeFromCve(cve)
@@ -95,6 +97,8 @@ def getCpeFromCve(cve):
     except:
         pass
     try:
+        # OVAL more accurate, too slow
+        #vendor_cpes=redhat.getCpeFromCveOval(cve)
         vendor_cpes=redhat.getCpeFromCve(cve)
         if len(vendor_cpes)>0:
             cpes=cpes+[["redhat.com",vendor_cpes]]
@@ -210,23 +214,32 @@ def filter_iavm_title(cpe, title):
         return False
     if "Oracle" in title and "MySQL" in title and not "cpe:/a:oracle:mysql" in cpe:
         return False
-    if "Apple" in title and not ("cpe:/a:apple" in cpe or "cpe:/o:apple" in cpe):
+    if "Oracle" in title and "Linux" in title and not ":oracle:" in cpe:
         return False
-    # misplaced NIST OS CPEs from OVAL logic
+	if "Adobe" in title and "Shockwave" in title and not ("adobe:shockwave" in cpe):
+		return False
+	if "Apple" in title and not ("cpe:/a:apple" in cpe or "cpe:/o:apple" in cpe):
+		return False
     if "McAfee" in title and not ":mcafee:" in cpe:
         return False
     if "Blue Coat" in title and not ":blue_coat:" in cpe:
         return False
-    if "IBM" in title and not ":ibm:" in cpe:
-        return False
+	if "IBM" in title and not ":ibm:" in cpe:
+		return False
+	if "IBM" in title and "DB2" in title and not ":ibm:db2" in cpe:
+		return False
     if "HP" in title and not ":hp" in cpe:
         return False
     if "Chrome" in title and "cpe:/o:" in cpe:
         return False
-    if "Juniper" in title and not ":juniper" in cpe:
+    if "Juniper" in title and not ":juniper:" in cpe:
         return False
-    if "Cisco" in title and not ":cisco" in cpe:
+    if "Cisco" in title and not ":cisco:" in cpe:
         return False
+	if "Red Hat" in title and "JBoss" in title and not "redhat:jboss" in cpe:
+		return False
+	if "Splunk" in title and not ":splunk:" in cpe:
+		return False
     return True
 
 
@@ -281,6 +294,7 @@ def filter_iavm_references(vendor, references):
         
         # some IAVMs only reference upstream vendor even when applies to Linux vendor
         if '.org/' in ref.get('URL') and vendor == 'redhat.com': return True
+        if '.edu/' in ref.get('URL') and vendor == 'redhat.com': return True
          
     return False
 
